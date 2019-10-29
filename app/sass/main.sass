@@ -1,0 +1,290 @@
+@import vars
+@import fonts
+@import libs
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+ul
+	padding: 0
+
+li
+	list-style: none
+img
+	object-fit: cover
+
+input, textarea
+	outline: none
+	&:focus:required:invalid
+		border-color: red
+	&:required:valid
+		border-color: green
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: 'Proxima Nova', sans-serif
+	overflow-x: hidden
+	color: $text
+
+.container
+	max-width: 1272px
+	padding:
+		right: $gutter/2
+		left: $gutter/2
+	margin:
+		left: auto
+		right: auto
+.btn
+	background: $accent
+	font-size: 14px
+	line-height: 34px
+	padding: 15px 51px 
+	text-transform: uppercase
+	color: #FFFFFF
+	&:after
+		content: url(../img/_src/arrow.svg)
+		padding-left: 12px
+	&:hover
+		color: #FFFFFF
+		text-decoration: none
+
+
+header
+	.container
+		position: relative
+		.header
+			display: flex
+			justify-content: space-between
+			align-items: center
+			padding: 25px 0px
+			.header__logo
+				img	
+			.header__nav
+				position: relative
+				z-index: 30
+				.header__list-nav
+					display: flex
+					justify-content: space-between
+					align-items: center
+					margin: 0
+					&.is-active
+						height: auto
+						display: flex
+						transition: .3s
+						z-index: 1000
+					// +media-breakpoint-down(lg)
+					// 	flex-direction: column
+					// 	position: absolute
+					// 	top: 4px
+					// 	left: 0
+					// 	right: 0
+					// 	width: 100%
+					// 	background-color: #f2f2f2
+					// 	padding: 30px 0
+					// 	height: 0
+					// 	display: none
+					.header__item
+						margin: 20px 0
+						.header__link
+							font-size: 16px
+							line-height: 34px
+							text-align: center
+							color: $text
+							text-decoration: none
+							padding: 0 23px
+							transition: .3s
+							&.is-active
+								color: $accent
+								transition: .3s
+							&:hover
+								color: $accent
+								transition: .3s
+			.header__function
+				display: flex
+				justify-content: space-between
+				align-items: center
+				.header__request
+					margin-right: 50px
+				.header__profile
+					margin-right: 74px
+		.burger-menu
+			position: absolute
+			top: 40px
+			right: 10px
+			+media-breakpoint-down(md)
+				top: 30px
+			.burger-menu__button
+				display: block
+				position: relative
+				width: 45px
+				height: 45px
+				border-radius: 10px
+				background: transparent
+				cursor: pointer
+				z-index: 1000
+				+media-breakpoint-down(lg)
+					display: block
+				.burger-menu__lines
+					position: absolute
+					width: 22px
+					height: 2px
+					top: 47%
+					right: 50%
+					transform: translate(50%)
+					background-color: #142C60
+					&::after
+						content: ""
+						position: absolute
+						width: 22px
+						height: 2px
+						background-color: #142C60
+						top: -8.5px
+					&::before
+						content: ""
+						position: absolute
+						width: 15px
+						height: 2px
+						background-color: #142C60
+						top: 8.5px
+			&.is-active
+				.burger-menu__lines
+					background-color: transparent
+					&:before
+						top: 0
+						transform: rotate(45deg)
+					&:after
+						top: 0
+						transform: rotate(-45deg)
+.carousel__baner
+	.carousel
+		.carousel-inner
+			.carousel-item				
+				position: relative
+				.carousel-img
+					width: 100%
+					object-fit: cover
+					+media-breakpoint-down(md)
+						min-height: 450px
+				.container
+					.carousel-caption
+						text-align: center
+						padding: 25px
+						left: 5%
+						right: 5%
+						bottom: 50%
+						transform: translateY(50%)
+						.carousel-title
+							font-size: 80px
+							line-height: 100px
+							font-weight: 600
+							text-align: center
+							color: #FFFFFF
+						.carousel-text
+							font-size: 24px
+							line-height: 34px
+							color: #FFFFFF
+							margin-bottom: 65px
+						.carousel-link
+
+
+footer
+	background-color: $accentTwo
+	padding-top: 75px
+	+media-breakpoint-down(lg)
+		padding-bottom: 70px
+	
+	.footer__nav
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+		border-bottom: 0.5px solid rgba(255, 255, 255, 0.25)
+		.footer__list
+			display: flex
+			align-items: flex-start
+			justify-content: space-between
+			flex-direction: column
+			padding: 70px 0 0
+			.footer__item
+				padding-bottom: 34px	
+				.footer__link
+					font-size: 16px
+					line-height: 19px
+					text-transform: uppercase
+					text-decoration: none
+					color: #ffffff
+		.law
+			.footer__item
+				.footer__link
+					text-transform: unset
+				.footer__sublist
+					display: flex
+					align-items: flex-start
+					justify-content: space-between
+					.footer__item	
+						display: flex	
+						align-items: center
+						justify-content: center		
+						padding-right: 28px	
+						padding-top: 20px	
+						.footer__link
+							justify-content: center
+							align-items: center
+							display: inherit
+							border: 1px solid rgba(255, 255, 255, 0.25)
+							min-width: 54px
+							min-height: 54px
+							transition: .3s
+							&:hover
+								background-color: $accent
+								transition: .3s
+
+							
+					
+	.footer__bottom
+		padding: 33px 0
+		display: flex
+		align-items: center
+		justify-content: space-between
+		color: #ffffff
+		opacity: 0.5
+		font-size: 16px
+		line-height: 19px
+		a
+			color: #ffffff
+
+
+// Custom Sass / Remove before use
+
+
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.example-grid
+	display: grid
+	grid-gap: $gutter
+	grid-template-columns: 1fr 1fr
+	grid-template-areas: "left right"
+	> div:first-child
+		grid-area: left
+	> div:last-child
+		grid-area: right
+	+media-breakpoint-down(xs)
+		display: block
+		> div
+			padding: $gutter/2 0
+	
+.example-img
+	width: 100%
+
+.parent // Lazy Load Placeholder Generator: https://webdesign-master.ru/services/lazy/
+	background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)
