@@ -1,6 +1,7 @@
 @import vars
 @import fonts
 @import libs
+@import media
 
 ::placeholder
 	color: #666
@@ -38,16 +39,17 @@ body
 	color: $text
 
 .container
-	
 	padding:
 		right: $gutter/2
 		left: $gutter/2
+	+media-breakpoint-down(xs)
+		padding:
+			right: $gutter*.75
+			left: $gutter*.75
 	margin:
 		left: auto
 		right: auto 
-	
-	+media-breakpoint-up(xl)
-		max-width: 1272px	
+		
 				
 .btn
 	background: $accent
@@ -56,6 +58,8 @@ body
 	padding: 15px 51px 
 	text-transform: uppercase
 	color: #FFFFFF
+	+media-breakpoint-down(sm)
+		padding: 10px 45px 
 	&:after
 		content: url(../img/_src/arrow.svg)
 		padding-left: 12px
@@ -68,6 +72,8 @@ body
 	line-height: 48px
 	color: $accentTwo
 	margin-bottom: 60px
+	+media-breakpoint-down(xs)
+		padding: 0 20px
 
 //home page
 
@@ -80,7 +86,9 @@ header
 			align-items: center
 			padding: 25px 0px
 			.header__logo
-				img	
+				img
+					+media-breakpoint-down(xs)
+						max-width: 140px
 			.header__nav
 				position: relative
 				z-index: 30
@@ -94,19 +102,8 @@ header
 						display: flex
 						transition: .3s
 						z-index: 1000
-					// +media-breakpoint-down(lg)
-					// 	flex-direction: column
-					// 	position: absolute
-					// 	top: 4px
-					// 	left: 0
-					// 	right: 0
-					// 	width: 100%
-					// 	background-color: #f2f2f2
-					// 	padding: 30px 0
-					// 	height: 0
-					// 	display: none
 					.header__item
-						margin: 20px 0
+						margin: 0
 						.header__link
 							font-size: 16px
 							line-height: 34px
@@ -126,15 +123,21 @@ header
 				justify-content: space-between
 				align-items: center
 				.header__request
-					margin-right: 50px
+					margin-right: 50px					
+					+media-breakpoint-down(md)
+						display: none
 				.header__profile
 					margin-right: 74px
+					+media-breakpoint-down(xs)
+						margin-right: 50px
 		.burger-menu
 			position: absolute
-			top: 40px
+			top: 35px
 			right: 10px
 			+media-breakpoint-down(md)
-				top: 30px
+				top: 23px
+			+media-breakpoint-down(xs)
+				top: 18px
 			.burger-menu__button
 				display: block
 				position: relative
@@ -144,8 +147,6 @@ header
 				background: transparent
 				cursor: pointer
 				z-index: 1000
-				+media-breakpoint-down(lg)
-					display: block
 				.burger-menu__lines
 					position: absolute
 					width: 22px
@@ -201,54 +202,119 @@ header
 							font-weight: 600
 							text-align: center
 							color: #FFFFFF
+							+media-breakpoint-down(sm) 
+								font-size: 48px
+								line-height: 52px
 						.carousel-text
 							font-size: 24px
 							line-height: 34px
 							color: #FFFFFF
 							margin-bottom: 65px
+							+media-breakpoint-down(sm) 
+								font-size: 18px
+								line-height: 22px
 						.carousel-link
-
-.programs__home
-	padding: 100px 0
 .order__home
 	background-image: url(../img/_src/orderBg.jpg)
 	background-position: center
 	background-repeat: no-repeat
 	background-size: cover
 	padding: 100px 0
+	+media-breakpoint-down(xs)
+		background-position: center left 60%
 	.container
 		.order__caption
 			max-width: 600px
+			+media-breakpoint-down(xs)
+				font-size: 36px
+    			line-height: 44px
 			.title
 				color: #fff
 				font-size: 44px
 				line-height: 54px
 				margin-bottom: 36px
+				+media-breakpoint-down(xs)
+					font-size: 42px
+					line-height: 46px
 			.order__btn
+				+media-breakpoint-down(xs)
+					margin-left: 20px
 .seti__home
-	padding: 50px 0 400px
+	padding: 50px 0px
 	background: #F7F7F7
+	.container
+		.row
+			justify-content: space-between
+			align-items: center
+			.seti__list
+				display: flex
+				align-items: flex-start
+				justify-content: space-between
+				margin-bottom: 50px
+				+media-breakpoint-down(xs)
+					margin-left: 20px
+				.seti__item
+					display: flex	
+					align-items: center
+					justify-content: center		
+					padding-right: 28px	
+					+media-breakpoint-down(xs)
+						padding-right: 15px	
+					.seti__link
+						justify-content: center
+						align-items: center
+						display: inherit
+						border: 1px solid #E5E7E8
+						min-width: 54px
+						min-height: 54px
+						transition: .3s
+						&:hover
+							background-color: $accent
+							transition: .3s
+						.seti__icon	
+.fon__home
+	padding: 50px 0 255px
+	background: #F7F7F7		
 .contacts__home
 	margin-top: -253px
 	padding-bottom: 120px
+	+media-breakpoint-down(md) 
+		padding-bottom: 580px
+	+media-breakpoint-down(sm)
+		padding-bottom: 540px
 	.container
-		.contacts
+		.contacts__map
 			background-image: url(../img/_src/map.jpg)
 			background-position: center
 			background-repeat: no-repeat
 			background-size: cover
 			padding-top: 144px
 			position: relative
+			min-height: 604px
+			+media-breakpoint-down(md) 
+				min-height: 440px
+			+media-breakpoint-down(sm)
+				min-height: 360px
 			&:after
 				position: absolute
 				content: url(../img/_src/icon-map.svg)
 				left: 48%
 				top: 40%
 			.contacts__caption
+				position: absolute
+				bottom: 0
+				left: 0
 				padding: 70px 50px
 				max-width: 410px
 				background: $accentTwo
 				color: #fff
+				+media-breakpoint-down(md) 
+					bottom: -436px
+					width: 100%
+					max-width: 100%
+				+media-breakpoint-down(sm)
+					bottom: -396px
+					padding: 50px 40px
 				.subTitle
 					font-weight: 600
 					font-size: 18px
@@ -388,22 +454,35 @@ header
 footer
 	background-color: $accentTwo
 	padding-top: 75px
-	+media-breakpoint-down(lg)
-		padding-bottom: 70px
 	
 	.footer__nav
 		display: flex
 		align-items: flex-start
 		justify-content: space-between
 		border-bottom: 0.5px solid rgba(255, 255, 255, 0.25)
+		+media-breakpoint-down(md)
+			flex-wrap: wrap
+		+media-breakpoint-down(xs)
+			padding-left: 20px
+			padding-right: 20px
 		.footer__list
 			display: flex
 			align-items: flex-start
 			justify-content: space-between
 			flex-direction: column
 			padding: 70px 0 0
+			+media-breakpoint-down(md)
+				flex-basis: 50%
+				&:nth-child(even)
+					align-items: flex-end
+			+media-breakpoint-down(sm)	
+				margin-bottom: 0			
+				flex-basis: 100%
+				&:nth-child(even)
+					padding-top: 0
+					align-items: flex-start
 			.footer__item
-				padding-bottom: 34px	
+				padding-bottom: 34px					
 				.footer__link
 					font-size: 16px
 					line-height: 19px
@@ -411,6 +490,11 @@ footer
 					text-decoration: none
 					color: #ffffff
 		.law
+			+media-breakpoint-down(md)
+				flex-basis: 100%
+				padding-top: 0px
+			+media-breakpoint-down(sm)
+				padding-top: 15px
 			.footer__item
 				.footer__link
 					text-transform: unset
@@ -424,6 +508,8 @@ footer
 						justify-content: center		
 						padding-right: 28px	
 						padding-top: 20px	
+						+media-breakpoint-down(xs)
+							padding-right: 15px	
 						.footer__link
 							justify-content: center
 							align-items: center
@@ -435,9 +521,6 @@ footer
 							&:hover
 								background-color: $accent
 								transition: .3s
-
-							
-					
 	.footer__bottom
 		padding: 33px 0
 		display: flex
@@ -447,32 +530,18 @@ footer
 		opacity: 0.5
 		font-size: 16px
 		line-height: 19px
+		+media-breakpoint-down(xs)
+			font-size: 14px
+			flex-direction: column
+		.footer__copiryte
+			+media-breakpoint-down(xs)
+				padding-bottom: 15px
+
 		a
 			color: #ffffff
+		+media-breakpoint-down(xs)
+			padding-left: 20px
+			padding-right: 20px
 
 
-// Custom Sass / Remove before use
 
-
-
-.img-responsive
-	display: block
-	max-width: 100%
-	height: auto
-
-.example-grid
-	display: grid
-	grid-gap: $gutter
-	grid-template-columns: 1fr 1fr
-	grid-template-areas: "left right"
-	> div:first-child
-		grid-area: left
-	> div:last-child
-		grid-area: right
-	+media-breakpoint-down(xs)
-		display: block
-		> div
-			padding: $gutter/2 0
-
-.parent // Lazy Load Placeholder Generator: https://webdesign-master.ru/services/lazy/
-	background-image: url(data:image/gif;base64,R0lGODlhCgAIAIABAN3d3f///yH5BAEAAAEALAAAAAAKAAgAAAINjAOnyJv2oJOrVXrzKQA7)

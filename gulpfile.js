@@ -2,7 +2,7 @@ var gulp         = require('gulp'),
 		sass         = require('gulp-sass'),
 		browserSync  = require('browser-sync'),
 		concat       = require('gulp-concat'),
-		uglify       = require('gulp-uglify-es').default,
+		// uglify       = require('gulp-uglify-es').default,
 		cleancss     = require('gulp-clean-css'),
 		autoprefixer = require('gulp-autoprefixer'),
 		rsync        = require('gulp-rsync'),
@@ -33,7 +33,7 @@ gulp.task('styles', function() {
 		grid: true,
 		overrideBrowserslist: ['last 10 versions']
 	}))
-	.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Optional. Comment out when debugging
+	// .pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Optional. Comment out when debugging
 	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.stream())
 });
@@ -42,11 +42,11 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
 	return gulp.src([
 		'node_modules/jquery/dist/jquery.min.js', // Optional jQuery plug-in (npm i --save-dev jquery)
-		'app/js/_lazy.js', // JS library plug-in example
+		// 'app/js/_lazy.js', // JS library plug-in example
 		'app/js/_custom.js', // Custom scripts. Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
-	.pipe(uglify()) // Minify js (opt.)
+	// .pipe(uglify()) // Minify js (opt.)
 	.pipe(gulp.dest('app/js'))
 	.pipe(browserSync.reload({ stream: true }))
 });
