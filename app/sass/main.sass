@@ -52,6 +52,7 @@ body
 	padding: 15px 51px
 	text-transform: uppercase
 	color: #FFFFFF
+	border-radius: 0
 	+media-breakpoint-down(sm)
 		padding: 10px 45px
 	&:after
@@ -459,9 +460,118 @@ header
 							padding-left: 12px
 						&:hover
 							text-decoration: none
+//Vacancies page
+.main__vacancies
+	background-color: #F7F7F7
+	.vacancies__banner
+		background-image: url(../img/_src/vacancies.jpg)
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+		position: relative
+		min-height: 736px
+		.container__breadcrumb
+			.row
+				.nav__breadcrumb
+					a
+						color: #fff
+					.breadcrumb-item
+						color: #fff
+						opacity: 0.8
+						&:before
+							color: #fff
+							opacity: 0.8
+		.vacancies__caption
+			flex-direction: column
+			align-items: flex-start
+			justify-content: flex-start
+			max-width: 590px
+			.title
+				color: #fff
+				font-size: 54px
+				line-height: 100px
+				margin-bottom: 20px
+			.text
+				font-size: 24px
+				line-height: 34px
+				color: #fff
+				margin-bottom: 130px
+			.vacancies__btn
+				display: inline-block
+				.vacancies__counter
+					font-size: 14px
+					line-height: 34px
+					text-transform: uppercase
+					color: rgba(255, 255, 255, 0.4)
+					padding-left: 7px
+	.vacancies
+		padding: 120px 0
+		.container
+			.row
+				.panel-group
+					width: 100%
+					.panel
+						background-color: #fff
+						padding: 50px
+						border-bottom: 1px solid #E5E7E8
+						.panel-heading
+							display: flex
+							flex-direction: column
+							align-items: flex-start
+							justify-content: space-between
+							.panel-title
+								font-weight: 600
+								font-size: 24px
+								line-height: 36px
+								padding-left: 21px
+								position: relative
+								&:after
+									content: url(../img/_src/square.svg)
+									position: absolute
+									left: 0px
+									top: -2px
+							.panel-description
+								font-weight: 300
+								font-size: 18px
+								line-height: 28px
+								color: #999EA7
+								padding-left: 21px
+								margin-bottom: 40px
+							.panel-collapse
+								width: 100%
+								.panel-body
+									display: flex
+									align-items: flex-start
+									justify-content: space-between
+									padding: 20px 20px 50px
+									.vacancies__item
+										.vacancies__subTitle
+											font-weight: bold
+											font-size: 18px
+											line-height: 28px
+											color: $accentTwo
+										.vacancies__list
+											.vacancies__point
+												font-size: 18px
+												line-height: 28px
+												margin-bottom: 5px
+												color: $accentTwo
+							.vacancies__btnWrap
+								display: flex
+								align-items: center
+								justify-content: space-between
+								width: 100%
+								.panel-link
+								.vacancies__btn
+									font-weight: bold
+									font-size: 14px
+									line-height: 34px
+									text-transform: uppercase
+									color: $accent
+
 //FAQ page
 .main__faq
-	background-color: #F7F7F7
+	background-color: #F7F7F7	
 .faq
 	padding-bottom: 120px
 	.panel-group
@@ -528,7 +638,6 @@ header
 			&.is-active
 				box-shadow: 0px 8px 24px rgba(55, 71, 84, 0.08)
 				z-index: 99
-				
 
 footer
 	background-color: $accentTwo
