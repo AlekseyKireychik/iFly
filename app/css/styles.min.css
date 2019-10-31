@@ -1596,11 +1596,17 @@ header .container .burger-menu.is-active .burger-menu__lines:after {
 }
 
 .main__vacancies .vacancies .container .row .panel-group .panel .panel-heading .vacancies__btnWrap .vacancies__btn {
+  position: relative;
   font-weight: bold;
   font-size: 14px;
   line-height: 34px;
   text-transform: uppercase;
   color: #E72D2D;
+}
+
+.main__vacancies .vacancies .container .row .panel-group .panel .panel-heading .vacancies__btnWrap .vacancies__btn::before {
+  position: absolute;
+  content: url(../img/_src/square.svg);
 }
 
 .main__faq {

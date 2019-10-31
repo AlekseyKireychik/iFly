@@ -563,15 +563,19 @@ header
 								width: 100%
 								.panel-link
 								.vacancies__btn
+									position: relative
 									font-weight: bold
 									font-size: 14px
 									line-height: 34px
 									text-transform: uppercase
 									color: $accent
+									&::before
+										position: absolute
+										content: url(../img/_src/square.svg)
 
 //FAQ page
 .main__faq
-	background-color: #F7F7F7	
+	background-color: #F7F7F7
 .faq
 	padding-bottom: 120px
 	.panel-group
