@@ -657,16 +657,14 @@ body {
 }
 
 .container {
-  padding-right: 10px;
-  padding-left: 10px;
-  margin-left: auto;
-  margin-right: auto;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 @media (max-width: 575.98px) {
   .container {
-    padding-right: 15px;
-    padding-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -696,7 +694,7 @@ body {
 }
 
 .title {
-  font-weight: 600;
+  font-weight: bold;
   font-size: 44px;
   line-height: 48px;
   color: #142C60;
@@ -707,6 +705,33 @@ body {
   .title {
     padding: 0 20px;
   }
+}
+
+.container__breadcrumb {
+  padding-top: 65px;
+}
+
+.container__breadcrumb .nav__breadcrumb {
+  z-index: 999;
+}
+
+.container__breadcrumb .nav__breadcrumb .breadcrumb {
+  background-color: transparent;
+  font-size: 16px;
+  line-height: 56px;
+  padding: 15px 15px 15px 0px;
+}
+
+.container__breadcrumb .nav__breadcrumb .breadcrumb .breadcrumb-item a {
+  color: #999EA7;
+}
+
+.container__breadcrumb .nav__breadcrumb .breadcrumb .breadcrumb-item:before {
+  color: #999EA7;
+}
+
+.container__breadcrumb .nav__breadcrumb .breadcrumb .breadcrumb-item:before .breadcrumb-item.active {
+  color: #999EA7;
 }
 
 header .container {
@@ -836,7 +861,7 @@ header .container .header .header__function .header__profile {
 header .container .burger-menu {
   position: absolute;
   top: 35px;
-  right: 10px;
+  right: 0px;
 }
 
 @media (max-width: 991.98px) {
@@ -987,7 +1012,7 @@ header .container .burger-menu.is-active .burger-menu__lines:after {
 @media (max-width: 575.98px) {
   .order__home .container .order__caption {
     font-size: 36px;
-    font-size-line-height: 44px;
+    line-height: 44px;
   }
 }
 
@@ -1096,29 +1121,29 @@ header .container .burger-menu.is-active .burger-menu__lines:after {
   transition: .3s;
 }
 
-.fon__home {
-  padding: 50px 0 255px;
+.fon {
+  padding: 0 0 255px;
   background: #F7F7F7;
 }
 
-.contacts__home {
+.contacts {
   margin-top: -253px;
   padding-bottom: 120px;
 }
 
 @media (max-width: 991.98px) {
-  .contacts__home {
+  .contacts {
     padding-bottom: 580px;
   }
 }
 
 @media (max-width: 767.98px) {
-  .contacts__home {
+  .contacts {
     padding-bottom: 540px;
   }
 }
 
-.contacts__home .container .contacts__map {
+.contacts .container .contacts__map {
   background-image: url(../img/_src/map.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -1129,25 +1154,25 @@ header .container .burger-menu.is-active .burger-menu__lines:after {
 }
 
 @media (max-width: 991.98px) {
-  .contacts__home .container .contacts__map {
+  .contacts .container .contacts__map {
     min-height: 440px;
   }
 }
 
 @media (max-width: 767.98px) {
-  .contacts__home .container .contacts__map {
+  .contacts .container .contacts__map {
     min-height: 360px;
   }
 }
 
-.contacts__home .container .contacts__map:after {
+.contacts .container .contacts__map:after {
   position: absolute;
   content: url(../img/_src/icon-map.svg);
   left: 48%;
   top: 40%;
 }
 
-.contacts__home .container .contacts__map .contacts__caption {
+.contacts .container .contacts__map .contacts__caption {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1158,7 +1183,7 @@ header .container .burger-menu.is-active .burger-menu__lines:after {
 }
 
 @media (max-width: 991.98px) {
-  .contacts__home .container .contacts__map .contacts__caption {
+  .contacts .container .contacts__map .contacts__caption {
     bottom: -436px;
     width: 100%;
     max-width: 100%;
@@ -1166,26 +1191,26 @@ header .container .burger-menu.is-active .burger-menu__lines:after {
 }
 
 @media (max-width: 767.98px) {
-  .contacts__home .container .contacts__map .contacts__caption {
+  .contacts .container .contacts__map .contacts__caption {
     bottom: -396px;
     padding: 50px 40px;
   }
 }
 
-.contacts__home .container .contacts__map .contacts__caption .subTitle {
+.contacts .container .contacts__map .contacts__caption .subTitle {
   font-weight: 600;
   font-size: 18px;
   line-height: 24px;
   text-transform: uppercase;
 }
 
-.contacts__home .container .contacts__map .contacts__caption .contacts__list .contacts__item .contacts__address {
+.contacts .container .contacts__map .contacts__caption .contacts__list .contacts__item .contacts__address {
   font-weight: normal;
   font-size: 18px;
   line-height: 24px;
 }
 
-.contacts__home .container .contacts__map .contacts__caption .contacts__list .contacts__item .contacts__phone {
+.contacts .container .contacts__map .contacts__caption .contacts__list .contacts__item .contacts__phone {
   font-size: 16px;
   line-height: 36px;
   padding-left: 30px;
@@ -1196,21 +1221,21 @@ header .container .burger-menu.is-active .burger-menu__lines:after {
   transition: .3s;
 }
 
-.contacts__home .container .contacts__map .contacts__caption .contacts__list .contacts__item .contacts__phone:hover {
+.contacts .container .contacts__map .contacts__caption .contacts__list .contacts__item .contacts__phone:hover {
   color: #E72D2D;
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
 }
 
-.contacts__home .container .contacts__map .contacts__caption .contacts__list .contacts__item .contacts__phone:before {
+.contacts .container .contacts__map .contacts__caption .contacts__list .contacts__item .contacts__phone:before {
   content: url(../img/_src/phone.svg);
   position: absolute;
   left: 0;
   top: -5px;
 }
 
-.contacts__home .container .contacts__map .contacts__caption .contacts__list .contacts__item .contacts__info {
+.contacts .container .contacts__map .contacts__caption .contacts__list .contacts__item .contacts__info {
   font-weight: normal;
   font-size: 18px;
   line-height: 24px;
@@ -1229,8 +1254,10 @@ header .container .burger-menu.is-active .burger-menu__lines:after {
 
 .insructorsPage .carousel .carousel-inner .container__breadcrumb .nav__breadcrumb .breadcrumb {
   background-color: transparent;
-  font-size: 16px;
-  line-height: 56px;
+}
+
+.insructorsPage .carousel .carousel-inner .container__breadcrumb .nav__breadcrumb .breadcrumb .breadcrumb-item a {
+  color: #fff;
 }
 
 .insructorsPage .carousel .carousel-inner .container__breadcrumb .nav__breadcrumb .breadcrumb .breadcrumb-item:before {
@@ -1314,7 +1341,7 @@ header .container .burger-menu.is-active .burger-menu__lines:after {
   content: url(../img/_src/square.svg);
   position: absolute;
   left: -20px;
-  left-top: -2px;
+  top: -2px;
 }
 
 .insructors .container .insructors__list .insructors__item .insructors__profile .insructors__info {
@@ -1387,6 +1414,114 @@ header .container .burger-menu.is-active .burger-menu__lines:after {
 
 .insructors .container .insructors__list .insructors__item .insructors__btnWrap .insructors__btn:hover {
   text-decoration: none;
+}
+
+.main__faq {
+  background-color: #F7F7F7;
+}
+
+.faq {
+  padding-bottom: 120px;
+}
+
+.faq .panel-group {
+  width: 100%;
+}
+
+.faq .panel-group .panel {
+  background-color: #fff;
+  padding: 50px;
+  border-bottom: 1px solid #E5E7E8;
+}
+
+.faq .panel-group .panel .panel-heading .panel-title .faq__btn {
+  font-weight: bold;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  color: #E72D2D;
+}
+
+.faq .panel-group .panel .panel-heading .panel-title .faq__btn .faq__number {
+  font-weight: 600;
+  font-size: 80px;
+  line-height: 1;
+  color: #E72D2D;
+  min-width: 96px;
+}
+
+.faq .panel-group .panel .panel-heading .panel-title .faq__btn .faq__title {
+  padding-left: 50px;
+}
+
+.faq .panel-group .panel .panel-heading .panel-title .faq__btn .faq__iconWrap {
+  position: relative;
+  background: #E72D2D;
+  padding: 15px 32px;
+  min-height: 64px;
+  margin-left: auto;
+}
+
+.faq .panel-group .panel .panel-heading .panel-title .faq__btn .faq__iconWrap .faq__icon {
+  position: absolute;
+  width: 12.5px;
+  height: 1.4px;
+  top: 47%;
+  right: 50%;
+  -webkit-transform: translate(50%);
+  -ms-transform: translate(50%);
+  transform: translate(50%);
+  background-color: #fff;
+}
+
+.faq .panel-group .panel .panel-heading .panel-title .faq__btn .faq__iconWrap .faq__icon:after {
+  display: none;
+}
+
+.faq .panel-group .panel .panel-heading .panel-title .faq__btn.collapsed {
+  color: #142C60;
+}
+
+.faq .panel-group .panel .panel-heading .panel-title .faq__btn.collapsed .faq__number {
+  color: #F7F7F7;
+}
+
+.faq .panel-group .panel .panel-heading .panel-title .faq__btn.collapsed .faq__iconWrap .faq__icon:after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 12.5px;
+  height: 1.4px;
+  background-color: #fff;
+  top: 0px;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.faq .panel-group .panel .panel-collapse {
+  padding-left: 146px;
+  padding-right: 115px;
+}
+
+.faq .panel-group .panel .panel-collapse .panel-body {
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+
+.faq .panel-group .panel.is-active {
+  -webkit-box-shadow: 0px 8px 24px rgba(55, 71, 84, 0.08);
+          box-shadow: 0px 8px 24px rgba(55, 71, 84, 0.08);
+  z-index: 99;
 }
 
 footer {
@@ -1543,6 +1678,10 @@ footer .footer__nav .law .footer__item .footer__sublist .footer__item {
   footer .footer__nav .law .footer__item .footer__sublist .footer__item {
     padding-right: 15px;
   }
+}
+
+footer .footer__nav .law .footer__item .footer__sublist .footer__item:last-child {
+  padding-right: 0;
 }
 
 footer .footer__nav .law .footer__item .footer__sublist .footer__item .footer__link {

@@ -1,5 +1,6 @@
-document.addEventListener("DOMContentLoaded", function() {
-
-	// Custom JS
-
+// accordion FAQ page
+$(".faq__btn").on("click", function() {
+  $(this)
+    .parents(".panel")
+    .toggleClass("is-active");
 });
