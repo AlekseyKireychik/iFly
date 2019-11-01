@@ -85,6 +85,45 @@ body
 					color: #999EA7
 					.breadcrumb-item.active
 						color: #999EA7
+.pagination
+	background-color: #fff
+	.row
+		width: 100%
+		align-items: center
+		justify-content: space-between
+		.pagination__counter
+			display: flex
+			align-items: center
+			justify-content: space-between
+			margin-bottom: 0
+			padding: 20px 50px
+			.pagination__item
+				color: #999EA7
+				padding-right: 5px
+		.pagination__wrap
+			position: relative
+			.pagination__list
+				display: flex
+				align-items: center
+				justify-content: space-between
+				margin-bottom: 0
+				padding: 20px 50px
+				.pagination__item
+					color: #999EA7
+					padding-right: 64px	
+					&.is-active
+						color: #E72D2D
+			.pagination__arr
+				position: absolute
+				content: url(../img/_src/arrLeft.svg)
+				&.left
+					left: 0
+					top: 0
+
+				&.right
+					right: 0
+					top: 0
+
 //home page
 
 header
@@ -573,7 +612,7 @@ header
 										position: absolute
 										content: url(../img/_src/iconPlus.svg)
 										right: -22px
-										top: 1px 
+										top: 1px
 										transform: rotate(-45deg)
 										transition: .3s
 									&.collapsed
@@ -588,10 +627,11 @@ header
 							.panel-heading
 								.panel-title
 									color: $accent
-											
+
 //news
 .main__news
 	background-color: #F7F7F7
+	padding-bottom: 120px
 	.news
 		.container
 			.news__top
@@ -607,7 +647,7 @@ header
 					justify-content: space-between
 					margin-bottom: 0
 					.news__item
-						margin-right: 20px						
+						margin-right: 20px
 						.news__tile
 							font-weight: 600
 							font-size: 16px
@@ -631,6 +671,8 @@ header
 					align-items: flex-start
 					justify-content: space-between
 					flex-wrap: wrap
+					margin-bottom: 0
+					padding-bottom: 25px
 					.news__item
 						padding-bottom: 40px
 						margin-bottom: 25px
@@ -652,12 +694,28 @@ header
 								font-size: 28px
 								line-height: 36px
 								color: #fff
+								position: relative
+								&:before
+									content: url(../img/_src/square.svg)
+									position: absolute
+									left: -18px
+									top: -3px
 						&.sale
+							position: relative
+							&:before
+								content: url(../img/_src/SALE.svg)
+								position: absolute
+								right: 0px
+								top: 50px
 						.news-bigWrap
 							position: absolute
-							left: 20px
-							bottom: 0
+							left: 70px
+							right: 170px
+							bottom: 54px
 							.news__description
+								font-size: 18px
+								line-height: 28px
+								color: #FFFFFF
 						.news__img
 						.news__subTitle
 							font-weight: 600
@@ -665,15 +723,21 @@ header
 							line-height: 28px
 							color: $accentTwo
 							padding: 47px 60px 20px 68px
+							position: relative
+							&:before
+								content: url(../img/_src/square.svg)
+								position: absolute
+								left: 48px
+								top: 47px
 						.news__description
 							font-size: 18px
 							line-height: 28px
 							color: #fff
 						.news__date
 							color: #999EA7
-							padding-left: 68px							
-							padding-right: 60px 
-							
+							padding-left: 68px
+							padding-right: 60px
+
 //FAQ page
 .main__faq
 	background-color: #F7F7F7

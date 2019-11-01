@@ -735,6 +735,89 @@ body {
   color: #999EA7;
 }
 
+.pagination {
+  background-color: #fff;
+}
+
+.pagination .row {
+  width: 100%;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.pagination .row .pagination__counter {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 0;
+  padding: 20px 50px;
+}
+
+.pagination .row .pagination__counter .pagination__item {
+  color: #999EA7;
+  padding-right: 5px;
+}
+
+.pagination .row .pagination__wrap {
+  position: relative;
+}
+
+.pagination .row .pagination__wrap .pagination__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 0;
+  padding: 20px 50px;
+}
+
+.pagination .row .pagination__wrap .pagination__list .pagination__item {
+  color: #999EA7;
+  padding-right: 64px;
+}
+
+.pagination .row .pagination__wrap .pagination__list .pagination__item.is-active {
+  color: #E72D2D;
+}
+
+.pagination .row .pagination__wrap .pagination__arr {
+  position: absolute;
+  content: url(../img/_src/arrLeft.svg);
+}
+
+.pagination .row .pagination__wrap .pagination__arr.left {
+  left: 0;
+  top: 0;
+}
+
+.pagination .row .pagination__wrap .pagination__arr.right {
+  right: 0;
+  top: 0;
+}
+
 header .container {
   position: relative;
 }
@@ -1640,6 +1723,7 @@ header .container .burger-menu.is-active .burger-menu__lines:after {
 
 .main__news {
   background-color: #F7F7F7;
+  padding-bottom: 120px;
 }
 
 .main__news .news .container .news__top {
@@ -1721,6 +1805,8 @@ header .container .burger-menu.is-active .burger-menu__lines:after {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+  margin-bottom: 0;
+  padding-bottom: 25px;
 }
 
 .main__news .news .container .row .news__list .news__item {
@@ -1758,12 +1844,38 @@ header .container .burger-menu.is-active .burger-menu__lines:after {
   font-size: 28px;
   line-height: 36px;
   color: #fff;
+  position: relative;
+}
+
+.main__news .news .container .row .news__list .news__item.news-big .news__subTitleBig:before {
+  content: url(../img/_src/square.svg);
+  position: absolute;
+  left: -18px;
+  top: -3px;
+}
+
+.main__news .news .container .row .news__list .news__item.sale {
+  position: relative;
+}
+
+.main__news .news .container .row .news__list .news__item.sale:before {
+  content: url(../img/_src/SALE.svg);
+  position: absolute;
+  right: 0px;
+  top: 50px;
 }
 
 .main__news .news .container .row .news__list .news__item .news-bigWrap {
   position: absolute;
-  left: 20px;
-  bottom: 0;
+  left: 70px;
+  right: 170px;
+  bottom: 54px;
+}
+
+.main__news .news .container .row .news__list .news__item .news-bigWrap .news__description {
+  font-size: 18px;
+  line-height: 28px;
+  color: #FFFFFF;
 }
 
 .main__news .news .container .row .news__list .news__item .news__subTitle {
@@ -1772,6 +1884,14 @@ header .container .burger-menu.is-active .burger-menu__lines:after {
   line-height: 28px;
   color: #142C60;
   padding: 47px 60px 20px 68px;
+  position: relative;
+}
+
+.main__news .news .container .row .news__list .news__item .news__subTitle:before {
+  content: url(../img/_src/square.svg);
+  position: absolute;
+  left: 48px;
+  top: 47px;
 }
 
 .main__news .news .container .row .news__list .news__item .news__description {
