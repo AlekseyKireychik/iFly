@@ -32,7 +32,7 @@
 					<ul class="header__list-nav">
 						<li class="header__item"><a href="./" class="header__link">Программы полетов</a></li>
 						<li class="header__item"><a href="./" class="header__link">Подарочные сертификаты</a></li>
-						<li class="header__item"><a href="./" class="header__link">Новости и акции</a></li>
+						<li class="header__item"><a href="./news.html" class="header__link">Новости и акции</a></li>
 					</ul>
 				</nav>	
 				<div class="header__function">
@@ -90,6 +90,64 @@
 				</div>
 			</div> 
 		</section>
+		<div class="container main__form">
+			<form id="form" class="form">
+				<h2 class="title">Связаться с нами</h2>
+				<div class="formWrap">
+					<div class="form__top">
+						<div class="mainform__group group-01">
+							<label for="name" class="mainform__label">Имя<span class="required-star">*</span></label>
+							<input type="text" class="mainform__control" name="name" id="name" placeholder="" data-validation-error-msg="Обязательное поле" data-validation="required">
+						</div>
+						<div class="mainform__group group-01">
+							<label for="fname" class="mainform__label">Фамилия<span class="required-star">*</span></label>
+							<input type="text" class="mainform__control" name="fname" id="fname" placeholder="" data-validation-error-msg="Обязательное поле" data-validation="required">
+						</div>
+						<div class="mainform__group group-01">
+							<label for="tel" class="mainform__label">Телефон<span class="required-star">*</span></label>
+							<input type="tel" class="mainform__control" name="tel" id="tel" placeholder="" data-validation-error-msg="Обязательное поле" data-validation="required">
+						</div>
+						<div class="mainform__group group-01">
+							<label for="email" class="mainform__label">Email</label>
+							<input type="email" class="mainform__control" name="email" id="email" placeholder="">
+						</div>
+					</div>
+					<div class="form__center">
+						<div class="mainform__group comment">
+							<label for="comment" class="mainform__label">Комментарий</label>
+							<textarea
+								name="comment"
+								id="comment"
+								coll="5"
+								class="mainform__control"
+								placeholder=""
+								>
+							</textarea>
+						</div>
+						<div class="mainform__group file">
+							<label for="file-input" class="mainform__label">Прикрепить резюме</label>
+							<input id="file-input" accept="application/pdf,application/msword" class="mainform__control" type="file" name="file" multiple>							
+							<span>Допустимый формат: pdf, doc</span>
+						</div>
+					</div>
+					
+					<input type="hidden" name="culturecode">
+					<input type="hidden" name="url">
+					<div class="footer__bottom">
+						<div class="mainform__group form-check">  
+							<input class="form__check-input" data-validation="required" type="checkbox" id="check1">  
+							<label class="form__check-label" for="check1">Заполняя форму, я даю согласие на обработку и хранение персональных данных<span class="required-star">*</span></label>  
+						</div> 
+						<div class="form__box">
+							<button type="submit" id="btn" class="btn submit">
+								ОТПРАВИТЬ
+							</button>
+						</div>
+					</div>
+					
+				</div>
+			</form>
+		</div>
 		<section class="insructors">
 			<div class="container">
 				<div class="row">
@@ -97,7 +155,7 @@
 				</div>				
 			</div>
 			<div class="container">
-					<ul class="insructors__list row">
+				<ul class="insructors__list row">
 						<li class="insructors__item ">
 							<img class="insructors__img" src="img/_src/instructor01.jpg" alt="Алексей Смирнов">
 							<div class="insructors__profile">
@@ -114,7 +172,7 @@
 								</ul>
 							</div>
 							<div class="insructors__btnWrap">
-								<a class="insructors__btn" href="#">Смотреть профайл</a>
+								<a class="insructors__btn" href="./instructor.html">Смотреть профайл</a>
 							</div>
 						</li>
 						<li class="insructors__item ">
@@ -133,7 +191,7 @@
 								</ul>
 							</div>
 							<div class="insructors__btnWrap">
-								<a class="insructors__btn" href="#">Смотреть профайл</a>
+								<a class="insructors__btn" href="./instructor.html">Смотреть профайл</a>
 							</div>
 						</li>
 						<li class="insructors__item ">
@@ -152,7 +210,7 @@
 									</ul>
 								</div>
 								<div class="insructors__btnWrap">
-									<a class="insructors__btn" href="#">Смотреть профайл</a>
+									<a class="insructors__btn" href="./instructor.html">Смотреть профайл</a>
 								</div>
 							</li>
 						<li class="insructors__item ">
@@ -171,7 +229,7 @@
 								</ul>
 							</div>
 							<div class="insructors__btnWrap">
-								<a class="insructors__btn" href="#">Смотреть профайл</a>
+								<a class="insructors__btn" href="./instructor.html">Смотреть профайл</a>
 							</div>
 						</li>
 						<li class="insructors__item ">
@@ -190,7 +248,7 @@
 								</ul>
 							</div>
 							<div class="insructors__btnWrap">
-								<a class="insructors__btn" href="#">Смотреть профайл</a>
+								<a class="insructors__btn" href="./instructor.html">Смотреть профайл</a>
 							</div>
 						</li>
 						<li class="insructors__item ">
@@ -209,7 +267,7 @@
 								</ul>
 							</div>
 							<div class="insructors__btnWrap">
-								<a class="insructors__btn" href="#">Смотреть профайл</a>
+								<a class="insructors__btn" href="./instructor.html">Смотреть профайл</a>
 							</div>
 						</li>
 						<li class="insructors__item ">
@@ -228,7 +286,7 @@
 								</ul>
 							</div>
 							<div class="insructors__btnWrap">
-								<a class="insructors__btn" href="#">Смотреть профайл</a>
+								<a class="insructors__btn" href="./instructor.html">Смотреть профайл</a>
 							</div>
 						</li>
 						<li class="insructors__item ">
@@ -247,7 +305,7 @@
 								</ul>
 							</div>
 							<div class="insructors__btnWrap">
-								<a class="insructors__btn" href="#">Смотреть профайл</a>
+								<a class="insructors__btn" href="./instructor.html">Смотреть профайл</a>
 							</div>
 						</li>
 						<li class="insructors__item ">

@@ -6,6 +6,26 @@ $(document).ready(function() {
       .parents(".panel")
       .toggleClass("is-active");
   });
+
+  $.extend($.validator.messages, {
+    required: "Error"
+  });
+
+  $("#form").validate({
+    rules: {
+      name: {
+        required: true
+      },
+      fname: {
+        required: true,
+        fname: true
+      },
+      tel: {
+        required: true
+      }
+    }
+  });
+
   //more-less
   // $('.nav-toggle').click(function () {
   //   var collapse_content_selector = $(this).attr('href');
