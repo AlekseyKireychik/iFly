@@ -1516,6 +1516,370 @@ header .container .burger-menu.is-active .burger-menu__lines:after {
   text-decoration: none;
 }
 
+.main__instructor {
+  background-color: #F7F7F7;
+}
+
+.main__instructor .instructor__banner {
+  background-image: url(../img/_src/instructor.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  min-height: 736px;
+  color: #fff;
+}
+
+.main__instructor .instructor__banner .container__breadcrumb {
+  margin-bottom: 115px;
+}
+
+.main__instructor .instructor__banner .container__breadcrumb .row .nav__breadcrumb a {
+  color: #fff;
+}
+
+.main__instructor .instructor__banner .container__breadcrumb .row .nav__breadcrumb .breadcrumb-item {
+  color: #fff;
+  opacity: 0.8;
+}
+
+.main__instructor .instructor__banner .container__breadcrumb .row .nav__breadcrumb .breadcrumb-item:before {
+  color: #fff;
+  opacity: 0.8;
+}
+
+.main__instructor .instructor__banner .container .instructor__caption {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-bottom: 100px;
+}
+
+.main__instructor .instructor__banner .container .instructor__caption .title {
+  font-size: 54px;
+  line-height: 80px;
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.main__instructor .instructor__banner .container .instructor__caption .instructor__description {
+  font-size: 24px;
+  line-height: 54px;
+  margin-bottom: 0;
+}
+
+.main__instructor .instructor__banner .container .instructor__counters {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 40px;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.main__instructor .instructor__banner .container .instructor__counters .instructor__countersWrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.main__instructor .instructor__banner .container .instructor__counters .instructor__countersWrap .instructor__counterWrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-left: 60px;
+  padding-right: 85px;
+}
+
+.main__instructor .instructor__banner .container .instructor__counters .instructor__countersWrap .instructor__counterWrap .instructor__counter {
+  font-size: 64px;
+  line-height: 54px;
+  position: relative;
+}
+
+.main__instructor .instructor__banner .container .instructor__counters .instructor__countersWrap .instructor__counterWrap .instructor__counter .instructor__counterIcon {
+  position: absolute;
+  left: -45px;
+  top: 0;
+}
+
+.main__instructor .instructor__banner .container .instructor__counters .instructor__countersWrap .instructor__counterWrap .instructor__counterDescription {
+  font-size: 18px;
+  line-height: 54px;
+}
+
+.main__instructor .instructor__banner .container .instructor__counters .instructor__btn {
+  display: inline-block;
+}
+
+.main__instructor .info {
+  background-color: #fff;
+  padding-top: 120px;
+  padding-bottom: 350px;
+}
+
+.main__instructor .info .container .row {
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main__instructor .info .container .row .instructor__description {
+  max-width: 730px;
+}
+
+.main__instructor .info .container .row .instructor__profile {
+  background-color: #142C60;
+  color: #fff;
+  padding: 35px 47px;
+}
+
+.main__instructor .info .container .row .instructor__profile .instructor__subTitle {
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 54px;
+}
+
+.main__instructor .info .container .row .instructor__profile .instructor__feature {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.main__instructor .info .container .row .instructor__profile .instructor__feature .instructor__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main__instructor .info .container .row .instructor__profile .instructor__feature .instructor__item:first-child {
+  padding-right: 100px;
+}
+
+.main__instructor .info .container .row .instructor__profile .instructor__feature .instructor__item .instructor__title {
+  opacity: 0.8;
+  line-height: 24px;
+}
+
+.main__instructor .info .container .row .instructor__profile .instructor__feature .instructor__item .instructor__count {
+  font-weight: 600;
+  line-height: 34px;
+}
+
+.main__instructor .info .container .row .instructor__profile .instructor__list {
+  padding-top: 50px;
+}
+
+.main__instructor .info .container .row .instructor__profile .instructor__list .instructor__item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main__instructor .info .container .row .instructor__profile .instructor__list .instructor__item .instructor__day {
+  line-height: 34px;
+  padding-right: 50px;
+}
+
+.main__instructor .info .container .row .instructor__profile .instructor__list .instructor__item .instructor__time {
+  font-weight: 600;
+  line-height: 34px;
+}
+
+.main__instructor .multimedia {
+  margin-top: -260px;
+  padding-bottom: 100px;
+}
+
+.main__instructor .multimedia .container .row .instructor__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-bottom: 0;
+  padding-bottom: 25px;
+}
+
+.main__instructor .multimedia .container .row .instructor__list .instructor__item {
+  padding-bottom: 40px;
+  margin-bottom: 25px;
+  background-color: #fff;
+  width: 100%;
+  min-height: 488px;
+}
+
+.main__instructor .multimedia .container .row .instructor__list .instructor__item:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 8px 24px rgba(55, 71, 84, 0.08);
+          box-shadow: 0px 8px 24px rgba(55, 71, 84, 0.08);
+}
+
+.main__instructor .multimedia .container .row .instructor__list .instructor__item.instructor-big {
+  -webkit-flex-basis: 841px;
+      -ms-flex-preferred-size: 841px;
+          flex-basis: 841px;
+}
+
+.main__instructor .multimedia .container .row .instructor__list .instructor__item.instructor-small {
+  -webkit-flex-basis: 408px;
+      -ms-flex-preferred-size: 408px;
+          flex-basis: 408px;
+}
+
+.main__instructor .multimedia .container .row .instructor__list .instructor__item .instructor__video {
+  height: 290px;
+  width: 100%;
+}
+
+.main__instructor .multimedia .container .row .instructor__list .instructor__item .instructor__subTitle {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #142C60;
+  padding: 47px 60px 20px 68px;
+  position: relative;
+}
+
+.main__instructor .multimedia .container .row .instructor__list .instructor__item .instructor__subTitle:before {
+  content: url(../img/_src/square.svg);
+  position: absolute;
+  left: 48px;
+  top: 47px;
+}
+
+.main__instructor .multimedia .container .row .instructor__list .instructor__item .instructor__date {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #999EA7;
+  padding-left: 68px;
+  padding-right: 60px;
+}
+
+.main__instructor .multimedia .container .row .instructor__btn {
+  background: #142C60;
+  font-size: 14px;
+  line-height: 34px;
+  padding: 12px 50px 12px 30px;
+  text-transform: uppercase;
+  color: #fff;
+  border: none;
+  border-radius: 0;
+  position: relative;
+  margin: 0 auto;
+}
+
+.main__instructor .multimedia .container .row .instructor__btn:after {
+  position: absolute;
+  content: url(../img/_src/iconPlus.svg);
+  right: 25px;
+  top: 14px;
+}
+
 .main__vacancies {
   background-color: #F7F7F7;
 }
@@ -1929,7 +2293,7 @@ header .container .burger-menu.is-active .burger-menu__lines:after {
 .new__top .container .row .title {
   font-size: 54px;
   line-height: 100px;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .new__top .container .new__btnWrap {
@@ -2110,9 +2474,12 @@ header .container .burger-menu.is-active .burger-menu__lines:after {
   -webkit-flex-basis: 408px;
       -ms-flex-preferred-size: 408px;
           flex-basis: 408px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
 }
 
-.new__posts .container .row .new__list .new__item .new__subTitle {
+.new__posts .container .row .new__list .new__item .new__link .new__subTitle {
   font-weight: 600;
   font-size: 18px;
   line-height: 28px;
@@ -2121,17 +2488,25 @@ header .container .burger-menu.is-active .burger-menu__lines:after {
   position: relative;
 }
 
-.new__posts .container .row .new__list .new__item .new__subTitle:before {
+.new__posts .container .row .new__list .new__item .new__link .new__subTitle:before {
   content: url(../img/_src/square.svg);
   position: absolute;
   left: 48px;
   top: 47px;
 }
 
-.new__posts .container .row .new__list .new__item .new__date {
+.new__posts .container .row .new__list .new__item .new__link .new__date {
   color: #999EA7;
   padding-left: 68px;
   padding-right: 60px;
+}
+
+.new__posts .container .row .new__list .new__item:hover {
+  -webkit-box-shadow: 0px 8px 24px rgba(55, 71, 84, 0.08);
+          box-shadow: 0px 8px 24px rgba(55, 71, 84, 0.08);
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
 }
 
 .main__faq {

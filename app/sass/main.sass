@@ -37,7 +37,6 @@ body
 	font-family: 'Proxima Nova', sans-serif
 	overflow-x: hidden
 	color: $text
-
 .container
 	padding-right: $gutter * .75
 	padding-left: $gutter * .75
@@ -506,6 +505,190 @@ header
 							padding-left: 12px
 						&:hover
 							text-decoration: none
+//insructor page
+.main__instructor
+	background-color: #F7F7F7
+	.instructor__banner
+		background-image: url(../img/_src/instructor.jpg)
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+		position: relative
+		min-height: 736px
+		color: #fff
+		.container__breadcrumb
+			margin-bottom: 115px
+			.row
+				.nav__breadcrumb
+					a
+						color: #fff
+					.breadcrumb-item
+						color: #fff
+						opacity: 0.8
+						&:before
+							color: #fff
+							opacity: 0.8
+		.container
+			.instructor__caption
+				display: flex
+				flex-direction: column
+				align-items: flex-start
+				justify-content: flex-start
+				padding-bottom: 100px
+				.title
+					font-size: 54px
+					line-height: 80px
+					color: #fff
+					margin-bottom: 0
+				.instructor__description
+					font-size: 24px
+					line-height: 54px
+					margin-bottom: 0
+			.instructor__counters
+				display: flex
+				align-items: center
+				justify-content: space-between
+				padding-top: 40px
+				border-top: 1px solid rgba(255, 255, 255, 0.4)
+				.instructor__countersWrap
+					display: flex
+					align-items: center
+					justify-content: flex-start
+					.instructor__counterWrap
+						display: flex
+						flex-direction: column
+						align-items: flex-start
+						justify-content: flex-start
+						padding-left: 60px
+						padding-right: 85px
+						.instructor__counter
+							font-size: 64px
+							line-height: 54px
+							position: relative
+							.instructor__counterIcon
+								position: absolute
+								left: -45px
+								top: 0
+						.instructor__counterDescription
+							font-size: 18px
+							line-height: 54px
+				.instructor__btn
+					display: inline-block
+	.info
+		background-color: #fff
+		padding-top: 120px
+		padding-bottom: 350px
+		.container
+			.row
+				align-items: flex-start
+				justify-content: space-between
+				.instructor__description
+					max-width: 730px
+					.title
+				.instructor__profile
+					background-color: $accentTwo
+					color: #fff
+					padding: 35px 47px
+					.instructor__subTitle
+						font-weight: 600	
+						font-size: 28px
+						line-height: 54px
+					.instructor__feature
+						display: flex
+						align-items: flex-start
+						justify-content: flex-start
+						padding-bottom: 50px
+						border-bottom: 1px solid rgba(255, 255, 255, 0.25)
+						.instructor__item
+							display: flex
+							align-items: flex-start
+							justify-content: flex-start
+							flex-direction: column
+							&:first-child
+								padding-right: 100px
+							.instructor__title
+								opacity: 0.8
+								line-height: 24px
+							.instructor__count
+								font-weight: 600
+								line-height: 34px
+					
+					.instructor__list
+						padding-top: 50px						
+						.instructor__item
+							display: flex
+							align-items: flex-start
+							justify-content: space-between
+							.instructor__day
+								line-height: 34px
+								padding-right: 50px
+							.instructor__time
+								font-weight: 600
+								line-height: 34px
+	.multimedia
+		margin-top: -260px	
+		padding-bottom: 100px
+		.container
+			.row
+				.instructor__list
+					display: flex
+					align-items: flex-start
+					justify-content: space-between
+					flex-wrap: wrap
+					margin-bottom: 0
+					padding-bottom: 25px
+					.instructor__item						
+						padding-bottom: 40px
+						margin-bottom: 25px
+						background-color: #fff
+						width: 100%
+						min-height: 488px
+						&:hover
+							cursor: pointer
+							box-shadow: 0px 8px 24px rgba(55, 71, 84, 0.08)
+						&.instructor-big
+							flex-basis: 841px
+						&.instructor-small
+							flex-basis: 408px
+						.instructor__video
+							height: 290px
+							width: 100%
+						.instructor__subTitle
+							font-weight: 600
+							font-size: 18px
+							line-height: 28px
+							color: $accentTwo
+							padding: 47px 60px 20px 68px
+							position: relative
+							&:before
+								content: url(../img/_src/square.svg)
+								position: absolute
+								left: 48px
+								top: 47px
+						.instructor__date
+							display: flex
+							align-items: center
+							justify-content: space-between
+							color: #999EA7
+							padding-left: 68px
+							padding-right: 60px
+				.instructor__btn
+					background: $accentTwo
+					font-size: 14px
+					line-height: 34px
+					padding: 12px 50px 12px 30px
+					text-transform: uppercase
+					color: #fff
+					border: none
+					border-radius: 0
+					position: relative
+					margin: 0 auto
+					&:after
+						position: absolute
+						content: url(../img/_src/iconPlus.svg)
+						right: 25px
+						top: 14px
+
 //Vacancies page
 .main__vacancies
 	background-color: #F7F7F7
@@ -752,7 +935,7 @@ header
 			.title
 				font-size: 54px
 				line-height: 100px
-				margin-bottom: 40px
+				margin-bottom: 30px
 		.new__btnWrap
 			display: flex
 			align-items: center
@@ -846,23 +1029,28 @@ header
 					background-color: #fff
 					width: 100%
 					flex-basis: 408px
-					.new__img
-					.new__subTitle
-						font-weight: 600
-						font-size: 18px
-						line-height: 28px
-						color: $accentTwo
-						padding: 47px 60px 20px 68px
-						position: relative
-						&:before
-							content: url(../img/_src/square.svg)
-							position: absolute
-							left: 48px
-							top: 47px
-					.new__date
-						color: #999EA7
-						padding-left: 68px
-						padding-right: 60px
+					transition: .3s
+					.new__link
+						.new__img
+						.new__subTitle
+							font-weight: 600
+							font-size: 18px
+							line-height: 28px
+							color: $accentTwo
+							padding: 47px 60px 20px 68px
+							position: relative
+							&:before
+								content: url(../img/_src/square.svg)
+								position: absolute
+								left: 48px
+								top: 47px
+						.new__date
+							color: #999EA7
+							padding-left: 68px
+							padding-right: 60px
+					&:hover
+						box-shadow: 0px 8px 24px rgba(55, 71, 84, 0.08)
+						transition: .3s
 //FAQ page
 .main__faq
 	background-color: #F7F7F7
