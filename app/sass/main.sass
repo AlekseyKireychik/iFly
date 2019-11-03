@@ -524,6 +524,169 @@ header
 								font-size: 18px
 								line-height: 22px
 						.carousel-link
+.programs__home
+	padding-top: 112px	
+	padding-bottom: 105px
+	.container
+		.row
+			.title
+			.programs__list
+				display: flex
+				align-items: flex-start
+				justify-content: space-between
+				flex-wrap: wrap
+				.programs__item
+					background-position: center
+					background-repeat: no-repeat
+					background-size: cover
+					min-height: 488px
+					flex-basis: 407px
+					width: 100%
+					display: flex
+					align-items: flex-end
+					justify-content: flex-end
+					&.item01
+						background-image: url(../img/_src/programs02.jpg)
+					&.item02
+						background-image: url(../img/_src/programs02.jpg)
+					&.item03
+						background-image: url(../img/_src/programs02.jpg)
+					.programs__link
+						display: flex
+						align-items: flex-start
+						justify-content: flex-end
+						flex-direction: column	
+						min-height: 488px
+						flex-basis: 408px
+						width: 100%		
+						&:hover
+							.programs__title
+								margin-bottom: 0
+								transition: .3s
+							.programs__description
+								visibility: visible
+						 		transition: .7s		
+							.programs__wrapBtn
+								.programs__btn
+									background-color: $accent	
+									transition: .3s				
+						.programs__title
+							padding-left: 74px
+							font-weight: bold
+							font-size: 28px
+							line-height: 54px
+							position: relative
+							margin-bottom: -84px
+							transition: .3s
+							&:before
+								content: url(../img/_src/square.svg)
+								position: absolute
+								left: 48px
+								top: -4px
+						.programs__description
+							visibility: hidden
+							padding-left: 74px
+							font-size: 18px
+							line-height: 28px
+							transition: .1s	
+						.programs__wrapBtn
+							text-align: center
+							margin: 40px auto 0
+							width: 100%
+							border-top: 1px solid rgba(255, 255, 255, 0.25)
+							.programs__btn
+								background-color: transparent
+								width: 100%
+								transition: .3s
+.akcii__home
+	padding-top: 120px
+	padding-bottom: 105px
+	.container
+		.row
+			.title
+			.akcii__list
+				display: flex
+				align-items: flex-start
+				justify-content: space-between
+				flex-wrap: wrap
+				.akcii__item
+					background-position: center
+					background-repeat: no-repeat
+					background-size: cover
+					min-height: 488px
+					flex-basis: 407px
+					width: 100%
+					display: flex
+					align-items: flex-end
+					justify-content: flex-end
+					&.akciiSale
+						position: relative
+						&:before
+							content: url(../img/_src/SALE.svg)
+							position: absolute
+							right: 0px
+							top: 51px
+					&.akciiNew
+						position: relative
+						&:before
+							content: url(../img/_src/NEW.svg)
+							position: absolute
+							right: 0px
+							top: 51px
+					&.item01
+						background-image: url(../img/_src/programs02.jpg)
+					&.item02
+						background-image: url(../img/_src/programs02.jpg)
+					&.item03
+						background-image: url(../img/_src/programs02.jpg)
+					.akcii__link
+						display: flex
+						align-items: flex-start
+						justify-content: flex-end
+						flex-direction: column	
+						min-height: 488px
+						flex-basis: 408px
+						width: 100%		
+						&:hover
+							.akcii__title
+								margin-bottom: 0
+								transition: .3s
+							.akcii__description
+								visibility: visible
+						 		transition: .7s	
+							.akcii__wrapBtn
+								.akcii__btn
+									background-color: $accent	
+									transition: .3s		
+						.akcii__title
+							padding-left: 74px
+							font-weight: bold
+							font-size: 28px
+							line-height: 54px
+							position: relative
+							margin-bottom: -84px
+							transition: .3s
+							&:before
+								content: url(../img/_src/square.svg)
+								position: absolute
+								left: 48px
+								top: -4px
+						.akcii__description
+							visibility: hidden
+							padding-left: 74px
+							padding-right: 45px
+							font-size: 18px
+							line-height: 28px
+							transition: .1s	
+						.akcii__wrapBtn
+							text-align: center
+							margin: 40px auto 0
+							width: 100%
+							border-top: 1px solid rgba(255, 255, 255, 0.25)
+							.akcii__btn
+								background-color: transparent
+								width: 100%
+								transition: .3s
 .order__home
 	background-image: url(../img/_src/orderBg.jpg)
 	background-position: center
@@ -570,6 +733,8 @@ header
 					padding-right: 28px
 					+media-breakpoint-down(xs)
 						padding-right: 15px
+					&:last-child
+						padding-right: 0
 					.seti__link
 						justify-content: center
 						align-items: center
@@ -579,9 +744,8 @@ header
 						min-height: 54px
 						transition: .3s
 						&:hover
-							background-color: $accent
+							background-color: #f2f2f2
 							transition: .3s
-						.seti__icon
 .fon
 	padding: 0 0 255px
 	background: #F7F7F7
