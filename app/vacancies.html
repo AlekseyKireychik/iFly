@@ -23,48 +23,98 @@
   </head>
 
   <body>
-    <header>
-      <div class="container">
-        <div class="header row">
-          <div class="header__logo">
-            <a href="/">
-              <img class="" src="img/_src/logo.png" alt="iFly" />
+      <header>		
+        <div class="container container__header ">
+          <div class="header">
+            <div class="header__logo">
+              <a href="/">
+                <img class="" src="img/_src/logo.png" alt="iFly">
+              </a>
+            </div>
+            <nav class="header__nav">
+              <ul class="header__list-nav">
+                <li class="header__item">
+                  <a href="#" class="header__link">Новичкам</a>
+                  <ul class="header__subList">
+                    <li class="header__item"><a class="header__subLink" href="">Что вас ждет</a></li>
+                    <li class="header__item"><a class="header__subLink" href="">Программы полетов</a></li>
+                    <li class="header__item"><a class="header__subLink" href="">Подарочный сертификат</a></li>
+                    <li class="header__item"><a class="header__subLink" href="">Стать спортсменом</a></li>
+                    <li class="header__item"><a class="header__subLink" href="">Вопрос-ответ</a></li>
+                  </ul>
+                </li>
+                <li class="header__item">
+                  <a href="./" class="header__link">Спортсменам</a>
+                  <ul class="header__subList">
+                    <li class="header__item"><a class="header__subLink" href="">Что вас ждет</a></li>
+                    <li class="header__item"><a class="header__subLink" href="">Программы полетов</a></li>
+                    <li class="header__item"><a class="header__subLink" href="">Подарочный сертификат</a></li>
+                    <li class="header__item"><a class="header__subLink" href="">Стать спортсменом</a></li>
+                    <li class="header__item"><a class="header__subLink" href="">Вопрос-ответ</a></li>
+                  </ul>
+                </li>
+                <li class="header__item">
+                  <a href="./" class="header__link">Корпоративы</a>
+                  <ul class="header__subList">
+                    <li class="header__item"><a class="header__subLink" href="">Что вас ждет</a></li>
+                    <li class="header__item"><a class="header__subLink" href="">Программы полетов</a></li>
+                    <li class="header__item"><a class="header__subLink" href="">Подарочный сертификат</a></li>
+                    <li class="header__item"><a class="header__subLink" href="">Стать спортсменом</a></li>
+                    <li class="header__item"><a class="header__subLink" href="">Вопрос-ответ</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>	
+            <div class="header__function">
+              <a class="header__phone" href="tel:+375441111111">+375 44 111-11-11</a>
+              <a class="header__request btn" href="#">Полетели</a>
+              <div class="header__profile">
+                <a class="lang__btn" href="#">ru</a>
+                <a class="profile__container" href="#">
+                  <img class="profile__logo" src="img/_src/profileicon.svg" alt="profile icon">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="burger-menu">
+            <a href="#" class="burger-menu__button">
+              <span class="burger-menu__lines"></span>
             </a>
           </div>
-          <nav class="header__nav">
-            <ul class="header__list-nav">
-              <li class="header__item">
-                <a href="./" class="header__link">Программы полетов</a>
+          <nav id="nav-menu" class="nav">
+            <div class="menu__wrap">
+              <ul class="menu__list">Новости
+                <li class="menu__item"><a class="menu__link" href="./news.html">Акции и скидки</a></li>
+                <li class="menu__item"><a class="menu__link" href="./news.html">Новости</a></li>
+              </ul>
+              <ul class="menu__list">О нас
+                <li class="menu__item"><a class="menu__link" href="">iFLY Minsk</a></li>
+                <li class="menu__item"><a class="menu__link" href="">Как это работает</a></li>
+                <li class="menu__item"><a class="menu__link" href="./instructors.html">Наша команда</a></li>
+                <li class="menu__item"><a class="menu__link" href="">Виртуальный тур</a></li>
+                <li class="menu__item"><a class="menu__link" href="">Фото и видео</a></li>
+                <li class="menu__item"><a class="menu__link" href="./contacts.html">Контакты</a></li>
+              </ul>
+            </div>
+            <ul class="seti__list">
+              <li class="seti__item"><a class="seti__link" href=""><img class="seti__icon" src="img/_src/instagramBlack.svg" alt="Мы в инстаграм"></a></li>
+              <li class="seti__item"><a class="seti__link" href=""><img class="seti__icon" src="img/_src/FacebookBlack.svg" alt="Мы в фэйсбук"></a></li>
+              <li class="seti__item"><a class="seti__link" href=""><img class="seti__icon" src="img/_src/youtubeBlack.svg" alt="Мы в ютуб"></a></li>							
+            </ul>	
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <a class="contacts__link contacts__phone" href="tel:+375441111111">+375 44 111-11-11</a>
               </li>
-              <li class="header__item">
-                <a href="./" class="header__link">Подарочные сертификаты</a>
+              <li class="contacts__item">
+                <a class="contacts__link contacts__mail" href="mailto:info@iflyminsk.by">info@iflyminsk.by</a>
               </li>
-              <li class="header__item">
-                <a href="./" class="header__link">Новости и акции</a>
+              <li class="contacts__item">
+                <a class="contacts__link contacts__map" href="./contacts.html">Тимирязева 74</a>
               </li>
             </ul>
           </nav>
-          <div class="header__function">
-            <a class="header__request btn" href="#">Оставить заявку</a>
-            <div class="header__profile">
-              <a class="profile__container" href="#">
-                <img
-                  class="profile__logo"
-                  src="img/_src/profileicon.svg"
-                  alt="profile icon"
-                />
-              </a>
-              <span class="profile__name"></span>
-            </div>
-          </div>
+          <div class="burger-menu__overlay"></div>			
         </div>
-        <div class="burger-menu">
-          <a href="#" class="burger-menu__button">
-            <span class="burger-menu__lines"></span>
-          </a>
-        </div>
-        <div class="burger-menu__overlay"></div>
-      </div>
     </header>
     <main class="main__vacancies">
       <section class="vacancies__banner">
