@@ -524,6 +524,8 @@ header
 								font-size: 18px
 								line-height: 22px
 						.carousel-link
+.home
+	background: #E3E1E1
 .programs__home
 	padding-top: 112px	
 	padding-bottom: 105px
@@ -713,7 +715,7 @@ header
 				+media-breakpoint-down(xs)
 					margin-left: 20px
 .seti__home
-	padding: 50px 0px
+	padding: 120px 0px
 	background: #F7F7F7
 	.container
 		.row
@@ -746,6 +748,67 @@ header
 						&:hover
 							background-color: #f2f2f2
 							transition: .3s
+	.seti__lenta
+		display: flex
+		align-items: flex-start
+		justify-content: space-between
+		.seti__item
+			flex-basis: 408px
+			width: 100%
+			background-color: #fff
+			padding-bottom: 30px
+			.seti__top
+				display: flex
+				align-items: center
+				justify-content: space-between
+				.seti__topGroup
+					display: flex
+					align-items: center
+					justify-content: flex-start
+					padding: 20px 0 20px 36px
+					.seti__avatar
+					.seti__name
+						padding-left: 17px
+						font-weight: bold
+						font-size: 18px
+						line-height: 36px
+						color: $accentTwo
+				.seti__time
+					padding-right: 32px
+					font-size: 16px
+					line-height: 36px
+					color: #999EA7
+			.seti__img
+			.seti__description
+				padding: 32px 35px 10px
+			.seti__bottom
+				display: flex
+				align-items: center
+				justify-content: space-between
+				padding: 0 35px
+				.seti__group					
+					font-size: 16px
+					line-height: 24px
+					color: #999EA7
+					.seti__comment
+						padding-left: 26px
+						position: relative
+						&:before
+							content: url(../img/_src/forum.svg)
+							position: absolute
+							left: 0px
+							top: 1px
+					.seti__like
+						padding-left: 26px
+						position: relative
+						&:before
+							content: url(../img/_src/like.svg)
+							position: absolute
+							left: 0px
+							top: -1px
+						
+				.seti__link
+					.seti__logo
 .fon
 	padding: 0 0 255px
 	background: #F7F7F7
