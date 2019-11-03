@@ -63,12 +63,10 @@ $(document).ready(function() {
   // });
 
   //slider
-  // $(".slider").slick({
-  //   dots: false,
-  //   arrows: false,
+  // $(".reviews-slider").slick({
+  //   dots: true,
+  //   arrows: true,
   //   speed: 300,
-  //   slidesToShow: 1,
-  //   autoplay: true,
-  //   autoplaySpeed: 4000
+  //   slidesToShow: 1
   // });
 });
