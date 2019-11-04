@@ -26,9 +26,9 @@
   </head>
 
   <body>
-      <header>		
+      <header>
         <div class="container container__header ">
-          <div class="header">
+          <div class="header row">
             <div class="header__logo">
               <a href="/">
                 <img class="" src="img/_src/logo.png" alt="iFly">
@@ -70,7 +70,7 @@
             </nav>	
             <div class="header__function">
               <a class="header__phone" href="tel:+375441111111">+375 44 111-11-11</a>
-              <a class="header__request btn" href="#">Полетели</a>
+              <a class="header__request btn register" href="#">Полетели</a>
               <div class="header__profile">
                 <a class="lang__btn" href="#">ru</a>
                 <a class="profile__container" href="#">
@@ -120,6 +120,70 @@
         </div>
       </header>
     <main>
+		<div class="container main__form">
+			<form id="form" class="form">
+				<div class="wrap__btnClose">
+					<h2 class="title">Связаться с нами</h2>
+					<div class="form__btnClose">
+						<span class="form__line"></span>
+					</div>
+				</div>
+				<div class="formWrap">
+					<div class="form__top">
+						<div class="mainform__group group-01">
+							<label for="name" class="mainform__label">Имя<span class="required-star">*</span></label>
+							<input type="text" class="mainform__control" name="name" id="name" placeholder="" data-validation-error-msg="Обязательное поле" data-validation="required">
+						</div>
+						<div class="mainform__group group-01">
+							<label for="fname" class="mainform__label">Фамилия<span class="required-star">*</span></label>
+							<input type="text" class="mainform__control" name="fname" id="fname" placeholder="" data-validation-error-msg="Обязательное поле" data-validation="required">
+						</div>
+						<div class="mainform__group group-01">
+							<label for="tel" class="mainform__label">Телефон<span class="required-star">*</span></label>
+							<input type="tel" class="mainform__control" name="tel" id="tel" placeholder="" data-validation-error-msg="Обязательное поле" data-validation="required">
+						</div>
+						<div class="mainform__group group-01">
+							<label for="email" class="mainform__label">Email</label>
+							<input type="email" class="mainform__control" name="email" id="email" placeholder="">
+						</div>
+					</div>
+					<div class="form__center">
+						<div class="mainform__group comment">
+							<label for="comment" class="mainform__label">Комментарий</label>
+							<textarea
+								name="comment"
+								id="comment"
+								coll="5"
+								class="mainform__control"
+								placeholder=""
+								>
+							</textarea>
+						</div>
+						<div class="mainform__group file">
+							<label for="file-input" class="mainform__label">Прикрепить резюме</label>
+							<input id="file-input" accept="application/pdf,application/msword" class="mainform__control" type="file" name="file" multiple>							
+							<span>Допустимый формат: pdf, doc</span>
+						</div>
+					</div>
+					
+					<input type="hidden" name="culturecode">
+					<input type="hidden" name="url">
+					<div class="footer__bottom">
+						<div class="mainform__group form-check">  
+							<input class="form__check-input" data-validation="required" type="checkbox" id="check1">  
+							<label class="form__check-label" for="check1">Заполняя форму, я даю согласие на обработку и хранение персональных данных<span class="required-star">*</span></label>  
+						</div> 
+						<div class="form__box">
+							<button type="submit" id="btn" class="btn submit">
+								ОТПРАВИТЬ
+							</button>
+						</div>
+					</div>
+					
+				</div>
+			</form>
+		</div>
+		<div class="overlay"></div>	
       <section class="new__top">
         <div class="container container__breadcrumb">
           <div class="row">
@@ -141,7 +205,7 @@
             <h1 class="title">Итоги чемпионата России по RISC-2019</h1>
           </div>
           <div class="row new__btnWrap">
-            <a href="./new.html" class="new__btn">Новости</a>
+            <a href="./news.html" class="new__btn">Новости</a>
             <span class="new__date">11 октября 2019</span>
           </div>
         </div>
@@ -337,104 +401,104 @@
         <div class="row">
           <a href="/"><img src="img/_src/logo-footer.png" alt="iFly"/></a>
         </div>
-      </div>
-      <div class="container">
-        <nav class="footer__nav row">
+        </div>
+        <div class="container">
+          <nav class="footer__nav row">
           <ul class="footer__list">
             <li class="footer__item">
-              <a class="footer__link" href="./">Программы полетов</a>
+            <a class="footer__link" href="./">Программы полетов</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="./">Новости и акции</a>
+            <a class="footer__link" href="./news.html">Новости и акции</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="./">Подарочный сертификат</a>
+            <a class="footer__link" href="./">Подарочный сертификат</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="./contacts.html">Контакты</a>
+            <a class="footer__link" href="./contacts.html">Контакты</a>
             </li>
           </ul>
           <ul class="footer__list">
             <li class="footer__item">
-              <a class="footer__link" href="./instructors.html">Инструкторы</a>
+            <a class="footer__link" href="./instructors.html">Инструкторы</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="./vacancies.html">Вакансии</a>
+            <a class="footer__link" href="./vacancies.html">Вакансии</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="./">Руководство</a>
+            <a class="footer__link" href="./history.html">История</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="./">Руководство</a>
+            <a class="footer__link" href="./faq.html">FAQ</a>
             </li>
           </ul>
           <ul class="footer__list law">
             <li class="footer__item">
-              <a class="footer__link" href="./">Пользовательское соглашение</a>
+            <a class="footer__link" href="./">Пользовательское соглашение</a>
             </li>
             <li class="footer__item">
-              <a class="footer__link" href="./">Юридическая информация</a>
+            <a class="footer__link" href="./">Юридическая информация</a>
             </li>
             <li class="footer__item">
-              <ul class="footer__sublist">
-                <li class="footer__item">
-                  <a class="footer__link" href=""
-                    ><img
-                      class="footer__img"
-                      src="img/_src/Vk.svg"
-                      alt="Мы в контакте"
-                  /></a>
-                </li>
-                <li class="footer__item">
-                  <a class="footer__link" href=""
-                    ><img
-                      class="footer__img"
-                      src="img/_src/Facebook.svg"
-                      alt="Мы в фэйсбук"
-                  /></a>
-                </li>
-                <li class="footer__item">
-                  <a class="footer__link" href=""
-                    ><img
-                      class="footer__img"
-                      src="img/_src/youtube.svg"
-                      alt="Мы в ютуб"
-                  /></a>
-                </li>
-                <li class="footer__item">
-                  <a class="footer__link" href=""
-                    ><img
-                      class="footer__img"
-                      src="img/_src/instagram.svg"
-                      alt="Мы в инстаграм"
-                  /></a>
-                </li>
-              </ul>
+            <ul class="footer__sublist">
+              <li class="footer__item">
+              <a class="footer__link" href=""
+                ><img
+                class="footer__img"
+                src="img/_src/Vk.svg"
+                alt="Мы в контакте"
+              /></a>
+              </li>
+              <li class="footer__item">
+              <a class="footer__link" href=""
+                ><img
+                class="footer__img"
+                src="img/_src/Facebook.svg"
+                alt="Мы в фэйсбук"
+              /></a>
+              </li>
+              <li class="footer__item">
+              <a class="footer__link" href=""
+                ><img
+                class="footer__img"
+                src="img/_src/youtube.svg"
+                alt="Мы в ютуб"
+              /></a>
+              </li>
+              <li class="footer__item">
+              <a class="footer__link" href=""
+                ><img
+                class="footer__img"
+                src="img/_src/instagram.svg"
+                alt="Мы в инстаграм"
+              /></a>
+              </li>
+            </ul>
             </li>
           </ul>
-        </nav>
-      </div>
-      <div class="container">
-        <div class="footer__bottom  row">
+          </nav>
+        </div>
+        <div class="container">
+          <div class="footer__bottom  row">
           <span class="footer__copiryte">
             <span class="footer__description">2019 &#169; iFLY.</span>
             <span class="footer__description">Все права защищены.</span>
           </span>
           <span>Разработчик сайта <a href="#">- Gik-Media</a></span>
+          </div>
         </div>
-      </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"
     ></script>
     <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"
     ></script>
     <script src="js/scripts.min.js"></script>
   </body>

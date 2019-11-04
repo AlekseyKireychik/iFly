@@ -37,6 +37,7 @@ body
 	font-family: 'Proxima Nova', sans-serif
 	overflow-x: hidden
 	color: $text
+	
 .container
 	padding-right: $gutter * .75
 	padding-left: $gutter * .75
@@ -96,12 +97,66 @@ input.error
 			left: 128px
 			&:before
 				content: url(../img/_src/arrowSliderRight.svg)
-
+.overlay
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+	z-index: 999
+	background-color: rgba(0, 0, 0, 0.8)
+	display: none
+	&.is-active
+		display: block
 .main__form
+	background-color: #fff
+	position: absolute
+	top: 0
+	right: 0
+	left: 0
+	z-index: 1000
+	display: none
+	&.is-active
+		display: block
 	.form
 		padding: 95px 100px
-		.title
+		.wrap__btnClose
+			display: flex
+			align-items: center
+			justify-content: space-between
+			.title
+				margin-bottom: 0
+			.form__btnClose
+				position: relative
+				cursor: pointer
+				padding: 15px
+				.form__line
+					position: absolute
+					width: 24px
+					height: 2px
+					top: 47%
+					right: 50%
+					transform: translate(50%)
+					background-color: transparent
+					&::after
+						content: ""
+						position: absolute
+						width: 24px
+						height: 2px
+						background-color: #E72D2D
+						top: 0px
+						transform: rotate(-45deg)
+					&::before
+						content: ""
+						position: absolute
+						width: 24px
+						height: 2px
+						background-color: #E72D2D
+						top: 0px
+						transform: rotate(45deg)
+						
 		.formWrap
+			padding-top: 60px
 			.form__top
 				display: flex
 				align-items: flex-start
@@ -914,52 +969,76 @@ header
 							line-height: 24px
 //insructors page
 .insructorsPage
-	.carousel
-		.carousel-inner
-			.container__breadcrumb
+	.container__breadcrumb
+		position: relative
+		padding-top: 0
+		.nav__breadcrumb
+			position: absolute
+			left: 0
+			top: 70px
+			z-index: 98
+			.breadcrumb
+				background-color: transparent
+				.breadcrumb-item
+					a
+						color: #fff
+					&:before
+						color: #fff
+				.breadcrumb-item.active
+					color: #fff
+	.insructors__slider
+		position: relative
+		.insructors__sliders
+			margin-bottom: 0
+			.insructors__item
 				position: relative
-				.nav__breadcrumb
-					position: absolute
-					top: 60px
-					left: 0
-					z-index: 98
-					.breadcrumb
-						background-color: transparent
-						.breadcrumb-item
-							a
-								color: #fff
-							&:before
-								color: #fff
-						.breadcrumb-item.active
-							color: #fff
-			.carousel-item
-				position: relative
-				.carousel-img
-					width: 100%
-					object-fit: cover
+				background-position: center
+				background-repeat: no-repeat
+				background-size: cover
+				min-height: 752px
+				color: #fff
 				.container
-					.carousel-caption
+					text-align: left
+					padding: 25px 25px 25px 0
+					transform: translateY(50%)
+					.insructors-title
+						font-size: 54px
+						line-height: 100px
+						font-weight: 600
 						text-align: left
-						padding: 25px
-						left: 2%
-						right: 5%
-						bottom: 50%
-						transform: translateY(50%)
-						.carousel-title
-							font-size: 54px
-							line-height: 100px
-							font-weight: 600
-							text-align: left
-							color: #FFFFFF
-						.carousel-text
-							font-size: 24px
-							line-height: 34px
-							color: #FFFFFF
-							margin-bottom: 65px
-						.carousel-link
+						color: #FFFFFF
+						padding-top: 45px;
+					.insructors-text
+						font-size: 24px
+						line-height: 34px
+						color: #FFFFFF
+						margin-bottom: 65px
+		.container__dots	
+			position: relative
+			margin-top: -125px	
+			.insructors__list
+				width: 100%
+				display: flex
+				align-items: center
+				justify-content: space-between
+				border-bottom: 1px solid rgba(255, 255, 255, 0.4)
+				.insructors__item
+					padding-bottom: 28px
+					.insructors__dots
+						font-weight: 600
+						font-size: 18px
+						line-height: 18px
+						color: #fff
+						transition: color .3s
+						padding: 30px 24px
+						&:hover
+							color: #ffffff
+							transition: color .3s
+							border-bottom: 2px solid #E72D2D
+						
 .insructors
 	background: #F7F7F7
-	padding: 115px 0 120px
+	padding: 145px 0 120px
 	.container
 		.insructors__list
 			display: flex
@@ -1663,7 +1742,7 @@ header
 					align-items: center
 					justify-content: space-between
 					border-bottom: 1px solid rgba(255, 255, 255, 0.4)
-					padding-bottom: 49px
+					padding-bottom: 48px
 					.history__item
 						.history__dots
 							font-weight: 600
