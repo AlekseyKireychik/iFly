@@ -1,25 +1,60 @@
 $(document).ready(function() {
+  //slider
+  $(".reviews-slider").slick({
+    dots: false,
+    arrows: true,
+    speed: 300,
+    slidesToShow: 1
+  });
+
+  let $slider = $(".slider");
+
+  if ($slider.length) {
+    let currentSlide;
+    let slidesCount;
+    let sliderCounter = document.createElement("div");
+    sliderCounter.classList.add("slider__counter");
+
+    let updateSliderCounter = function(slick, currentIndex) {
+      currentSlide = slick.slickCurrentSlide() + 1;
+      slidesCount = slick.slideCount;
+      $(sliderCounter).text(currentSlide + "/" + slidesCount);
+    };
+
+    $slider.on("init", function(event, slick) {
+      $slider.append(sliderCounter);
+      updateSliderCounter(slick);
+    });
+
+    $slider.on("afterChange", function(event, slick, currentSlide) {
+      updateSliderCounter(slick, currentSlide);
+    });
+
+    $slider.slick();
+  }
   //nav-menu
   $(".burger-menu").on("click", function(event) {
     event.preventDefault();
     $("#nav-menu").toggleClass("is-active");
     $(".burger-menu").toggleClass("is-active");
-    $("#nav-menu").on('mouseenter', function() {
+    $("#nav-menu").on("mouseenter", function() {
       $(this).addClass("is-active");
     });
-    $("#nav-menu").on('mouseleave', function() {
+    $("#nav-menu").on("mouseleave", function() {
       $(this).removeClass("is-active");
       $(".burger-menu").removeClass("is-active");
     });
   });
 
-  $(".header__link").hover (function(event) {
+  $(".header__link").hover(function(event) {
     event.preventDefault();
-    $(this).siblings(".header__subList").toggleClass("is-active");
-    $(".header__subList").on('mouseenter', function() {
+    $(this)
+      .siblings(".header__subList")
+      .toggleClass("is-active");
+    $(".header__subList").on("mouseenter", function() {
       $(this).addClass("is-active");
     });
-    $(".header__subList").on('mouseleave', function() {
+    $(".header__subList").on("mouseleave", function() {
       $(this).removeClass("is-active");
     });
   });
@@ -27,7 +62,9 @@ $(document).ready(function() {
   // accordion FAQ page
   $(".faq__btn").on("click", function() {
     $(".panel").removeClass("is-active");
-    $(this).parents(".panel").toggleClass("is-active");
+    $(this)
+      .parents(".panel")
+      .toggleClass("is-active");
   });
 
   // $.extend($.validator.messages, {
@@ -60,13 +97,5 @@ $(document).ready(function() {
   //           toggle_switch.html('Read Less');
   //       }
   //   });
-  // });
-
-  //slider
-  // $(".reviews-slider").slick({
-  //   dots: true,
-  //   arrows: true,
-  //   speed: 300,
-  //   slidesToShow: 1
   // });
 });

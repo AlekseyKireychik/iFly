@@ -1670,7 +1670,9 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 
 .programs__home .container .row .programs__list .programs__item .programs__link:hover .programs__description {
   visibility: visible;
-  visibility-transition: .7s;
+  -webkit-transition: .7s;
+  -o-transition: .7s;
+  transition: .7s;
 }
 
 .programs__home .container .row .programs__list .programs__item .programs__link:hover .programs__wrapBtn .programs__btn {
@@ -1838,7 +1840,9 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 
 .akcii__home .container .row .akcii__list .akcii__item .akcii__link:hover .akcii__description {
   visibility: visible;
-  visibility-transition: .7s;
+  -webkit-transition: .7s;
+  -o-transition: .7s;
+  transition: .7s;
 }
 
 .akcii__home .container .row .akcii__list .akcii__item .akcii__link:hover .akcii__wrapBtn .akcii__btn {
@@ -2826,8 +2830,10 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 .main__instructor .reviews .container .row .instructor__list {
+  position: relative;
   background: #FFF;
   padding: 84px 100px;
+  max-width: 1272px;
 }
 
 .main__instructor .reviews .container .row .instructor__list .instructor__item {
@@ -2876,6 +2882,40 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 
 .main__instructor .reviews .container .row .instructor__list .instructor__item .instructor__itemWrap .instructor__description {
   opacity: 0.8;
+}
+
+.main__instructor .reviews .container .row .instructor__list .slider__counter {
+  position: absolute;
+  bottom: -114px;
+  left: 64px;
+  font-size: 16px;
+  line-height: 34px;
+  color: #99A4AF;
+  padding: 15px 18px;
+}
+
+.main__instructor .reviews .container .row .instructor__list .slick-arrow {
+  top: 120%;
+  width: 64px;
+  height: 64px;
+  border: 1px solid #E5E7E8;
+}
+
+.main__instructor .reviews .container .row .instructor__list .slick-arrow.slick-prev {
+  left: 0px;
+}
+
+.main__instructor .reviews .container .row .instructor__list .slick-arrow.slick-prev:before {
+  content: url(../img/_src/arrowSliderLeft.svg);
+}
+
+.main__instructor .reviews .container .row .instructor__list .slick-arrow.slick-next {
+  right: auto;
+  left: 128px;
+}
+
+.main__instructor .reviews .container .row .instructor__list .slick-arrow.slick-next:before {
+  content: url(../img/_src/arrowSliderRight.svg);
 }
 
 .main__vacancies {
@@ -3529,7 +3569,12 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 
 .faq .panel-group {
   width: 100%;
-  padding: 0 23px;
+}
+
+@media (max-width: 575.98px) {
+  .faq .panel-group {
+    padding: 0 23px;
+  }
 }
 
 .faq .panel-group .panel {

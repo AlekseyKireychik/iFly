@@ -3,7 +3,6 @@
 @import libs
 @import media
 
-
 ::placeholder
 	color: #666
 
@@ -77,7 +76,7 @@ input.error
 	.form
 		padding: 95px 100px
 		.title
-		.formWrap			
+		.formWrap
 			.form__top
 				display: flex
 				align-items: flex-start
@@ -102,7 +101,7 @@ input.error
 						padding-left: 20px
 						.required-star
 							color: $accent
-					.mainform__control	
+					.mainform__control
 						font-size: 16px
 						line-height: 19px
 						color: $accentTwo
@@ -112,7 +111,7 @@ input.error
 						padding: 15px 20px
 						border-bottom: 1px solid #E5E7E8
 						&:focus
-							border-bottom: 1px solid $accentTwo 
+							border-bottom: 1px solid $accentTwo
 						&:invalid
 							border-bottom: 1px solid $accent
 
@@ -135,16 +134,16 @@ input.error
 						position: relative
 						z-index: 10
 						padding-top: 25px
-						.mainform__label	
+						.mainform__label
 							padding-left: 40px
 							padding-bottom: 20px
-							border-bottom: 1px solid #E5E7E8	
+							border-bottom: 1px solid #E5E7E8
 						.mainform__control
 							width: 0.1px
 							height: 0.1px
 							opacity: 0
 							position: absolute
-							z-index: -10		
+							z-index: -10
 						&:before
 							position: absolute
 							content: url(../img/_src/file.svg)
@@ -177,7 +176,7 @@ input.error
 					margin-bottom: 20px
 					.form__check-label
 						font-size: 16px
-						line-height: 24px						
+						line-height: 24px
 						padding-left: 20px
 						color: $accentTwo
 						margin-bottom: 20px
@@ -201,13 +200,11 @@ input.error
 						vertical-align: middle
 						border: 2px solid $accentTwo
 					.form__check-input:checked + label:before
-						background: $accent	
+						background: $accent
 						border: 2px solid $accent
-						
 
-			
 .container__breadcrumb
-	padding-top: 65px	
+	padding-top: 65px
 	.nav__breadcrumb
 		z-index: 999
 		.breadcrumb
@@ -281,13 +278,13 @@ header
 				display: flex
 				justify-content: space-between
 				align-items: center
-				padding: 25px 0px	
-				+media-breakpoint-down(xs)		
+				padding: 25px 0px
+				+media-breakpoint-down(xs)
 					padding: 23px 0px
 				.header__logo
 					padding: 10px 0px
 					+media-breakpoint-down(xs)
-						padding: 0	
+						padding: 0
 					img
 						+media-breakpoint-down(xs)
 							max-width: 140px
@@ -444,7 +441,7 @@ header
 						font-size: 16px
 						line-height: 34px
 						font-weight: 600
-						
+
 						.menu__item
 							padding-left: 15px
 							.menu__link
@@ -535,7 +532,7 @@ header
 .home
 	background: #E3E1E1
 .programs__home
-	padding-top: 112px	
+	padding-top: 112px
 	padding-bottom: 105px
 	.container
 		.row
@@ -565,21 +562,21 @@ header
 						display: flex
 						align-items: flex-start
 						justify-content: flex-end
-						flex-direction: column	
+						flex-direction: column
 						min-height: 488px
 						flex-basis: 408px
-						width: 100%		
+						width: 100%
 						&:hover
 							.programs__title
 								margin-bottom: 0
 								transition: .3s
 							.programs__description
 								visibility: visible
-						 		transition: .7s		
+								transition: .7s
 							.programs__wrapBtn
 								.programs__btn
-									background-color: $accent	
-									transition: .3s				
+									background-color: $accent
+									transition: .3s
 						.programs__title
 							padding-left: 74px
 							font-weight: bold
@@ -598,7 +595,7 @@ header
 							padding-left: 74px
 							font-size: 18px
 							line-height: 28px
-							transition: .1s	
+							transition: .1s
 						.programs__wrapBtn
 							text-align: center
 							margin: 40px auto 0
@@ -653,21 +650,21 @@ header
 						display: flex
 						align-items: flex-start
 						justify-content: flex-end
-						flex-direction: column	
+						flex-direction: column
 						min-height: 488px
 						flex-basis: 408px
-						width: 100%		
+						width: 100%
 						&:hover
 							.akcii__title
 								margin-bottom: 0
 								transition: .3s
 							.akcii__description
 								visibility: visible
-						 		transition: .7s	
+								transition: .7s
 							.akcii__wrapBtn
 								.akcii__btn
-									background-color: $accent	
-									transition: .3s		
+									background-color: $accent
+									transition: .3s
 						.akcii__title
 							padding-left: 74px
 							font-weight: bold
@@ -687,7 +684,7 @@ header
 							padding-right: 45px
 							font-size: 18px
 							line-height: 28px
-							transition: .1s	
+							transition: .1s
 						.akcii__wrapBtn
 							text-align: center
 							margin: 40px auto 0
@@ -794,7 +791,7 @@ header
 				align-items: center
 				justify-content: space-between
 				padding: 0 35px
-				.seti__group					
+				.seti__group
 					font-size: 16px
 					line-height: 24px
 					color: #999EA7
@@ -814,7 +811,7 @@ header
 							position: absolute
 							left: 0px
 							top: -1px
-						
+
 				.seti__link
 					.seti__logo
 .fon
@@ -1083,7 +1080,7 @@ header
 					color: #fff
 					padding: 35px 47px
 					.instructor__subTitle
-						font-weight: 600	
+						font-weight: 600
 						font-size: 28px
 						line-height: 54px
 					.instructor__feature
@@ -1105,9 +1102,9 @@ header
 							.instructor__count
 								font-weight: 600
 								line-height: 34px
-					
+
 					.instructor__list
-						padding-top: 50px						
+						padding-top: 50px
 						.instructor__item
 							display: flex
 							align-items: flex-start
@@ -1119,7 +1116,7 @@ header
 								font-weight: 600
 								line-height: 34px
 	.multimedia
-		margin-top: -260px	
+		margin-top: -260px
 		padding-bottom: 100px
 		.container
 			.row
@@ -1130,7 +1127,7 @@ header
 					flex-wrap: wrap
 					margin-bottom: 0
 					padding-bottom: 25px
-					.instructor__item						
+					.instructor__item
 						padding-bottom: 40px
 						margin-bottom: 25px
 						background-color: #fff
@@ -1186,15 +1183,17 @@ header
 		.container
 			.row
 				.instructor__list
+					position: relative
 					background: #FFF
 					padding: 84px 100px
-					.instructor__item		
-						display: block				
+					max-width: 1272px
+					.instructor__item
+						display: block
 						.instructor__itemWrap
 							display: flex
 							align-items: flex-start
 							justify-content: flex-start
-							flex-direction: column	
+							flex-direction: column
 							.instructor__text
 								padding-top: 67px
 								font-size: 18px
@@ -1211,6 +1210,29 @@ header
 								line-height: 28px
 							.instructor__description
 								opacity: 0.8
+					.slider__counter
+						position: absolute
+						bottom: -114px
+						left: 64px
+						font-size: 16px
+						line-height: 34px
+						color: #99A4AF
+						padding: 15px 18px
+					.slick-arrow
+						top: 120%
+						width: 64px
+						height: 64px
+						border: 1px solid #E5E7E8
+						&.slick-prev
+							left: 0px
+							&:before
+								content: url(../img/_src/arrowSliderLeft.svg)
+						&.slick-next
+							right: auto
+							left: 128px
+							&:before
+								content: url(../img/_src/arrowSliderRight.svg)
+
 //Vacancies page
 .main__vacancies
 	background-color: #F7F7F7
@@ -1585,7 +1607,7 @@ header
 	.panel-group
 		width: 100%
 		+media-breakpoint-down(xs)
-		padding: 0 23px
+			padding: 0 23px
 		.panel
 			background-color: #fff
 			padding: 50px
