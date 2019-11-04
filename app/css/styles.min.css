@@ -3813,7 +3813,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   -webkit-transition: color .3s;
   -o-transition: color .3s;
   transition: color .3s;
-  padding: 50px 80px;
+  padding: 48px 80px;
 }
 
 .main__history .history__banner .container .row .history__list .history__item .history__dots:hover {

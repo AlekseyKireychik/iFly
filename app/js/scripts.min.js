@@ -11,7 +11,7 @@ $(document).ready(function() {
   $(".insructors__sliders").slick({
     infinite: true,
     dots: false,
-    arrows: true,
+    arrows: false,
     speed: 300,
     slidesToShow: 1
   });
