@@ -72,6 +72,31 @@ select.error
 	border-bottom: 1px solid $accent
 input.error
 	border-bottom: 1px solid $accent
+
+.slider
+	.slider__counter
+		position: absolute
+		bottom: -114px
+		left: 64px
+		font-size: 16px
+		line-height: 34px
+		color: #99A4AF
+		padding: 15px 18px
+	.slick-arrow
+		top: 120%
+		width: 64px
+		height: 64px
+		border: 1px solid #E5E7E8
+		&.slick-prev
+			left: 0px
+			&:before
+				content: url(../img/_src/arrowSliderLeft.svg)
+		&.slick-next
+			right: auto
+			left: 128px
+			&:before
+				content: url(../img/_src/arrowSliderRight.svg)
+
 .main__form
 	.form
 		padding: 95px 100px
@@ -1210,28 +1235,6 @@ header
 								line-height: 28px
 							.instructor__description
 								opacity: 0.8
-					.slider__counter
-						position: absolute
-						bottom: -114px
-						left: 64px
-						font-size: 16px
-						line-height: 34px
-						color: #99A4AF
-						padding: 15px 18px
-					.slick-arrow
-						top: 120%
-						width: 64px
-						height: 64px
-						border: 1px solid #E5E7E8
-						&.slick-prev
-							left: 0px
-							&:before
-								content: url(../img/_src/arrowSliderLeft.svg)
-						&.slick-next
-							right: auto
-							left: 128px
-							&:before
-								content: url(../img/_src/arrowSliderRight.svg)
 
 //Vacancies page
 .main__vacancies
@@ -1497,6 +1500,20 @@ header
 				font-size: 18px
 				line-height: 54px
 				color: #999EA7
+.new__slider
+	padding-bottom: 184px
+	.container
+		.row
+			.newpost-slider
+				display: flex
+				align-items: center
+				justify-content: space-between
+				max-width: 1272px
+				.new__item
+					padding-right: 24px
+				.slider__counter
+					bottom: -132px
+
 .new
 	margin-top: -130px
 	.container
@@ -1505,8 +1522,6 @@ header
 				padding-bottom: 70px
 			.new__text
 				padding: 0 110px 50px
-				p
-.slider
 .new__contentBottom
 	.container
 		.row
@@ -1568,6 +1583,7 @@ header
 				flex-wrap: wrap
 				margin-bottom: 0
 				padding-bottom: 95px
+				max-width: 1272px
 				.new__item
 					padding-bottom: 45px
 					background-color: #fff
@@ -1595,6 +1611,71 @@ header
 					&:hover
 						box-shadow: 0px 8px 24px rgba(55, 71, 84, 0.08)
 						transition: .3s
+//history page
+.main__history
+	.history__banner
+		background-image: url(../img/_src/historyBg.jpg)
+		background-position: center
+		background-repeat: no-repeat
+		background-size: cover
+		position: relative
+		min-height: 880px
+		.container__breadcrumb
+			.row
+				.nav__breadcrumb
+					a
+						color: #fff
+					.breadcrumb-item
+						color: #fff
+						opacity: 0.8
+						&:before
+							color: #fff
+							opacity: 0.8
+		.container
+			.row
+				.title
+					color: #fff
+					font-size: 54px
+					line-height: 100px
+					margin-bottom: 0
+					padding-bottom: 112px
+			.row
+				.history-slide
+					max-width: 1272px
+					.history__caption
+						flex-direction: column
+						align-items: flex-start
+						justify-content: flex-start
+						.history__date
+							font-size: 100px
+							line-height: 100px
+							color: #fff
+							font-weight: 600
+						.history__text
+							font-size: 18px
+							line-height: 28px
+							color: #fff
+							padding-top: 40px
+							padding-bottom: 110px
+							max-width: 624px
+				.history__list
+					display: flex
+					align-items: center
+					justify-content: space-between
+					border-bottom: 1px solid rgba(255, 255, 255, 0.4)
+					padding-bottom: 49px
+					.history__item
+						.history__dots
+							font-weight: 600
+							font-size: 24px
+							line-height: 24px
+							color: rgba(255, 255, 255, 0.4)
+							transition: color .3s
+							padding: 50px 80px
+							&:hover
+								color: #ffffff
+								transition: color .3s
+								border-bottom: 2px solid #E72D2D
 //FAQ page
 .main__faq
 	background-color: #F7F7F7

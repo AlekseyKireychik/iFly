@@ -1,13 +1,57 @@
 $(document).ready(function() {
   //slider
   $(".reviews-slider").slick({
+    infinite: true,
     dots: false,
     arrows: true,
     speed: 300,
     slidesToShow: 1
   });
 
-  let $slider = $(".slider");
+  $(".newpost-slider").slick({
+    dots: false,
+    arrows: true,
+    speed: 300,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    variableWidth: true
+  });
+
+  $(".newposts-slider").slick({
+    dots: false,
+    arrows: true,
+    speed: 300,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    variableWidth: true
+  });
+
+  $(".history-slide").slick({
+    dots: false,
+    arrows: false,
+    speed: 300,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  });
+
+  //pagination text
+  $("a[data-slide]").click(function(e) {
+    e.preventDefault();
+    let slideno = $(this).data("slide");
+    $(".history-slide").slick("slickGoTo", slideno - 1);
+  });
+  $(".history__caption[data-dot]").hasClass(".slick-active"),
+    function(e) {
+      e.preventDefault();
+      let dot = $(this).data("dot");
+      dot.toggleClass("is-active");
+    };
+
+  //pagination counter
+
+  let $slider = $(".pagin-number");
 
   if ($slider.length) {
     let currentSlide;
@@ -32,6 +76,7 @@ $(document).ready(function() {
 
     $slider.slick();
   }
+
   //nav-menu
   $(".burger-menu").on("click", function(event) {
     event.preventDefault();
