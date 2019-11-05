@@ -75,9 +75,17 @@
 					<a class="header__request btn register" href="#">Полетели</a>
 					<div class="header__profile">
 						<a class="lang__btn" href="#">ru</a>
-						<a class="profile__container" href="#">
-							<img class="profile__logo" src="img/_src/profileicon.svg" alt="profile icon">
-						</a>
+						<div class="profile__container">
+							<a class="profile__containerLogo" href="#">
+								<img class="profile__logo" src="img/_src/profileicon.svg" alt="profile icon">
+							</a>
+							<ul class="profile__subList">
+								<li class="profile__item"><a class="profile__subLink" href="#">Профиль</a></li>
+								<li class="profile__item"><a class="profile__subLink" href="#">Мои полеты</a></li>
+								<li class="profile__item"><a class="profile__subLink" href="#">Настройки</a></li>
+								<li class="profile__item"><a class="profile__subLink" href="#">Выйти</a></li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -89,7 +97,7 @@
 			<nav id="nav-menu" class="nav">
 				<div class="menu__wrap">
 					<ul class="menu__list">Новости
-						<li class="menu__item"><a class="menu__link" href="./news.html">Акции и скидки</a></li>
+						<li class="menu__item"><a class="menu__link" href="./news.html">Специальные предложения</a></li>
 						<li class="menu__item"><a class="menu__link" href="./news.html">Новости</a></li>
 					</ul>
 					<ul class="menu__list">О нас
@@ -190,7 +198,7 @@
 			<div id="carouselHome" class="carousel slide" data-ride="carousel">
 				<div class="carousel-inner">
 					<div class="carousel-item active">
-						<img class="carousel-img d-block w-100" src="img/@1x/bannerHomepage.jpg" alt="Первый слайд">
+						<img class="carousel-img d-block w-100" src="img/_src/bannerHomepage.jpg" alt="Первый слайд">
 						<div class="container">
 							<div class="carousel-caption">
 								<h3 class="carousel-title">Начни летать как супергерой</h3>
@@ -200,7 +208,7 @@
 						</div>
 					</div>
 					<div class="carousel-item">
-						<img class="carousel-img d-block w-100" src="img/@1x/bannerHomepage.jpg" alt="Второй слайд">
+						<img class="carousel-img d-block w-100" src="img/_src/bannerHomepage.jpg" alt="Второй слайд">
 						<div class="container">
 							<div class="carousel-caption ">
 								<h3 class="carousel-title">Начни летать как супергерой</h3>
@@ -210,7 +218,7 @@
 						</div>
 					</div>
 					<div class="carousel-item">
-						<img class="carousel-img d-block w-100" src="img/@1x/bannerHomepage.jpg" alt="Третий слайд">
+						<img class="carousel-img d-block w-100" src="img/_src/bannerHomepage.jpg" alt="Третий слайд">
 						<div class="container">
 							<div class="carousel-caption ">
 								<h3 class="carousel-title">Начни летать как супергерой</h3>
@@ -416,27 +424,33 @@
 					<a class="footer__link" href="./">Программы полетов</a>
 				  </li>
 				  <li class="footer__item">
-					<a class="footer__link" href="./news.html">Новости и акции</a>
+					<a class="footer__link" href="./">Подарочный сертификат</a>
 				  </li>
 				  <li class="footer__item">
-					<a class="footer__link" href="./">Подарочный сертификат</a>
+					<a class="footer__link" href="./">Специальные предложения</a>
 				  </li>
 				  <li class="footer__item">
 					<a class="footer__link" href="./contacts.html">Контакты</a>
 				  </li>
+				  <li class="footer__item">
+					<a class="footer__link" href="./faq.html">FAQ</a>
+				  </li>
 				</ul>
 				<ul class="footer__list">
 				  <li class="footer__item">
-					<a class="footer__link" href="./instructors.html">Инструкторы</a>
+					<a class="footer__link" href="./history.html">История iFLY</a>
 				  </li>
 				  <li class="footer__item">
-					<a class="footer__link" href="./vacancies.html">Вакансии</a>
+					<a class="footer__link" href="./">ТРЦ Palazzo</a>
 				  </li>
 				  <li class="footer__item">
-					<a class="footer__link" href="./history.html">История</a>
+					<a class="footer__link" href="./">Для прессы</a>
 				  </li>
 				  <li class="footer__item">
-					<a class="footer__link" href="./faq.html">FAQ</a>
+					<a class="footer__link" href="./">Партнерам</a>
+				  </li>
+				  <li class="footer__item">
+					<a class="footer__link" href="./">Вакансии</a>
 				  </li>
 				</ul>
 				<ul class="footer__list law">
@@ -448,14 +462,15 @@
 				  </li>
 				  <li class="footer__item">
 					<ul class="footer__sublist">
-					  <li class="footer__item">
-						<a class="footer__link" href=""
-						  ><img
-							class="footer__img"
-							src="img/_src/Vk.svg"
-							alt="Мы в контакте"
-						/></a>
-					  </li>
+					<li class="footer__item">
+						<a class="footer__link" href="">
+							<img
+								class="footer__img"
+								src="img/_src/instagram.svg"
+								alt="Мы в инстаграм"
+							/>
+						</a>
+					</li>
 					  <li class="footer__item">
 						<a class="footer__link" href=""
 						  ><img
@@ -471,15 +486,7 @@
 							src="img/_src/youtube.svg"
 							alt="Мы в ютуб"
 						/></a>
-					  </li>
-					  <li class="footer__item">
-						<a class="footer__link" href=""
-						  ><img
-							class="footer__img"
-							src="img/_src/instagram.svg"
-							alt="Мы в инстаграм"
-						/></a>
-					  </li>
+					  </li>					  
 					</ul>
 				  </li>
 				</ul>

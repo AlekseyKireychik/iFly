@@ -49,7 +49,7 @@ body
 	background: $accent
 	font-size: 14px
 	line-height: 34px
-	padding: 15px 51px
+	padding: 14px 50px
 	text-transform: uppercase
 	color: #FFFFFF
 	border-radius: 0
@@ -376,9 +376,9 @@ header
 				display: flex
 				justify-content: space-between
 				align-items: center
-				padding: 25px 0px
+				padding: 18px 0px
 				+media-breakpoint-down(xs)
-					padding: 23px 24px
+					padding: 18px 24px
 				.header__logo
 					padding: 10px 0px
 					+media-breakpoint-down(xs)
@@ -456,22 +456,47 @@ header
 							left: 0
 							top: 3px
 					.header__request
-						margin-right: 50px
+						padding: 14px 50px 14px 50px
+						margin-right: 30px
 						+media-breakpoint-down(sm)
 							display: none
+						&:after 
+							padding-left: 38px
 					.header__profile
-						margin-right: 50px
+						margin-right: 60px
+						display: flex
+    					align-items: center
 						+media-breakpoint-down(xs)
 							margin-right: 80px
 						.lang__btn
 							font-size: 18px
-							line-height: 34px
+							line-height: 28px
 							color: $accentTwo
 							text-transform: uppercase
 							margin-right: 30px
+						.profile__container
+							position: relative
+							.profile__containerLogo
+								.profile__logo
+							.profile__subList
+								display: none
+								position: absolute
+								padding: 20px
+								background-color: #fff
+								border-top: 2px solid rgba(153, 158, 167, 0.5)
+								top: 64px
+								left: -15px
+								z-index: 999
+								&.is-active
+									display: block
+								.profile__item
+									margin-bottom: 10px
+									.profile__subLink
+										color: $accentTwo
+										white-space: nowrap	
 			.burger-menu
 				position: absolute
-				top: 35px
+				top: 28px
 				right: 0px
 				+media-breakpoint-down(xs)
 					top: 18px
@@ -520,7 +545,7 @@ header
 			.nav
 				position: absolute
 				right: -5px
-				top: 116px
+				top: 100px
 				z-index: 1000
 				display: none
 				align-items: flex-start
@@ -1964,12 +1989,13 @@ header
 
 footer
 	background-color: $accentTwo
-	padding-top: 75px
+	padding-top: 60px
 
 	.footer__nav
 		display: flex
 		align-items: flex-start
 		justify-content: space-between
+		padding-bottom: 24px
 		border-bottom: 0.5px solid rgba(255, 255, 255, 0.25)
 		+media-breakpoint-down(md)
 			flex-wrap: nowrap
@@ -1981,17 +2007,10 @@ footer
 			align-items: flex-start
 			justify-content: space-between
 			flex-direction: column
-			padding: 70px 0 0
-			+media-breakpoint-down(md)
-				// flex-basis: 50%
-				// &:nth-child(even)
-				// 	align-items: flex-end
+			margin: 0
+			padding: 60px 0 0
 			+media-breakpoint-down(sm)
 				margin-bottom: 0
-				// flex-basis: 100%
-				// &:nth-child(even)
-				// 	padding-top: 0
-				// 	align-items: flex-start
 			.footer__item
 				padding-bottom: 34px
 				.footer__link
@@ -2001,11 +2020,6 @@ footer
 					text-decoration: none
 					color: #ffffff
 		.law
-			+media-breakpoint-down(md)
-				// flex-basis: 100%
-				// padding-top: 0px
-			+media-breakpoint-down(sm)
-				// padding-top: 15px
 			.footer__item
 				.footer__link
 					text-transform: unset
@@ -2035,7 +2049,7 @@ footer
 								background-color: $accent
 								transition: .3s
 	.footer__bottom
-		padding: 33px 0
+		padding: 30px 0
 		display: flex
 		align-items: center
 		justify-content: space-between

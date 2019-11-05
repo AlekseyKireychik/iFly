@@ -85,13 +85,22 @@ $(document).ready(function() {
     event.preventDefault();
     $("#nav-menu").toggleClass("is-active");
     $(".burger-menu").toggleClass("is-active");
-    $("#nav-menu").on("mouseenter", function() {
-      $(this).addClass("is-active");
-    });
-    $("#nav-menu").on("mouseleave", function() {
-      $(this).removeClass("is-active");
-      $(".burger-menu").removeClass("is-active");
-    });
+    $(".profile__subList").removeClass("is-active");
+    // $("#nav-menu").on("mouseenter", function() {
+    //   $(this).addClass("is-active");
+    // });
+    // $("#nav-menu").on("mouseleave", function() {
+    //   $(this).removeClass("is-active");
+    //   $(".burger-menu").removeClass("is-active");
+    // });
+  });
+
+  //nav-profile
+  $(".profile__container").on("click", function(event) {
+    event.preventDefault();
+    $(".profile__subList").toggleClass("is-active");
+    $("#nav-menu").removeClass("is-active");
+    $(".burger-menu").removeClass("is-active");
   });
 
   $(".header__link").hover(function(event) {
