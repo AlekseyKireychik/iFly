@@ -1,5 +1,21 @@
 $(document).ready(function() {
   //slider
+  $(".advantages__list").slick({
+    infinite: true,
+    dots: true,
+    arrows: false,
+    speed: 300,
+    slidesToShow: 1
+  });
+
+  $(".seti__lenta").slick({
+    infinite: true,
+    arrows: true,
+    speed: 300,
+    slidesToShow: 3
+  });
+
+  
   $(".reviews-slider").slick({
     infinite: true,
     dots: false,

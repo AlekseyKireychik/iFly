@@ -636,7 +636,7 @@ header
 						bottom: 50%
 						transform: translateY(50%)
 						.carousel-title
-							font-size: 80px
+							font-size: 60px
 							line-height: 100px
 							font-weight: 600
 							text-align: center
@@ -656,16 +656,16 @@ header
 .home
 	background: #E3E1E1
 .programs__home
-	padding-top: 112px
-	padding-bottom: 105px
+	padding-top: 120px
+	padding-bottom: 120px
 	.container
 		.row
-			.title
 			.programs__list
 				display: flex
 				align-items: flex-start
 				justify-content: space-between
-				flex-wrap: wrap
+				flex-wrap: nowrap
+				width: 100%
 				.programs__item
 					background-position: center
 					background-repeat: no-repeat
@@ -682,7 +682,14 @@ header
 						background-image: url(../img/_src/programs02.jpg)
 					&.item03
 						background-image: url(../img/_src/programs02.jpg)
+					&.item04
+						background-image: url(../img/_src/programs02.jpg)
+					&.item05
+						background-image: url(../img/_src/programs02.jpg)
+					&.item06
+						background-image: url(../img/_src/programs02.jpg)
 					.programs__link
+						position: relative
 						display: flex
 						align-items: flex-start
 						justify-content: flex-end
@@ -691,12 +698,9 @@ header
 						flex-basis: 408px
 						width: 100%
 						&:hover
-							.programs__title
-								margin-bottom: 0
-								transition: .3s
 							.programs__description
-								visibility: visible
-								transition: .7s
+								display: block
+								transition: .3s
 							.programs__wrapBtn
 								.programs__btn
 									background-color: $accent
@@ -707,7 +711,6 @@ header
 							font-size: 28px
 							line-height: 54px
 							position: relative
-							margin-bottom: -84px
 							transition: .3s
 							&:before
 								content: url(../img/_src/square.svg)
@@ -715,11 +718,11 @@ header
 								left: 48px
 								top: -4px
 						.programs__description
-							visibility: hidden
+							display: none
 							padding-left: 74px
 							font-size: 18px
 							line-height: 28px
-							transition: .1s
+							transition: .3s
 						.programs__wrapBtn
 							text-align: center
 							margin: 40px auto 0
@@ -729,6 +732,55 @@ header
 								background-color: transparent
 								width: 100%
 								transition: .3s
+						.programs__order
+							position: absolute
+							right: 0
+							top: 50px
+							font-weight: bold
+							font-size: 18px
+							line-height: 20px
+							color: #FFF
+							padding: 14px 10px
+							background-color: $accent
+.advantages__home
+	.advantages__list		
+		margin: 0
+		.advantages__item
+			background-position: center
+			background-repeat: no-repeat
+			background-size: cover
+			padding: 100px 0
+			.container
+				.row
+					.advantages__count
+						position: relative
+						font-weight: 600
+						font-size: 100px
+						line-height: 100px
+						color: #fff
+						margin-left: 20px
+						&:before
+							content: url(../img/_src/square.svg)
+							position: absolute
+							left: -20px
+							top: -15px
+					.advantages__title
+						font-weight: 600
+						font-size: 40px
+						line-height: 48px
+						color: #FFF
+						margin-left: 20px
+						padding-top: 130px
+						padding-bottom: 20px
+					.advantages__text
+						font-size: 18px
+						line-height: 28px
+						color: #FFF
+						margin-left: 20px
+						padding-bottom: 45px
+						max-width: 800px
+	.slick-dots
+		bottom: 20px
 .akcii__home
 	padding-top: 120px
 	padding-bottom: 105px
@@ -739,7 +791,9 @@ header
 				display: flex
 				align-items: flex-start
 				justify-content: space-between
-				flex-wrap: wrap
+				flex-wrap: nowrap
+				width: 100%
+				overflow: hidden
 				.akcii__item
 					background-position: center
 					background-repeat: no-repeat
@@ -763,7 +817,7 @@ header
 							content: url(../img/_src/NEW.svg)
 							position: absolute
 							right: 0px
-							top: 51px
+							top: 50px
 					&.item01
 						background-image: url(../img/_src/programs02.jpg)
 					&.item02
@@ -779,12 +833,9 @@ header
 						flex-basis: 408px
 						width: 100%
 						&:hover
-							.akcii__title
-								margin-bottom: 0
-								transition: .3s
 							.akcii__description
-								visibility: visible
-								transition: .7s
+								display: block
+								transition: .3s
 							.akcii__wrapBtn
 								.akcii__btn
 									background-color: $accent
@@ -795,15 +846,13 @@ header
 							font-size: 28px
 							line-height: 54px
 							position: relative
-							margin-bottom: -84px
-							transition: .3s
 							&:before
 								content: url(../img/_src/square.svg)
 								position: absolute
 								left: 48px
 								top: -4px
 						.akcii__description
-							visibility: hidden
+							display: none
 							padding-left: 74px
 							padding-right: 45px
 							font-size: 18px
