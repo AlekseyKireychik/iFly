@@ -292,6 +292,8 @@ input.error
 
 .container__breadcrumb
 	padding-top: 65px
+	+media-breakpoint-down(xs)
+		padding-top: 40px
 	.nav__breadcrumb
 		z-index: 999
 		.breadcrumb
@@ -301,6 +303,7 @@ input.error
 			padding: 15px 15px 15px 0px
 			+media-breakpoint-down(xs)
 				padding-left: 25px
+				line-height: 22px
 			.breadcrumb-item
 				a
 					color: #999EA7
@@ -375,14 +378,14 @@ header
 				align-items: center
 				padding: 25px 0px
 				+media-breakpoint-down(xs)
-					padding: 23px 0px
+					padding: 23px 24px
 				.header__logo
 					padding: 10px 0px
 					+media-breakpoint-down(xs)
 						padding: 0
 					img
 						+media-breakpoint-down(xs)
-							max-width: 140px
+							max-width: 130px
 				.header__nav
 					position: relative
 					z-index: 30
@@ -459,7 +462,7 @@ header
 					.header__profile
 						margin-right: 50px
 						+media-breakpoint-down(xs)
-							margin-right: 50px
+							margin-right: 80px
 						.lang__btn
 							font-size: 18px
 							line-height: 34px
@@ -472,6 +475,7 @@ header
 				right: 0px
 				+media-breakpoint-down(xs)
 					top: 18px
+					right: 24px
 				.burger-menu__button
 					display: block
 					position: relative
@@ -1144,6 +1148,8 @@ header
 		color: #fff
 		.container__breadcrumb
 			margin-bottom: 115px
+			+media-breakpoint-down(xs)
+				margin-bottom: 40px
 			.row
 				.nav__breadcrumb
 					a
@@ -1161,6 +1167,8 @@ header
 				align-items: flex-start
 				justify-content: flex-start
 				padding-bottom: 100px
+				+media-breakpoint-down(xs)
+					padding-bottom: 0px
 				.title
 					font-size: 54px
 					line-height: 80px
@@ -1168,24 +1176,35 @@ header
 					margin-bottom: 0
 					+media-breakpoint-down(sm)
 						font-size: 48px
+					+media-breakpoint-down(xs)
+						font-size: 36px
 				.instructor__description
 					padding-right: 20px
 					font-size: 24px
 					line-height: 54px
 					margin-bottom: 0
+					+media-breakpoint-down(xs)
+						padding-left: 24px
 			.instructor__counters
 				display: flex
 				align-items: center
 				justify-content: space-between
 				padding-top: 40px
 				border-top: 1px solid rgba(255, 255, 255, 0.4)
+				+media-breakpoint-down(xs)
+					border-top: 0
 				.instructor__countersWrap
 					display: flex
 					align-items: center
 					justify-content: flex-start
-					+media-breakpoint-down(sm)
+					+media-breakpoint-down(md)
 						width: 100%
 						justify-content: space-between
+					+media-breakpoint-down(sm)
+						flex-direction: column
+						align-items: flex-start
+					+media-breakpoint-down(xs)
+						padding-bottom: 30px
 					.instructor__counterWrap
 						display: flex
 						flex-direction: column
@@ -1197,12 +1216,18 @@ header
 							padding-bottom: 30px
 						+media-breakpoint-down(sm)
 							padding-right: 20px
+						+media-breakpoint-down(xs)
+							padding-left: 70px
+							padding-bottom: 0px
 						.instructor__counter
+							font-weight: 600
 							font-size: 64px
 							line-height: 54px
 							position: relative
 							+media-breakpoint-down(lg)
 								font-size: 48px
+							+media-breakpoint-down(xs)
+								font-size: 40px
 							.instructor__counterIcon
 								position: absolute
 								left: -45px
@@ -1214,8 +1239,8 @@ header
 								white-space: nowrap
 				.instructor__btn
 					display: inline-block
-				+media-breakpoint-down(lg)
-					padding-bottom: 60px
+					+media-breakpoint-down(xs)
+						margin-left: 24px
 	.info
 		background-color: #fff
 		padding-top: 120px
@@ -1317,10 +1342,14 @@ header
 							flex-basis: 841px
 							+media-breakpoint-down(lg)
 								flex-basis: 100%
+							+media-breakpoint-down(sm)
+								flex-basis: 312px
 						&.instructor-small
 							flex-basis: 408px
 							+media-breakpoint-down(md)
 								flex-basis: 332px
+							+media-breakpoint-down(sm)
+								flex-basis: 312px
 						.instructor__video
 							height: 290px
 							width: 100%
