@@ -5,17 +5,34 @@ $(document).ready(function() {
     dots: true,
     arrows: false,
     speed: 300,
-    slidesToShow: 1
+    slidesToShow: 1,
+    customPaging: function(slider, i) {
+      var thumb = $(slider.$slides[i]).data();
+      return '<a class="advantages__dot">' + "0" + (i + 1) + "</a>";
+    },
+    responsive: [
+      {
+        breakpoint: 500,
+        settings: {
+          dots: false,
+          arrows: false,
+          infinite: false,
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      }
+    ]
   });
 
   $(".seti__lenta").slick({
     infinite: true,
     arrows: true,
+    dots: true,
+    centerMode: true,
     speed: 300,
     slidesToShow: 3
   });
 
-  
   $(".reviews-slider").slick({
     infinite: true,
     dots: false,
@@ -23,7 +40,7 @@ $(document).ready(function() {
     speed: 300,
     slidesToShow: 1
   });
-  
+
   $(".insructors__sliders").slick({
     infinite: true,
     dots: false,
@@ -31,7 +48,6 @@ $(document).ready(function() {
     speed: 300,
     slidesToShow: 1
   });
-  
 
   $(".newpost-slider").slick({
     dots: false,
@@ -80,7 +96,6 @@ $(document).ready(function() {
   //     dot.toggleClass("is-active");
   //   };
 
-  
   //form
   $(".register").on("click", function(event) {
     event.preventDefault();
@@ -95,7 +110,7 @@ $(document).ready(function() {
       $(".main__form").removeClass("is-active");
     });
   });
-  
+
   //nav-menu
   $(".burger-menu").on("click", function(event) {
     event.preventDefault();
@@ -111,7 +126,7 @@ $(document).ready(function() {
     // });
   });
 
-  //nav-profile
+  //profile
   $(".profile__container").on("click", function(event) {
     event.preventDefault();
     $(".profile__subList").toggleClass("is-active");
