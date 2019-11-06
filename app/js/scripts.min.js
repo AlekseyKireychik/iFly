@@ -27,7 +27,7 @@ $(document).ready(function() {
   $(".seti__lenta").slick({
     infinite: true,
     arrows: true,
-    dots: true,
+    dots: false,
     centerMode: true,
     speed: 300,
     slidesToShow: 3

@@ -698,7 +698,7 @@ header
 						justify-content: flex-end
 						flex-direction: column
 						min-height: 488px
-						flex-basis: 408px
+						flex-basis: 407px
 						width: 100%
 						&:hover
 							.programs__description
@@ -712,7 +712,7 @@ header
 							padding-left: 74px
 							font-weight: bold
 							font-size: 28px
-							line-height: 54px
+							line-height: 34px
 							position: relative
 							transition: .3s
 							&:before
@@ -881,7 +881,7 @@ header
 							padding-left: 74px
 							font-weight: bold
 							font-size: 28px
-							line-height: 54px
+							line-height: 34px
 							position: relative
 							&:before
 								content: url(../img/_src/square.svg)
@@ -939,7 +939,6 @@ header
 						margin-left: 20px
 .seti__home
 	padding: 120px 0px
-	background: #F7F7F7
 	.container
 		.row
 			justify-content: space-between
@@ -975,66 +974,140 @@ header
 		display: flex
 		align-items: flex-start
 		justify-content: space-between
-		.seti__item
-			flex-basis: 408px
-			width: 100%
-			background-color: #fff
-			padding-bottom: 30px
-			.seti__top
-				display: flex
-				align-items: center
-				justify-content: space-between
-				.seti__topGroup
+		.seti__item			
+			.seti__itemWrap	
+				flex-basis: 408px	
+				width: 408px
+				background-color: #fff
+				padding-bottom: 30px
+				.seti__top
 					display: flex
 					align-items: center
-					justify-content: flex-start
-					padding: 20px 0 20px 36px
-					.seti__avatar
-					.seti__name
-						padding-left: 17px
-						font-weight: bold
-						font-size: 18px
+					justify-content: space-between
+					.seti__topGroup
+						display: flex
+						align-items: center
+						justify-content: flex-start
+						padding: 20px 0 20px 36px
+						.seti__avatar
+						.seti__name
+							padding-left: 17px
+							font-weight: bold
+							font-size: 18px
+							line-height: 36px
+							color: $accentTwo
+					.seti__time
+						padding-right: 32px
+						font-size: 16px
 						line-height: 36px
-						color: $accentTwo
-				.seti__time
-					padding-right: 32px
-					font-size: 16px
-					line-height: 36px
-					color: #999EA7
-			.seti__img
-			.seti__description
-				padding: 32px 35px 10px
-			.seti__bottom
-				display: flex
-				align-items: center
-				justify-content: space-between
-				padding: 0 35px
-				.seti__group
-					font-size: 16px
-					line-height: 24px
-					color: #999EA7
-					.seti__comment
-						padding-left: 26px
-						position: relative
-						&:before
-							content: url(../img/_src/forum.svg)
-							position: absolute
-							left: 0px
-							top: 1px
-					.seti__like
-						padding-left: 26px
-						position: relative
-						&:before
-							content: url(../img/_src/like.svg)
-							position: absolute
-							left: 0px
-							top: -1px
+						color: #999EA7
+				.seti__img
+				.seti__description
+					padding: 32px 35px 10px
+				.seti__bottom
+					display: flex
+					align-items: center
+					justify-content: space-between
+					padding: 0 35px
+					.seti__group
+						font-size: 16px
+						line-height: 24px
+						color: #999EA7
+						.seti__comment
+							padding-left: 26px
+							position: relative
+							&:before
+								content: url(../img/_src/forum.svg)
+								position: absolute
+								left: 0px
+								top: 1px
+						.seti__like
+							padding-left: 26px
+							position: relative
+							&:before
+								content: url(../img/_src/like.svg)
+								position: absolute
+								left: 0px
+								top: -1px
 
-				.seti__link
-					.seti__logo
+					.seti__link
+						.seti__logo
+
+
 .fon
 	padding: 0 0 255px
 	background: #F7F7F7
+
+.contacts__home
+	margin-top: 0px
+	padding-bottom: 120px
+	+media-breakpoint-down(md)
+		padding-bottom: 580px
+	+media-breakpoint-down(sm)
+		padding-bottom: 540px
+	.container
+		.contacts__map
+			background-image: url(../img/_src/map.jpg)
+			background-position: center
+			background-repeat: no-repeat
+			background-size: cover
+			padding-top: 144px
+			position: relative
+			min-height: 604px
+			+media-breakpoint-down(md)
+				min-height: 440px
+			+media-breakpoint-down(sm)
+				min-height: 360px
+			&:after
+				position: absolute
+				content: url(../img/_src/icon-map.svg)
+				left: 43%
+				top: 28%
+			.contacts__caption
+				position: absolute
+				bottom: 0
+				left: 0
+				padding: 70px 50px
+				max-width: 410px
+				background: $accentTwo
+				color: #fff
+				+media-breakpoint-down(md)
+					bottom: -436px
+					width: 100%
+					max-width: 100%
+				+media-breakpoint-down(sm)
+					bottom: -396px
+					padding: 50px 40px
+				.subTitle
+					font-weight: 600
+					font-size: 18px
+					line-height: 24px
+					text-transform: uppercase
+				.contacts__list
+					.contacts__item
+						.contacts__address
+							font-weight: normal
+							font-size: 18px
+							line-height: 24px
+						.contacts__phone
+							font-size: 16px
+							line-height: 36px
+							padding-left: 30px
+							color: #fff
+							position: relative
+							transition: .3s
+							&:hover
+								color: #E72D2D
+								transition: .3s
+							&:before
+								content: url(../img/_src/phone.svg)
+								position: absolute
+								left: 0
+								top: -5px
+						.contacts__info
+							font-weight: normal
+							font-size: 18px
+							line-height: 24px
 .contacts
 	margin-top: -253px
 	padding-bottom: 120px
@@ -1058,8 +1131,8 @@ header
 			&:after
 				position: absolute
 				content: url(../img/_src/icon-map.svg)
-				left: 48%
-				top: 40%
+				left: 43%
+				top: 28%
 			.contacts__caption
 				position: absolute
 				bottom: 0

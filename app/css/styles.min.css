@@ -1913,9 +1913,9 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
       -ms-flex-direction: column;
           flex-direction: column;
   min-height: 488px;
-  -webkit-flex-basis: 408px;
-      -ms-flex-preferred-size: 408px;
-          flex-basis: 408px;
+  -webkit-flex-basis: 407px;
+      -ms-flex-preferred-size: 407px;
+          flex-basis: 407px;
   width: 100%;
 }
 
@@ -1937,7 +1937,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   padding-left: 74px;
   font-weight: bold;
   font-size: 28px;
-  line-height: 54px;
+  line-height: 34px;
   position: relative;
   -webkit-transition: .3s;
   -o-transition: .3s;
@@ -2202,7 +2202,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   padding-left: 74px;
   font-weight: bold;
   font-size: 28px;
-  line-height: 54px;
+  line-height: 34px;
   position: relative;
 }
 
@@ -2298,7 +2298,6 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 
 .seti__home {
   padding: 120px 0px;
-  background: #F7F7F7;
 }
 
 .seti__home .container .row {
@@ -2400,16 +2399,16 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
           justify-content: space-between;
 }
 
-.seti__home .seti__lenta .seti__item {
+.seti__home .seti__lenta .seti__item .seti__itemWrap {
   -webkit-flex-basis: 408px;
       -ms-flex-preferred-size: 408px;
           flex-basis: 408px;
-  width: 100%;
+  width: 408px;
   background-color: #fff;
   padding-bottom: 30px;
 }
 
-.seti__home .seti__lenta .seti__item .seti__top {
+.seti__home .seti__lenta .seti__item .seti__itemWrap .seti__top {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2424,7 +2423,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
           justify-content: space-between;
 }
 
-.seti__home .seti__lenta .seti__item .seti__top .seti__topGroup {
+.seti__home .seti__lenta .seti__item .seti__itemWrap .seti__top .seti__topGroup {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2440,7 +2439,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   padding: 20px 0 20px 36px;
 }
 
-.seti__home .seti__lenta .seti__item .seti__top .seti__topGroup .seti__name {
+.seti__home .seti__lenta .seti__item .seti__itemWrap .seti__top .seti__topGroup .seti__name {
   padding-left: 17px;
   font-weight: bold;
   font-size: 18px;
@@ -2448,18 +2447,18 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   color: #142C60;
 }
 
-.seti__home .seti__lenta .seti__item .seti__top .seti__time {
+.seti__home .seti__lenta .seti__item .seti__itemWrap .seti__top .seti__time {
   padding-right: 32px;
   font-size: 16px;
   line-height: 36px;
   color: #999EA7;
 }
 
-.seti__home .seti__lenta .seti__item .seti__description {
+.seti__home .seti__lenta .seti__item .seti__itemWrap .seti__description {
   padding: 32px 35px 10px;
 }
 
-.seti__home .seti__lenta .seti__item .seti__bottom {
+.seti__home .seti__lenta .seti__item .seti__itemWrap .seti__bottom {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2475,30 +2474,30 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   padding: 0 35px;
 }
 
-.seti__home .seti__lenta .seti__item .seti__bottom .seti__group {
+.seti__home .seti__lenta .seti__item .seti__itemWrap .seti__bottom .seti__group {
   font-size: 16px;
   line-height: 24px;
   color: #999EA7;
 }
 
-.seti__home .seti__lenta .seti__item .seti__bottom .seti__group .seti__comment {
+.seti__home .seti__lenta .seti__item .seti__itemWrap .seti__bottom .seti__group .seti__comment {
   padding-left: 26px;
   position: relative;
 }
 
-.seti__home .seti__lenta .seti__item .seti__bottom .seti__group .seti__comment:before {
+.seti__home .seti__lenta .seti__item .seti__itemWrap .seti__bottom .seti__group .seti__comment:before {
   content: url(../img/_src/forum.svg);
   position: absolute;
   left: 0px;
   top: 1px;
 }
 
-.seti__home .seti__lenta .seti__item .seti__bottom .seti__group .seti__like {
+.seti__home .seti__lenta .seti__item .seti__itemWrap .seti__bottom .seti__group .seti__like {
   padding-left: 26px;
   position: relative;
 }
 
-.seti__home .seti__lenta .seti__item .seti__bottom .seti__group .seti__like:before {
+.seti__home .seti__lenta .seti__item .seti__itemWrap .seti__bottom .seti__group .seti__like:before {
   content: url(../img/_src/like.svg);
   position: absolute;
   left: 0px;
@@ -2508,6 +2507,121 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 .fon {
   padding: 0 0 255px;
   background: #F7F7F7;
+}
+
+.contacts__home {
+  margin-top: 0px;
+  padding-bottom: 120px;
+}
+
+@media (max-width: 991.98px) {
+  .contacts__home {
+    padding-bottom: 580px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .contacts__home {
+    padding-bottom: 540px;
+  }
+}
+
+.contacts__home .container .contacts__map {
+  background-image: url(../img/_src/map.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 144px;
+  position: relative;
+  min-height: 604px;
+}
+
+@media (max-width: 991.98px) {
+  .contacts__home .container .contacts__map {
+    min-height: 440px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .contacts__home .container .contacts__map {
+    min-height: 360px;
+  }
+}
+
+.contacts__home .container .contacts__map:after {
+  position: absolute;
+  content: url(../img/_src/icon-map.svg);
+  left: 43%;
+  top: 28%;
+}
+
+.contacts__home .container .contacts__map .contacts__caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 70px 50px;
+  max-width: 410px;
+  background: #142C60;
+  color: #fff;
+}
+
+@media (max-width: 991.98px) {
+  .contacts__home .container .contacts__map .contacts__caption {
+    bottom: -436px;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .contacts__home .container .contacts__map .contacts__caption {
+    bottom: -396px;
+    padding: 50px 40px;
+  }
+}
+
+.contacts__home .container .contacts__map .contacts__caption .subTitle {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.contacts__home .container .contacts__map .contacts__caption .contacts__list .contacts__item .contacts__address {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.contacts__home .container .contacts__map .contacts__caption .contacts__list .contacts__item .contacts__phone {
+  font-size: 16px;
+  line-height: 36px;
+  padding-left: 30px;
+  color: #fff;
+  position: relative;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.contacts__home .container .contacts__map .contacts__caption .contacts__list .contacts__item .contacts__phone:hover {
+  color: #E72D2D;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.contacts__home .container .contacts__map .contacts__caption .contacts__list .contacts__item .contacts__phone:before {
+  content: url(../img/_src/phone.svg);
+  position: absolute;
+  left: 0;
+  top: -5px;
+}
+
+.contacts__home .container .contacts__map .contacts__caption .contacts__list .contacts__item .contacts__info {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 .contacts {
@@ -2552,8 +2666,8 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 .contacts .container .contacts__map:after {
   position: absolute;
   content: url(../img/_src/icon-map.svg);
-  left: 48%;
-  top: 40%;
+  left: 43%;
+  top: 28%;
 }
 
 .contacts .container .contacts__map .contacts__caption {
