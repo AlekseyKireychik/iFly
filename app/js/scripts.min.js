@@ -66,14 +66,25 @@ $(document).ready(function() {
     slidesToScroll: 1,
     variableWidth: true
   });
-
-  $(".newposts-slider").slick({
+  
+  $(".new__bottom").slick({
     dots: false,
     arrows: true,
     speed: 300,
-    slidesToShow: 1,
+    slidesToShow: 3,
     slidesToScroll: 1,
-    variableWidth: true
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: true,
+          infinite: true
+        }
+      }
+    ]
+      
   });
 
   $(".history-slide").slick({
@@ -104,6 +115,17 @@ $(document).ready(function() {
   //     let dot = $(this).data("dot");
   //     dot.toggleClass("is-active");
   //   };
+
+  //news
+  $(".news__btn").on("click", function(event) {
+    event.preventDefault();
+    $(this).toggleClass("is-active");
+  });  
+
+  $(".news__selectValue").on("click", function(event) {
+    event.preventDefault();
+    $(".news__nav").toggleClass("is-active");
+  });  
 
   //form
   $(".register").on("click", function(event) {
