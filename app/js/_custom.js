@@ -42,11 +42,20 @@ $(document).ready(function() {
   });
 
   $(".insructors__sliders").slick({
-    infinite: true,
     dots: false,
     arrows: false,
     speed: 300,
-    slidesToShow: 1
+    slidesToShow: 1,
+    asNavFor: '.insructorsList-slider'
+
+  });
+  $(".insructorsList-slider").slick({
+    dots: false,
+    asNavFor: '.insructors__sliders',
+    arrows: false,
+    speed: 300,
+    focusOnSelect: true,
+    slidesToShow: 5
   });
 
   $(".newpost-slider").slick({

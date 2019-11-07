@@ -58,6 +58,8 @@ body
 	border-radius: 0
 	+media-breakpoint-down(sm)
 		padding: 10px 45px
+	+media-breakpoint-down(xs)
+		padding: 10px 20px
 	&:after
 		content: url(../img/_src/arrow.svg)
 		padding-left: 12px
@@ -85,14 +87,12 @@ input.error
 .slider
 	.slider__counter
 		position: absolute
-		bottom: -114px
 		left: 64px
 		font-size: 16px
 		line-height: 34px
 		color: #99A4AF
 		padding: 15px 18px
-		+media-breakpoint-down(md)
-			bottom: -132px
+		top: 113%
 	.slick-arrow
 		top: 120%
 		width: 64px
@@ -295,6 +295,8 @@ input.error
 
 .container__breadcrumb
 	padding-top: 65px
+	+media-breakpoint-down(md)
+		padding-top: 55px
 	+media-breakpoint-down(xs)
 		padding-top: 40px
 	.nav__breadcrumb
@@ -307,6 +309,7 @@ input.error
 			+media-breakpoint-down(xs)
 				padding-left: 25px
 				line-height: 22px
+				margin-bottom: 0
 			.breadcrumb-item
 				a
 					color: #999EA7
@@ -357,14 +360,19 @@ input.error
 					left: 15px
 					transform: rotate(0deg)
 					+media-breakpoint-down(md)
+						left: -20%
+					+media-breakpoint-down(sm)
 						left: -10%
+						padding-left: 25px
 					&:hover
 						content: url(../img/_src/arrRight.svg)
 				&.right
 					right: 15px
 					transform: rotate(-180deg)
 					+media-breakpoint-down(md)
-						right: -10%
+						right: -20%
+					+media-breakpoint-down(sm)
+						padding-left: 25px
 					&:hover
 						content: url(../img/_src/arrRight.svg)
 
@@ -381,7 +389,7 @@ header
 				align-items: center
 				padding: 18px 0px
 				+media-breakpoint-down(xs)
-					padding: 18px 24px
+					padding: 26px 24px
 				.header__logo
 					padding: 10px 0px
 					+media-breakpoint-down(xs)
@@ -477,6 +485,8 @@ header
 							color: $accentTwo
 							text-transform: uppercase
 							margin-right: 30px
+							+media-breakpoint-down(xs)
+								display: none
 						.profile__container
 							position: relative
 							.profile__containerLogo
@@ -490,6 +500,12 @@ header
 								top: 64px
 								left: -15px
 								z-index: 999
+								+media-breakpoint-down(sm)
+									left: auto
+									right: -55px
+									top: 60px
+								+media-breakpoint-down(xs)
+									top: 55px
 								&.is-active
 									display: block
 								.profile__item
@@ -501,6 +517,8 @@ header
 				position: absolute
 				top: 28px
 				right: 0px
+				+media-breakpoint-down(sm)
+					top: 25px
 				+media-breakpoint-down(xs)
 					top: 18px
 					right: 24px
@@ -559,6 +577,13 @@ header
 				padding: 20px 20px 10px
 				background-color: #fff
 				border-top: 2px solid rgba(153, 158, 167, 0.5)
+				+media-breakpoint-down(sm)
+					max-width: 100%
+					top: 95px
+					right: 0px
+					left: 0px
+				+media-breakpoint-down(xs)
+					top: 80px
 				&.is-active
 					display: flex
 				.menu__wrap
@@ -1042,9 +1067,9 @@ header
 	margin-top: 0px
 	padding-bottom: 120px
 	+media-breakpoint-down(md)
-		padding-bottom: 580px
+		padding-bottom: 490px
 	+media-breakpoint-down(sm)
-		padding-bottom: 540px
+		padding-bottom: 440px
 	.container
 		.contacts__map
 			background-image: url(../img/_src/map.jpg)
@@ -1057,7 +1082,7 @@ header
 			+media-breakpoint-down(md)
 				min-height: 440px
 			+media-breakpoint-down(sm)
-				min-height: 360px
+				min-height: 600px
 			&:after
 				position: absolute
 				content: url(../img/_src/icon-map.svg)
@@ -1072,23 +1097,38 @@ header
 				background: $accentTwo
 				color: #fff
 				+media-breakpoint-down(md)
-					bottom: -436px
+					padding: 55px 58px
+					bottom: -390px
 					width: 100%
-					max-width: 100%
+					max-width: 100%					
 				+media-breakpoint-down(sm)
-					bottom: -396px
+					bottom: -375px
 					padding: 50px 40px
 				.subTitle
 					font-weight: 600
 					font-size: 18px
 					line-height: 24px
 					text-transform: uppercase
+				.contacts__address					
+					font-weight: normal
+					font-size: 18px
+					line-height: 24px
 				.contacts__list
-					.contacts__item
-						.contacts__address
-							font-weight: normal
-							font-size: 18px
-							line-height: 24px
+					+media-breakpoint-down(md)
+						padding: 20px 0
+						display: flex
+						justify-content: space-between
+						align-items: center
+					+media-breakpoint-down(sm)
+						flex-direction: column
+						align-items: flex-start
+					&.mode
+						+media-breakpoint-down(md)
+							justify-content: flex-start
+							.contacts__item
+								&:first-child
+									padding-right: 75px
+					.contacts__item						
 						.contacts__phone
 							font-size: 16px
 							line-height: 36px
@@ -1112,9 +1152,9 @@ header
 	margin-top: -253px
 	padding-bottom: 120px
 	+media-breakpoint-down(md)
-		padding-bottom: 580px
+		padding-bottom: 490px
 	+media-breakpoint-down(sm)
-		padding-bottom: 540px
+		padding-bottom: 440px
 	.container
 		.contacts__map
 			background-image: url(../img/_src/map.jpg)
@@ -1127,7 +1167,7 @@ header
 			+media-breakpoint-down(md)
 				min-height: 440px
 			+media-breakpoint-down(sm)
-				min-height: 360px
+				min-height: 600px
 			&:after
 				position: absolute
 				content: url(../img/_src/icon-map.svg)
@@ -1142,30 +1182,45 @@ header
 				background: $accentTwo
 				color: #fff
 				+media-breakpoint-down(md)
-					bottom: -436px
+					padding: 55px 58px
+					bottom: -390px
 					width: 100%
 					max-width: 100%
 				+media-breakpoint-down(sm)
-					bottom: -396px
+					bottom: -375px
 					padding: 50px 40px
 				.subTitle
 					font-weight: 600
 					font-size: 18px
 					line-height: 24px
 					text-transform: uppercase
+				.contacts__address
+					font-weight: normal
+					font-size: 18px
+					line-height: 24px
 				.contacts__list
-					.contacts__item
-						.contacts__address
-							font-weight: normal
-							font-size: 18px
-							line-height: 24px
+					+media-breakpoint-down(md)
+						padding: 20px 0
+						display: flex
+						justify-content: space-between
+						align-items: center
+					+media-breakpoint-down(sm)
+						flex-direction: column
+						align-items: flex-start
+					&.mode
+						+media-breakpoint-down(md)
+							justify-content: flex-start
+						.contacts__item
+							&:first-child
+								padding-right: 75px
+					.contacts__item						
 						.contacts__phone
 							font-size: 16px
 							line-height: 36px
 							padding-left: 30px
 							color: #fff
 							position: relative
-							transition: .3s
+							transition: .3s							
 							&:hover
 								color: #E72D2D
 								transition: .3s
@@ -1244,12 +1299,13 @@ header
 				// 	overflow-x: auto
 				.insructors__item
 					padding-bottom: 28px
+					margin: 0 auto
 					&.slick-current
 						.insructors__dots
 							position: relative
 							color: #ffffff
 							transition: color .3s
-							background-color: #E72D2D
+							border-bottom: 1px solid #E72D2D
 					.insructors__dots
 						font-weight: 600
 						font-size: 18px
@@ -1258,6 +1314,7 @@ header
 						transition: color .3s
 						padding: 0px 22px 30px
 						white-space: nowrap
+						outline-color: transparent
 .insructors
 	background: #F7F7F7
 	padding: 145px 0 120px
@@ -1340,8 +1397,12 @@ header
 		color: #fff
 		.container__breadcrumb
 			margin-bottom: 115px
+			+media-breakpoint-down(lg)
+				margin-bottom: 0px
 			+media-breakpoint-down(xs)
 				margin-bottom: 40px
+				
+
 			.row
 				.nav__breadcrumb
 					a
@@ -1393,9 +1454,10 @@ header
 						width: 100%
 						justify-content: space-between
 					+media-breakpoint-down(sm)
+						
+					+media-breakpoint-down(xs)
 						flex-direction: column
 						align-items: flex-start
-					+media-breakpoint-down(xs)
 						padding-bottom: 30px
 					.instructor__counterWrap
 						display: flex
@@ -1431,6 +1493,8 @@ header
 								white-space: nowrap
 				.instructor__btn
 					display: inline-block
+					+media-breakpoint-down(lg)
+						margin-bottom: 60px
 					+media-breakpoint-down(xs)
 						margin-left: 24px
 	.info
@@ -1440,6 +1504,8 @@ header
 		+media-breakpoint-down(md)
 			padding-top: 95px
 			padding-bottom: 330px
+		+media-breakpoint-down(md)
+			padding-top: 80px
 		.container
 			.row
 				align-items: flex-start
@@ -1449,9 +1515,13 @@ header
 					padding-right: 20px
 					+media-breakpoint-down(lg)
 						max-width: 100%
+					+media-breakpoint-down(sm)
+						padding-left: 25px
 					.title
 						+media-breakpoint-down(md)
 							font-size: 40px
+						+media-breakpoint-down(sm)
+							padding-left: 0
 				.instructor__profile
 					background-color: $accentTwo
 					color: #fff
@@ -1468,12 +1538,17 @@ header
 							justify-content: space-between
 						+media-breakpoint-down(md)
 							padding-bottom: 35px
+						+media-breakpoint-down(sm)
+							flex-direction: column
 						.instructor__subTitle
 							font-weight: 600
 							font-size: 28px
 							line-height: 54px
 							+media-breakpoint-down(lg)
 								line-height: 32px
+							+media-breakpoint-down(sm)
+								font-size: 24px
+								line-height: 54px
 						.instructor__feature
 							display: flex
 							align-items: flex-start
@@ -1483,6 +1558,10 @@ header
 								align-items: flex-start
 								justify-content: flex-start
 								flex-direction: column
+								+media-breakpoint-down(sm)
+									justify-content: space-between
+									&:first-child
+										padding-right: 0px
 								&:first-child
 									padding-right: 100px
 								.instructor__title
@@ -1502,6 +1581,13 @@ header
 							.instructor__day
 								line-height: 34px
 								padding-right: 50px
+								&.full
+									+media-breakpoint-down(xs)	
+										display: none
+								&.mobile
+									display: none
+									+media-breakpoint-down(xs)									
+										display: flex
 							.instructor__time
 								font-weight: 600
 								line-height: 34px
@@ -1519,6 +1605,9 @@ header
 					flex-wrap: wrap
 					margin-bottom: 0
 					padding-bottom: 28px
+					+media-breakpoint-down(xs)
+						justify-content: center
+						padding: 0 25px 28px
 					.instructor__item
 						padding-bottom: 40px
 						margin-bottom: 25px
@@ -1535,13 +1624,15 @@ header
 							+media-breakpoint-down(lg)
 								flex-basis: 100%
 							+media-breakpoint-down(sm)
-								flex-basis: 312px
+								flex-basis: 680px	
+							+media-breakpoint-down(xs)
+								flex-basis: 100%
 						&.instructor-small
 							flex-basis: 408px
 							+media-breakpoint-down(md)
 								flex-basis: 332px
-							+media-breakpoint-down(sm)
-								flex-basis: 312px
+							+media-breakpoint-down(xs)
+								flex-basis: 100%
 						.instructor__video
 							height: 290px
 							width: 100%
@@ -1559,6 +1650,8 @@ header
 								position: absolute
 								left: 48px
 								top: 47px
+								+media-breakpoint-down(sm)
+									top: 36px
 						.instructor__date
 							display: flex
 							align-items: center
@@ -1586,6 +1679,11 @@ header
 		padding-bottom: 235px
 		.container
 			.row
+				.title
+					+media-breakpoint-down(xs)
+						line-height: 34px
+		.container
+			.row
 				.instructor__list
 					position: relative
 					background: #FFF
@@ -1594,11 +1692,16 @@ header
 					+media-breakpoint-down(lg)
 						max-width: 960px
 					+media-breakpoint-down(md)
+						padding: 60px 42px
 						max-width: 720px
 					+media-breakpoint-down(sm)
-						max-width: 540px
+						padding: 50px 34px
+						max-width: 500px						
+					+media-breakpoint-down(xs)
+						max-width: 100%
 					.instructor__item
 						display: block
+						margin: 0 5px 
 						.instructor__itemWrap
 							display: flex
 							align-items: flex-start
@@ -1620,6 +1723,14 @@ header
 								line-height: 28px
 							.instructor__description
 								opacity: 0.8
+					.slick-arrow
+						+media-breakpoint-down(xs)
+							margin-left: 25px
+					.slider__counter
+						+media-breakpoint-down(xs)
+							left: 88px
+
+
 
 //Vacancies page
 .main__vacancies
@@ -1755,6 +1866,8 @@ header
 	background-color: #F7F7F7
 	padding-bottom: 120px
 	.news
+		+media-breakpoint-down(sm)
+			padding: 0 25px
 		.container
 			.news__top
 				display: flex
@@ -1763,13 +1876,19 @@ header
 				padding-bottom: 55px
 				.title
 					margin-bottom: 0
+					+media-breakpoint-down(md)
+						font-size: 36px
+						line-height: 44px
+						margin-bottom: 10px						
+					+media-breakpoint-down(sm)
+						padding-left: 0
 				.news__nav
 					display: flex
 					align-items: center
 					justify-content: space-between
 					margin-bottom: 0
 					.news__item
-						margin-right: 20px
+						margin-right: 20px						
 						.news__tile
 							font-weight: 600
 							font-size: 16px
@@ -1784,6 +1903,8 @@ header
 							color: #999EA7
 							opacity: 0.8
 							padding: 20px 35px
+							+media-breakpoint-down(md)
+								padding: 12px 35px
 							&.is-active
 								background: #FFF
 								color: $accent
@@ -1800,10 +1921,34 @@ header
 						margin-bottom: 25px
 						background-color: #fff
 						width: 100%
+						transition: .3s
+						+media-breakpoint-down(lg)
+							order: 0
+							&:nth-child(3)
+								order: 1
+							&:nth-child(9)
+								order: 1
+						+media-breakpoint-down(md)
+							padding-bottom: 20px
+						&:hover
+							box-shadow: 0px 8px 24px rgba(55, 71, 84, 0.08)
+							transition: .3s
 						&.news-post
 							flex-basis: 408px
+							+media-breakpoint-down(lg)
+								flex-basis: 48%
+							+media-breakpoint-down(sm)
+								flex-basis: 100%
+						&.date
+							+media-breakpoint-down(md)
+								padding-bottom: 50px
+							+media-breakpoint-down(sm)
+								padding-bottom: 40px
 						&.news-sale
-							flex-basis: 408px
+							+media-breakpoint-down(lg)
+								flex-basis: 48%
+							+media-breakpoint-down(sm)
+								flex-basis: 100%
 						&.news-big
 							background-position: center
 							background-repeat: no-repeat
@@ -1811,6 +1956,12 @@ header
 							position: relative
 							flex-basis: 840px
 							min-height: 488px
+							+media-breakpoint-down(lg)
+								flex-basis: 100%
+							+media-breakpoint-down(md)
+								min-height: 453px
+							+media-breakpoint-down(sm)
+								min-height: 382px
 							.news__subTitleBig
 								font-size: 28px
 								line-height: 36px
@@ -1828,36 +1979,46 @@ header
 								position: absolute
 								right: 0px
 								top: 50px
-						.news-bigWrap
-							position: absolute
-							left: 70px
-							right: 170px
-							bottom: 54px
+						.news__link							
+							.news-bigWrap
+								position: absolute
+								left: 70px
+								right: 170px
+								bottom: 54px
+								+media-breakpoint-down(sm)
+									left: 56px
+									right: 42px
+								.news__description
+									font-size: 18px
+									line-height: 28px
+									color: #FFFFFF
+							.news__img
+								+media-breakpoint-down(lg)
+									width: 100%
+							.news__subTitle
+								font-weight: 600
+								font-size: 18px
+								line-height: 28px
+								color: $accentTwo
+								padding: 47px 60px 20px 68px
+								position: relative
+								+media-breakpoint-down(sm)
+									padding: 47px 42px 20px 56px
+								&:before
+									content: url(../img/_src/square.svg)
+									position: absolute
+									left: 48px
+									top: 47px
+									+media-breakpoint-down(sm)
+										left: 40px
 							.news__description
 								font-size: 18px
 								line-height: 28px
-								color: #FFFFFF
-						.news__img
-						.news__subTitle
-							font-weight: 600
-							font-size: 18px
-							line-height: 28px
-							color: $accentTwo
-							padding: 47px 60px 20px 68px
-							position: relative
-							&:before
-								content: url(../img/_src/square.svg)
-								position: absolute
-								left: 48px
-								top: 47px
-						.news__description
-							font-size: 18px
-							line-height: 28px
-							color: #fff
-						.news__date
-							color: #999EA7
-							padding-left: 68px
-							padding-right: 60px
+								color: #fff
+							.news__date
+								color: #999EA7
+								padding-left: 68px
+								padding-right: 60px
 //New
 .new__top
 	background: #F7F7F7
@@ -2157,7 +2318,10 @@ header
 footer
 	background-color: $accentTwo
 	padding-top: 60px
-
+	.footer__logo
+		+media-breakpoint-down(sm)
+			.footer__link
+				margin: 0 auto
 	.footer__nav
 		display: flex
 		align-items: flex-start
@@ -2166,7 +2330,13 @@ footer
 		border-bottom: 0.5px solid rgba(255, 255, 255, 0.25)
 		+media-breakpoint-down(md)
 			flex-wrap: nowrap
-		+media-breakpoint-down(xs)
+		+media-breakpoint-down(sm)
+			flex-wrap: wrap
+			flex-direction: column
+			align-items: center
+			justify-content: center
+			padding-top: 60px
+		+media-breakpoint-down(xs)			
 			padding-left: 20px
 			padding-right: 20px
 		.footer__list
@@ -2176,10 +2346,14 @@ footer
 			flex-direction: column
 			margin: 0
 			padding: 60px 0 0
-			+media-breakpoint-down(sm)
+			+media-breakpoint-down(sm)	
+				align-items: center
+				justify-content: center			
+				text-align: center
 				margin-bottom: 0
+				padding: 0
 			.footer__item
-				padding-bottom: 34px
+				padding-bottom: 34px				
 				.footer__link
 					font-size: 16px
 					line-height: 19px
@@ -2202,6 +2376,8 @@ footer
 						padding-top: 20px
 						+media-breakpoint-down(md)
 							padding-right: 10px
+						+media-breakpoint-down(sm)
+							padding: 0 13px
 						&:last-child
 							padding-right: 0
 						.footer__link
