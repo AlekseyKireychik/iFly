@@ -1882,32 +1882,41 @@ header
 						margin-bottom: 10px						
 					+media-breakpoint-down(sm)
 						padding-left: 0
-				.news__nav
+				.news__navWrap
 					display: flex
 					align-items: center
 					justify-content: space-between
 					margin-bottom: 0
-					.news__item
-						margin-right: 20px						
-						.news__tile
-							font-weight: 600
-							font-size: 16px
-							line-height: 56px
-							color: #999EA7
-							opacity: 0.8
-						.news__btn
-							cursor: pointer
-							font-weight: 600
-							font-size: 16px
-							line-height: 56px
-							color: #999EA7
-							opacity: 0.8
-							padding: 20px 35px
-							+media-breakpoint-down(md)
-								padding: 12px 35px
-							&.is-active
-								background: #FFF
-								color: $accent
+					.news__tile
+						margin-right: 20px
+					.news__selectValue
+						display: none
+					.news__nav
+						display: flex
+						align-items: center
+						justify-content: flex-start
+						margin-bottom: 0
+						.news__item
+													
+							.news__tile
+								font-weight: 600
+								font-size: 16px
+								line-height: 56px
+								color: #999EA7
+								opacity: 0.8
+							.news__btn
+								cursor: pointer
+								font-weight: 600
+								font-size: 16px
+								line-height: 56px
+								color: #999EA7
+								opacity: 0.8
+								padding: 20px 35px
+								+media-breakpoint-down(md)
+									padding: 12px 35px
+								&.is-active
+									background: #FFF
+									color: $accent
 			.row
 				.news__list
 					display: flex
@@ -1945,6 +1954,7 @@ header
 							+media-breakpoint-down(sm)
 								padding-bottom: 40px
 						&.news-sale
+							flex-basis: 408px
 							+media-breakpoint-down(lg)
 								flex-basis: 48%
 							+media-breakpoint-down(sm)
