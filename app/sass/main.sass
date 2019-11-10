@@ -1401,6 +1401,8 @@ header
 		position: relative
 		min-height: 736px
 		color: #fff
+		+media-breakpoint-down(xs)
+			min-height: 622px
 		.container__breadcrumb
 			margin-bottom: 115px
 			+media-breakpoint-down(lg)
@@ -1683,11 +1685,14 @@ header
 						top: 14px
 	.reviews
 		padding-bottom: 235px
+		+media-breakpoint-down(xs)
+			padding: 0 25px 194px
 		.container
 			.row
 				.title
 					+media-breakpoint-down(xs)
 						line-height: 34px
+						padding-left: 0
 		.container
 			.row
 				.instructor__list
@@ -1705,6 +1710,19 @@ header
 						max-width: 500px						
 					+media-breakpoint-down(xs)
 						max-width: 100%
+						margin: 0 auto
+						.slick-prev
+							left: 15%
+							margin: 0
+						.slick-arrow
+							margin: 0
+							top: 110%
+							&.slick-next
+								margin: 0
+								left: 60%
+						.slider__counter
+								left: 36.5%
+								top: 105%
 					.instructor__item
 						display: block
 						margin: 0 5px 
@@ -1729,12 +1747,6 @@ header
 								line-height: 28px
 							.instructor__description
 								opacity: 0.8
-					.slick-arrow
-						+media-breakpoint-down(xs)
-							margin-left: 25px
-					.slider__counter
-						+media-breakpoint-down(xs)
-							left: 88px
 
 
 
@@ -1826,6 +1838,7 @@ header
 									+media-breakpoint-down(xs)
 										font-size: 16px
 										line-height: 24px
+										padding-right: 15px
 								&:after
 									content: url(../img/_src/square.svg)
 									position: absolute
@@ -1853,6 +1866,8 @@ header
 									padding: 20px 20px 50px
 									+media-breakpoint-down(lg)
 										flex-wrap: wrap
+										+media-breakpoint-down(sm)
+											padding: 20px 20px 0px
 									.vacancies__item
 										+media-breakpoint-down(md)
 											padding-top: 25px
@@ -1888,14 +1903,14 @@ header
 								.panel-link
 									+media-breakpoint-down(sm)
 										display: none
-								
 								.vacancies__btnContainer
 									+media-breakpoint-down(sm)
 										position: absolute
-										right: 85px
-										top: 20px
+										right: 0px
+										top: 0px
 										+media-breakpoint-down(xs)
-											top: 10px
+											top: -2px
+											right: -15px
 									.vacancies__btn
 										position: relative
 										font-weight: bold
@@ -1903,49 +1918,67 @@ header
 										line-height: 34px
 										text-transform: uppercase
 										color: $accent
-										&::before
-											position: absolute
-											content: url(../img/_src/iconPlus.svg)
-											right: -95px
-											top: 1px
-											transform: rotate(-45deg)
-											transition: .1s
-											+media-breakpoint-down(sm)
-												content: ""
-												height: 1.4px
-												width: 15px
-												background-color: $accent
-												transform: rotate(0deg)
-												top: 0px
-												+media-breakpoint-down(xs)
-													right: -95px
-										.disabled
-											display: none
-											+media-breakpoint-down(sm)
-												display: none
-										.active
-											display: block
-											+media-breakpoint-down(sm)
-												display: none
-										&.collapsed
-											.disabled
+										.wrap
+											display: flex
+											align-items: center
+											justify-content: space-between
+											.btn__icon
 												display: block
-												+media-breakpoint-down(sm)
-													display: none
-											.active
-												display: none
-												+media-breakpoint-down(sm)
-													display: none
-											&::before
-												transform: rotate(0deg)
-												transition: .1s
-												top: 2px
-												right: -95px
-												+media-breakpoint-down(sm)
-													content: url(../img/_src/iconPlus.svg)
-													height: 0px
+												position: relative
+												width: 30px
+												height: 30px
+												border-radius: 10px
+												background: transparent
+												cursor: pointer
+												z-index: 98
+												.btn__line
+													position: absolute
 													width: 15px
-													top: -15px
+													height: 1.5px
+													top: 45%
+													right: 50%
+													transform: translate(50%) rotate(45deg)												
+													background-color: $accent
+													+media-breakpoint-down(sm)
+														transform: translate(50%) rotate(0deg)		
+													&:before 
+														content: ""
+														position: absolute
+														width: 15px
+														height: 1.5px
+														transform: rotate(90deg)
+														background-color: $accent 
+														top: 0px
+														+media-breakpoint-down(sm)
+															display: none
+
+											.value
+												.disabled
+													display: none
+													+media-breakpoint-down(sm)
+														display: none
+												.active
+													display: block
+													+media-breakpoint-down(sm)
+														display: none
+										&.collapsed
+											.wrap
+												.value
+													.disabled
+														display: block
+														+media-breakpoint-down(sm)
+															display: none
+													.active
+														display: none
+														+media-breakpoint-down(sm)
+															display: none
+												.btn__icon
+													.btn__line
+														transform: translate(50%)
+														&:before 
+															+media-breakpoint-down(sm)
+																display: block
+													
 						&.is-active
 							box-shadow: 0px 8px 24px rgba(55, 71, 84, 0.08)
 							z-index: 99
@@ -2330,7 +2363,7 @@ header
 				+media-breakpoint-down(sm)
 					max-width: 540px
 				+media-breakpoint-down(xs)
-					max-width: 300px
+					max-width: 271px
 					margin: 0 auto
 					.slick-prev
 						left: 15%
