@@ -55,7 +55,28 @@ $(document).ready(function() {
     arrows: false,
     speed: 300,
     focusOnSelect: true,
-    slidesToShow: 5
+    slidesToShow: 5,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          infinite: true,
+          arrows: false
+        }
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          infinite: true
+        }
+      }
+    ]
+
   });
 
   $(".newpost-slider").slick({
@@ -179,13 +200,6 @@ $(document).ready(function() {
     $("#nav-menu").toggleClass("is-active");
     $(".burger-menu").toggleClass("is-active");
     $(".profile__subList").removeClass("is-active");
-    // $("#nav-menu").on("mouseenter", function() {
-    //   $(this).addClass("is-active");
-    // });
-    // $("#nav-menu").on("mouseleave", function() {
-    //   $(this).removeClass("is-active");
-    //   $(".burger-menu").removeClass("is-active");
-    // });
   });
 
   //profile
