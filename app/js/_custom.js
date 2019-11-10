@@ -139,6 +139,7 @@ $(document).ready(function() {
     let slideno = $(this).data("slide");
     $(".history-slide").slick("slickGoTo", slideno - 1);
   });
+
   // $(".history__caption[data-dot]").hasClass(".slick-active"),
   //   function(e) {
   //     e.preventDefault();
@@ -207,6 +208,17 @@ $(document).ready(function() {
       $(this).removeClass("is-active");
     });
   });
+  // vacancies
+  
+  
+  // $(".vacancies__btn").on("click", function() {
+  //   var vacancies_switch = $(this);
+  //   if ($(this).text() == 'подробнее') {
+  //     vacancies_switch.html('подробнее');
+  //     } else {
+  //       vacancies_switch.html('свернуть');
+  //     }
+  // });
 
   // accordion FAQ page
   $(".faq__btn").on("click", function() {
@@ -274,4 +286,6 @@ $(document).ready(function() {
 
     $slider.slick();
   }
+
 });
+

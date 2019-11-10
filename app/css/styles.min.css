@@ -4210,6 +4210,22 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   transition: .3s;
 }
 
+.main__vacancies .vacancies .container .row .panel-group .panel .panel-heading .vacancies__btnWrap .vacancies__btn .disabled {
+  display: none;
+}
+
+.main__vacancies .vacancies .container .row .panel-group .panel .panel-heading .vacancies__btnWrap .vacancies__btn .active {
+  display: block;
+}
+
+.main__vacancies .vacancies .container .row .panel-group .panel .panel-heading .vacancies__btnWrap .vacancies__btn.collapsed .disabled {
+  display: block;
+}
+
+.main__vacancies .vacancies .container .row .panel-group .panel .panel-heading .vacancies__btnWrap .vacancies__btn.collapsed .active {
+  display: none;
+}
+
 .main__vacancies .vacancies .container .row .panel-group .panel .panel-heading .vacancies__btnWrap .vacancies__btn.collapsed::before {
   -webkit-transform: rotate(0deg);
       -ms-transform: rotate(0deg);
@@ -4793,6 +4809,15 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
     max-width: 300px;
     margin: 0 auto;
   }
+  .new__slider .container .row .newpost-slider .slick-prev {
+    left: 15%;
+  }
+  .new__slider .container .row .newpost-slider .slick-arrow.slick-next {
+    left: 60%;
+  }
+  .new__slider .container .row .newpost-slider .slider__counter {
+    left: 36.5%;
+  }
 }
 
 .new__slider .container .row .newpost-slider .new__item {
@@ -5085,11 +5110,24 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   position: relative;
 }
 
+@media (max-width: 575.98px) {
+  .new__posts .container .row .new__list .new__item .new__itemContent .new__link .new__subTitle {
+    padding: 30px 40px 20px 40px;
+  }
+}
+
 .new__posts .container .row .new__list .new__item .new__itemContent .new__link .new__subTitle:before {
   content: url(../img/_src/square.svg);
   position: absolute;
   left: 48px;
   top: 47px;
+}
+
+@media (max-width: 575.98px) {
+  .new__posts .container .row .new__list .new__item .new__itemContent .new__link .new__subTitle:before {
+    left: 20px;
+    top: 30px;
+  }
 }
 
 .new__posts .container .row .new__list .new__item .new__itemContent .new__link .new__date {
