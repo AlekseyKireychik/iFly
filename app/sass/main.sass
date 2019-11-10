@@ -1747,7 +1747,10 @@ header
 		background-repeat: no-repeat
 		background-size: cover
 		position: relative
-		min-height: 736px
+		min-height: 736px		
+		+media-breakpoint-down(xs)
+			background-image: url(../img/_src/vacanciesMobile.jpg)
+			min-height: 484px
 		.container__breadcrumb
 			.row
 				.nav__breadcrumb
@@ -1764,16 +1767,24 @@ header
 			align-items: flex-start
 			justify-content: flex-start
 			max-width: 590px
+			+media-breakpoint-down(xs)
+				padding: 0 25px
 			.title
 				color: #fff
 				font-size: 54px
 				line-height: 100px
 				margin-bottom: 20px
+				+media-breakpoint-down(xs)
+					padding-left: 0
 			.text
 				font-size: 24px
 				line-height: 34px
 				color: #fff
 				margin-bottom: 130px
+				+media-breakpoint-down(xs)
+					font-size: 16px
+					line-height: 24px
+					margin-bottom: 60px
 			.vacancies__btn
 				display: inline-block
 				.vacancies__counter
@@ -1784,6 +1795,10 @@ header
 					padding-left: 7px
 	.vacancies
 		padding: 120px 0
+		+media-breakpoint-down(md)
+			padding: 100px 0
+			+media-breakpoint-down(md)
+				padding: 100px 25px
 		.container
 			.row
 				.panel-group
@@ -1792,7 +1807,10 @@ header
 						background-color: #fff
 						padding: 50px
 						border-bottom: 1px solid #E5E7E8
+						+media-breakpoint-down(xs)
+							padding: 32px
 						.panel-heading
+							position: relative
 							display: flex
 							flex-direction: column
 							align-items: flex-start
@@ -1803,11 +1821,18 @@ header
 								line-height: 36px
 								padding-left: 21px
 								position: relative
+								+media-breakpoint-down(sm)
+									font-size: 20px
+									+media-breakpoint-down(xs)
+										font-size: 16px
+										line-height: 24px
 								&:after
 									content: url(../img/_src/square.svg)
 									position: absolute
 									left: 0px
 									top: -2px
+									+media-breakpoint-down(xs)
+										top: 0px
 							.panel-description
 								font-weight: 300
 								font-size: 18px
@@ -1815,6 +1840,10 @@ header
 								color: #999EA7
 								padding-left: 21px
 								margin-bottom: 40px
+								+media-breakpoint-down(xs)
+									margin-bottom: 0px
+									font-size: 16px
+
 							.panel-collapse
 								width: 100%
 								.panel-body
@@ -1822,51 +1851,101 @@ header
 									align-items: flex-start
 									justify-content: space-between
 									padding: 20px 20px 50px
+									+media-breakpoint-down(lg)
+										flex-wrap: wrap
 									.vacancies__item
+										+media-breakpoint-down(md)
+											padding-top: 25px
+											&:first-child
+												padding-top: 0px
+										&:last-child
+											+media-breakpoint-down(lg)
+												padding-top: 35px
 										.vacancies__subTitle
 											font-weight: bold
 											font-size: 18px
 											line-height: 28px
 											color: $accentTwo
+											+media-breakpoint-down(xs)
+												font-size: 16px
 										.vacancies__list
 											.vacancies__point
 												font-size: 18px
 												line-height: 28px
 												margin-bottom: 5px
 												color: $accentTwo
+												+media-breakpoint-down(xs)
+													font-size: 16px
+								.btn-mobile
+									display: none
+									+media-breakpoint-down(sm)
+										display: inline-block
 							.vacancies__btnWrap
 								display: flex
 								align-items: center
 								justify-content: space-between
 								width: 100%
 								.panel-link
-								.vacancies__btn
-									position: relative
-									font-weight: bold
-									font-size: 14px
-									line-height: 34px
-									text-transform: uppercase
-									color: $accent
-									&::before
-										position: absolute
-										content: url(../img/_src/iconPlus.svg)
-										right: -22px
-										top: 1px
-										transform: rotate(-45deg)
-										transition: .3s
-									.disabled
+									+media-breakpoint-down(sm)
 										display: none
-									.active
-										display: block
-									&.collapsed
-										.disabled
-											display: block
-										.active
-											display: none
+								
+								.vacancies__btnContainer
+									+media-breakpoint-down(sm)
+										position: absolute
+										right: 85px
+										top: 20px
+										+media-breakpoint-down(xs)
+											top: 10px
+									.vacancies__btn
+										position: relative
+										font-weight: bold
+										font-size: 14px
+										line-height: 34px
+										text-transform: uppercase
+										color: $accent
 										&::before
-											transform: rotate(0deg)
-											transition: .3s
-											top: 2px
+											position: absolute
+											content: url(../img/_src/iconPlus.svg)
+											right: -95px
+											top: 1px
+											transform: rotate(-45deg)
+											transition: .1s
+											+media-breakpoint-down(sm)
+												content: ""
+												height: 1.4px
+												width: 15px
+												background-color: $accent
+												transform: rotate(0deg)
+												top: 0px
+												+media-breakpoint-down(xs)
+													right: -95px
+										.disabled
+											display: none
+											+media-breakpoint-down(sm)
+												display: none
+										.active
+											display: block
+											+media-breakpoint-down(sm)
+												display: none
+										&.collapsed
+											.disabled
+												display: block
+												+media-breakpoint-down(sm)
+													display: none
+											.active
+												display: none
+												+media-breakpoint-down(sm)
+													display: none
+											&::before
+												transform: rotate(0deg)
+												transition: .1s
+												top: 2px
+												right: -95px
+												+media-breakpoint-down(sm)
+													content: url(../img/_src/iconPlus.svg)
+													height: 0px
+													width: 15px
+													top: -15px
 						&.is-active
 							box-shadow: 0px 8px 24px rgba(55, 71, 84, 0.08)
 							z-index: 99
