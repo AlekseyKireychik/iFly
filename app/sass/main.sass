@@ -788,16 +788,16 @@ header
 				.row
 					.advantages__count
 						position: relative
-						font-weight: 600
-						font-size: 100px
-						line-height: 100px
-						color: #fff
 						margin-left: 20px
+						max-width: 122px
+						height: 60px
 						&:before
 							content: url(../img/_src/square.svg)
 							position: absolute
 							left: -20px
 							top: -15px
+						img
+							display: inline
 					.advantages__title
 						font-weight: 600
 						font-size: 40px
@@ -963,9 +963,10 @@ header
 					font-size: 16px
 					line-height: 19px
 					color: $accentTwo
-					padding: 21px 83px 21px 22px
+					padding: 21px 22px 21px 22px
+					width: 320px
 				.order__btn
-					margin-left: 30px	
+					margin-left: 30px
 					+media-breakpoint-down(xs)
 						margin-left: 20px
 .seti__home
@@ -1005,9 +1006,9 @@ header
 		display: flex
 		align-items: flex-start
 		justify-content: space-between
-		.seti__item			
-			.seti__itemWrap	
-				flex-basis: 408px	
+		.seti__item
+			.seti__itemWrap
+				flex-basis: 408px
 				width: 408px
 				background-color: #fff
 				padding-bottom: 30px
@@ -1064,7 +1065,6 @@ header
 					.seti__link
 						.seti__logo
 
-
 .fon
 	padding: 0 0 255px
 	background: #F7F7F7
@@ -1106,7 +1106,7 @@ header
 					padding: 55px 58px
 					bottom: -390px
 					width: 100%
-					max-width: 100%					
+					max-width: 100%
 				+media-breakpoint-down(sm)
 					bottom: -375px
 					padding: 50px 40px
@@ -1115,7 +1115,7 @@ header
 					font-size: 18px
 					line-height: 24px
 					text-transform: uppercase
-				.contacts__address					
+				.contacts__address
 					font-weight: normal
 					font-size: 18px
 					line-height: 24px
@@ -1134,7 +1134,7 @@ header
 							.contacts__item
 								&:first-child
 									padding-right: 75px
-					.contacts__item						
+					.contacts__item
 						.contacts__phone
 							font-size: 16px
 							line-height: 36px
@@ -1219,14 +1219,14 @@ header
 						.contacts__item
 							&:first-child
 								padding-right: 75px
-					.contacts__item						
+					.contacts__item
 						.contacts__phone
 							font-size: 16px
 							line-height: 36px
 							padding-left: 30px
 							color: #fff
 							position: relative
-							transition: .3s							
+							transition: .3s
 							&:hover
 								color: #E72D2D
 								transition: .3s
@@ -1352,7 +1352,7 @@ header
 			padding-bottom: 25px
 			+media-breakpoint-down(xs)
 				justify-content: center
-				
+
 			.insructors__item
 				background: #fff
 				margin-bottom: 31px
@@ -1415,9 +1415,9 @@ header
 						text-transform: uppercase
 						color: $accentTwo
 						display: inline-block
-							+media-breakpoint-down(xs)
-							 padding: 10px 10px
-						padding:
+						+media-breakpoint-down(xs)
+							padding: 10px 10px
+							padding:
 						&:after
 							content: url(../img/_src/arrowblack.svg)
 							padding-left: 12px
@@ -1442,7 +1442,6 @@ header
 				margin-bottom: 0px
 			+media-breakpoint-down(xs)
 				margin-bottom: 40px
-				
 
 			.row
 				.nav__breadcrumb
@@ -1495,7 +1494,7 @@ header
 						width: 100%
 						justify-content: space-between
 					+media-breakpoint-down(sm)
-						
+
 					+media-breakpoint-down(xs)
 						flex-direction: column
 						align-items: flex-start
@@ -1623,11 +1622,11 @@ header
 								line-height: 34px
 								padding-right: 50px
 								&.full
-									+media-breakpoint-down(xs)	
+									+media-breakpoint-down(xs)
 										display: none
 								&.mobile
 									display: none
-									+media-breakpoint-down(xs)									
+									+media-breakpoint-down(xs)
 										display: flex
 							.instructor__time
 								font-weight: 600
@@ -1665,7 +1664,7 @@ header
 							+media-breakpoint-down(lg)
 								flex-basis: 100%
 							+media-breakpoint-down(sm)
-								flex-basis: 680px	
+								flex-basis: 680px
 							+media-breakpoint-down(xs)
 								flex-basis: 100%
 						&.instructor-small
@@ -1740,7 +1739,7 @@ header
 						max-width: 720px
 					+media-breakpoint-down(sm)
 						padding: 50px 34px
-						max-width: 500px						
+						max-width: 500px
 					+media-breakpoint-down(xs)
 						max-width: 100%
 						margin: 0 auto
@@ -1754,11 +1753,11 @@ header
 								margin: 0
 								left: 60%
 						.slider__counter
-								left: 36.5%
-								top: 105%
+							left: 36.5%
+							top: 105%
 					.instructor__item
 						display: block
-						margin: 0 5px 
+						margin: 0 5px
 						.instructor__itemWrap
 							display: flex
 							align-items: flex-start
@@ -1781,8 +1780,6 @@ header
 							.instructor__description
 								opacity: 0.8
 
-
-
 //Vacancies page
 .main__vacancies
 	background-color: #F7F7F7
@@ -1792,7 +1789,7 @@ header
 		background-repeat: no-repeat
 		background-size: cover
 		position: relative
-		min-height: 736px		
+		min-height: 736px
 		+media-breakpoint-down(xs)
 			background-image: url(../img/_src/vacanciesMobile.jpg)
 			min-height: 484px
@@ -1970,17 +1967,17 @@ header
 													height: 1.5px
 													top: 45%
 													right: 50%
-													transform: translate(50%) rotate(45deg)												
+													transform: translate(50%) rotate(45deg)
 													background-color: $accent
 													+media-breakpoint-down(sm)
-														transform: translate(50%) rotate(0deg)		
-													&:before 
+														transform: translate(50%) rotate(0deg)
+													&:before
 														content: ""
 														position: absolute
 														width: 15px
 														height: 1.5px
 														transform: rotate(90deg)
-														background-color: $accent 
+														background-color: $accent
 														top: 0px
 														+media-breakpoint-down(sm)
 															display: none
@@ -2008,10 +2005,10 @@ header
 												.btn__icon
 													.btn__line
 														transform: translate(50%)
-														&:before 
+														&:before
 															+media-breakpoint-down(sm)
 																display: block
-													
+
 						&.is-active
 							box-shadow: 0px 8px 24px rgba(55, 71, 84, 0.08)
 							z-index: 99
@@ -2038,7 +2035,7 @@ header
 					+media-breakpoint-down(md)
 						font-size: 36px
 						line-height: 44px
-						margin-bottom: 10px						
+						margin-bottom: 10px
 					+media-breakpoint-down(sm)
 						padding-left: 0
 				.news__navWrap
@@ -2066,7 +2063,7 @@ header
 								position: absolute
 								left: 120px
 								top: 10px
-							
+
 						.news__nav
 							display: flex
 							align-items: center
@@ -2080,10 +2077,10 @@ header
 								flex-direction: column
 								align-items: flex-start
 								justify-content: flex-start
-								background-color: #fff	
-								width: 100%	
-								border-top: 1px solid #f2f2f2					
-							.news__item														
+								background-color: #fff
+								width: 100%
+								border-top: 1px solid #f2f2f2
+							.news__item
 								.news__tile
 									font-weight: 600
 									font-size: 16px
@@ -2111,7 +2108,7 @@ header
 										padding: 20px 35px
 										transition: .3s
 										color: $accent
-										
+
 			.row
 				.news__list
 					display: flex
@@ -2190,7 +2187,7 @@ header
 								position: absolute
 								right: 0px
 								top: 50px
-						.news__link							
+						.news__link
 							.news-bigWrap
 								position: absolute
 								left: 70px
@@ -2217,7 +2214,7 @@ header
 									padding: 47px 42px 20px 56px
 								+media-breakpoint-down(xs)
 									font-size: 16px
-									line-height: 24px    								
+									line-height: 24px
 								&:before
 									content: url(../img/_src/square.svg)
 									position: absolute
@@ -2270,7 +2267,7 @@ header
 				line-height: 54px
 				color: #999EA7
 .new__slider
-	padding-bottom: 184px	
+	padding-bottom: 184px
 	.container
 		.row
 			.newpost-slider
@@ -2293,10 +2290,10 @@ header
 						&.slick-next
 							left: 60%
 					.slider__counter
-							left: 36.5%
+						left: 36.5%
 				.new__item
 					padding-right: 24px
-					
+
 .new
 	margin-top: -130px
 	+media-breakpoint-down(xs)
@@ -2403,7 +2400,7 @@ header
 					.slick-arrow
 						&.slick-next
 							left: 60%
-				.new__item	
+				.new__item
 					padding-right: 24px
 					+media-breakpoint-down(xs)
 						padding-right: 0
@@ -2450,6 +2447,7 @@ header
 		background-size: cover
 		position: relative
 		min-height: 880px
+		overflow: hidden
 		.container__breadcrumb
 			.row
 				.nav__breadcrumb
@@ -2488,24 +2486,35 @@ header
 							padding-top: 40px
 							padding-bottom: 110px
 							max-width: 624px
-				.history__list
-					display: flex
-					align-items: center
-					justify-content: space-between
-					border-bottom: 1px solid rgba(255, 255, 255, 0.4)
-					padding-bottom: 48px
-					.history__item
-						.history__dots
-							font-weight: 600
-							font-size: 24px
-							line-height: 24px
-							color: rgba(255, 255, 255, 0.4)
-							transition: color .3s
-							padding: 48px 80px
-							&:hover
-								color: #ffffff
+					.slick-dots
+						bottom: -40px
+						left: 0
+						padding-bottom: 40px
+						border-bottom: 1px solid rgba(255, 255, 255, 0.4)
+						overflow: hidden
+						overflow-x: auto
+						white-space: nowrap
+						li
+
+							min-width: 300px
+							button
+								display: inline
+								width: 300px
+								font-weight: 600
+								font-size: 24px
+								line-height: 24px
+								color: rgba(255, 255, 255, 0.4)
 								transition: color .3s
-								border-bottom: 2px solid #E72D2D
+								margin: 0
+								padding-bottom: 68px
+								&:before
+									content: ""
+									display: none
+							&.slick-active
+								button
+									color: #ffffff
+									transition: color .3s
+									border-bottom: 2px solid $accent
 //FAQ page
 .main__faq
 	background-color: #F7F7F7
@@ -2620,7 +2629,7 @@ footer
 			align-items: center
 			justify-content: center
 			padding-top: 60px
-		+media-breakpoint-down(xs)			
+		+media-breakpoint-down(xs)
 			padding-left: 20px
 			padding-right: 20px
 		.footer__list
@@ -2630,14 +2639,14 @@ footer
 			flex-direction: column
 			margin: 0
 			padding: 60px 0 0
-			+media-breakpoint-down(sm)	
+			+media-breakpoint-down(sm)
 				align-items: center
-				justify-content: center			
+				justify-content: center
 				text-align: center
 				margin-bottom: 0
 				padding: 0
 			.footer__item
-				padding-bottom: 34px				
+				padding-bottom: 34px
 				.footer__link
 					font-size: 16px
 					line-height: 19px

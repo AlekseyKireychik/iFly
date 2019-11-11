@@ -46,12 +46,11 @@ $(document).ready(function() {
     arrows: false,
     speed: 300,
     slidesToShow: 1,
-    asNavFor: '.insructorsList-slider'
-
+    asNavFor: ".insructorsList-slider"
   });
   $(".insructorsList-slider").slick({
     dots: false,
-    asNavFor: '.insructors__sliders',
+    asNavFor: ".insructors__sliders",
     arrows: false,
     speed: 300,
     focusOnSelect: true,
@@ -76,7 +75,6 @@ $(document).ready(function() {
         }
       }
     ]
-
   });
 
   $(".newpost-slider").slick({
@@ -87,6 +85,8 @@ $(document).ready(function() {
     slidesToShow: 2,
     slidesToScroll: 1,
     variableWidth: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 1300,
@@ -108,13 +108,15 @@ $(document).ready(function() {
       }
     ]
   });
-  
+
   $(".new__bottom").slick({
     dots: false,
     arrows: true,
     speed: 300,
     slidesToShow: 3,
     slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
     responsive: [
       {
         breakpoint: 1300,
@@ -135,15 +137,14 @@ $(document).ready(function() {
         }
       }
     ]
-      
   });
 
   $(".history-slide").slick({
-    dots: false,
+    dots: true,
     arrows: false,
     speed: 300,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1
   });
@@ -172,12 +173,12 @@ $(document).ready(function() {
   $(".news__btn").on("click", function(event) {
     event.preventDefault();
     $(this).toggleClass("is-active");
-  });  
+  });
 
   $(".news__selectValue").on("click", function(event) {
     event.preventDefault();
     $(".news__nav").toggleClass("is-active");
-  });  
+  });
 
   //form
   $(".register").on("click", function(event) {
@@ -222,17 +223,22 @@ $(document).ready(function() {
       $(this).removeClass("is-active");
     });
   });
+
   // vacancies
-  
-  
-  // $(".vacancies__btn").on("click", function() {
-  //   var vacancies_switch = $(this);
-  //   if ($(this).text() == 'подробнее') {
-  //     vacancies_switch.html('подробнее');
-  //     } else {
-  //       vacancies_switch.html('свернуть');
-  //     }
+
+  // $("#slick-slide-control00").on("click", function() {
+  // //   var vacancies_switch = $(this);
+  // //   if ($(this).text() == 'подробнее') {
+  // //     vacancies_switch.html('подробнее');
+  // //     } else {
+  // //       vacancies_switch.html('свернуть');
+  // //     }
   // });
+
+  $("#slick-slide-control00").text("1998 - 2001");
+  $("#slick-slide-control01").text("2002 - 2007");
+  $("#slick-slide-control02").text("2008 - 2013");
+  $("#slick-slide-control03").text("2014 - 2019");
 
   // accordion FAQ page
   $(".faq__btn").on("click", function() {
@@ -242,43 +248,27 @@ $(document).ready(function() {
       .toggleClass("is-active");
   });
 
-  // $.extend($.validator.messages, {
-  //   required: "Error"
-  // });
-
-  // $("#form").validate({
-  //   rules: {
-  //     name: {
-  //       required: true
-  //     },
-  //     fname: {
-  //       required: true,
-  //       fname: true
-  //     },
-  //     tel: {
-  //       required: true
-  //     }
-  //   }
-  // });
-
-  //more-less
-  // $('.nav-toggle').click(function () {
-  //   var collapse_content_selector = $(this).attr('href');
-  //   var toggle_switch = $(this);
-  //   $(collapse_content_selector).toggle(function () {
-  //       if ($(this).css('display') == 'none') {
-  //           toggle_switch.html('Read More');
-  //       } else {
-  //           toggle_switch.html('Read Less');
-  //       }
-  //   });
-  // });
   //pagination counter
+
+  //custom function showing current slide
+  // var $status = $(".pagingInfo");
+  // var $slickElement = $(".pagin-number");
+
+  // $slickElement.on("init reInit afterChange", function(
+  //   event,
+  //   slick,
+  //   currentSlide,
+  //   nextSlide
+  // ) {
+  //   //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+  //   var i = (currentSlide ? currentSlide : 0) + 1;
+  //   $status.text(i + "/" + slick.slideCount);
+  // });
 
   let $slider = $(".pagin-number");
 
   if ($slider.length) {
-    let currentSlide;
+    let currentSlide = 0;
     let slidesCount;
     let sliderCounter = document.createElement("div");
     sliderCounter.classList.add("slider__counter");
@@ -300,6 +290,4 @@ $(document).ready(function() {
 
     $slider.slick();
   }
-
 });
-
