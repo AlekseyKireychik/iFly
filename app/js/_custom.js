@@ -256,6 +256,51 @@ $(document).ready(function() {
       .parents(".panel")
       .toggleClass("is-active");
   });
+
+
+  //pagination counter
+
+  //custom function showing current slide
+  // var $status = $(".pagingInfo");
+  // var $slickElement = $(".pagin-number");
+
+  // $slickElement.on("init reInit afterChange", function(
+  //   event,
+  //   slick,
+  //   currentSlide,
+  //   nextSlide
+  // ) {
+  //   //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
+  //   var i = (currentSlide ? currentSlide : 0) + 1;
+  //   $status.text(i + "/" + slick.slideCount);
+  // });
+
+  let $slider = $(".pagin-number");
+
+  if ($slider.length) {
+    let currentSlide = 0;
+    let slidesCount;
+    let sliderCounter = document.createElement("div");
+    sliderCounter.classList.add("slider__counter");
+
+    let updateSliderCounter = function(slick, currentIndex) {
+      currentSlide = slick.slickCurrentSlide() + 1;
+      slidesCount = slick.slideCount;
+      $(sliderCounter).text(currentSlide + "/" + slidesCount);
+    };
+
+    $slider.on("init", function(event, slick) {
+      $slider.append(sliderCounter);
+      updateSliderCounter(slick);
+    });
+
+    $slider.on("afterChange", function(event, slick, currentSlide) {
+      updateSliderCounter(slick, currentSlide);
+    });
+
+    $slider.slick();
+  }
+});
   ///fsdfdsdfsd
 
   var SETTINGS = {
@@ -443,48 +488,3 @@ function determineOverflow(content, container) {
   ///https://codepen.io/benfrain/pen/MppBYa
 
 
-
-
-  //pagination counter
-
-  //custom function showing current slide
-  // var $status = $(".pagingInfo");
-  // var $slickElement = $(".pagin-number");
-
-  // $slickElement.on("init reInit afterChange", function(
-  //   event,
-  //   slick,
-  //   currentSlide,
-  //   nextSlide
-  // ) {
-  //   //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
-  //   var i = (currentSlide ? currentSlide : 0) + 1;
-  //   $status.text(i + "/" + slick.slideCount);
-  // });
-
-  let $slider = $(".pagin-number");
-
-  if ($slider.length) {
-    let currentSlide = 0;
-    let slidesCount;
-    let sliderCounter = document.createElement("div");
-    sliderCounter.classList.add("slider__counter");
-
-    let updateSliderCounter = function(slick, currentIndex) {
-      currentSlide = slick.slickCurrentSlide() + 1;
-      slidesCount = slick.slideCount;
-      $(sliderCounter).text(currentSlide + "/" + slidesCount);
-    };
-
-    $slider.on("init", function(event, slick) {
-      $slider.append(sliderCounter);
-      updateSliderCounter(slick);
-    });
-
-    $slider.on("afterChange", function(event, slick, currentSlide) {
-      updateSliderCounter(slick, currentSlide);
-    });
-
-    $slider.slick();
-  }
-});
