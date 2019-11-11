@@ -2790,6 +2790,12 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   }
 }
 
+@media (max-width: 575.98px) {
+  .contacts {
+    padding: 0 25px 440px;
+  }
+}
+
 .contacts .container .contacts__map {
   background-image: url(../img/_src/map.jpg);
   background-position: center;
@@ -2842,6 +2848,12 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   .contacts .container .contacts__map .contacts__caption {
     bottom: -375px;
     padding: 50px 40px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .contacts .container .contacts__map .contacts__caption {
+    padding: 50px 25px;
   }
 }
 
@@ -2901,6 +2913,12 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 
 .contacts .container .contacts__map .contacts__caption .contacts__list.mode .contacts__item:first-child {
   padding-right: 75px;
+}
+
+@media (max-width: 575.98px) {
+  .contacts .container .contacts__map .contacts__caption .contacts__list.mode .contacts__item:first-child {
+    padding-right: 0px;
+  }
 }
 
 .contacts .container .contacts__map .contacts__caption .contacts__list .contacts__item .contacts__phone {
