@@ -1,5 +1,14 @@
 $(document).ready(function() {
   //slider
+  $(".programs__list").slick({
+    infinite: false,
+    arrows: false,
+    dots: false,
+    speed: 300,
+    centerMode: true,
+    slidesToShow: 3
+  });
+
   $(".advantages__list").slick({
     infinite: true,
     dots: true,
@@ -42,40 +51,47 @@ $(document).ready(function() {
   });
 
   $(".insructors__sliders").slick({
-    dots: false,
     arrows: false,
     speed: 300,
     slidesToShow: 1,
-    asNavFor: ".insructorsList-slider"
+    dots: true
+    // asNavFor: ".insructorsList-slider"
   });
-  $(".insructorsList-slider").slick({
-    dots: false,
-    asNavFor: ".insructors__sliders",
-    arrows: false,
-    speed: 300,
-    focusOnSelect: true,
-    slidesToShow: 5,
-    responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 1,
-          infinite: true,
-          arrows: false
-        }
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          arrows: false,
-          infinite: true
-        }
-      }
-    ]
-  });
+
+  $(".insructors__sliders #slick-slide-control00").text("Алексей Птушкин");
+  $(".insructors__sliders #slick-slide-control01").text("Илья Алёхин");
+  $(".insructors__sliders #slick-slide-control02").text("Вячеслав Красный");
+  $(".insructors__sliders #slick-slide-control03").text("Сергей Панченков");
+  $(".insructors__sliders #slick-slide-control04").text("Алексей Смирнов");
+
+  // $(".insructorsList-slider").slick({
+  //   dots: false,
+  //   asNavFor: ".insructors__sliders",
+  //   arrows: false,
+  //   speed: 300,
+  //   focusOnSelect: true,
+  //   slidesToShow: 5,
+  //   responsive: [
+  //     {
+  //       breakpoint: 1200,
+  //       settings: {
+  //         slidesToShow: 4,
+  //         slidesToScroll: 1,
+  //         infinite: true,
+  //         arrows: false
+  //       }
+  //     },
+  //     {
+  //       breakpoint: 640,
+  //       settings: {
+  //         slidesToShow: 1,
+  //         slidesToScroll: 1,
+  //         arrows: false,
+  //         infinite: true
+  //       }
+  //     }
+  //   ]
+  // });
 
   $(".newpost-slider").slick({
     infinite: true,
@@ -148,6 +164,11 @@ $(document).ready(function() {
     slidesToShow: 1,
     slidesToScroll: 1
   });
+
+  $(".history-slide #slick-slide-control00").text("1998 - 2001");
+  $(".history-slide #slick-slide-control01").text("2002 - 2007");
+  $(".history-slide #slick-slide-control02").text("2008 - 2013");
+  $(".history-slide #slick-slide-control03").text("2014 - 2019");
 
   //pagination text
   $("a[data-slide]").click(function(e) {
@@ -234,11 +255,6 @@ $(document).ready(function() {
   // //       vacancies_switch.html('свернуть');
   // //     }
   // });
-
-  $("#slick-slide-control00").text("1998 - 2001");
-  $("#slick-slide-control01").text("2002 - 2007");
-  $("#slick-slide-control02").text("2008 - 2013");
-  $("#slick-slide-control03").text("2014 - 2019");
 
   // accordion FAQ page
   $(".faq__btn").on("click", function() {

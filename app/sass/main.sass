@@ -699,14 +699,15 @@ header
 				align-items: flex-start
 				justify-content: space-between
 				flex-wrap: nowrap
-				width: 100%
+				// width: 100%
+				padding: 0 20% 0 0
 				.programs__item
 					background-position: center
 					background-repeat: no-repeat
 					background-size: cover
 					min-height: 488px
 					flex-basis: 407px
-					width: 100%
+					// width: 100%
 					display: flex
 					align-items: flex-end
 					justify-content: flex-end
@@ -1241,6 +1242,7 @@ header
 							line-height: 24px
 //insructors page
 .insructorsPage
+	overflow-x: hidden
 	.container__breadcrumb
 		position: relative
 		padding-top: 0
@@ -1273,7 +1275,7 @@ header
 				color: #fff
 				+media-breakpoint-down(xs)
 					min-height: 540px
-					padding: 0 25px
+					padding: 0 22px
 				.container
 					text-align: left
 					padding: 25px 25px 25px 0
@@ -1293,6 +1295,8 @@ header
 							margin-bottom: 0
 						+media-breakpoint-down(xs)
 							font-size: 36px
+							line-height: 36px
+							padding-top: 70px
 					.insructors-text
 						font-size: 24px
 						line-height: 34px
@@ -1300,39 +1304,50 @@ header
 						margin-bottom: 65px
 						+media-breakpoint-down(xs)
 							font-size: 20px
-							margin-bottom: 15px
-		.container__dots
-			position: relative
-			margin-top: -125px
-			+media-breakpoint-down(xs)
-				padding: 0 25px
-			.insructors__list
-				width: 100%
-				display: flex
-				align-items: center
-				justify-content: space-between
-				flex-wrap: nowrap
+							padding-top: 15px
+							margin-bottom: 25px
+			.slick-dots
+				bottom: 60px
+				padding-bottom: 30px
 				border-bottom: 1px solid rgba(255, 255, 255, 0.4)
-				// +media-breakpoint-down(lg)
-				// 	overflow-x: auto
-				.insructors__item
-					padding-bottom: 28px
-					margin: 0 auto
-					&.slick-current
-						.insructors__dots
-							position: relative
-							color: #ffffff
-							transition: color .3s
-							border-bottom: 1px solid #E72D2D
-					.insructors__dots
+				overflow: hidden
+				overflow-x: auto
+				white-space: nowrap
+				max-width: 1272px
+				left: 12%
+				right: 12%
+				text-align: left
+				+media-breakpoint-down(lg)
+					max-width: 1140px
+					padding-right: 100px
+					left: 6%
+					right: 6%
+				+media-breakpoint-down(md)
+					max-width: 960px
+				+media-breakpoint-down(sm)
+					left: 7%
+					right: 7%
+				li
+					min-width: 200px
+					height: 40px
+					button
+						display: inline
+						width: 200px
 						font-weight: 600
 						font-size: 18px
-						line-height: 18px
-						color: #fff
+						line-height: 52px
+						color: rgba(255, 255, 255, 0.4)
 						transition: color .3s
-						padding: 0px 22px 30px
-						white-space: nowrap
-						outline-color: transparent
+						margin: 0
+						padding-bottom: 68px
+						&:before
+							content: ""
+							display: none
+					&.slick-active
+						button
+							color: #ffffff
+							transition: color .3s
+							border-bottom: 2px solid $accent
 .insructors
 	background: #F7F7F7
 	padding: 145px 0 120px
@@ -2448,17 +2463,22 @@ header
 		position: relative
 		min-height: 880px
 		overflow: hidden
+		+media-breakpoint-down(xs)
+			padding: 0 24px
 		.container__breadcrumb
 			.row
 				.nav__breadcrumb
-					a
-						color: #fff
-					.breadcrumb-item
-						color: #fff
-						opacity: 0.8
-						&:before
+					.breadcrumb
+						+media-breakpoint-down(xs)
+							padding-left: 0
+						a
+							color: #fff
+						.breadcrumb-item
 							color: #fff
 							opacity: 0.8
+							&:before
+								color: #fff
+								opacity: 0.8
 		.container
 			.row
 				.title
@@ -2467,6 +2487,10 @@ header
 					line-height: 100px
 					margin-bottom: 0
 					padding-bottom: 112px
+					+media-breakpoint-down(xs)
+						padding-bottom: 20px
+						font-size: 36px
+						padding-left: 0
 			.row
 				.history-slide
 					max-width: 1272px
@@ -2479,6 +2503,12 @@ header
 							line-height: 100px
 							color: #fff
 							font-weight: 600
+							+media-breakpoint-down(md)
+								font-size: 84px
+								line-height: 84px
+							+media-breakpoint-down(xs)
+								font-size: 64px
+								line-height: 64px
 						.history__text
 							font-size: 18px
 							line-height: 28px
@@ -2486,6 +2516,8 @@ header
 							padding-top: 40px
 							padding-bottom: 110px
 							max-width: 624px
+							+media-breakpoint-down(xs)
+								max-width: 280px
 					.slick-dots
 						bottom: -40px
 						left: 0
@@ -2494,9 +2526,22 @@ header
 						overflow: hidden
 						overflow-x: auto
 						white-space: nowrap
+						text-align: left
+						+media-breakpoint-down(lg)
+							padding-right: 200px
+						+media-breakpoint-down(md)
+							padding-right: 400px
+						+media-breakpoint-down(sm)
+							padding-right: 600px
+						+media-breakpoint-down(xs)
+							padding-right: 990px
 						li
-
+							height: 35px
 							min-width: 300px
+							+media-breakpoint-down(sm)
+								min-width: 274px
+							+media-breakpoint-down(xs)
+								min-width: 144px
 							button
 								display: inline
 								width: 300px
@@ -2507,6 +2552,10 @@ header
 								transition: color .3s
 								margin: 0
 								padding-bottom: 68px
+								+media-breakpoint-down(sm)
+									width: 274px
+								+media-breakpoint-down(xs)
+									width: 144px
 								&:before
 									content: ""
 									display: none
@@ -2515,6 +2564,28 @@ header
 									color: #ffffff
 									transition: color .3s
 									border-bottom: 2px solid $accent
+
+			// .slick-dots
+			// 	bottom: 60px
+			// 	padding-bottom: 30px
+			// 	border-bottom: 1px solid rgba(255, 255, 255, 0.4)
+			// 	overflow: hidden
+			// 	overflow-x: auto
+			// 	white-space: nowrap
+			// 	max-width: 1272px
+			// 	left: 12%
+			// 	right: 12%
+			// 	text-align: left
+			// 	+media-breakpoint-down(lg)
+			// 		max-width: 1140px
+			// 		padding-right: 100px
+			// 		left: 6%
+			// 		right: 6%
+			// 	+media-breakpoint-down(md)
+			// 		max-width: 960px
+			// 	+media-breakpoint-down(sm)
+			// 		left: 7%
+			// 		right: 7%
 //FAQ page
 .main__faq
 	background-color: #F7F7F7
