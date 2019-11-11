@@ -587,8 +587,8 @@ template {
     padding-left: 6vw !important;
   }
   .insructors__sliders .slick-dots {
-    left: 4% !important;
-    right: 4% !important;
+    left: 3% !important;
+    right: 3% !important;
   }
 }
 
@@ -1921,7 +1921,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 .home {
-  background: #E3E1E1;
+  background: #F7F7F7;
 }
 
 .programs__home {
@@ -1929,7 +1929,36 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   padding-bottom: 120px;
 }
 
-.programs__home .container .row .programs__list {
+.programs__home .programs__wrapper {
+  position: relative;
+  padding: 0 11px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.programs__home .programs__wrapper .programs__nav {
+  overflow-x: auto;
+  /* We don't want vertical scrolling */
+  overflow-y: hidden;
+  /* For WebKit implementations, provide inertia scrolling */
+  -webkit-overflow-scrolling: touch;
+  /* We don't want internal inline elements to wrap */
+  white-space: nowrap;
+  /* If JS present, let's hide the default scrollbar */
+  position: relative;
+}
+
+.js .programs__home .programs__wrapper .programs__nav {
+  /* Make an auto-hiding scroller for the 3 people using a IE */
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  /* Remove the default scrollbar for WebKit implementations */
+}
+
+.js .programs__home .programs__wrapper .programs__nav::-webkit-scrollbar {
+  display: none;
+}
+
+.programs__home .programs__wrapper .programs__nav .programs__list {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1945,10 +1974,10 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
-  padding: 0 20% 0 0;
+  margin: 0 auto;
 }
 
-.programs__home .container .row .programs__list .programs__item {
+.programs__home .programs__wrapper .programs__nav .programs__list .programs__item {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1956,6 +1985,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   -webkit-flex-basis: 407px;
       -ms-flex-preferred-size: 407px;
           flex-basis: 407px;
+  width: 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1970,31 +2000,31 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
           justify-content: flex-end;
 }
 
-.programs__home .container .row .programs__list .programs__item.item01 {
+.programs__home .programs__wrapper .programs__nav .programs__list .programs__item.item01 {
   background-image: url(../img/_src/programs02.jpg);
 }
 
-.programs__home .container .row .programs__list .programs__item.item02 {
+.programs__home .programs__wrapper .programs__nav .programs__list .programs__item.item02 {
   background-image: url(../img/_src/programs02.jpg);
 }
 
-.programs__home .container .row .programs__list .programs__item.item03 {
+.programs__home .programs__wrapper .programs__nav .programs__list .programs__item.item03 {
   background-image: url(../img/_src/programs02.jpg);
 }
 
-.programs__home .container .row .programs__list .programs__item.item04 {
+.programs__home .programs__wrapper .programs__nav .programs__list .programs__item.item04 {
   background-image: url(../img/_src/programs02.jpg);
 }
 
-.programs__home .container .row .programs__list .programs__item.item05 {
+.programs__home .programs__wrapper .programs__nav .programs__list .programs__item.item05 {
   background-image: url(../img/_src/programs02.jpg);
 }
 
-.programs__home .container .row .programs__list .programs__item.item06 {
+.programs__home .programs__wrapper .programs__nav .programs__list .programs__item.item06 {
   background-image: url(../img/_src/programs02.jpg);
 }
 
-.programs__home .container .row .programs__list .programs__item .programs__link {
+.programs__home .programs__wrapper .programs__nav .programs__list .programs__item .programs__link {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2020,21 +2050,21 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   width: 100%;
 }
 
-.programs__home .container .row .programs__list .programs__item .programs__link:hover .programs__description {
+.programs__home .programs__wrapper .programs__nav .programs__list .programs__item .programs__link:hover .programs__description {
   display: block;
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
 }
 
-.programs__home .container .row .programs__list .programs__item .programs__link:hover .programs__wrapBtn .programs__btn {
+.programs__home .programs__wrapper .programs__nav .programs__list .programs__item .programs__link:hover .programs__wrapBtn .programs__btn {
   background-color: #E72D2D;
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
 }
 
-.programs__home .container .row .programs__list .programs__item .programs__link .programs__title {
+.programs__home .programs__wrapper .programs__nav .programs__list .programs__item .programs__link .programs__title {
   padding-left: 74px;
   font-weight: bold;
   font-size: 28px;
@@ -2045,14 +2075,14 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   transition: .3s;
 }
 
-.programs__home .container .row .programs__list .programs__item .programs__link .programs__title:before {
+.programs__home .programs__wrapper .programs__nav .programs__list .programs__item .programs__link .programs__title:before {
   content: url(../img/_src/square.svg);
   position: absolute;
   left: 48px;
   top: -4px;
 }
 
-.programs__home .container .row .programs__list .programs__item .programs__link .programs__description {
+.programs__home .programs__wrapper .programs__nav .programs__list .programs__item .programs__link .programs__description {
   display: none;
   padding-left: 74px;
   font-size: 18px;
@@ -2062,14 +2092,14 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   transition: .3s;
 }
 
-.programs__home .container .row .programs__list .programs__item .programs__link .programs__wrapBtn {
+.programs__home .programs__wrapper .programs__nav .programs__list .programs__item .programs__link .programs__wrapBtn {
   text-align: center;
   margin: 40px auto 0;
   width: 100%;
   border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-.programs__home .container .row .programs__list .programs__item .programs__link .programs__wrapBtn .programs__btn {
+.programs__home .programs__wrapper .programs__nav .programs__list .programs__item .programs__link .programs__wrapBtn .programs__btn {
   background-color: transparent;
   width: 100%;
   -webkit-transition: .3s;
@@ -2077,7 +2107,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   transition: .3s;
 }
 
-.programs__home .container .row .programs__list .programs__item .programs__link .programs__order {
+.programs__home .programs__wrapper .programs__nav .programs__list .programs__item .programs__link .programs__order {
   position: absolute;
   right: 0;
   top: 50px;
@@ -2401,7 +2431,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 .seti__home {
-  padding: 120px 0px;
+  padding: 120px 0px 234px;
 }
 
 .seti__home .container .row {
@@ -2493,21 +2523,22 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .seti__home .seti__lenta .seti__item .seti__itemWrap {
+  margin: 0;
+  width: 408px;
   -webkit-flex-basis: 408px;
       -ms-flex-preferred-size: 408px;
           flex-basis: 408px;
-  width: 408px;
   background-color: #fff;
   padding-bottom: 30px;
 }
@@ -2606,6 +2637,25 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   position: absolute;
   left: 0px;
   top: -1px;
+}
+
+.seti__home .seti__lenta .slick-prev {
+  left: 3%;
+  margin: 0;
+}
+
+.seti__home .seti__lenta .slick-arrow {
+  margin: 0;
+}
+
+.seti__home .seti__lenta .slick-arrow.slick-next {
+  margin: 0;
+  left: 12%;
+}
+
+.seti__home .seti__lenta .slider__counter {
+  left: 7.6%;
+  top: 115%;
 }
 
 .fon {
@@ -3120,11 +3170,11 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   transition: color .3s;
   margin: 0;
   padding-bottom: 68px;
+  position: relative;
 }
 
 .insructorsPage .insructors__slider .insructors__sliders .slick-dots li button:before {
-  content: "";
-  display: none;
+  content: " ";
 }
 
 .insructorsPage .insructors__slider .insructors__sliders .slick-dots li.slick-active button {

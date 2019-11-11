@@ -688,26 +688,44 @@ header
 								line-height: 22px
 						.carousel-link
 .home
-	background: #E3E1E1
+	background: #F7F7F7
 .programs__home
 	padding-top: 120px
 	padding-bottom: 120px
-	.container
-		.row
+	.programs__wrapper
+		position: relative
+		padding: 0 11px
+		box-sizing: border-box
+		.programs__nav
+			overflow-x: auto
+			/* We don't want vertical scrolling */
+			overflow-y: hidden
+			/* For WebKit implementations, provide inertia scrolling */
+			-webkit-overflow-scrolling: touch
+			/* We don't want internal inline elements to wrap */
+			white-space: nowrap
+			/* If JS present, let's hide the default scrollbar */
+			position: relative
+			.js & 
+				/* Make an auto-hiding scroller for the 3 people using a IE */
+				-ms-overflow-style: -ms-autohiding-scrollbar
+				/* Remove the default scrollbar for WebKit implementations */
+				&::-webkit-scrollbar 
+					display: none
+			
 			.programs__list
 				display: flex
 				align-items: flex-start
 				justify-content: space-between
 				flex-wrap: nowrap
-				// width: 100%
-				padding: 0 20% 0 0
+				margin: 0 auto
 				.programs__item
 					background-position: center
 					background-repeat: no-repeat
 					background-size: cover
 					min-height: 488px
 					flex-basis: 407px
-					// width: 100%
+					width: 100%
 					display: flex
 					align-items: flex-end
 					justify-content: flex-end
@@ -971,7 +989,7 @@ header
 					+media-breakpoint-down(xs)
 						margin-left: 20px
 .seti__home
-	padding: 120px 0px
+	padding: 120px 0px 234px
 	.container
 		.row
 			justify-content: space-between
@@ -1005,12 +1023,13 @@ header
 							transition: .3s
 	.seti__lenta
 		display: flex
-		align-items: flex-start
-		justify-content: space-between
-		.seti__item
+		align-items: center
+		justify-content: center
+		.seti__item		
 			.seti__itemWrap
-				flex-basis: 408px
+				margin: 0
 				width: 408px
+				flex-basis: 408px
 				background-color: #fff
 				padding-bottom: 30px
 				.seti__top
@@ -1062,10 +1081,18 @@ header
 								position: absolute
 								left: 0px
 								top: -1px
-
-					.seti__link
-						.seti__logo
-
+		.slick-prev
+			left: 3%
+			margin: 0
+		.slick-arrow
+			margin: 0
+			&.slick-next
+				margin: 0
+				left: 12%
+		.slider__counter
+			left: 7.6%
+			top: 115%
+    		
 .fon
 	padding: 0 0 255px
 	background: #F7F7F7
@@ -1346,14 +1373,24 @@ header
 						transition: color .3s
 						margin: 0
 						padding-bottom: 68px
+						position: relative
 						&:before
-							content: ""
-							display: none
+							content: " "
 					&.slick-active
 						button
 							color: #ffffff
 							transition: color .3s
 							border-bottom: 2px solid $accent
+							// &:after
+							// 	display: block
+							// 	content: " "
+							// 	width: 200px
+							// 	height: 2px
+							// 	background-color: $accent
+							// 	bottom: 0
+							// 	left: 50%
+							// 	z-index: 999
+
 .insructors
 	background: #F7F7F7
 	padding: 145px 0 120px
