@@ -1929,35 +1929,6 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   padding-bottom: 120px;
 }
 
-.programs__home .programs__wrapper {
-  position: relative;
-  padding: 0 11px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-.programs__home .programs__wrapper .programs__nav {
-  overflow-x: auto;
-  /* We don't want vertical scrolling */
-  overflow-y: hidden;
-  /* For WebKit implementations, provide inertia scrolling */
-  -webkit-overflow-scrolling: touch;
-  /* We don't want internal inline elements to wrap */
-  white-space: nowrap;
-  /* If JS present, let's hide the default scrollbar */
-  position: relative;
-}
-
-.js .programs__home .programs__wrapper .programs__nav {
-  /* Make an auto-hiding scroller for the 3 people using a IE */
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  /* Remove the default scrollbar for WebKit implementations */
-}
-
-.js .programs__home .programs__wrapper .programs__nav::-webkit-scrollbar {
-  display: none;
-}
-
 .programs__home .programs__wrapper .programs__nav .programs__list {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1967,14 +1938,16 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
-  margin: 0 auto;
+  max-width: 1400px;
+  position: relative;
+  z-index: 1;
 }
 
 .programs__home .programs__wrapper .programs__nav .programs__list .programs__item {
@@ -1985,7 +1958,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   -webkit-flex-basis: 407px;
       -ms-flex-preferred-size: 407px;
           flex-basis: 407px;
-  width: 100%;
+  max-width: 407px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2021,7 +1994,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 .programs__home .programs__wrapper .programs__nav .programs__list .programs__item.item06 {
-  background-image: url(../img/_src/programs02.jpg);
+  background-image: url(../img/_src/programsAll.jpg);
 }
 
 .programs__home .programs__wrapper .programs__nav .programs__list .programs__item .programs__link {
@@ -2117,6 +2090,63 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   color: #FFF;
   padding: 14px 10px;
   background-color: #E72D2D;
+}
+
+.programs__home .programs__wrapper .programs__nav .programs__list.slick-slider .slick-list {
+  margin: 0 -12px;
+}
+
+.programs__home .programs__wrapper .programs__nav .programs__list.slick-slider .slick-list .slick-track .slick-slide {
+  margin: 0 12px;
+}
+
+.programs__home .programs__wrapper .programs__nav .programs__list .slick-prev {
+  left: 0;
+  margin: 0;
+  display: block;
+}
+
+.programs__home .programs__wrapper .programs__nav .programs__list .slick-prev:before {
+  content: url(../img/_src/arrowProduct.svg);
+}
+
+.programs__home .programs__wrapper .programs__nav .programs__list .slick-prev.slick-disabled {
+  opacity: 0;
+  display: none;
+}
+
+.programs__home .programs__wrapper .programs__nav .programs__list .slick-arrow {
+  top: 50%;
+  margin: 0;
+  z-index: 2;
+  border: none;
+}
+
+.programs__home .programs__wrapper .programs__nav .programs__list .slick-arrow.slick-next {
+  margin: 0;
+  left: auto;
+  right: -14px;
+  width: 120px;
+  height: 100%;
+  display: block;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(#fff));
+  background: -o-linear-gradient(left, rgba(255, 255, 255, 0), #fff);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), #fff);
+}
+
+.programs__home .programs__wrapper .programs__nav .programs__list .slick-arrow.slick-next:before {
+  content: url(../img/_src/arrowProduct.svg);
+  cursor: pointer;
+}
+
+.programs__home .programs__wrapper .programs__nav .programs__list .slick-arrow.slick-next.slick-disabled {
+  opacity: 0;
+  display: none;
+}
+
+.programs__home .programs__wrapper .programs__nav .programs__list .slider__counter {
+  left: 5%;
+  top: 115%;
 }
 
 .advantages__home .advantages__list {
@@ -2531,6 +2561,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  max-width: 1272px;
 }
 
 .seti__home .seti__lenta .seti__item .seti__itemWrap {
@@ -2639,8 +2670,16 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   top: -1px;
 }
 
+.seti__home .seti__lenta.slick-slider .slick-list {
+  margin: 0 -25px;
+}
+
+.seti__home .seti__lenta.slick-slider .slick-list .slick-track .slick-slide {
+  margin: 0 25px;
+}
+
 .seti__home .seti__lenta .slick-prev {
-  left: 3%;
+  left: 0%;
   margin: 0;
 }
 
@@ -2650,11 +2689,11 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 
 .seti__home .seti__lenta .slick-arrow.slick-next {
   margin: 0;
-  left: 12%;
+  left: 10%;
 }
 
 .seti__home .seti__lenta .slider__counter {
-  left: 7.6%;
+  left: 5%;
   top: 115%;
 }
 

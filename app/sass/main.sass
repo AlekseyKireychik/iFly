@@ -383,7 +383,6 @@ input.error
 						content: url(../img/_src/arrRight.svg)
 
 //home page
-
 header
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
 	.container
@@ -693,39 +692,22 @@ header
 	padding-top: 120px
 	padding-bottom: 120px
 	.programs__wrapper
-		position: relative
-		padding: 0 11px
-		box-sizing: border-box
 		.programs__nav
-			overflow-x: auto
-			/* We don't want vertical scrolling */
-			overflow-y: hidden
-			/* For WebKit implementations, provide inertia scrolling */
-			-webkit-overflow-scrolling: touch
-			/* We don't want internal inline elements to wrap */
-			white-space: nowrap
-			/* If JS present, let's hide the default scrollbar */
-			position: relative
-			.js & 
-				/* Make an auto-hiding scroller for the 3 people using a IE */
-				-ms-overflow-style: -ms-autohiding-scrollbar
-				/* Remove the default scrollbar for WebKit implementations */
-				&::-webkit-scrollbar 
-					display: none
-			
 			.programs__list
 				display: flex
 				align-items: flex-start
-				justify-content: space-between
+				justify-content: center
 				flex-wrap: nowrap
-				margin: 0 auto
+				max-width: 1400px
+				position: relative
+				z-index: 1
 				.programs__item
 					background-position: center
 					background-repeat: no-repeat
 					background-size: cover
 					min-height: 488px
 					flex-basis: 407px
-					width: 100%
+					max-width: 407px
 					display: flex
 					align-items: flex-end
 					justify-content: flex-end
@@ -740,7 +722,7 @@ header
 					&.item05
 						background-image: url(../img/_src/programs02.jpg)
 					&.item06
-						background-image: url(../img/_src/programs02.jpg)
+						background-image: url(../img/_src/programsAll.jpg)
 					.programs__link
 						position: relative
 						display: flex
@@ -795,6 +777,44 @@ header
 							color: #FFF
 							padding: 14px 10px
 							background-color: $accent
+				&.slick-slider
+					.slick-list
+						margin: 0 -12px
+						.slick-track
+							.slick-slide
+								margin: 0 12px
+				.slick-prev
+					left: 0
+					margin: 0
+					display: block
+					&:before
+						content: url(../img/_src/arrowProduct.svg)						
+					&.slick-disabled
+						opacity: 0
+						display: none
+				.slick-arrow
+					top: 50%
+					margin: 0
+					z-index: 2
+					border: none
+					&.slick-next
+						margin: 0
+						left: auto
+						right: -14px
+						width: 120px
+						height: 100%
+						display: block
+						background: linear-gradient(90deg,hsla(0,0%,100%,0),#fff)
+						&:before
+							content: url(../img/_src/arrowProduct.svg)
+							cursor: pointer
+						&.slick-disabled
+							opacity: 0
+							display: none
+
+				.slider__counter
+					left: 5%
+					top: 115%
 .advantages__home
 	.advantages__list
 		margin: 0
@@ -1025,7 +1045,8 @@ header
 		display: flex
 		align-items: center
 		justify-content: center
-		.seti__item		
+		max-width: 1272px
+		.seti__item
 			.seti__itemWrap
 				margin: 0
 				width: 408px
@@ -1081,18 +1102,24 @@ header
 								position: absolute
 								left: 0px
 								top: -1px
+		&.slick-slider
+			.slick-list
+				margin: 0 -25px
+				.slick-track
+					.slick-slide
+						margin: 0 25px
 		.slick-prev
-			left: 3%
+			left: 0%
 			margin: 0
 		.slick-arrow
 			margin: 0
 			&.slick-next
 				margin: 0
-				left: 12%
+				left: 10%
 		.slider__counter
-			left: 7.6%
+			left: 5%
 			top: 115%
-    		
+
 .fon
 	padding: 0 0 255px
 	background: #F7F7F7
