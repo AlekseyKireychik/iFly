@@ -2,7 +2,48 @@
 @media screen and (min-width: 1300px)
     .container
         max-width: 1272px
+@media screen and (min-width: 1450px)    
+    .programs__home
+        padding-bottom: 120px!important
+        .programs__wrapper
+            .programs__nav
+                .programs__list
+                    max-width: 1400px!important
+                    .slick-prev
+                        left: 0!important
+                        margin: 0!important
+                        display: block
+                        &:before
+                            content: url(../img/_src/arrowProduct.svg)!important
+                        &.slick-disabled
+                            opacity: 0!important
+                            display: none
+                    .slick-arrow
+                        top: 50%!important
+                        margin: 0!important
+                        z-index: 2!important
+                        border: none!important
+                        &.slick-next
+                            margin: 0!important
+                            left: auto!important
+                            right: -14px!important
+                            width: 120px!important
+                            height: 100%!important
+                            display: block
+                            background: linear-gradient(90deg,hsla(0,0%,100%,0),#fff)!important
+                            &:before
+                                content: url(../img/_src/arrowProduct.svg)!important
+                                cursor: pointer!important
+                            &.slick-disabled
+                                opacity: 0!important
+                                display: none
 
+@media screen and (min-width: 1200px) and (max-width: 1340px)
+    .programs__home
+        .programs__wrapper
+            .programs__nav
+                .programs__list
+                    max-width: 1140px!important
 @media screen and (max-width: 1299px)
     header
         .container

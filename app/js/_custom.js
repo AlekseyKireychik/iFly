@@ -7,7 +7,19 @@ $(document).ready(function() {
     dots: false,
     speed: 300,
     autoplay: false,
-    slidesToShow: 3
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          infinite: true,
+          arrows: true,
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      }
+    ]
   });
 
   $(".advantages__list").slick({
@@ -36,6 +48,27 @@ $(document).ready(function() {
     ]
   });
 
+  $(".akcii__list").slick({
+    infinite: false,
+    arrows: false,
+    dots: false,
+    speed: 300,
+    autoplay: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          infinite: true,
+          arrows: true,
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+  
   // seti homepage
   $(".seti__lenta").slick({
     infinite: true,
@@ -83,7 +116,7 @@ $(document).ready(function() {
     setSlideVisibility();
   });
 
-  //
+  // reviews
   $(".reviews-slider").slick({
     infinite: true,
     dots: false,
@@ -303,6 +336,58 @@ $(document).ready(function() {
     });
 
     $slider.slick();
+  }
+
+  let $slider02 = $(".pagin-number02");
+
+  if ($slider02.length) {
+    let currentSlide = 0;
+    let slidesCount;
+    let sliderCounter = document.createElement("div");
+    sliderCounter.classList.add("slider__counter");
+
+    let updateSliderCounter = function(slick, currentIndex) {
+      currentSlide = slick.slickCurrentSlide() + 1;
+      slidesCount = slick.slideCount;
+      $(sliderCounter).text(currentSlide + "/" + slidesCount);
+    };
+
+    $slider02.on("init", function(event, slick) {
+      $slider02.append(sliderCounter);
+      updateSliderCounter(slick);
+    });
+
+    $slider02.on("afterChange", function(event, slick, currentSlide) {
+      updateSliderCounter(slick, currentSlide);
+    });
+
+    $slider02.slick();
+  }
+
+  let $slider03 = $(".pagin-number03");
+
+  if ($slider03.length) {
+    let currentSlide = 0;
+    let slidesCount;
+    let sliderCounter = document.createElement("div");
+    sliderCounter.classList.add("slider__counter");
+
+    let updateSliderCounter = function(slick, currentIndex) {
+      currentSlide = slick.slickCurrentSlide() + 1;
+      slidesCount = slick.slideCount;
+      $(sliderCounter).text(currentSlide + "/" + slidesCount);
+    };
+
+    $slider03.on("init", function(event, slick) {
+      $slider03.append(sliderCounter);
+      updateSliderCounter(slick);
+    });
+
+    $slider03.on("afterChange", function(event, slick, currentSlide) {
+      updateSliderCounter(slick, currentSlide);
+    });
+
+    $slider03.slick();
   }
 });
 

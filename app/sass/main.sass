@@ -125,7 +125,8 @@ input.error
 	right: 0
 	left: 0
 	z-index: 1000
-	display: none
+	// display: none
+	display: block
 	&.is-active
 		display: block
 	.form
@@ -177,10 +178,11 @@ input.error
 					align-items: flex-start
 					justify-content: flex-start
 					flex-direction: column
+					position: relative
 					&.group-01
 						flex-basis: 50%
 						width: 100%
-						padding-bottom: 65px
+						padding-bottom: 50px
 						&:nth-child(odd)
 							padding-right: 27px
 					.mainform__label
@@ -189,9 +191,12 @@ input.error
 						color: $accentTwo
 						font-weight: 600
 						padding-left: 20px
+						position: absolute
+						top: 15px
+						left: 0
 						.required-star
 							color: $accent
-					.mainform__control
+					input
 						font-size: 16px
 						line-height: 19px
 						color: $accentTwo
@@ -202,9 +207,23 @@ input.error
 						border-bottom: 1px solid #E5E7E8
 						&:focus
 							border-bottom: 1px solid $accentTwo
-						&:invalid
-							border-bottom: 1px solid $accent
+							& + label
+								top: -15px
+								font-size: 14px
+								line-height: 17px
+								color: #999EA7
+								.required-star
+									color: #999EA7
 
+						&:invalid:not(:focus):not(:placeholder-shown)
+							border-bottom: 1px solid $accent
+							& + label
+								top: -15px
+								font-size: 14px
+								line-height: 17px
+								color: $accent
+						&:valid
+							border-bottom: 1px solid #E5E7E8
 			.form__center
 				display: flex
 				align-items: flex-start
@@ -216,9 +235,20 @@ input.error
 					justify-content: flex-start
 					flex-direction: column
 					width: 100%
+					position: relative
 					&.comment
 						flex-basis: 80%
 						padding-right: 27px
+						.mainform__label
+							position: absolute
+							top: 25px
+						#comment:focus
+							border-bottom: 1px solid $accentTwo
+							& + label
+								top: -40px
+								font-size: 14px
+								line-height: 17px
+								color: #999EA7
 					&.file
 						flex-basis: 20%
 						position: relative
@@ -226,7 +256,7 @@ input.error
 						padding-top: 25px
 						.mainform__label
 							padding-left: 40px
-							padding-bottom: 20px
+							padding-bottom: 15px
 							border-bottom: 1px solid #E5E7E8
 						.mainform__control
 							width: 0.1px
@@ -255,6 +285,7 @@ input.error
 						border: none
 						border-bottom: 1px solid #E5E7E8
 						resize: none
+						margin-top: -25px
 			.footer__bottom
 				padding-top: 50px
 				display: flex
@@ -267,7 +298,7 @@ input.error
 					.form__check-label
 						font-size: 16px
 						line-height: 24px
-						padding-left: 20px
+						padding-left: 0px
 						color: $accentTwo
 						margin-bottom: 20px
 					.form__check-input
@@ -690,7 +721,7 @@ header
 	background: #F7F7F7
 .programs__home
 	padding-top: 120px
-	padding-bottom: 120px
+	padding-bottom: 210px
 	.programs__wrapper
 		.programs__nav
 			.programs__list
@@ -698,9 +729,21 @@ header
 				align-items: flex-start
 				justify-content: center
 				flex-wrap: nowrap
-				max-width: 1400px
+				max-width: 1272px
 				position: relative
 				z-index: 1
+				+media-breakpoint-up(xl)
+					max-width: 1272px
+				+media-breakpoint-down(xl)
+					max-width: 1140px
+				+media-breakpoint-down(lg)
+					max-width: 960px
+				+media-breakpoint-down(md)
+					max-width: 720px
+				+media-breakpoint-down(sm)
+					max-width: 500px
+				+media-breakpoint-down(xs)
+					max-width: 100%
 				.programs__item
 					background-position: center
 					background-repeat: no-repeat
@@ -711,6 +754,10 @@ header
 					display: flex
 					align-items: flex-end
 					justify-content: flex-end
+					+media-breakpoint-down(xl)
+						min-height: 396px
+						max-width: 332px
+						flex-basis: 332px
 					&.item01
 						background-image: url(../img/_src/programs02.jpg)
 					&.item02
@@ -783,38 +830,6 @@ header
 						.slick-track
 							.slick-slide
 								margin: 0 12px
-				.slick-prev
-					left: 0
-					margin: 0
-					display: block
-					&:before
-						content: url(../img/_src/arrowProduct.svg)						
-					&.slick-disabled
-						opacity: 0
-						display: none
-				.slick-arrow
-					top: 50%
-					margin: 0
-					z-index: 2
-					border: none
-					&.slick-next
-						margin: 0
-						left: auto
-						right: -14px
-						width: 120px
-						height: 100%
-						display: block
-						background: linear-gradient(90deg,hsla(0,0%,100%,0),#fff)
-						&:before
-							content: url(../img/_src/arrowProduct.svg)
-							cursor: pointer
-						&.slick-disabled
-							opacity: 0
-							display: none
-
-				.slider__counter
-					left: 5%
-					top: 115%
 .advantages__home
 	.advantages__list
 		margin: 0
@@ -911,6 +926,9 @@ header
 					display: flex
 					align-items: flex-end
 					justify-content: flex-end
+					+media-breakpoint-down(xl)
+						width: 332px
+						flex-basis: 332px
 					&.akciiSale
 						position: relative
 						&:before
@@ -1046,6 +1064,18 @@ header
 		align-items: center
 		justify-content: center
 		max-width: 1272px
+		// +media-breakpoint-up(xl)
+		// 	max-width: 1272px
+		+media-breakpoint-down(xl)
+			max-width: 1140px
+		+media-breakpoint-down(lg)
+			max-width: 960px
+		+media-breakpoint-down(md)
+			max-width: 720px
+		+media-breakpoint-down(sm)
+			max-width: 500px
+		+media-breakpoint-down(xs)
+			max-width: 100%
 		.seti__item
 			.seti__itemWrap
 				margin: 0
@@ -1053,6 +1083,9 @@ header
 				flex-basis: 408px
 				background-color: #fff
 				padding-bottom: 30px
+				+media-breakpoint-down(xl)
+					width: 332px
+					flex-basis: 332px
 				.seti__top
 					display: flex
 					align-items: center
@@ -1104,10 +1137,10 @@ header
 								top: -1px
 		&.slick-slider
 			.slick-list
-				margin: 0 -25px
+				margin: 0 -10px
 				.slick-track
 					.slick-slide
-						margin: 0 25px
+						margin: 0 10px
 		.slick-prev
 			left: 0%
 			margin: 0
@@ -1408,15 +1441,6 @@ header
 							color: #ffffff
 							transition: color .3s
 							border-bottom: 2px solid $accent
-							// &:after
-							// 	display: block
-							// 	content: " "
-							// 	width: 200px
-							// 	height: 2px
-							// 	background-color: $accent
-							// 	bottom: 0
-							// 	left: 50%
-							// 	z-index: 999
 
 .insructors
 	background: #F7F7F7
