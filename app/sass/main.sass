@@ -125,12 +125,13 @@ input.error
 	right: 0
 	left: 0
 	z-index: 1000
-	// display: none
-	display: block
+	display: none
 	&.is-active
 		display: block
 	.form
 		padding: 95px 100px
+		+media-breakpoint-down(sm)
+			padding: 50px 10px
 		.wrap__btnClose
 			display: flex
 			align-items: center
@@ -183,8 +184,12 @@ input.error
 						flex-basis: 50%
 						width: 100%
 						padding-bottom: 50px
+						+media-breakpoint-down(md)
+							flex-basis: 100%
 						&:nth-child(odd)
 							padding-right: 27px
+							+media-breakpoint-down(md)
+								padding-right: 0px
 					.mainform__label
 						font-size: 16px
 						line-height: 19px
@@ -213,12 +218,9 @@ input.error
 								line-height: 17px
 								color: #999EA7
 								.required-star
-									color: #999EA7
-
-						&:invalid:not(:focus):not(:placeholder-shown)
-							border-bottom: 1px solid $accent
+									color: #999EA7	
+						&:invalid:not(:focus):not(:placeholder-shown)														
 							& + label
-								top: -15px
 								font-size: 14px
 								line-height: 17px
 								color: $accent
@@ -229,6 +231,9 @@ input.error
 				align-items: flex-start
 				justify-content: space-between
 				flex-wrap: wrap
+				padding-bottom: 20px
+				+media-breakpoint-down(lg)
+					flex-direction: column
 				.mainform__group
 					display: flex
 					align-items: flex-start
@@ -239,6 +244,11 @@ input.error
 					&.comment
 						flex-basis: 80%
 						padding-right: 27px
+						+media-breakpoint-down(lg)
+							padding-right: 0px
+							padding-bottom: 20px
+							+media-breakpoint-down(md)
+								padding-bottom: 40px
 						.mainform__label
 							position: absolute
 							top: 25px
@@ -258,6 +268,9 @@ input.error
 							padding-left: 40px
 							padding-bottom: 15px
 							border-bottom: 1px solid #E5E7E8
+							cursor: pointer
+							+media-breakpoint-down(xs)
+								width: 100%
 						.mainform__control
 							width: 0.1px
 							height: 0.1px
@@ -285,12 +298,38 @@ input.error
 						border: none
 						border-bottom: 1px solid #E5E7E8
 						resize: none
-						margin-top: -25px
+						margin-top: -23px
+			#file-name				
+				.del__container
+					display: flex
+					align-items: center
+					justify-content: space-between
+					background: #F7F7F7
+					padding: 25px 40px 25px 28px
+					#del-file
+						position: relative
+						cursor: pointer
+						&:before
+							position: absolute
+							content: url(../img/_src/close.svg)
+							cursor: pointer
+							top: 3px
+							left: -35px
+							+media-breakpoint-down(xs)
+								top: -10px
+								left: 0px
+						.name
+							+media-breakpoint-down(xs)
+								display: none
 			.footer__bottom
 				padding-top: 50px
 				display: flex
 				align-items: center
 				justify-content: space-between
+				+media-breakpoint-down(lg)
+					flex-direction: column
+					align-items: flex-start
+					padding-top: 0px
 				.form-check
 					position: relative
 					margin-top: 40px
@@ -301,6 +340,8 @@ input.error
 						padding-left: 0px
 						color: $accentTwo
 						margin-bottom: 20px
+						+media-breakpoint-down(md)
+							padding-left: 12px
 					.form__check-input
 						background: #F7F7F7
 						border: 2px solid #F7F7F7
@@ -320,9 +361,19 @@ input.error
 						display: inline-block
 						vertical-align: middle
 						border: 2px solid $accentTwo
+						+media-breakpoint-down(md)
+							bottom: 45px
+							+media-breakpoint-down(xs)
+								bottom: auto
+								top: 32px
 					.form__check-input:checked + label:before
 						background: $accent
 						border: 2px solid $accent
+				.form__box
+					+media-breakpoint-down(xs)
+						width: 100%
+						button
+							width: 100%
 
 .container__breadcrumb
 	padding-top: 65px
@@ -916,6 +967,18 @@ header
 				flex-wrap: nowrap
 				width: 100%
 				overflow: hidden
+				+media-breakpoint-up(xl)
+					max-width: 1272px
+				+media-breakpoint-down(xl)
+					max-width: 1140px
+				+media-breakpoint-down(lg)
+					max-width: 960px
+				+media-breakpoint-down(md)
+					max-width: 720px
+				+media-breakpoint-down(sm)
+					max-width: 500px
+				+media-breakpoint-down(xs)
+					max-width: 100%
 				.akcii__item
 					background-position: center
 					background-repeat: no-repeat

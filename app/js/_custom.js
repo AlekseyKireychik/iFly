@@ -1,6 +1,19 @@
-$(document).ready(function() {
-  //sliders
+ //BackForm input-file
 
+function getFileName () {
+
+  let file = document.getElementById ('uploaded-file').value;
+  
+  file = file.replace (/\\/g, "/").split ('/').pop ();
+  
+  document.getElementById ('file-name').innerHTML ='<div class="del__container">' + file +'<span id="del-file"><span class="name">Удалить файл</span></span>' + '</div>';
+  
+};
+
+$(document).ready(function() {
+ 
+  //sliders
+  
   $(".programs__list").slick({
     infinite: false,
     arrows: true,
@@ -320,12 +333,6 @@ $(document).ready(function() {
     let sliderCounter = document.createElement("div");
     sliderCounter.classList.add("slider__counter");
 
-    let updateSliderCounter = function(slick, currentIndex) {
-      currentSlide = slick.slickCurrentSlide() + 1;
-      slidesCount = slick.slideCount;
-      $(sliderCounter).text(currentSlide + "/" + slidesCount);
-    };
-
     $slider.on("init", function(event, slick) {
       $slider.append(sliderCounter);
       updateSliderCounter(slick);
@@ -334,6 +341,12 @@ $(document).ready(function() {
     $slider.on("afterChange", function(event, slick, currentSlide) {
       updateSliderCounter(slick, currentSlide);
     });
+
+    let updateSliderCounter = function(slick, currentIndex) {
+      currentSlide = slick.slickCurrentSlide() + 1;
+      slidesCount = slick.slideCount;
+      $(sliderCounter).text(currentSlide + "/" + slidesCount);
+    };
 
     $slider.slick();
   }
@@ -346,12 +359,6 @@ $(document).ready(function() {
     let sliderCounter = document.createElement("div");
     sliderCounter.classList.add("slider__counter");
 
-    let updateSliderCounter = function(slick, currentIndex) {
-      currentSlide = slick.slickCurrentSlide() + 1;
-      slidesCount = slick.slideCount;
-      $(sliderCounter).text(currentSlide + "/" + slidesCount);
-    };
-
     $slider02.on("init", function(event, slick) {
       $slider02.append(sliderCounter);
       updateSliderCounter(slick);
@@ -360,6 +367,12 @@ $(document).ready(function() {
     $slider02.on("afterChange", function(event, slick, currentSlide) {
       updateSliderCounter(slick, currentSlide);
     });
+
+    let updateSliderCounter = function(slick, currentIndex) {
+      currentSlide = slick.slickCurrentSlide() + 1;
+      slidesCount = slick.slideCount;
+      $(sliderCounter).text(currentSlide + "/" + slidesCount);
+    };
 
     $slider02.slick();
   }
@@ -372,12 +385,6 @@ $(document).ready(function() {
     let sliderCounter = document.createElement("div");
     sliderCounter.classList.add("slider__counter");
 
-    let updateSliderCounter = function(slick, currentIndex) {
-      currentSlide = slick.slickCurrentSlide() + 1;
-      slidesCount = slick.slideCount;
-      $(sliderCounter).text(currentSlide + "/" + slidesCount);
-    };
-
     $slider03.on("init", function(event, slick) {
       $slider03.append(sliderCounter);
       updateSliderCounter(slick);
@@ -387,8 +394,15 @@ $(document).ready(function() {
       updateSliderCounter(slick, currentSlide);
     });
 
+    let updateSliderCounter = function(slick, currentIndex) {
+      currentSlide = slick.slickCurrentSlide() + 1;
+      slidesCount = slick.slideCount;
+      $(sliderCounter).text(currentSlide + "/" + slidesCount);
+    };
+
     $slider03.slick();
   }
+
 });
 
 ///https://codepen.io/benfrain/pen/MppBYa

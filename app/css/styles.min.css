@@ -896,7 +896,7 @@ input.error {
   right: 0;
   left: 0;
   z-index: 1000;
-  display: block;
+  display: none;
 }
 
 .main__form.is-active {
@@ -905,6 +905,12 @@ input.error {
 
 .main__form .form {
   padding: 95px 100px;
+}
+
+@media (max-width: 767.98px) {
+  .main__form .form {
+    padding: 50px 10px;
+  }
 }
 
 .main__form .form .wrap__btnClose {
@@ -1019,8 +1025,22 @@ input.error {
   padding-bottom: 50px;
 }
 
+@media (max-width: 991.98px) {
+  .main__form .form .formWrap .form__top .mainform__group.group-01 {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+  }
+}
+
 .main__form .form .formWrap .form__top .mainform__group.group-01:nth-child(odd) {
   padding-right: 27px;
+}
+
+@media (max-width: 991.98px) {
+  .main__form .form .formWrap .form__top .mainform__group.group-01:nth-child(odd) {
+    padding-right: 0px;
+  }
 }
 
 .main__form .form .formWrap .form__top .mainform__group .mainform__label {
@@ -1064,12 +1084,7 @@ input.error {
   color: #999EA7;
 }
 
-.main__form .form .formWrap .form__top .mainform__group input:invalid:not(:focus):not(:placeholder-shown) {
-  border-bottom: 1px solid #E72D2D;
-}
-
 .main__form .form .formWrap .form__top .mainform__group input:invalid:not(:focus):not(:placeholder-shown) + label {
-  top: -15px;
   font-size: 14px;
   line-height: 17px;
   color: #E72D2D;
@@ -1095,6 +1110,17 @@ input.error {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 1199.98px) {
+  .main__form .form .formWrap .form__center {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .main__form .form .formWrap .form__center .mainform__group {
@@ -1126,6 +1152,19 @@ input.error {
   padding-right: 27px;
 }
 
+@media (max-width: 1199.98px) {
+  .main__form .form .formWrap .form__center .mainform__group.comment {
+    padding-right: 0px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 1199.98px) and (max-width: 991.98px) {
+  .main__form .form .formWrap .form__center .mainform__group.comment {
+    padding-bottom: 40px;
+  }
+}
+
 .main__form .form .formWrap .form__center .mainform__group.comment .mainform__label {
   position: absolute;
   top: 25px;
@@ -1155,6 +1194,13 @@ input.error {
   padding-left: 40px;
   padding-bottom: 15px;
   border-bottom: 1px solid #E5E7E8;
+  cursor: pointer;
+}
+
+@media (max-width: 575.98px) {
+  .main__form .form .formWrap .form__center .mainform__group.file .mainform__label {
+    width: 100%;
+  }
 }
 
 .main__form .form .formWrap .form__center .mainform__group.file .mainform__control {
@@ -1192,7 +1238,50 @@ input.error {
   border: none;
   border-bottom: 1px solid #E5E7E8;
   resize: none;
-  margin-top: -25px;
+  margin-top: -23px;
+}
+
+.main__form .form .formWrap #file-name .del__container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #F7F7F7;
+  padding: 25px 40px 25px 28px;
+}
+
+.main__form .form .formWrap #file-name .del__container #del-file {
+  position: relative;
+  cursor: pointer;
+}
+
+.main__form .form .formWrap #file-name .del__container #del-file:before {
+  position: absolute;
+  content: url(../img/_src/close.svg);
+  cursor: pointer;
+  top: 3px;
+  left: -35px;
+}
+
+@media (max-width: 575.98px) {
+  .main__form .form .formWrap #file-name .del__container #del-file:before {
+    top: -10px;
+    left: 0px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .main__form .form .formWrap #file-name .del__container #del-file .name {
+    display: none;
+  }
 }
 
 .main__form .form .formWrap .footer__bottom {
@@ -1211,6 +1300,21 @@ input.error {
           justify-content: space-between;
 }
 
+@media (max-width: 1199.98px) {
+  .main__form .form .formWrap .footer__bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-top: 0px;
+  }
+}
+
 .main__form .form .formWrap .footer__bottom .form-check {
   position: relative;
   margin-top: 40px;
@@ -1223,6 +1327,12 @@ input.error {
   padding-left: 0px;
   color: #142C60;
   margin-bottom: 20px;
+}
+
+@media (max-width: 991.98px) {
+  .main__form .form .formWrap .footer__bottom .form-check .form__check-label {
+    padding-left: 12px;
+  }
 }
 
 .main__form .form .formWrap .footer__bottom .form-check .form__check-input {
@@ -1250,9 +1360,31 @@ input.error {
   border: 2px solid #142C60;
 }
 
+@media (max-width: 991.98px) {
+  .main__form .form .formWrap .footer__bottom .form-check .form__check-input + label:before {
+    bottom: 45px;
+  }
+}
+
+@media (max-width: 991.98px) and (max-width: 575.98px) {
+  .main__form .form .formWrap .footer__bottom .form-check .form__check-input + label:before {
+    bottom: auto;
+    top: 32px;
+  }
+}
+
 .main__form .form .formWrap .footer__bottom .form-check .form__check-input:checked + label:before {
   background: #E72D2D;
   border: 2px solid #E72D2D;
+}
+
+@media (max-width: 575.98px) {
+  .main__form .form .formWrap .footer__bottom .form__box {
+    width: 100%;
+  }
+  .main__form .form .formWrap .footer__bottom .form__box button {
+    width: 100%;
+  }
 }
 
 .container__breadcrumb {
@@ -2346,6 +2478,37 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
           flex-wrap: nowrap;
   width: 100%;
   overflow: hidden;
+  max-width: 1140px;
+}
+
+@media (min-width: 1200px) {
+  .akcii__home .container .row .akcii__list {
+    max-width: 1272px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .akcii__home .container .row .akcii__list {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .akcii__home .container .row .akcii__list {
+    max-width: 720px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .akcii__home .container .row .akcii__list {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .akcii__home .container .row .akcii__list {
+    max-width: 100%;
+  }
 }
 
 .akcii__home .container .row .akcii__list .akcii__item {

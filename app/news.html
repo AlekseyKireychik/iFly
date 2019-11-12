@@ -135,14 +135,17 @@
 						<div class="mainform__group group-01">							
 							<input type="text" placeholder=" " class="mainform__control" name="name" id="name" placeholder="" data-validation-error-msg="Обязательное поле" required>
 							<label for="name"  class="mainform__label">Имя<span class="required-star">*</span></label>
+							<span class="help-text"></span>
 						</div>
 						<div class="mainform__group group-01">							
 							<input type="text" placeholder=" " class="mainform__control" name="fname" id="fname" placeholder="" data-validation-error-msg="Обязательное поле" required>
 							<label for="fname" class="mainform__label">Фамилия<span class="required-star">*</span></label>
+							<span class="help-text"></span>
 						</div>
 						<div class="mainform__group group-01">							
 							<input type="tel" placeholder=" " class="mainform__control" name="tel" id="tel" placeholder="" data-validation-error-msg="Обязательное поле" required>
 							<label for="tel" class="mainform__label">Телефон<span class="required-star">*</span></label>
+							<span class="help-text"></span>
 						</div>
 						<div class="mainform__group group-01">							
 							<input type="email" placeholder=" " class="mainform__control" name="email" id="email" placeholder="">
@@ -163,11 +166,12 @@
 							<label for="comment" class="mainform__label">Комментарий</label>
 						</div>
 						<div class="mainform__group file">
-							<label for="file-input" class="mainform__label">Прикрепить резюме</label>
-							<input id="file-input" placeholder=" " accept="application/pdf,application/msword" class="mainform__control" type="file" name="file" multiple>							
+							<label for="uploaded-file" class="mainform__label">Прикрепить резюме</label>
+							<input id="uploaded-file" onchange="getFileName ();" placeholder=" " accept="application/pdf,application/msword" class="mainform__control" type="file" name="file" multiple>							
 							<span>Допустимый формат: pdf, doc</span>
 						</div>
 					</div>
+					<div id="file-name"></div>
 					
 					<input type="hidden" name="culturecode">
 					<input type="hidden" name="url">
@@ -181,8 +185,7 @@
 								ОТПРАВИТЬ
 							</button>
 						</div>
-					</div>
-					
+					</div>					
 				</div>
 			</form>
 		</div>
