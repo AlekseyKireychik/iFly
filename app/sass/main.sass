@@ -805,7 +805,7 @@ header
 					display: flex
 					align-items: flex-end
 					justify-content: flex-end
-					+media-breakpoint-down(xl)
+					+media-breakpoint-down(lg)
 						min-height: 396px
 						max-width: 332px
 						flex-basis: 332px
@@ -985,11 +985,12 @@ header
 					background-size: cover
 					min-height: 488px
 					flex-basis: 407px
+					max-width: 407px
 					width: 100%
 					display: flex
 					align-items: flex-end
 					justify-content: flex-end
-					+media-breakpoint-down(xl)
+					+media-breakpoint-down(lg)
 						width: 332px
 						flex-basis: 332px
 					&.akciiSale
@@ -1019,6 +1020,7 @@ header
 						flex-direction: column
 						min-height: 488px
 						flex-basis: 408px
+						
 						width: 100%
 						&:hover
 							.akcii__description
@@ -1055,6 +1057,12 @@ header
 								background-color: transparent
 								width: 100%
 								transition: .3s
+				&.slick-slider
+					.slick-list
+						margin: 0 -12px
+						.slick-track
+							.slick-slide
+								margin: 0 12px
 .order__home
 	background-image: url(../img/_src/orderBg.jpg)
 	background-position: center
@@ -1127,8 +1135,8 @@ header
 		align-items: center
 		justify-content: center
 		max-width: 1272px
-		// +media-breakpoint-up(xl)
-		// 	max-width: 1272px
+		+media-breakpoint-up(xl)
+			max-width: 1272px
 		+media-breakpoint-down(xl)
 			max-width: 1140px
 		+media-breakpoint-down(lg)
@@ -1146,7 +1154,7 @@ header
 				flex-basis: 408px
 				background-color: #fff
 				padding-bottom: 30px
-				+media-breakpoint-down(xl)
+				+media-breakpoint-down(lg)
 					width: 332px
 					flex-basis: 332px
 				.seti__top
@@ -1171,6 +1179,7 @@ header
 						line-height: 36px
 						color: #999EA7
 				.seti__img
+					width: 100%
 				.seti__description
 					padding: 32px 35px 10px
 				.seti__bottom
