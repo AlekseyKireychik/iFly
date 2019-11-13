@@ -70,7 +70,7 @@ $(document).ready(function() {
   });
 
   $(".akcii__list").slick({
-    infinite: false,
+    infinite: true,
     arrows: false,
     speed: 300,
     autoplay: false,
@@ -78,11 +78,12 @@ $(document).ready(function() {
     slidesToScroll: 1,
     responsive: [
       {
-        breakpoint: 1350,
+        breakpoint: 1250,
         settings: {
           infinite: true,
           arrows: true,
           autoplay: true,
+          speed: 300,
           autoplaySpeed: 3000,
           slidesToShow: 2,
           slidesToScroll: 1
@@ -343,82 +344,81 @@ $(document).ready(function() {
   //   $status.text(i + "/" + slick.slideCount);
   // });
 
-  let $slider = $(".pagin-number");
+  // let $slider = $(".pagin-number");
 
-  if ($slider.length) {
-    let currentSlide = 0;
-    let slidesCount;
-    let sliderCounter = document.createElement("div");
-    sliderCounter.classList.add("slider__counter");
+  // if ($slider.length) {
+  //   let currentSlide = 0;
+  //   let slidesCount;
+  //   let sliderCounter = document.createElement("div");
+  //   sliderCounter.classList.add("slider__counter");
 
-    let updateSliderCounter = function(slick, currentIndex) {
-      currentSlide = slick.slickCurrentSlide() + 1;
-      slidesCount = slick.slideCount;
-      $(sliderCounter).text(currentSlide + "/" + slidesCount);
-    };
+  //   let updateSliderCounter = function(slick, currentIndex) {
+  //     currentSlide = slick.slickCurrentSlide() + 1;
+  //     slidesCount = slick.slideCount;
+  //     $(sliderCounter).text(currentSlide + "/" + slidesCount);
+  //   };
 
-    $slider.on("afterChange", function(event, slick, currentSlide) {
-      updateSliderCounter(slick, currentSlide);
-    });
+  //   $slider.on("afterChange", function(event, slick, currentSlide) {
+  //     updateSliderCounter(slick, currentSlide);
+  //   });
 
-    $slider.on("init", function(event, slick) {
-      $slider.append(sliderCounter);
-      updateSliderCounter(slick);
-    });
+  //   $slider.on("init", function(event, slick) {
+  //     $slider.append(sliderCounter);
+  //     updateSliderCounter(slick);
+  //   });
 
-    $slider.slick();
-  }
+  //   $slider.slick();
+  // }
 
-  let $slider02 = $(".pagin-number02");
+  // let $slider02 = $(".pagin-number02");
 
-  if ($slider02.length) {
-    let currentSlide = 0;
-    let slidesCount;
-    let sliderCounter = document.createElement("div");
-    sliderCounter.classList.add("slider__counter");
+  // if ($slider02.length) {
+  //   let currentSlide = 0;
+  //   let slidesCount;
+  //   let sliderCounter = document.createElement("div");
+  //   sliderCounter.classList.add("slider__counter");
 
-    $slider02.on("init", function(event, slick) {
-      $slider02.append(sliderCounter);
-      updateSliderCounter(slick);
-    });
+  //   $slider02.on("init", function(event, slick) {
+  //     $slider02.append(sliderCounter);
+  //     updateSliderCounter(slick);
+  //   });
 
-    $slider02.on("afterChange", function(event, slick, currentSlide) {
-      updateSliderCounter(slick, currentSlide);
-    });
+  //   $slider02.on("afterChange", function(event, slick, currentSlide) {
+  //     updateSliderCounter(slick, currentSlide);
+  //   });
 
-    let updateSliderCounter = function(slick, currentIndex) {
-      currentSlide = slick.slickCurrentSlide() + 1;
-      slidesCount = slick.slideCount;
-      $(sliderCounter).text(currentSlide + "/" + slidesCount);
-    };
+  //   let updateSliderCounter = function(slick, currentIndex) {
+  //     currentSlide = slick.slickCurrentSlide() + 1;
+  //     slidesCount = slick.slideCount;
+  //     $(sliderCounter).text(currentSlide + "/" + slidesCount);
+  //   };
 
-    $slider02.slick();
-  }
+  //   $slider02.slick();
+  // }
 
-  let $slider03 = $(".pagin-number03");
+  // let $slider03 = $(".pagin-number03");
 
-  if ($slider03.length) {
-    let currentSlide = 0;
-    let slidesCount;
-    let sliderCounter = document.createElement("div");
-    sliderCounter.classList.add("slider__counter");
+  // if ($slider03.length) {
+  //   let currentSlide = 0;
+  //   let slidesCount;
+  //   let sliderCounter = document.createElement("div");
+  //   sliderCounter.classList.add("slider__counter");
 
-    $slider03.on("init", function(event, slick) {
-      $slider03.append(sliderCounter);
-      updateSliderCounter(slick);
-    });
+  //   $slider03.on("init", function(event, slick) {
+  //     $slider03.append(sliderCounter);
+  //     updateSliderCounter(slick);
+  //   });
 
-    $slider03.on("afterChange", function(event, slick, currentSlide) {
-      updateSliderCounter(slick, currentSlide);
-    });
+  //   $slider03.on("afterChange", function(event, slick, currentSlide) {
+  //     updateSliderCounter(slick, currentSlide);
+  //   });
 
-    let updateSliderCounter = function(slick, currentIndex) {
-      currentSlide = slick.slickCurrentSlide() + 1;
-      slidesCount = slick.slideCount;
-      $(sliderCounter).text(currentSlide + "/" + slidesCount);
-    };
+  //   let updateSliderCounter = function(slick, currentIndex) {
+  //     currentSlide = slick.slickCurrentSlide() + 1;
+  //     slidesCount = slick.slideCount;
+  //     $(sliderCounter).text(currentSlide + "/" + slidesCount);
+  //   };
 
-    $slider03.slick();
-  }
+  //   $slider03.slick();
+  // }
 });
-
