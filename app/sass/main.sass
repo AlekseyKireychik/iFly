@@ -744,6 +744,10 @@ header
 					object-fit: cover
 					+media-breakpoint-down(md)
 						min-height: 450px
+					+media-breakpoint-down(sm)
+						min-height: 740px
+					+media-breakpoint-down(xs)
+						min-height: 640px
 				.container
 					.carousel-caption
 						text-align: center
@@ -753,28 +757,47 @@ header
 						bottom: 50%
 						transform: translateY(50%)
 						.carousel-title
-							font-size: 60px
+							font-size: 80px
 							line-height: 100px
 							font-weight: 600
 							text-align: center
 							color: #FFFFFF
 							+media-breakpoint-down(sm)
-								font-size: 48px
-								line-height: 52px
+								font-size: 64px
+								line-height: 72px
+								padding-bottom: 30px
+							+media-breakpoint-down(xs)
+								font-size: 36px
+								line-height: 44px
+								padding-bottom: 20px
 						.carousel-text
 							font-size: 24px
 							line-height: 34px
 							color: #FFFFFF
 							margin-bottom: 65px
 							+media-breakpoint-down(sm)
-								font-size: 18px
-								line-height: 22px
 						.carousel-link
 .home
 	background: #F7F7F7
 .programs__home
 	padding-top: 120px
 	padding-bottom: 210px
+	+media-breakpoint-down(sm)
+		padding-top: 90px
+	+media-breakpoint-down(xs)
+		padding-top: 80px
+		padding-left: 25px
+		padding-right: 25px
+	.container
+		.row
+			.title
+				+media-breakpoint-down(sm)
+					font-size: 40px
+					line-height: 48px
+				+media-breakpoint-down(xs)
+					padding-left: 0px
+					font-size: 28px
+					line-height: 34px
 	.programs__wrapper
 		.programs__nav
 			.programs__list
@@ -790,27 +813,40 @@ header
 				+media-breakpoint-down(xl)
 					max-width: 1140px
 				+media-breakpoint-down(lg)
-					max-width: 960px
+					max-width: 842px
 				+media-breakpoint-down(md)
-					max-width: 720px
+					max-width: 692px				
 				+media-breakpoint-down(sm)
-					max-width: 500px
+					max-width: 668px
 				+media-breakpoint-down(xs)
 					max-width: 100%
 				.programs__item
 					background-position: center
 					background-repeat: no-repeat
 					background-size: cover
-					min-height: 488px
-					flex-basis: 407px
-					max-width: 407px
 					display: flex
 					align-items: flex-end
 					justify-content: flex-end
-					+media-breakpoint-down(lg)
+					+media-breakpoint-up(xl)
+						min-height: 488px
+						flex-basis: 407px
+						max-width: 407px
+					+media-breakpoint-down(xl)
 						min-height: 396px
 						max-width: 332px
 						flex-basis: 332px
+					+media-breakpoint-down(lg)
+						min-height: 488px
+						flex-basis: 407px
+						max-width: 407px
+					+media-breakpoint-down(md)
+						min-height: 396px
+						max-width: 332px
+						flex-basis: 332px	
+					+media-breakpoint-down(xs)
+						min-height: 394px
+						max-width: 100%
+						flex-basis: 100%
 					&.item01
 						background-image: url(../img/_src/programs02.jpg)
 					&.item02
@@ -847,6 +883,8 @@ header
 							line-height: 34px
 							position: relative
 							transition: .3s
+							+media-breakpoint-down(xs)
+								font-size: 24px
 							&:before
 								content: url(../img/_src/square.svg)
 								position: absolute
@@ -880,6 +918,7 @@ header
 				&.slick-slider
 					.slick-list
 						margin: 0 -12px
+						
 						.slick-track
 							.slick-slide
 								margin: 0 12px
@@ -891,6 +930,8 @@ header
 			background-repeat: no-repeat
 			background-size: cover
 			padding: 100px 0 160px
+			+media-breakpoint-down(xs)
+				padding: 80px 15px 160px
 			.container
 				.row
 					.advantages__count
@@ -928,8 +969,11 @@ header
 			padding-bottom: 50px
 			text-align: left
 			padding-left: 10vw
+
 			li
 				margin: 0 27px
+				+media-breakpoint-down(xs)
+					margin: 0 20px
 				.advantages__dot
 					font-weight: 600
 					font-size: 18px
@@ -962,6 +1006,12 @@ header
 	.container
 		.row
 			.title
+				+media-breakpoint-down(sm)
+					font-size: 40px
+					line-height: 48px
+				+media-breakpoint-down(xs)
+					font-size: 28px
+					line-height: 34px
 			.akcii__list
 				display: flex
 				align-items: flex-start
@@ -969,35 +1019,48 @@ header
 				flex-wrap: nowrap
 				max-width: 1272px
 				width: 100%
-				overflow: hidden
+				overflow: hidden				
+				position: relative
+				z-index: 1
 				+media-breakpoint-up(xl)
 					max-width: 1272px
 				+media-breakpoint-down(xl)
 					max-width: 1140px
 				+media-breakpoint-down(lg)
-					max-width: 960px
+					max-width: 842px
 				+media-breakpoint-down(md)
-					max-width: 720px
+					max-width: 692px				
 				+media-breakpoint-down(sm)
-					max-width: 500px
+					max-width: 668px
 				+media-breakpoint-down(xs)
 					max-width: 100%
 				.akcii__item
 					background-position: center
 					background-repeat: no-repeat
 					background-size: cover
-					min-height: 488px
-					flex-basis: 407px
-					max-width: 407px
-					min-width: 407px
-					width: 100%
 					display: flex
 					align-items: flex-end
 					justify-content: flex-end
-					+media-breakpoint-down(lg)
+					+media-breakpoint-up(xl)
+						min-height: 488px
+						flex-basis: 407px
+						max-width: 407px
+					+media-breakpoint-down(xl)
 						min-height: 396px
 						max-width: 332px
 						flex-basis: 332px
+					+media-breakpoint-down(lg)
+						min-height: 488px
+						flex-basis: 407px
+						max-width: 407px
+					+media-breakpoint-down(md)
+						min-height: 396px
+						max-width: 332px
+						flex-basis: 332px	
+					+media-breakpoint-down(xs)
+						min-height: 394px
+						max-width: 100%
+						flex-basis: 100%
 					&.akciiSale
 						position: relative
 						&:before
@@ -1087,9 +1150,12 @@ header
 				font-size: 44px
 				line-height: 54px
 				margin-bottom: 36px
+				+media-breakpoint-down(sm)
+					font-size: 40px
+					line-height: 48px
 				+media-breakpoint-down(xs)
-					font-size: 42px
-					line-height: 46px
+					font-size: 28px
+					line-height: 34px
 			.certificate__form
 				input
 					font-weight: 600
@@ -1098,12 +1164,28 @@ header
 					color: $accentTwo
 					padding: 21px 22px 21px 22px
 					width: 320px
+					+media-breakpoint-down(sm)
+						padding: 16px 22px 17px 22px
+					+media-breakpoint-down(sm)
+						margin-left: 20px
+						margin-bottom: 20px
+						width: 280px						
 				.order__btn
 					margin-left: 30px
 					+media-breakpoint-down(xs)
+						padding: 10px 45px
 						margin-left: 20px
 .seti__home
 	padding: 120px 0px 234px
+	.container
+		.row
+			.title
+				+media-breakpoint-down(sm)
+					font-size: 40px
+					line-height: 48px
+				+media-breakpoint-down(xs)
+					font-size: 28px
+					line-height: 34px
 	.container
 		.row
 			justify-content: space-between
@@ -1162,6 +1244,9 @@ header
 				+media-breakpoint-down(lg)
 					width: 332px
 					flex-basis: 332px
+				+media-breakpoint-down(md)
+					width: 407px
+					flex-basis: 407px
 				.seti__top
 					display: flex
 					align-items: center
@@ -1247,6 +1332,15 @@ header
 	+media-breakpoint-down(sm)
 		padding-bottom: 440px
 	.container
+		.row
+			.title
+				+media-breakpoint-down(sm)
+					font-size: 40px
+					line-height: 48px
+				+media-breakpoint-down(xs)
+					font-size: 28px
+					line-height: 34px
+	.container
 		.contacts__map
 			background-image: url(../img/_src/map.jpg)
 			background-position: center
@@ -1296,8 +1390,10 @@ header
 						justify-content: space-between
 						align-items: center
 					+media-breakpoint-down(sm)
-						flex-direction: column
+						flex-direction: row
 						align-items: flex-start
+					+media-breakpoint-down(xs)
+						flex-direction: column
 					&.mode
 						+media-breakpoint-down(md)
 							justify-content: flex-start

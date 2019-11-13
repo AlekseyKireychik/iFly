@@ -16,6 +16,7 @@ function getFileName() {
 }
 
 $(document).ready(function() {
+
   //sliders
 
   $(".programs__list").slick({
@@ -31,13 +32,48 @@ $(document).ready(function() {
       {
         breakpoint: 1400,
         settings: {
-          infinite: true
+          infinite: true,
+          slidesToScroll: 1,
+          focusOnSelect: true
         }
       },
       {
-        breakpoint: 1350,
+        breakpoint: 1200,
         settings: {
-          slidesToShow: 2
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 610,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+
+  $(".akcii__list").slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: false,
+    responsive: [ {
+        breakpoint: 1200,
+        settings: {
+          infinite: false,
+          arrows: true,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          focusOnSelect: true,
+          autoplay: true,
+          autoplaySpeed: 3000
+        }
+      },{
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
         }
       }
     ]
@@ -54,45 +90,10 @@ $(document).ready(function() {
     customPaging: function(slider, i) {
       var thumb = $(slider.$slides[i]).data();
       return '<a class="advantages__dot">' + "0" + (i + 1) + "</a>";
-    },
-    responsive: [
-      {
-        breakpoint: 500,
-        settings: {
-          dots: false,
-          arrows: false,
-          infinite: false,
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      }
-    ]
+    }
   });
 
-  $(".akcii__list").slick({
-    infinite: true,
-    arrows: false,
-    speed: 300,
-    autoplay: false,
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1250,
-        settings: {
-          infinite: true,
-          arrows: true,
-          autoplay: true,
-          speed: 300,
-          autoplaySpeed: 3000,
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
-
-  // seti homepage
+  //seti homepage
   $(".seti__lenta").slick({
     infinite: true,
     arrows: true,
@@ -102,13 +103,26 @@ $(document).ready(function() {
     centerMode: true,
     autoplay: true,
     autoplaySpeed: 3000,
-    responsive: [
-      {
-        breakpoint: 1350,
-        settings: {
-          slidesToShow: 2
+    responsive: [ {
+        breakpoint: 1200,
+          settings: {
+            slidesToShow: 2
+          }
+        },
+        {
+        breakpoint: 1200,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+        breakpoint: 600,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
         }
-      }
     ]
   });
 
@@ -252,17 +266,17 @@ $(document).ready(function() {
   $(".history-slide #slick-slide-control03").text("2014 - 2019");
 
   //pagination text
-  // $("a[data-slide]").click(function(e) {
-  //   e.preventDefault();
-  //   let slideno = $(this).data("slide");
-  //   $(".insructors__sliders").slick("slickGoTo", slideno - 1);
-  // });
+  $("a[data-slide]").click(function(e) {
+    e.preventDefault();
+    let slideno = $(this).data("slide");
+    $(".insructors__sliders").slick("slickGoTo", slideno - 1);
+  });
 
-  // $("a[data-slide]").click(function(e) {
-  //   e.preventDefault();
-  //   let slideno = $(this).data("slide");
-  //   $(".history-slide").slick("slickGoTo", slideno - 1);
-  // });
+  $("a[data-slide]").click(function(e) {
+    e.preventDefault();
+    let slideno = $(this).data("slide");
+    $(".history-slide").slick("slickGoTo", slideno - 1);
+  });
 
   //news
   $(".news__btn").on("click", function(event) {
