@@ -1,53 +1,39 @@
- //BackForm input-file
+//BackForm input-file
 
-function getFileName () {
+function getFileName() {
+  let file = document.getElementById("uploaded-file").value;
 
-  let file = document.getElementById ('uploaded-file').value;
-  
-  file = file.replace (/\\/g, "/").split ('/').pop ();
-  
-  document.getElementById ('file-name').innerHTML ='<div class="del__container">' + file +'<span id="del-file"><span class="name">Удалить файл</span></span>' + '</div>';
-  
-};
+  file = file
+    .replace(/\\/g, "/")
+    .split("/")
+    .pop();
+
+  document.getElementById("file-name").innerHTML =
+    '<div class="del__container">' +
+    file +
+    '<span id="del-file"><span class="name">Удалить файл</span></span>' +
+    "</div>";
+}
 
 $(document).ready(function() {
- 
   //sliders
-  
-  // $(".programs__list").slick({
-  //   infinite: false,
-  //   arrows: true,
-  //   dots: false,
-  //   speed: 300,
-  //   autoplay: false,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1,
-  //   focusOnSelect: true,
-  //   responsive: [
-  //     {
-  //       breakpoint: 1400,
-  //       settings: {
-  //         infinite: true
-  //       }
-  //     },
-  //     {
-  //       breakpoint: 1350,
-  //       settings: {
-  //         slidesToShow: 2
-  //       }
-  //     }
-  //   ]
-  // });
+
   $(".programs__list").slick({
-    infinite: true,
+    infinite: false,
     arrows: true,
+    dots: false,
+    speed: 300,
+    autoplay: false,
     slidesToShow: 3,
     slidesToScroll: 1,
     focusOnSelect: true,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    // centerMode: true,
     responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          infinite: true
+        }
+      },
       {
         breakpoint: 1350,
         settings: {
@@ -104,7 +90,7 @@ $(document).ready(function() {
       }
     ]
   });
-  
+
   // seti homepage
   $(".seti__lenta").slick({
     infinite: true,
@@ -112,9 +98,9 @@ $(document).ready(function() {
     slidesToShow: 3,
     slidesToScroll: 1,
     focusOnSelect: true,
+    centerMode: true,
     autoplay: true,
     autoplaySpeed: 3000,
-    // centerMode: true,
     responsive: [
       {
         breakpoint: 1350,
@@ -378,65 +364,61 @@ $(document).ready(function() {
     $slider.on("init", function(event, slick) {
       $slider.append(sliderCounter);
       updateSliderCounter(slick);
-    });    
-
-
+    });
 
     $slider.slick();
   }
 
-  // let $slider02 = $(".pagin-number02");
+  let $slider02 = $(".pagin-number02");
 
-  // if ($slider02.length) {
-  //   let currentSlide = 0;
-  //   let slidesCount;
-  //   let sliderCounter = document.createElement("div");
-  //   sliderCounter.classList.add("slider__counter");
+  if ($slider02.length) {
+    let currentSlide = 0;
+    let slidesCount;
+    let sliderCounter = document.createElement("div");
+    sliderCounter.classList.add("slider__counter");
 
-  //   $slider02.on("init", function(event, slick) {
-  //     $slider02.append(sliderCounter);
-  //     updateSliderCounter(slick);
-  //   });
+    $slider02.on("init", function(event, slick) {
+      $slider02.append(sliderCounter);
+      updateSliderCounter(slick);
+    });
 
-  //   $slider02.on("afterChange", function(event, slick, currentSlide) {
-  //     updateSliderCounter(slick, currentSlide);
-  //   });
+    $slider02.on("afterChange", function(event, slick, currentSlide) {
+      updateSliderCounter(slick, currentSlide);
+    });
 
-  //   let updateSliderCounter = function(slick, currentIndex) {
-  //     currentSlide = slick.slickCurrentSlide() + 1;
-  //     slidesCount = slick.slideCount;
-  //     $(sliderCounter).text(currentSlide + "/" + slidesCount);
-  //   };
+    let updateSliderCounter = function(slick, currentIndex) {
+      currentSlide = slick.slickCurrentSlide() + 1;
+      slidesCount = slick.slideCount;
+      $(sliderCounter).text(currentSlide + "/" + slidesCount);
+    };
 
-  //   $slider02.slick();
-  // }
+    $slider02.slick();
+  }
 
-  // let $slider03 = $(".pagin-number03");
+  let $slider03 = $(".pagin-number03");
 
-  // if ($slider03.length) {
-  //   let currentSlide = 0;
-  //   let slidesCount;
-  //   let sliderCounter = document.createElement("div");
-  //   sliderCounter.classList.add("slider__counter");
+  if ($slider03.length) {
+    let currentSlide = 0;
+    let slidesCount;
+    let sliderCounter = document.createElement("div");
+    sliderCounter.classList.add("slider__counter");
 
-  //   $slider03.on("init", function(event, slick) {
-  //     $slider03.append(sliderCounter);
-  //     updateSliderCounter(slick);
-  //   });
+    $slider03.on("init", function(event, slick) {
+      $slider03.append(sliderCounter);
+      updateSliderCounter(slick);
+    });
 
-  //   $slider03.on("afterChange", function(event, slick, currentSlide) {
-  //     updateSliderCounter(slick, currentSlide);
-  //   });
+    $slider03.on("afterChange", function(event, slick, currentSlide) {
+      updateSliderCounter(slick, currentSlide);
+    });
 
-  //   let updateSliderCounter = function(slick, currentIndex) {
-  //     currentSlide = slick.slickCurrentSlide() + 1;
-  //     slidesCount = slick.slideCount;
-  //     $(sliderCounter).text(currentSlide + "/" + slidesCount);
-  //   };
+    let updateSliderCounter = function(slick, currentIndex) {
+      currentSlide = slick.slickCurrentSlide() + 1;
+      slidesCount = slick.slideCount;
+      $(sliderCounter).text(currentSlide + "/" + slidesCount);
+    };
 
-  //   $slider03.slick();
-  // }
-
+    $slider03.slick();
+  }
 });
 
-///https://codepen.io/benfrain/pen/MppBYa
