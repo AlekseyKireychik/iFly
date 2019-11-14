@@ -868,6 +868,10 @@ header
 						min-height: 488px
 						flex-basis: 407px
 						width: 100%
+						+media-breakpoint-down(xs)
+							min-height: 394px
+							max-width: 100%
+							flex-basis: 100%
 						&:hover
 							.programs__description
 								display: block
@@ -885,6 +889,7 @@ header
 							transition: .3s
 							+media-breakpoint-down(xs)
 								font-size: 24px
+								padding-right: 25px
 							&:before
 								content: url(../img/_src/square.svg)
 								position: absolute
@@ -918,7 +923,6 @@ header
 				&.slick-slider
 					.slick-list
 						margin: 0 -12px
-
 						.slick-track
 							.slick-slide
 								margin: 0 12px
@@ -1003,6 +1007,14 @@ header
 .akcii__home
 	padding-top: 120px
 	padding-bottom: 105px
+	+media-breakpoint-down(lg)
+		padding-bottom: 212px
+	+media-breakpoint-down(sm)
+		padding-top: 90px
+	+media-breakpoint-down(xs)
+		padding-top: 80px
+		padding-left: 25px
+		padding-right: 25px
 	.container
 		.row
 			.title
@@ -1010,16 +1022,16 @@ header
 					font-size: 40px
 					line-height: 48px
 				+media-breakpoint-down(xs)
+					padding-left: 0px
 					font-size: 28px
 					line-height: 34px
 			.akcii__list
 				display: flex
 				align-items: flex-start
 				justify-content: center
-				flex-wrap: nowrap
+				lex-wrap: nowrap
 				max-width: 1272px
 				width: 100%
-				overflow: hidden
 				position: relative
 				z-index: 1
 				+media-breakpoint-up(xl)
@@ -1089,6 +1101,10 @@ header
 						min-height: 488px
 						flex-basis: 407px
 						width: 100%
+						+media-breakpoint-down(xs)
+							min-height: 394px
+							max-width: 100%
+							flex-basis: 100%
 						&:hover
 							.akcii__description
 								display: block
@@ -1099,11 +1115,14 @@ header
 									transition: .3s
 						.akcii__title
 							padding-left: 74px
+							padding-right: 25px
 							font-weight: bold
 							font-size: 28px
 							line-height: 34px
 							position: relative
 							transition: .3s
+							+media-breakpoint-down(xs)
+								font-size: 24px
 							&:before
 								content: url(../img/_src/square.svg)
 								position: absolute
@@ -1131,6 +1150,11 @@ header
 						.slick-track
 							.slick-slide
 								margin: 0 12px
+				.slider__counter
+					display: none
+					+media-breakpoint-down(lg)
+						display: block
+
 .order__home
 	background-image: url(../img/_src/orderBg.jpg)
 	background-position: center
@@ -1221,13 +1245,16 @@ header
 		display: flex
 		align-items: center
 		justify-content: center
+		flex-wrap: nowrap
 		max-width: 100vw
-		// +media-breakpoint-up(xl)
-		// 	max-width: 100vw
+		width: 100%
+		position: relative
+		z-index: 1
 		// +media-breakpoint-down(xl)
 		// 	max-width: 100vw
 		// +media-breakpoint-down(lg)
-		// 	max-width: 960px
+		// 	max-width: 1140px
+		// 	margin: 0 auto
 		// +media-breakpoint-down(md)
 		// 	max-width: 720px
 		// +media-breakpoint-down(sm)
@@ -1241,12 +1268,12 @@ header
 				flex-basis: 408px
 				background-color: #fff
 				padding-bottom: 30px
-				+media-breakpoint-down(lg)
+				+media-breakpoint-down(xl)
 					width: 332px
 					flex-basis: 332px
-				+media-breakpoint-down(md)
-					width: 407px
-					flex-basis: 407px
+				+media-breakpoint-down(sm)
+					max-width: 100%
+					flex-basis: 100%
 				.seti__top
 					display: flex
 					align-items: center
@@ -1299,38 +1326,65 @@ header
 								top: -1px
 		&.slick-slider
 			.slick-list
-				// margin: 0 -10px
+				+media-breakpoint-down(xl)
+					padding: 0 5% 0 6%!important
+				+media-breakpoint-down(lg)
+					padding: 0 5% 0 20%!important
+				+media-breakpoint-down(md)
+					padding: 0 5% 0 8%!important
+				+media-breakpoint-down(sm)
+					padding: 0 5% 0 20%!important
 				.slick-track
 					.slick-slide
 						max-width: 408px
 						margin: 0 10px
+						+media-breakpoint-down(xl)
+							max-width: 332px
+						+media-breakpoint-down(lg)
+							margin: 0 20px
+						+media-breakpoint-down(sm)
+							max-width: 100%
+							margin: 0
 		.slick-prev
-
 			margin: 0
+			+media-breakpoint-up(xs)
+				left: calc((100vw/2 - 96px)
+			+media-breakpoint-up(sm)
+				left: calc((100vw - 540px)/2)
+			+media-breakpoint-up(md)
+				left: calc((100vw - 720px)/2)
+			+media-breakpoint-up(lg)
+				left: calc((100vw - 960px)/2)
 			+media-breakpoint-up(xl)
 				left: calc((100vw - 1282px)/2)
-			// +media-breakpoint-down(lg)
-			// 	left: calc((100vw - 1140px)/2)
-			// +media-breakpoint-down(md)
-			// 	left: calc((100vw - 960px)/2)
+
 		.slick-arrow
 			margin: 0
 			&.slick-next
 				margin: 0
+				+media-breakpoint-up(xs)
+					left: calc((100vw/2 + 32px)
+				+media-breakpoint-up(sm)
+					left: calc(((100vw - 540px)/2) + 20%)
+				+media-breakpoint-up(md)
+					left: calc(((100vw - 720px)/2) + 16%)
+				+media-breakpoint-up(lg)
+					left: calc(((100vw - 960px)/2) + 11%)
 				+media-breakpoint-up(xl)
 					left: calc(((100vw - 1282px)/2) + 9%)
-				// +media-breakpoint-down(lg)
-				// 	left: calc(((100vw - 1140px)/2) + 9%)
-				// +media-breakpoint-down(md)
-				// 	left: calc(((100vw - 960px)/2) + 9%)
+
 		.slider__counter
 			top: 115%
+			+media-breakpoint-up(xs)
+				left: calc((100vw/2 - 32px)
+			+media-breakpoint-up(sm)
+				left: calc(((100vw - 540px)/2) + 10%)
+			+media-breakpoint-up(md)
+				left: calc(((100vw - 720px)/2) + 8%)
+			+media-breakpoint-up(lg)
+				left: calc(((100vw - 960px)/2) + 5.5%)
 			+media-breakpoint-up(xl)
-				left: calc(((100vw - 1282px)/2) + 5%)
-			// +media-breakpoint-down(lg)
-			// 	left: calc(((100vw - 1140px)/2) + 5%)
-			// +media-breakpoint-down(md)
-			// 	left: calc(((100vw - 960px)/2) + 5%)
+				left: calc(((100vw - 1282px)/2) + 4.5%)
 
 .fon
 	padding: 0 0 255px
@@ -1343,6 +1397,8 @@ header
 		padding-bottom: 490px
 	+media-breakpoint-down(sm)
 		padding-bottom: 440px
+	+media-breakpoint-down(xs)
+		padding: 0 25px 440px
 	.container
 		.row
 			.title
@@ -1352,6 +1408,7 @@ header
 				+media-breakpoint-down(xs)
 					font-size: 28px
 					line-height: 34px
+					padding-left: 0
 	.container
 		.contacts__map
 			background-image: url(../img/_src/map.jpg)

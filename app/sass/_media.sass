@@ -43,7 +43,7 @@
         .seti__lenta
             .slick-list
                 padding: 0 5% 0 10%!important
-@media screen and (max-width: 1449px)
+@media screen and (min-width: 1200px) and (max-width: 1449px)
     .seti__home
         .seti__lenta
             .slick-list
@@ -98,13 +98,21 @@
             .row
                 .new__list
                     max-width: 680px!important
+    .seti__lenta
+        .slick-prev
+            left: calc((100vw - 680px)/2)!important
+        .slick-arrow
+            &.slick-next
+                left: calc(((100vw - 680px)/2) + 18%)!important
+        .slider__counter
+            left: calc(((100vw - 680px)/2) + 9%)!important
 @media (min-width: 577px) and (max-width: 669px)
-    .programs__home	
+    .programs__home
         .container
             .row
                 .programs__list
                     max-width: 680px
-    .akcii__home	
+    .akcii__home
         .programs__wrapper
             .programs__nav
                 .akcii__list
