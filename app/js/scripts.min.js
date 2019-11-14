@@ -18,80 +18,94 @@ function getFileName() {
 $(document).ready(function() {
   //sliders
 
-  // $(".programs__list").slick({
-  //   infinite: false,
-  //   arrows: true,
-  //   dots: false,
-  //   speed: 300,
-  //   autoplay: false,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1,
-  //   focusOnSelect: true,
-  //   responsive: [
-  //     {
-  //       breakpoint: 1400,
-  //       settings: {
-  //         infinite: true,
-  //         slidesToScroll: 1,
-  //         focusOnSelect: true
-  //       }
-  //     },
-  //     {
-  //       breakpoint: 1200,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 1
-  //       }
-  //     },
-  //     {
-  //       breakpoint: 600,
-  //       settings: {
-  //         infinite: true,
-  //         arrows: true,
-  //         slidesToShow: 1,
-  //         slidesToScroll: 1,
-  //         focusOnSelect: true,
-  //         autoplay: true,
-  //         autoplaySpeed: 3000
-  //       }
-  //     }
-  //   ]
-  // });
+  //programs
+  $('#programs-list').on(`init reInit`, function(event, slick) {
+    $('.programs__counter').text(1 + ' / ' + slick.slideCount);
+  })
+  $('#programs-list').on(`afterChange`, function(event, slick, currentSlide, nextSlide) {
+    $('.programs__counter').text(currentSlide + 1 + ' / ' + slick.slideCount);
+  })
+  $("#programs-list").slick({
+    infinite: false,
+    arrows: true,
+    dots: false,
+    speed: 300,
+    autoplay: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    focusOnSelect: true,
+    responsive: [
+      {
+        breakpoint: 1400,
+        settings: {
+          infinite: true,
+          slidesToScroll: 1,
+          focusOnSelect: true
+        }
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          infinite: true,
+          arrows: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          focusOnSelect: true,
+          autoplay: true,
+          autoplaySpeed: 3000
+        }
+      }
+    ]
+  });
 
-  // $(".akcii__list").slick({
-  //   arrows: false,
-  //   slidesToShow: 3,
-  //   slidesToScroll: 1,
-  //   autoplay: false,
-  //   responsive: [
-  //     {
-  //       breakpoint: 1200,
-  //       settings: {
-  //         infinite: true,
-  //         arrows: true,
-  //         slidesToShow: 2,
-  //         slidesToScroll: 1,
-  //         focusOnSelect: true,
-  //         autoplay: true,
-  //         autoplaySpeed: 3000
-  //       }
-  //     },
-  //     {
-  //       breakpoint: 600,
-  //       settings: {
-  //         infinite: true,
-  //         arrows: true,
-  //         slidesToShow: 1,
-  //         slidesToScroll: 1,
-  //         focusOnSelect: true,
-  //         autoplay: true,
-  //         autoplaySpeed: 3000
-  //       }
-  //     }
-  //   ]
-  // });
+  //akcii
+  $('#akcii-list').on(`init reInit`, function(event, slick) {
+    $('.akcii__counter').text(1 + ' / ' + slick.slideCount);
+  })
+  $('#akcii-list').on(`afterChange`, function(event, slick, currentSlide, nextSlide) {
+    $('.akcii__counter').text(currentSlide + 1 + ' / ' + slick.slideCount);
+  })
+  $("#akcii-list").slick({
+    arrows: false,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: false,
+    responsive: [
+      {
+        breakpoint: 1200,
+        settings: {
+          infinite: true,
+          arrows: true,
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          focusOnSelect: true,
+          autoplay: true,
+          autoplaySpeed: 3000
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          infinite: true,
+          arrows: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          focusOnSelect: true,
+          autoplay: true,
+          autoplaySpeed: 3000
+        }
+      }
+    ]
+  });
 
-  $(".advantages__list").slick({
+  $("#advantages-list").slick({
     infinite: true,
     dots: true,
     arrows: false,
@@ -106,7 +120,13 @@ $(document).ready(function() {
   });
 
   //seti homepage
-  $(".seti__lenta").slick({
+  $('#seti-lenta').on(`init reInit`, function(event, slick) {
+    $('.seti__counter').text(1 + ' / ' + slick.slideCount);
+  })
+  $('#seti-lenta').on(`afterChange`, function(event, slick, currentSlide, nextSlide) {
+    $('.seti__counter').text(currentSlide + 1 + ' / ' + slick.slideCount);
+  })
+  $("#seti-lenta").slick({
     infinite: true,
     arrows: true,
     slidesToShow: 3,
@@ -185,6 +205,12 @@ $(document).ready(function() {
   });
 
   // reviews
+  $('.reviews-slider').on(`init reInit`, function(event, slick) {
+    $('.reviews__counter').text(1 + ' / ' + slick.slideCount);
+  })
+  $('.reviews-slider').on(`afterChange`, function(event, slick, currentSlide, nextSlide) {
+    $('.reviews__counter').text(currentSlide + 1 + ' / ' + slick.slideCount);
+  })
   $(".reviews-slider").slick({
     infinite: true,
     dots: false,
@@ -195,6 +221,7 @@ $(document).ready(function() {
     slidesToShow: 1
   });
 
+  
   $(".insructors__sliders").slick({
     arrows: false,
     speed: 300,
@@ -210,6 +237,14 @@ $(document).ready(function() {
   $(".insructors__sliders #slick-slide-control03").text("Сергей Панченков");
   $(".insructors__sliders #slick-slide-control04").text("Алексей Смирнов");
 
+
+  //newpost
+  $('.newpost-slider').on(`init reInit`, function(event, slick) {
+    $('.newpost__counter').text(1 + ' / ' + slick.slideCount);
+  })
+  $('.newpost-slider').on(`afterChange`, function(event, slick, currentSlide, nextSlide) {
+    $('.newpost__counter').text(currentSlide + 1 + ' / ' + slick.slideCount);
+  })
   $(".newpost-slider").slick({
     infinite: true,
     dots: false,
@@ -242,6 +277,13 @@ $(document).ready(function() {
     ]
   });
 
+  //newpost bottom
+  $('.new__bottom').on(`init reInit`, function(event, slick) {
+    $('.new__counter').text(1 + ' / ' + slick.slideCount);
+  })
+  $('.new__bottom').on(`afterChange`, function(event, slick, currentSlide, nextSlide) {
+    $('.new__counter').text(currentSlide + 1 + ' / ' + slick.slideCount);
+  })
   $(".new__bottom").slick({
     dots: false,
     arrows: true,
@@ -361,56 +403,5 @@ $(document).ready(function() {
     $(this)
       .parents(".panel")
       .toggleClass("is-active");
-  });
-
-  // pagination counter
-
-  // custom function showing current slide
-  // var $status = $(".pagingInfo");
-  // var $slickElement = $(".pagin-number");
-
-  // $slickElement.on("init reInit afterChange", function(
-  //   event,
-  //   slick,
-  //   currentSlide,
-  //   nextSlide
-  // ) {
-  //   //currentSlide is undefined on init -- set it to 0 in this case (currentSlide is 0 based)
-  //   var i = (currentSlide ? currentSlide : 0) + 1;
-  //   $status.text(i + "/" + slick.slideCount);
-  // });
-
-  var sliders = {
-    1: { item: ".pagin-number" },
-    2: { item: ".pagin-number02" },
-    3: { item: ".pagin-number03" }
-  };
-
-  $.each(sliders, function() {
-    let $slider = $(this.item);
-
-    if ($slider.length) {
-      let currentSlide = 0;
-      let slidesCount;
-      let sliderCounter = document.createElement("div");
-      sliderCounter.classList.add("slider__counter");
-
-      let updateSliderCounter = function(slick, currentIndex) {
-        currentSlide = slick.slickCurrentSlide() + 1;
-        slidesCount = slick.slideCount;
-        $(sliderCounter).text(currentSlide + "/" + slidesCount);
-      };
-
-      $slider.on("afterChange", function(event, slick, currentSlide) {
-        updateSliderCounter(slick, currentSlide);
-      });
-
-      $slider.on("init", function(event, slick) {
-        $slider.append(sliderCounter);
-        updateSliderCounter(slick);
-      });
-
-      $slider.slick();
-    }
   });
 });

@@ -85,16 +85,15 @@ select.error
 	border-bottom: 1px solid $accent
 input.error
 	border-bottom: 1px solid $accent
-
-.slider
-	.slider__counter
-		position: absolute
-		left: 64px
-		font-size: 16px
-		line-height: 34px
-		color: #99A4AF
-		padding: 15px 18px
-		top: 113%
+.slider__counter
+	position: absolute
+	left: 64px
+	font-size: 16px
+	line-height: 34px
+	color: #99A4AF
+	padding: 15px 18px
+	top: 113%
+.slider	
 	.slick-arrow
 		top: 120%
 		width: 64px
@@ -800,6 +799,7 @@ header
 					line-height: 34px
 	.programs__wrapper
 		.programs__nav
+			position: relative
 			.programs__list
 				display: flex
 				align-items: flex-start
@@ -1017,6 +1017,8 @@ header
 		padding-right: 25px
 	.container
 		.row
+			&.akcii
+				position: relative
 			.title
 				+media-breakpoint-down(sm)
 					font-size: 40px
@@ -1201,6 +1203,7 @@ header
 						margin-left: 20px
 .seti__home
 	padding: 120px 0px 234px
+	position: relative
 	.container
 		.row
 			.title
@@ -1373,18 +1376,18 @@ header
 				+media-breakpoint-up(xl)
 					left: calc(((100vw - 1282px)/2) + 9%)
 
-		.slider__counter
-			top: 115%
-			+media-breakpoint-up(xs)
-				left: calc((100vw/2 - 32px)
-			+media-breakpoint-up(sm)
-				left: calc(((100vw - 540px)/2) + 10%)
-			+media-breakpoint-up(md)
-				left: calc(((100vw - 720px)/2) + 8%)
-			+media-breakpoint-up(lg)
-				left: calc(((100vw - 960px)/2) + 5.5%)
-			+media-breakpoint-up(xl)
-				left: calc(((100vw - 1282px)/2) + 4.5%)
+	.slider__counter
+		top: 85%
+		+media-breakpoint-up(xs)
+			left: calc((100vw/2 - 32px)
+		+media-breakpoint-up(sm)
+			left: calc(((100vw - 540px)/2) + 10%)
+		+media-breakpoint-up(md)
+			left: calc(((100vw - 720px)/2) + 8%)
+		+media-breakpoint-up(lg)
+			left: calc(((100vw - 960px)/2) + 5.5%)
+		+media-breakpoint-up(xl)
+			left: calc(((100vw - 1282px)/2) + 4.5%)
 
 .fon
 	padding: 0 0 255px
@@ -2083,6 +2086,10 @@ header
 						padding-left: 0
 		.container
 			.row
+				position: relative
+				.slider__counter
+					left: 36.5%
+					top: 85%
 				.instructor__list
 					position: relative
 					background: #FFF
@@ -2107,10 +2114,7 @@ header
 							top: 110%
 							&.slick-next
 								margin: 0
-								left: 60%
-						.slider__counter
-							left: 36.5%
-							top: 105%
+								left: 60%				
 					.instructor__item
 						display: block
 						margin: 0 5px
@@ -2626,6 +2630,7 @@ header
 	padding-bottom: 184px
 	.container
 		.row
+			position: relative
 			.newpost-slider
 				display: flex
 				align-items: center
@@ -2644,12 +2649,12 @@ header
 						left: 15%
 					.slick-arrow
 						&.slick-next
-							left: 60%
-					.slider__counter
-						left: 36.5%
+							left: 60%					
 				.new__item
 					padding-right: 24px
-
+			.slider__counter
+				top: 114%
+				left: calc((100vw/2) - 44px)
 .new
 	margin-top: -130px
 	+media-breakpoint-down(xs)
@@ -2726,11 +2731,12 @@ header
 									transition: .3s
 .new__posts
 	background: #F7F7F7
-	padding-bottom: 215px
+	padding-bottom: 215px	
 	+media-breakpoint-down(xs)
 		padding: 0 24px 215px
 	.container
 		.row
+			position: relative
 			.title
 				padding-top: 100px
 				+media-breakpoint-down(sm)
@@ -2794,6 +2800,9 @@ header
 						&:hover
 							box-shadow: 0px 8px 24px rgba(55, 71, 84, 0.08)
 							transition: .3s
+			.slider__counter 
+				left: calc((100vw/2) - 64px)
+				top: 108%
 //history page
 .main__history
 	.history__banner
