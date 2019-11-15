@@ -2972,28 +2972,238 @@ header
 									color: #ffffff
 									transition: color .3s
 									border-bottom: 2px solid $accent
+//flight
+.flight__top
+	.container
+		.row
+			.title
+				font-size: 54px
+				line-height: 100px
+				+media-breakpoint-down(md)
+					font-size: 40px
+					line-height: 48px
+					+media-breakpoint-down(xs)
+						font-size: 28px
+.flight
+	.container
+		.flight__content
+			padding-left: 128px
+			padding-right: 128px
+			padding-bottom: 55px
+			+media-breakpoint-down(xs)
+				padding-left: 25px
+				padding-right: 25px
+				padding-bottom: 25px
+			.flight__text
+				.subTtitle
+					font-size: 28px
+					line-height: 24px
+					font-weight: 600
+					padding-bottom: 25px
+					+media-breakpoint-down(xs)
+						font-size: 24px
 
-			// .slick-dots
-			// 	bottom: 60px
-			// 	padding-bottom: 30px
-			// 	border-bottom: 1px solid rgba(255, 255, 255, 0.4)
-			// 	overflow: hidden
-			// 	overflow-x: auto
-			// 	white-space: nowrap
-			// 	max-width: 1272px
-			// 	left: 12%
-			// 	right: 12%
-			// 	text-align: left
-			// 	+media-breakpoint-down(lg)
-			// 		max-width: 1140px
-			// 		padding-right: 100px
-			// 		left: 6%
-			// 		right: 6%
-			// 	+media-breakpoint-down(md)
-			// 		max-width: 960px
-			// 	+media-breakpoint-down(sm)
-			// 		left: 7%
-			// 		right: 7%
+				p
+					padding-bottom: 25px
+//book flight
+.order
+	.container
+		.row
+			flex-direction: column
+			.title
+				padding-top: 60px
+				margin-bottom: 20px
+			.description
+				padding-bottom: 30px
+				margin-bottom: 0
+				font-weight: 600
+				font-size: 18px
+				line-height: 48px
+				color: $accentTwo
+	.container
+		.row
+			.order__tabs
+				border-bottom: none
+				.nav-item
+					flex-basis: 50%
+					width: 100%
+					&:first-child
+						padding-right: 10px
+					&:last-child
+						padding-left: 10px
+					.nav-link
+						font-weight: 600
+						font-size: 18px
+						line-height: 22px
+						color: #fff
+						background: $accentTwo
+						border-radius: 0
+						width: 100%
+						border: none
+						padding: 20px 25px
+						text-align: center
+						&.active
+							background: $accent
+			.tab-content
+				.tab-pane
+					.order__list
+						display: flex
+						align-items: flex-start
+						justify-content: space-between
+						flex-wrap: nowrap
+						max-width: 1272px
+						position: relative
+						z-index: 1
+						padding-bottom: 70px
+						+media-breakpoint-up(xl)
+							max-width: 1272px
+						+media-breakpoint-down(xl)
+							max-width: 1140px
+						+media-breakpoint-down(lg)
+							max-width: 842px
+						+media-breakpoint-down(md)
+							max-width: 692px
+						+media-breakpoint-down(sm)
+							max-width: 668px
+						+media-breakpoint-down(xs)
+							max-width: 100%
+						.order__item
+							background-position: center
+							background-repeat: no-repeat
+							background-size: cover
+							display: flex
+							align-items: flex-end
+							justify-content: flex-end
+							+media-breakpoint-up(xl)
+								min-height: 568px
+								flex-basis: 407px
+								max-width: 407px
+							+media-breakpoint-down(xl)
+								min-height: 396px
+								max-width: 332px
+								flex-basis: 332px
+							+media-breakpoint-down(lg)
+								min-height: 488px
+								flex-basis: 407px
+								max-width: 407px
+							+media-breakpoint-down(md)
+								min-height: 396px
+								max-width: 332px
+								flex-basis: 332px
+							+media-breakpoint-down(xs)
+								min-height: 394px
+								max-width: 100%
+								flex-basis: 100%
+							&.item01
+								background-image: url(../img/_src/programs02.jpg)
+							&.item02
+								background-image: url(../img/_src/programs02.jpg)
+							&.item03
+								background-image: url(../img/_src/programs02.jpg)
+							&.item04
+								background-image: url(../img/_src/programs02.jpg)
+							&.item05
+								background-image: url(../img/_src/programs02.jpg)
+							&.item06
+								background: $accentTwo
+							&.user
+								position: relative
+								&:before
+									content: url(../img/_src/iconUser.svg)
+									position: absolute
+									right: 120px
+									top: 60px
+							.order__link
+								position: relative
+								display: flex
+								align-items: flex-start
+								justify-content: flex-end
+								flex-direction: column
+								min-height: 568px
+								flex-basis: 407px
+								width: 100%
+								+media-breakpoint-down(xs)
+									min-height: 394px
+									max-width: 100%
+									flex-basis: 100%
+								&:hover
+									.order__description
+										display: block
+										transition: .3s
+									.order__wrapBtn
+										.order__btn
+											background-color: $accent
+											transition: .3s
+								.order__basket
+									font-weight: bold
+									font-size: 36px
+									line-height: 44px
+									color: #fff
+									padding-left: 35px
+								.order__baskeValue
+
+								.order__total
+									font-weight: bold
+									font-size: 36px
+									line-height: 44px
+									color: #fff
+									padding-left: 35px
+								.order__title
+									padding-left: 47px
+									font-weight: bold
+									font-size: 28px
+									line-height: 34px
+									position: relative
+									transition: .3s
+									+media-breakpoint-down(xs)
+										font-size: 24px
+										padding-right: 25px
+									&:before
+										content: url(../img/_src/square.svg)
+										position: absolute
+										left: 20px
+										top: -4px
+								.order__description
+									display: none
+									padding-left: 20px
+									font-size: 18px
+									line-height: 22px
+									transition: .3s
+								.order__wrapBtn
+									text-align: center
+									margin: 20px auto 0
+									width: 100%
+									border-top: 1px solid rgba(255, 255, 255, 0.25)
+									.order__btn
+										background-color: transparent
+										width: 100%
+										transition: .3s
+										&:after
+											padding-left: 40px
+
+								.order__order
+									position: absolute
+									background-color: $accent
+									right: 0
+									top: 50px
+									font-weight: bold
+									font-size: 18px
+									line-height: 20px
+									color: #FFF
+									padding: 14px 10px
+
+						&.slick-slider
+							.slick-list
+								margin: 0 -12px
+								.slick-track
+									.slick-slide
+										margin: 0 12px
+							+media-breakpoint-down(xs)
+								.slick-prev
+									left: calc((100vw/2) - 128px )
+								.slick-next
+									left: calc((100vw/2))
+
 //FAQ page
 .main__faq
 	background-color: #F7F7F7
@@ -3166,7 +3376,7 @@ footer
 	.footer__bottom
 		padding: 30px 0
 		display: flex
-		align-items: center
+		align-items: flex-start
 		justify-content: space-between
 		color: #ffffff
 		opacity: 0.5
