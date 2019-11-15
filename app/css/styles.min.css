@@ -612,9 +612,6 @@ template {
   .seti__home .seti__lenta .slick-list {
     padding: 0 5% 0 10% !important;
   }
-  .seti__home .slider__counter {
-    top: 84.5% !important;
-  }
   .new__counter {
     display: none;
   }
@@ -626,6 +623,7 @@ template {
   }
   .seti__home .seti__lenta .slick-list .slick-track .slick-slide {
     max-width: 377px;
+    width: 377px;
   }
   .seti__home .seti__lenta .slick-list .slick-track .slick-slide .seti__itemWrap {
     width: 377px;
@@ -3178,19 +3176,30 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 .seti__home .seti__lenta .seti__item .seti__itemWrap {
   margin: 0;
   width: 408px;
+  max-width: 408px;
   -webkit-flex-basis: 408px;
       -ms-flex-preferred-size: 408px;
           flex-basis: 408px;
   background-color: #fff;
   padding-bottom: 30px;
-  width: 332px;
-  -webkit-flex-basis: 332px;
-      -ms-flex-preferred-size: 332px;
-          flex-basis: 332px;
+  width: 408px;
+  max-width: 408px;
+  flex-basis: 408px;
+}
+
+@media (max-width: 1199.98px) {
+  .seti__home .seti__lenta .seti__item .seti__itemWrap {
+    width: 332px;
+    max-width: 332px;
+    -webkit-flex-basis: 332px;
+        -ms-flex-preferred-size: 332px;
+            flex-basis: 332px;
+  }
 }
 
 @media (max-width: 767.98px) {
   .seti__home .seti__lenta .seti__item .seti__itemWrap {
+    width: 100%;
     max-width: 100%;
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
@@ -3299,7 +3308,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 .seti__home .seti__lenta.slick-slider .slick-list {
-  padding: 0 5% 0 6% !important;
+  padding: 0 5% 0 10% !important;
 }
 
 @media (max-width: 1199.98px) {
@@ -3316,18 +3325,22 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 
 @media (max-width: 767.98px) {
   .seti__home .seti__lenta.slick-slider .slick-list {
-    padding: 0 5% 0 20% !important;
+    padding: 0 5% 0 6% !important;
   }
 }
 
 .seti__home .seti__lenta.slick-slider .slick-list .slick-track .slick-slide {
-  max-width: 408px;
   margin: 0 10px;
-  max-width: 332px;
+  max-width: 408px;
+  width: 408px;
+  max-width: 408px;
+  width: 408px;
 }
 
 @media (max-width: 1199.98px) {
   .seti__home .seti__lenta.slick-slider .slick-list .slick-track .slick-slide {
+    max-width: 332px;
+    width: 332px;
     margin: 0 20px;
   }
 }
@@ -3335,6 +3348,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 @media (max-width: 767.98px) {
   .seti__home .seti__lenta.slick-slider .slick-list .slick-track .slick-slide {
     max-width: 100%;
+    width: 100%;
     margin: 0;
   }
 }
@@ -3402,12 +3416,13 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 .seti__home .slider__counter {
-  top: 84.5%;
+  top: 85%;
   left: calc((100vw/2 - 32px));
 }
 
 @media (min-width: 576px) {
   .seti__home .slider__counter {
+    top: 84.5%;
     left: calc(((100vw - 540px)/2) + 10%);
   }
 }
