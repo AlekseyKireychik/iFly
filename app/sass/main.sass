@@ -93,7 +93,7 @@ input.error
 	color: #99A4AF
 	padding: 15px 18px
 	top: 113%
-.slider	
+.slider
 	.slick-arrow
 		top: 120%
 		width: 64px
@@ -800,6 +800,11 @@ header
 	.programs__wrapper
 		.programs__nav
 			position: relative
+			.programs__counter
+				top: 110.5%
+				+media-breakpoint-down(xs)
+					top: 108.5%
+					left: calc((100vw/2) - 64px )
 			.programs__list
 				display: flex
 				align-items: flex-start
@@ -926,6 +931,11 @@ header
 						.slick-track
 							.slick-slide
 								margin: 0 12px
+					+media-breakpoint-down(xs)
+						.slick-prev
+							left: calc((100vw/2) - 128px )
+						.slick-next
+							left: calc((100vw/2))
 .advantages__home
 	.advantages__list
 		margin: 0
@@ -1019,6 +1029,14 @@ header
 		.row
 			&.akcii
 				position: relative
+				.akcii__counter
+					display: none
+					+media-breakpoint-down(lg)
+						display: block
+						top: 110.5%
+					+media-breakpoint-down(xs)
+						top: 108.5%
+						left: calc((100vw/2) - 64px )
 			.title
 				+media-breakpoint-down(sm)
 					font-size: 40px
@@ -1031,8 +1049,7 @@ header
 				display: flex
 				align-items: flex-start
 				justify-content: center
-				lex-wrap: nowrap
-				max-width: 1272px
+				flex-wrap: nowrap
 				width: 100%
 				position: relative
 				z-index: 1
@@ -1059,18 +1076,22 @@ header
 						min-height: 488px
 						flex-basis: 407px
 						max-width: 407px
+						width: 407px
 					+media-breakpoint-down(xl)
 						min-height: 396px
 						max-width: 332px
 						flex-basis: 332px
+						width: 332px
 					+media-breakpoint-down(lg)
 						min-height: 488px
 						flex-basis: 407px
 						max-width: 407px
+						width: 407px
 					+media-breakpoint-down(md)
 						min-height: 396px
 						max-width: 332px
 						flex-basis: 332px
+						width: 332px
 					+media-breakpoint-down(xs)
 						min-height: 394px
 						max-width: 100%
@@ -1152,10 +1173,11 @@ header
 						.slick-track
 							.slick-slide
 								margin: 0 12px
-				.slider__counter
-					display: none
-					+media-breakpoint-down(lg)
-						display: block
+					+media-breakpoint-down(xs)
+						.slick-prev
+							left: calc((100vw/2) - 128px )
+						.slick-next
+							left: calc((100vw/2))
 
 .order__home
 	background-image: url(../img/_src/orderBg.jpg)
@@ -1224,6 +1246,7 @@ header
 				margin-bottom: 50px
 				+media-breakpoint-down(xs)
 					margin-left: 20px
+					margin-right: 20px
 				.seti__item
 					display: flex
 					align-items: center
@@ -1372,13 +1395,13 @@ header
 				+media-breakpoint-up(md)
 					left: calc(((100vw - 720px)/2) + 16%)
 				+media-breakpoint-up(lg)
-					left: calc(((100vw - 960px)/2) + 11%)
+					left: calc(((100vw - 960px)/2) + 12%)
 				+media-breakpoint-up(xl)
 					left: calc(((100vw - 1282px)/2) + 9%)
 
 	.slider__counter
-		top: 85%
 		+media-breakpoint-up(xs)
+			top: 84.5%
 			left: calc((100vw/2 - 32px)
 		+media-breakpoint-up(sm)
 			left: calc(((100vw - 540px)/2) + 10%)
@@ -1388,6 +1411,7 @@ header
 			left: calc(((100vw - 960px)/2) + 5.5%)
 		+media-breakpoint-up(xl)
 			left: calc(((100vw - 1282px)/2) + 4.5%)
+			top: 85.5%
 
 .fon
 	padding: 0 0 255px
@@ -2088,8 +2112,13 @@ header
 			.row
 				position: relative
 				.slider__counter
-					left: 36.5%
-					top: 85%
+					left: 5%
+					top: 112.5
+					+media-breakpoint-down(md)
+						left: 10%
+					+media-breakpoint-down(xs)
+						top: 109.5%
+						left: calc((100vw/2) - 64px )
 				.instructor__list
 					position: relative
 					background: #FFF
@@ -2109,12 +2138,21 @@ header
 						.slick-prev
 							left: 15%
 							margin: 0
+							+media-breakpoint-down(xs)
+								top: 115%
+								left: calc((100vw/2) - 128px )
+
 						.slick-arrow
 							margin: 0
 							top: 110%
+							+media-breakpoint-down(xs)
+								top: 115%
 							&.slick-next
 								margin: 0
-								left: 60%				
+								left: 60%
+								+media-breakpoint-down(xs)
+									left: calc((100vw/2))
+
 					.instructor__item
 						display: block
 						margin: 0 5px
@@ -2649,12 +2687,14 @@ header
 						left: 15%
 					.slick-arrow
 						&.slick-next
-							left: 60%					
+							left: 60%
 				.new__item
 					padding-right: 24px
 			.slider__counter
-				top: 114%
-				left: calc((100vw/2) - 44px)
+				top: 111%
+				+media-breakpoint-down(xs)
+					top: 114%
+					left: calc((100vw/2) - 44px)
 .new
 	margin-top: -130px
 	+media-breakpoint-down(xs)
@@ -2685,6 +2725,8 @@ header
 					position: relative
 					+media-breakpoint-down(md)
 						padding: 25px 0px 25px 110px
+					+media-breakpoint-down(sm)
+						padding: 120px 0px 25px 0px
 					&:before
 						content: url(../img/_src/deq.svg)
 						position: absolute
@@ -2692,6 +2734,8 @@ header
 						top: 25px
 						+media-breakpoint-down(md)
 							left: 0px
+						+media-breakpoint-down(sm)
+							top: 35px
 
 				.new__social
 					display: flex
@@ -2731,7 +2775,7 @@ header
 									transition: .3s
 .new__posts
 	background: #F7F7F7
-	padding-bottom: 215px	
+	padding-bottom: 215px
 	+media-breakpoint-down(xs)
 		padding: 0 24px 215px
 	.container
@@ -2800,9 +2844,21 @@ header
 						&:hover
 							box-shadow: 0px 8px 24px rgba(55, 71, 84, 0.08)
 							transition: .3s
-			.slider__counter 
-				left: calc((100vw/2) - 64px)
-				top: 108%
+			.new__counter
+				display: none
+				+media-breakpoint-down(lg)
+					display: block
+					left: 6.5%
+					top: 110.5%
+				+media-breakpoint-down(md)
+					left: 8.5%
+					top: 109.5%
+				+media-breakpoint-down(sm)
+					left: 10.5%
+					top: 111.5%
+				+media-breakpoint-down(xs)
+					left: calc((100vw/2) - 64px)
+					top: 108%
 //history page
 .main__history
 	.history__banner

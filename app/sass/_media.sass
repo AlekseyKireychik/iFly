@@ -7,6 +7,8 @@
         padding-bottom: 120px!important
         .programs__wrapper
             .programs__nav
+                .programs__counter
+                    display: none
                 .programs__list
                     max-width: 1400px!important
                     .slick-prev
@@ -37,12 +39,15 @@
                             &.slick-disabled
                                 opacity: 0!important
                                 display: none
-                    .slider__counter
-                        display: none
     .seti__home
         .seti__lenta
             .slick-list
                 padding: 0 5% 0 10%!important
+        .slider__counter
+            top: 84.5%!important
+    .new__counter
+        display: none
+
 @media screen and (min-width: 1200px) and (max-width: 1449px)
     .seti__home
         .seti__lenta
@@ -104,8 +109,20 @@
         .slick-arrow
             &.slick-next
                 left: calc(((100vw - 680px)/2) + 18%)!important
-        .slider__counter
-            left: calc(((100vw - 680px)/2) + 9%)!important
+    .slider__counter
+        left: calc(((100vw - 680px)/2) + 9%)!important
+    .reviews
+        .container
+            .row
+                .slider__counter
+                    left: 9%!important
+                    top: 110.5%!important
+    .new__posts
+        .container
+            .row
+                .new__counter
+                    left: 11.5%!important
+                    top: 109.5%!important
 @media (min-width: 577px) and (max-width: 669px)
     .programs__home
         .container
