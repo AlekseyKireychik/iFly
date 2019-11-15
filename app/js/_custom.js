@@ -258,10 +258,15 @@ $(document).ready(function() {
   $(".insructors__sliders #slick-slide-control04").text("Алексей Смирнов");
 
   //book flight
+  $(".lang__btn").on("click", function(event) {
+    event.preventDefault();
+    $(".lang__subList").toggleClass("is-active");
+  });
+
   $("#order-list01").on(`init reInit`, function(event, slick) {
     $(".order__counter").text(1 + " / " + slick.slideCount);
   });
-  $(".#order-list01").on(`afterChange`, function(
+  $("#order-list01").on(`afterChange`, function(
     event,
     slick,
     currentSlide,
@@ -269,12 +274,55 @@ $(document).ready(function() {
   ) {
     $(".order__counter").text(currentSlide + 1 + " / " + slick.slideCount);
   });
-  $(".#order-list01").slick({
+  $("#order-list01").slick({
     infinite: true,
     dots: false,
     arrows: true,
     speed: 300,
-    slidesToShow: 2,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    variableWidth: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    responsive: [
+      {
+        breakpoint: 1300,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          arrows: true,
+          infinite: true
+        }
+      },
+      {
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: true,
+          infinite: true
+        }
+      }
+    ]
+  });
+
+  $("#order-list02").on(`init reInit`, function(event, slick) {
+    $(".order__counter02").text(1 + " / " + slick.slideCount);
+  });
+  $("#order-list02").on(`afterChange`, function(
+    event,
+    slick,
+    currentSlide,
+    nextSlide
+  ) {
+    $(".order__counter02").text(currentSlide + 1 + " / " + slick.slideCount);
+  });
+  $("#order-list02").slick({
+    infinite: true,
+    dots: false,
+    arrows: true,
+    speed: 300,
+    slidesToShow: 3,
     slidesToScroll: 1,
     variableWidth: true,
     autoplay: true,

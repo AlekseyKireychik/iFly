@@ -375,7 +375,95 @@ input.error
 						width: 100%
 						button
 							width: 100%
-
+header
+	.container-fluid							
+		&.header__flight
+			.header
+				justify-content: space-between
+				.header__logo
+					padding: 30px 60px
+				.header__function
+					display: flex
+					align-items: center
+					justify-content: flex-start
+					.form
+						display: flex
+						align-items: flex-start
+						justify-content: space-between
+						flex-wrap: wrap
+						.mainform__group
+							position: relative
+							padding-right: 30px
+							.mainform__label
+								font-size: 16px
+								line-height: 19px
+								color: $accentTwo
+								font-weight: 600
+								padding-left: 20px
+								position: absolute
+								top: 15px
+								left: 0
+								.required-star
+									color: $accent
+							input
+								font-size: 16px
+								line-height: 19px
+								color: $accentTwo
+								font-weight: 600
+								width: 100%
+								border: none
+								padding: 15px 20px
+								border-bottom: 1px solid #E5E7E8
+								&:focus
+									border-bottom: 1px solid $accentTwo
+									& + label
+										top: -15px
+										font-size: 14px
+										line-height: 17px
+										color: #999EA7
+										.required-star
+											color: #999EA7
+								&:invalid:not(:focus):not(:placeholder-shown)
+									& + label
+										font-size: 14px
+										line-height: 17px
+										color: $accent
+								&:valid
+									border-bottom: 1px solid #E5E7E8
+					.header__request
+						&.form
+							margin-right: 60px
+					.lang__container
+						position: relative
+						.lang__btn
+							font-weight: 600
+							font-size: 24px
+							line-height: 29px
+							color: $accentTwo
+							position: relative
+							margin-right: 84px
+							&:before
+								position: absolute
+								content: url(../img/_src/arrowDown.svg)
+								right: -20px
+								top: -2px
+						.lang__subList
+							display: none
+							position: absolute
+							background-color: #fff
+							padding: 20px 15px
+							left: -10px
+							top: 65px    						
+							border-top: 1px solid #E5E7E8
+							.lang__item
+								padding-bottom: 10px
+								.lang__subLink
+									font-weight: 600
+									font-size: 24px
+									line-height: 29px
+									color: $accentTwo
+							&.is-active
+								display: block
 .container__breadcrumb
 	padding-top: 65px
 	+media-breakpoint-down(md)
@@ -3046,6 +3134,7 @@ header
 							background: $accent
 			.tab-content
 				.tab-pane
+					position: relative
 					.order__list
 						display: flex
 						align-items: flex-start
@@ -3078,14 +3167,17 @@ header
 								min-height: 568px
 								flex-basis: 407px
 								max-width: 407px
+								width: 407px
 							+media-breakpoint-down(xl)
 								min-height: 396px
 								max-width: 332px
 								flex-basis: 332px
+								width: 332px
 							+media-breakpoint-down(lg)
 								min-height: 488px
 								flex-basis: 407px
 								max-width: 407px
+								width: 407px
 							+media-breakpoint-down(md)
 								min-height: 396px
 								max-width: 332px
@@ -3122,10 +3214,13 @@ header
 								min-height: 568px
 								flex-basis: 407px
 								width: 100%
+								padding: 35px
 								+media-breakpoint-down(xs)
 									min-height: 394px
 									max-width: 100%
 									flex-basis: 100%
+								&.basket
+									justify-content: space-between
 								&:hover
 									.order__description
 										display: block
@@ -3134,12 +3229,22 @@ header
 										.order__btn
 											background-color: $accent
 											transition: .3s
+								&.basket
+									justify-content: center
+									transition: .5s
+									&:hover
+										justify-content: space-between
+										transition: .5s
 								.order__basket
 									font-weight: bold
 									font-size: 36px
 									line-height: 44px
 									color: #fff
 									padding-left: 35px
+									padding-right: 35px
+									width: 100%
+									border-bottom: 1px solid #C4C4C4
+									padding-bottom: 15px
 								.order__baskeValue
 
 								.order__total
@@ -3148,6 +3253,10 @@ header
 									line-height: 44px
 									color: #fff
 									padding-left: 35px
+									padding-right: 35px
+									width: 100%
+									border-top: 1px solid #C4C4C4
+									padding-top: 15px
 								.order__title
 									padding-left: 47px
 									font-weight: bold
@@ -3194,7 +3303,7 @@ header
 
 						&.slick-slider
 							.slick-list
-								margin: 0 -12px
+								margin: 0 2px
 								.slick-track
 									.slick-slide
 										margin: 0 12px
@@ -3203,6 +3312,13 @@ header
 									left: calc((100vw/2) - 128px )
 								.slick-next
 									left: calc((100vw/2))
+						&#order-list02
+							.slick-list
+								margin: 0 -10px
+					.order__counter
+						top: auto
+    					bottom: 0px
+						display: none
 
 //FAQ page
 .main__faq

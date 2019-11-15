@@ -5,7 +5,7 @@
 
 	<meta charset="utf-8">
 
-	<title>Забронировать полёт</title>
+	<title>Выбор полета</title>
 	<meta name="description" content="iFly">
 
 	<meta name="viewport" content="width=device-width">
@@ -59,94 +59,49 @@
 		</div>
 	</header>
 	<main>
-		<section class="order">
+		<section class="choice">
 			<div class="container">
-				<div class="row order__top">
-					<h2 class="title">Забронировать полёт</h2>
-					<p class="description">Выберите количество рейсов и забронируйте полет на желаемую дату в календаре</p>
+				<ul class="row choice__list">
+					<li class="choice__item completed">1. Выбор полета</li>
+					<li class="choice__item active">2. Подтверждение</li>
+					<li class="choice__item further">3. Заполнение данных</li>
+				</ul>
+				<div class="row choice__top">
+					<h2 class="title">Полет тест1</h2>
+					<span class="description">0т 50 BYN +</span>
 				</div>
 			</div>
 			<div class="container">
 				<div class="row">
-					<ul class="nav nav-tabs order__tabs">
-						<li class="nav-item">
-							<a class="nav-link active" data-toggle="tab" href="#beginners">Новичкам</a>
+					<ul class="choice__services">
+						<li class="choice__item">
+							<span class="services__title">Доп услуга 1</span>
+							<p class="services__description"></p>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" data-toggle="tab" href="#athletes">Спортсменам</a>
+						<li class="choice__item">
+							<span class="services__title">Доп услуга 2</span>
+							<p class="services__description"></p>
 						</li>
-					</ul>					
-					<div class="tab-content">
-						<div class="tab-pane active" id="beginners">
-							<ul id="order-list01" class="order__list slider">
-								<li class="order__item item01 user">
-									<a class="order__link" href="#">
-										<h3 class="order__title">Тест1</h3>
-										<span class="order__description">Обучающие курсы полёта в аэротрубе в дружеской, веселой обстановке группы. Все хотят отметить корпоративный успех в кругу сослуживцев нестандартно, весело, интересно. В неформальной обстановке коллеги лучше узнают друг друга. Это укрепляет командный дух и благотворно влияет на климат в трудовом коллективе.</span>
-										<span class="order__wrapBtn">
-											<span class="order__btn btn">купить</span>
-										</span>
-										<span class="order__order">50 BYN</span>
-									</a>
-								</li>
-								<li class="order__item item02 user">
-									<a class="order__link" href="#">
-										<h3 class="order__title">Тест2</h3>
-										<span class="order__description">Обучающие курсы полёта в аэротрубе в дружеской, веселой обстановке группы. Все хотят отметить корпоративный успех в кругу сослуживцев нестандартно, весело, интересно. В неформальной обстановке коллеги лучше узнают друг друга. Это укрепляет командный дух и благотворно влияет на климат в трудовом коллективе.</span>
-										<span class="order__wrapBtn">
-											<span class="order__btn btn">купить</span>
-										</span>
-										<span class="order__order">30 BYN</span>
-									</a>
-								</li>
-								<li class="order__item item03 user">
-									<a class="order__link" href="#">
-										<h3 class="order__title">Тест3</h3>
-										<span class="order__description">Обучающие курсы полёта в аэротрубе в дружеской, веселой обстановке группы. Все хотят отметить корпоративный успех в кругу сослуживцев нестандартно, весело, интересно. В неформальной обстановке коллеги лучше узнают друг друга. Это укрепляет командный дух и благотворно влияет на климат в трудовом коллективе.</span>
-										<span class="order__wrapBtn">
-											<span class="order__btn btn">купить</span>
-										</span>
-										<span class="order__order">50 BYN</span>
-									</a>
-								</li>
-							</ul>
-							<div class="order__counter slider__counter"></div>
-						</div>
-						<div class="tab-pane fade" id="athletes">
-							<ul id="order-list02" class="order__list slider">
-								<li class="order__item item04">
-									<a class="order__link" href="#">
-										<h3 class="order__title">Presell Pack</h3>
-										<span class="order__description">Программа для обучения воинских частей свободному падению в моделируемой среде </span>
-										<span class="order__wrapBtn">
-											<span class="order__btn btn">купить</span>
-										</span>
-										<span class="order__order">500 BYN в час</span>
-									</a>
-								</li>
-								<li class="order__item item05">
-									<a class="order__link" href="#">
-										<h3 class="order__title">Presell Pack - Coaching included</h3>
-										<span class="order__description">Программа для обучения воинских частей свободному падению в моделируемой среде </span>
-										<span class="order__wrapBtn">
-											<span class="order__btn btn">купить</span>
-										</span>
-										<span class="order__order">500 BYN в час</span>
-									</a>
-								</li>
-								<li class="order__item item06">
-									<a class="order__link basket" href="#">
-										<span class="order__basket">Корзина</span>	
-										<span class="order__baskeValue"></span>
-										<span class="order__total">
-											Итого
-										</span>										
-									</a>
-								</li>
-							</ul>
-							<div class="order__counter02 slider__counter"></div>
-						</div>
-					</div>
+					</ul>
+				</div>
+				<div class="row">
+					<form class="certificate__form" action="">
+						<label for="certificate" >
+							<input name="certificate" type="text" placeholder="Промокод">
+						</label>
+						<a class="order__btn btn" href="#">Проверить</a>
+					</form>	
+					<span class="choice__total">Итого:<span class="choice__value"> 50 BYN</span></span>
+				</div>
+				<div class="row">
+					<a class="btn" href="#">Выберите дату</a>					
+				</div>
+				<div class="row">
+					Календарь					
+				</div>
+				<div class="row">
+					<a class="btn" href="#">Назад</a>	
+					<a class="btn" href="#">Дальше</a>					
 				</div>
 			</div>
 		</section>
