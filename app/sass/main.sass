@@ -85,6 +85,189 @@ select.error
 	border-bottom: 1px solid $accent
 input.error
 	border-bottom: 1px solid $accent
+
+//popap 01
+.popap-01
+	background-color: #fff
+	// position: absolute
+	top: 200px
+	right: 0
+	left: 0
+
+	z-index: 1000
+	// display: none
+	display: block
+	&.is-active
+		display: block
+	.form
+		padding: 100px 108px
+		+media-breakpoint-down(sm)
+			padding: 50px 10px
+		.wrap__btnClose
+			display: flex
+			align-items: center
+			justify-content: space-between
+			.title
+				font-size: 44px
+				line-height: 48px
+				text-align: center
+			.popap-01-close
+				position: relative
+				cursor: pointer
+				padding: 15px
+				.form__line
+					position: absolute
+					width: 24px
+					height: 2px
+					top: 47%
+					right: 50%
+					transform: translate(50%)
+					background-color: transparent
+					&::after
+						content: ""
+						position: absolute
+						width: 24px
+						height: 2px
+						background-color: #E72D2D
+						top: 0px
+						transform: rotate(-45deg)
+					&::before
+						content: ""
+						position: absolute
+						width: 24px
+						height: 2px
+						background-color: #E72D2D
+						top: 0px
+						transform: rotate(45deg)
+		.formWrap
+			.form__body
+				font-weight: 600
+				font-size: 28px
+				line-height: 48px
+				color: $accentTwo
+				max-width: 600px
+			.form__bottom
+				padding-top: 50px
+				display: flex
+				align-items: center
+				justify-content: space-between
+				+media-breakpoint-down(lg)
+					flex-direction: column
+					align-items: flex-start
+					padding-top: 0px
+				.form-check
+					position: relative
+					margin-top: 40px
+					margin-bottom: 20px
+					.form__check-input
+						background: #F7F7F7
+						border: 2px solid #F7F7F7
+					input[type="checkbox"]
+						display: inline-block
+						width: auto
+						margin-top: 5px
+						opacity: 0
+					.form__check-input + label:before
+						position: absolute
+						left: -35px
+						bottom: 4px
+						height: 18px
+						width: 18px
+						content: ""
+						background: #F7F7F7
+						display: inline-block
+						vertical-align: middle
+						border: 2px solid $accentTwo
+						+media-breakpoint-down(md)
+							bottom: 45px
+							+media-breakpoint-down(xs)
+								bottom: auto
+								top: 32px
+					.form__check-input:checked + label:before
+						background: $accent
+						border: 2px solid $accent
+					.form__check-label
+						font-size: 16px
+						line-height: 24px
+						padding-left: 0px
+						color: $accentTwo
+						margin-bottom: 20px
+						position: relative
+						cursor: pointer
+						&:after
+							position: absolute
+							content: url(../img/_src/check.svg)
+							left: -31px
+							top: -3px
+							cursor: pointer
+						+media-breakpoint-down(md)
+							padding-left: 12px
+				.form__box
+					+media-breakpoint-down(xs)
+						width: 100%
+						button
+							width: 100%
+
+//popap 02
+.popap-02
+	background-color: #fff
+	// position: absolute
+	top: 200px
+	right: 0
+	left: 0
+
+	z-index: 1000
+	// display: none
+	display: block
+	&.is-active
+		display: block
+	.form
+		padding: 100px 108px
+		text-align: center
+		+media-breakpoint-down(sm)
+			padding: 50px 10px
+		.title
+			font-size: 44px
+			line-height: 48px
+			text-align: center
+		.formWrap
+			padding: 0 100px
+			color: $accentTwo
+			.form__body
+				font-weight: 600
+				font-size: 28px
+				line-height: 48px
+				padding-bottom: 35px
+			.form__time
+				font-weight: 600
+				font-size: 28px
+				line-height: 48px
+				text-align: center
+				background: #E5E7E8
+				border-radius: 10px
+				padding: 8px 40px
+		.popap__bottom
+			display: flex
+			align-items: center
+			justify-content: space-between
+			margin-bottom: 0
+			padding-top: 40px
+			padding-bottom: 80px
+			.popap__item
+				width: 100%
+				max-width: 320px
+				.popap__btn
+					width: 100%
+					&:after
+						padding-left: 60px
+					&.prew
+						background: #FFFFFF
+						color: $accent
+						border: 1px solid $accent
+						&:after
+							content: url(../img/_src/arrowRedRight.svg)
+					&.next
+
 .slider__counter
 	position: absolute
 	left: 64px
@@ -341,6 +524,12 @@ input.error
 						padding-left: 0px
 						color: $accentTwo
 						margin-bottom: 20px
+						position: relative
+						&:after
+							position: absolute
+							content: url(../img/_src/check.svg)
+							left: -31px
+							top: -3px
 						+media-breakpoint-down(md)
 							padding-left: 12px
 					.form__check-input
@@ -351,10 +540,12 @@ input.error
 						width: auto
 						margin-top: 5px
 						opacity: 0
+						cursor: pointer
 					.form__check-input + label:before
+						cursor: pointer
 						position: absolute
-						left: 0
-						bottom: 24px
+						left: -35px
+						bottom: 4px
 						height: 18px
 						width: 18px
 						content: ""
@@ -376,7 +567,7 @@ input.error
 						button
 							width: 100%
 header
-	.container-fluid							
+	.container-fluid
 		&.header__flight
 			.header
 				justify-content: space-between
@@ -453,7 +644,7 @@ header
 							background-color: #fff
 							padding: 20px 15px
 							left: -10px
-							top: 65px    						
+							top: 65px
 							border-top: 1px solid #E5E7E8
 							.lang__item
 								padding-bottom: 10px
@@ -3317,10 +3508,279 @@ header
 								margin: 0 -10px
 					.order__counter
 						top: auto
-    					bottom: 0px
+						bottom: 0px
 						display: none
+//choice
+.step__list
+	justify-content: space-between
+	align-items: center
+	flex-wrap: nowrap
+	padding-bottom: 60px
+	.step__item
+		font-weight: 600
+		font-size: 28px
+		line-height: 54px
+		color: #FFFFFF
+		padding: 3px 40px
+		width: 100%
+		text-align: center
+		&.completed
+			margin-right: 20px
+			background-color: $accentTwo
+		&.active
+			margin-right: 20px
+			background-color: $accent
+		&.further
+			background-color: #C4C4C4
+.choice
+	padding-top: 60px
+	.container
+		.step__list
+		.choice__top
+			display: flex
+			align-items: center
+			justify-content: space-between
+			padding-bottom: 60px
+			border-bottom: 2px solid #C4C4C4
+			.title
+				font-weight: 600
+				font-size: 44px
+				line-height: 48px
+				color: $accentTwo
+				margin-bottom: 0
+			.choice__topVavue
+				font-weight: 600
+				font-size: 44px
+				line-height: 48px
+				color: $accentTwo
+				padding-right: 45px
+				position: relative
+				&:before
+					content: url(../img/_src/ion-trash.svg)
+					position: absolute
+					right: 0px
+					top: 0px
+	.container
+		.row
+			.choice__services
+				padding-top: 60px
+				width: 100%
+				margin-bottom: 30px
+				.choice__item
+					background: #E5E7E8
+					border-radius: 20px
+					width: 100%
+					padding: 34px
+					margin-bottom: 30px
+					min-height: 300px
+					&:last-child
+						min-height: 400px
 
-//FAQ page
+					.services__title
+						font-weight: bold
+						font-size: 24px
+						line-height: 34px
+						text-transform: uppercase
+						color: #000000
+					.services__description
+		.row
+			&.choice__formWrap
+				display: flex
+				align-items: center
+				justify-content: space-between
+				padding-bottom: 120px
+				.choice__form
+					display: flex
+					align-items: flex-start
+					justify-content: space-between
+					flex-wrap: wrap
+					flex-basis: 400px
+					width: 100%
+					.mainform__group
+						position: relative
+						width: 100%
+						input
+							font-size: 16px
+							line-height: 19px
+							color: $accentTwo
+							font-weight: 600
+							width: 100%
+							border: none
+							padding: 15px 20px
+							border-bottom: 1px solid #E5E7E8
+							&:focus
+								border-bottom: 1px solid $accentTwo
+								& + label
+									top: -15px
+									font-size: 14px
+									line-height: 17px
+									color: #999ea7
+							&:invalid:not(:focus):not(:placeholder-shown)
+								& + label
+									font-size: 14px
+									line-height: 17px
+									color: $accent
+							&:valid
+								border-bottom: 1px solid #E5E7E8
+						.mainform__label
+							font-size: 16px
+							line-height: 19px
+							color: $accentTwo
+							font-weight: 600
+							padding-left: 20px
+							position: absolute
+							top: 15px
+							left: 0
+				.choice__btn
+					width: 100%
+					max-width: 320px
+			.choice__total
+				font-weight: 600
+				font-size: 44px
+				line-height: 48px
+				color: $accentTwo
+				flex-basis: 400px
+				width: 100%
+				text-align: right
+				.choice__value
+
+		.row
+			.select__btn
+				width: 100%
+				max-width: 320px
+				margin: 0 auto
+		.row
+			&.calendar
+				padding-top: 60px
+				padding-bottom: 90px
+		.choice__bottom
+			display: flex
+			align-items: center
+			justify-content: space-between
+			margin-bottom: 0
+			padding-bottom: 80px
+			.choice__item
+				width: 100%
+				max-width: 320px
+				.choice__btn
+					width: 100%
+					&:after
+						padding-left: 60px
+					&.prew
+						background: #FFFFFF
+						color: $accent
+						border: 1px solid $accent
+						&:after
+							content: url(../img/_src/arrowRedRight.svg)
+					&.next
+
+// Date
+.date
+	padding-top: 60px
+	.date__form
+		background-color: #fff
+		z-index: 1000
+		.form-date
+			padding: 0 100px 80px
+			+media-breakpoint-down(sm)
+				padding: 50px 10px
+			.title
+				text-align: center
+			.formWrap
+				.form__top
+					display: flex
+					align-items: flex-start
+					justify-content: space-between
+					flex-wrap: wrap
+					.mainform__group
+						display: flex
+						align-items: flex-start
+						justify-content: flex-start
+						flex-direction: column
+						position: relative
+						&.group-01
+							flex-basis: 50%
+							width: 100%
+							padding-bottom: 50px
+							+media-breakpoint-down(md)
+								flex-basis: 100%
+							&:nth-child(odd)
+								padding-right: 27px
+								+media-breakpoint-down(md)
+									padding-right: 0px
+						.mainform__label
+							font-size: 16px
+							line-height: 19px
+							color: $accentTwo
+							font-weight: 600
+							padding-left: 20px
+							position: absolute
+							top: 15px
+							left: 0
+							.required-star
+								color: $accent
+						input
+							font-size: 16px
+							line-height: 19px
+							color: $accentTwo
+							font-weight: 600
+							width: 100%
+							border: none
+							padding: 15px 20px
+							border-bottom: 1px solid #E5E7E8
+							&:focus
+								border-bottom: 1px solid $accentTwo
+								& + label
+									top: -15px
+									font-size: 14px
+									line-height: 17px
+									color: #999EA7
+									.required-star
+										color: #999EA7
+							&:invalid:not(:focus):not(:placeholder-shown)
+								& + label
+									font-size: 14px
+									line-height: 17px
+									color: $accent
+							&:valid
+								border-bottom: 1px solid #E5E7E8
+						input[type="date"]
+								opacity: 1
+								background: url(../img/_src/arrowDown.svg)
+								background-position: center right 25px
+								background-repeat: no-repeat
+								background-size: inherit
+								&::-webkit-datetime-edit
+									color: transparent
+									&:hover
+										background: none
+								&:focus::-webkit-datetime-edit
+									color: #000
+									background: none
+
+						select
+							cursor: pointer
+							font-size: 16px
+							line-height: 19px
+							color: $accentTwo
+							font-weight: 600
+							width: 100%
+							border: none
+							padding: 18px 20px
+							border-bottom: 1px solid #E5E7E8
+							width: 100%
+							max-width: 100%
+							appearance: none
+							background-color: #fff
+							background-image: url(../img/_src/arrowDown.svg)
+							background-repeat: no-repeat, repeat
+							background-position: right .7em top 50%, 0 0
+							background-size: .65em auto, 100%
+				.form__box
+					text-align: center
+					.submit
+
+// FAQ page
 .main__faq
 	background-color: #F7F7F7
 .faq

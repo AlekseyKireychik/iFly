@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
 
-    <title>Выбор полета</title>
+    <title>Информация о клиенте</title>
     <meta name="description" content="iFly" />
 
     <meta name="viewport" content="width=device-width" />
@@ -93,67 +93,180 @@
       </div>
     </header>
     <main>
-      <section class="choice">
+      <section class="date">
         <div class="container">
           <ul class="row step__list">
             <li class="step__item completed">1. Выбор полета</li>
-            <li class="step__item active">2. Подтверждение</li>
-            <li class="step__item further">3. Заполнение данных</li>
+            <li class="step__item completed">2. Подтверждение</li>
+            <li class="step__item active">3. Заполнение данных</li>
           </ul>
-          <div class="row choice__top">
-            <span class="title">Полет тест1</span>
-            <span class="choice__topVavue">0т 50 BYN&nbsp;&nbsp;+&nbsp;</span>
-          </div>
         </div>
-        <div class="container">
-          <div class="row">
-            <ul class="choice__services">
-              <li class="choice__item">
-                <span class="services__title">Доп услуга 1</span>
-                <p class="services__description"></p>
-              </li>
-              <li class="choice__item">
-                <span class="services__title">Доп услуга 2</span>
-                <p class="services__description"></p>
-              </li>
-            </ul>
-          </div>
-          <div class="row choice__formWrap">
-            <form class="choice__form" action="">
-              <div class="mainform__group">
-                <input
-                  type="text"
-                  placeholder=" "
-                  class="mainform__control"
-                  name="text"
-                  id="text"
-                  required
-                />
-                <label for="email" class="mainform__label">Промокод</label>
+        <div class="container date__form">
+          <form id="form-date" class="form-date">
+            <h2 class="title">Информация о клиенте</h2>
+            <div class="formWrap">
+              <div class="form__top">
+                <div class="mainform__group group-01">
+                  <input
+                    type="text"
+                    placeholder=" "
+                    class="mainform__control"
+                    name="name"
+                    id="name"
+                    placeholder=""
+                    data-validation-error-msg="Обязательное поле"
+                    required
+                  />
+                  <label for="name" class="mainform__label"
+                    >Имя<span class="required-star">*</span></label
+                  >
+                  <span class="help-text"></span>
+                </div>
+                <div class="mainform__group group-01">
+                  <input
+                    type="text"
+                    placeholder=" "
+                    class="mainform__control"
+                    name="fname"
+                    id="fname"
+                    placeholder=""
+                    data-validation-error-msg="Обязательное поле"
+                    required
+                  />
+                  <label for="fname" class="mainform__label"
+                    >Фамилия<span class="required-star">*</span></label
+                  >
+                  <span class="help-text"></span>
+                </div>
+                <div class="mainform__group group-01">
+                  <input
+                    type="tel"
+                    placeholder=" "
+                    class="mainform__control"
+                    name="tel"
+                    id="tel"
+                    placeholder=""
+                    data-validation-error-msg="Обязательное поле"
+                    required
+                  />
+                  <label for="tel" class="mainform__label"
+                    >Телефон<span class="required-star">*</span></label
+                  >
+                  <span class="help-text"></span>
+                </div>
+                <div class="mainform__group group-01">
+                  <input
+                    type="email"
+                    placeholder=" "
+                    class="mainform__control"
+                    name="form-email"
+                    id="form-email"
+                    required
+                  />
+                  <label for="form-email" class="mainform__label"
+                    >Email<span class="required-star">*</span></label
+                  >
+                  <span class="help-text"></span>
+                </div>
+                <div class="mainform__group group-01">
+                  <select
+                    name="gender"
+                    placeholder=" "
+                    class="mainform__control mainform-select"
+                    id="gender"
+                  >
+                    <option>Мужской</option>
+                    <option>Женский</option>
+                  </select>
+                </div>
+                <div class="mainform__group group-01">
+                  <input
+                    type="date"
+                    placeholder=""
+                    class="mainform__control"
+                    name="date"
+                    id="date"
+                    value=""
+                  />
+                  <label for="date" class="mainform__label"
+                    >Дата Рождения</label
+                  >
+                </div>
               </div>
-            </form>
-            <a class="choice__btn btn" href="#">Проверить</a>
-            <span class="choice__total"
-              >Итого:<span class="choice__value"> 50 BYN</span></span
-            >
-          </div>
-          <div class="row">
-            <a class="btn select__btn" href="#">Выберите дату</a>
-          </div>
-          <div class="row calendar">
-            <img src="img/_src/calendar.jpg" alt="" />
-          </div>
-          <ul class="row choice__bottom">
-            <li class="choice__item">
-              <a class="btn choice__btn prew" href="#">Назад</a>
-            </li>
-            <li class="choice__item">
-              <a class="btn choice__btn next" href="#">Дальше</a>
-            </li>
-          </ul>
+
+              <input type="hidden" name="culturecode" />
+              <input type="hidden" name="url" />
+              <div class="form__box">
+                <button type="submit" id="btn" class="btn submit">
+                  Забронировать
+                </button>
+              </div>
+            </div>
+          </form>
         </div>
       </section>
     </main>
+    <!-- popap 01 -->
+    <div class="container popap-01">
+      <form id="form-popap-01" class="form">
+        <div class="wrap__btnClose">
+          <h2 class="title">Связаться с нами</h2>
+          <div class="popap-01-close">
+            <span class="form__line"></span>
+          </div>
+        </div>
+        <div class="formWrap">
+          <p class="form__body">
+            Уважаемый <span id="popap-01-name">Имя</span>, Ваш полет
+            забронирован на <span id="popap-01-date">"Число-Месяц-Год"</span>. С
+            нетертерпением ждем Вас.
+          </p>
+          <input type="hidden" name="culturecode" />
+          <input type="hidden" name="url" />
+          <div class="form__bottom">
+            <div class="mainform__group form-check">
+              <input
+                class="form__check-input"
+                placeholder=" "
+                required
+                type="checkbox"
+                id="check-popap-01"
+              />
+              <label class="form__check-label" for="check-popap-01"
+                >Подписаться на рассылку</label
+              >
+            </div>
+            <div class="form__box">
+              <a href="/" id="btn" class="btn submit">
+                На главную
+              </a>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- popap 02 -->
+    <div class="container popap-02">
+      <form id="form-popap-02" class="form">
+        <h2 id="day" class="title">Воскресенье 1 декабря</h2>
+        <div class="formWrap">
+          <p class="form__body">
+            Пожалуйста, примите во внимание, что вы должны сообщить о заявке за
+            1 час до полета.
+          </p>
+          <span id="form__time" class="form__time">14:00</span>
+        </div>
+        <ul class="row popap__bottom">
+          <li class="popap__item">
+            <a class="btn popap__btn prew" href="#">Назад</a>
+          </li>
+          <li class="popap__item">
+            <a class="btn popap__btn next" href="#">На главную</a>
+          </li>
+        </ul>
+      </form>
+    </div>
     <footer>
       <div class="footer__logo container">
         <div class="row">
