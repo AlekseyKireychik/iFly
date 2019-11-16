@@ -405,11 +405,14 @@ input.error
 									color: #999EA7
 						&:invalid:not(:focus):not(:placeholder-shown)
 							& + label
+								top: -15px
 								font-size: 14px
 								line-height: 17px
 								color: $accent
 						&:valid
 							border-bottom: 1px solid #E5E7E8
+							& + label
+								top: -15px
 			.form__center
 				display: flex
 				align-items: flex-start
@@ -616,11 +619,14 @@ header
 											color: #999EA7
 								&:invalid:not(:focus):not(:placeholder-shown)
 									& + label
+										top: -15px
 										font-size: 14px
 										line-height: 17px
 										color: $accent
 								&:valid
 									border-bottom: 1px solid #E5E7E8
+									& + label
+										top: -15px
 					.header__request
 						&.form
 							margin-right: 60px
@@ -3617,11 +3623,14 @@ header
 									color: #999ea7
 							&:invalid:not(:focus):not(:placeholder-shown)
 								& + label
+									top: -15px
 									font-size: 14px
 									line-height: 17px
 									color: $accent
 							&:valid
 								border-bottom: 1px solid #E5E7E8
+								& + label
+									top: -15px
 						.mainform__label
 							font-size: 16px
 							line-height: 19px
@@ -3731,32 +3740,34 @@ header
 							&:focus
 								border-bottom: 1px solid $accentTwo
 								& + label
-									top: -15px
 									font-size: 14px
 									line-height: 17px
 									color: #999EA7
+									top: -15px
 									.required-star
 										color: #999EA7
 							&:invalid:not(:focus):not(:placeholder-shown)
 								& + label
 									font-size: 14px
 									line-height: 17px
+									top: -15px
 									color: $accent
 							&:valid
 								border-bottom: 1px solid #E5E7E8
+								& + label
+									top: -15px
 						input[type="date"]
-								opacity: 1
-								background: url(../img/_src/arrowDown.svg)
-								background-position: center right 25px
-								background-repeat: no-repeat
-								background-size: inherit
-								&::-webkit-datetime-edit
-									color: transparent
-									&:hover
-										background: none
-								&:focus::-webkit-datetime-edit
-									color: #000
+							opacity: 1
+							background: url(../img/_src/arrowDown.svg)
+							background-position: center right 25px
+							background-repeat: no-repeat
+							&::-webkit-datetime-edit
+								color: transparent
+								&:hover
 									background: none
+							&:focus::-webkit-datetime-edit
+								color: #000
+								background: none
 
 						select
 							cursor: pointer

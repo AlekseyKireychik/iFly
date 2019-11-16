@@ -1434,6 +1434,7 @@ input.error {
 }
 
 .main__form .form .formWrap .form__top .mainform__group input:invalid:not(:focus):not(:placeholder-shown) + label {
+  top: -15px;
   font-size: 14px;
   line-height: 17px;
   color: #E72D2D;
@@ -1441,6 +1442,10 @@ input.error {
 
 .main__form .form .formWrap .form__top .mainform__group input:valid {
   border-bottom: 1px solid #E5E7E8;
+}
+
+.main__form .form .formWrap .form__top .mainform__group input:valid + label {
+  top: -15px;
 }
 
 .main__form .form .formWrap .form__center {
@@ -1837,6 +1842,7 @@ header .container-fluid.header__flight .header .header__function .form .mainform
 }
 
 header .container-fluid.header__flight .header .header__function .form .mainform__group input:invalid:not(:focus):not(:placeholder-shown) + label {
+  top: -15px;
   font-size: 14px;
   line-height: 17px;
   color: #E72D2D;
@@ -1844,6 +1850,10 @@ header .container-fluid.header__flight .header .header__function .form .mainform
 
 header .container-fluid.header__flight .header .header__function .form .mainform__group input:valid {
   border-bottom: 1px solid #E5E7E8;
+}
+
+header .container-fluid.header__flight .header .header__function .form .mainform__group input:valid + label {
+  top: -15px;
 }
 
 header .container-fluid.header__flight .header .header__function .header__request.form {
@@ -7770,6 +7780,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 .choice .container .row.choice__formWrap .choice__form .mainform__group input:invalid:not(:focus):not(:placeholder-shown) + label {
+  top: -15px;
   font-size: 14px;
   line-height: 17px;
   color: #E72D2D;
@@ -7777,6 +7788,10 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 
 .choice .container .row.choice__formWrap .choice__form .mainform__group input:valid {
   border-bottom: 1px solid #E5E7E8;
+}
+
+.choice .container .row.choice__formWrap .choice__form .mainform__group input:valid + label {
+  top: -15px;
 }
 
 .choice .container .row.choice__formWrap .choice__form .mainform__group .mainform__label {
@@ -7977,10 +7992,10 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 .date .date__form .form-date .formWrap .form__top .mainform__group input:focus + label {
-  top: -15px;
   font-size: 14px;
   line-height: 17px;
   color: #999EA7;
+  top: -15px;
 }
 
 .date .date__form .form-date .formWrap .form__top .mainform__group input:focus + label .required-star {
@@ -7990,6 +8005,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 .date .date__form .form-date .formWrap .form__top .mainform__group input:invalid:not(:focus):not(:placeholder-shown) + label {
   font-size: 14px;
   line-height: 17px;
+  top: -15px;
   color: #E72D2D;
 }
 
@@ -7997,12 +8013,15 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   border-bottom: 1px solid #E5E7E8;
 }
 
+.date .date__form .form-date .formWrap .form__top .mainform__group input:valid + label {
+  top: -15px;
+}
+
 .date .date__form .form-date .formWrap .form__top .mainform__group input[type="date"] {
   opacity: 1;
   background: url(../img/_src/arrowDown.svg);
   background-position: center right 25px;
   background-repeat: no-repeat;
-  background-size: inherit;
 }
 
 .date .date__form .form-date .formWrap .form__top .mainform__group input[type="date"]::-webkit-datetime-edit {
