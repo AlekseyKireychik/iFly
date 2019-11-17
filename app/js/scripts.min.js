@@ -282,7 +282,7 @@ $(document).ready(function() {
     slidesToShow: 3,
     slidesToScroll: 1,
     variableWidth: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     responsive: [
       {
@@ -325,7 +325,7 @@ $(document).ready(function() {
     slidesToShow: 3,
     slidesToScroll: 1,
     variableWidth: true,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     responsive: [
       {
