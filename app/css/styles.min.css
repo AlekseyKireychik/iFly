@@ -1039,7 +1039,7 @@ input.error {
   height: 18px;
   width: 18px;
   content: "";
-  background: #F7F7F7;
+  background: #fff;
   display: inline-block;
   vertical-align: middle;
   border: 2px solid #142C60;
@@ -1433,6 +1433,10 @@ input.error {
   color: #999EA7;
 }
 
+.main__form .form .formWrap .form__top .mainform__group input:invalid:not(:focus):not(:placeholder-shown) {
+  border-bottom: 1px solid #E72D2D;
+}
+
 .main__form .form .formWrap .form__top .mainform__group input:invalid:not(:focus):not(:placeholder-shown) + label {
   top: -15px;
   font-size: 14px;
@@ -1718,7 +1722,7 @@ input.error {
   height: 18px;
   width: 18px;
   content: "";
-  background: #F7F7F7;
+  background: #fff;
   display: inline-block;
   vertical-align: middle;
   border: 2px solid #142C60;
@@ -1839,6 +1843,10 @@ header .container-fluid.header__flight .header .header__function .form .mainform
 
 header .container-fluid.header__flight .header .header__function .form .mainform__group input:focus + label .required-star {
   color: #999EA7;
+}
+
+header .container-fluid.header__flight .header .header__function .form .mainform__group input:invalid:not(:focus):not(:placeholder-shown) {
+  border-bottom: 1px solid #E72D2D;
 }
 
 header .container-fluid.header__flight .header .header__function .form .mainform__group input:invalid:not(:focus):not(:placeholder-shown) + label {
@@ -7786,6 +7794,10 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   color: #E72D2D;
 }
 
+.choice .container .row.choice__formWrap .choice__form .mainform__group input:invalid:not(:focus):not(:placeholder-shown) {
+  border-bottom: 1px solid #E72D2D;
+}
+
 .choice .container .row.choice__formWrap .choice__form .mainform__group input:valid {
   border-bottom: 1px solid #E5E7E8;
 }
@@ -8000,6 +8012,10 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 
 .date .date__form .form-date .formWrap .form__top .mainform__group input:focus + label .required-star {
   color: #999EA7;
+}
+
+.date .date__form .form-date .formWrap .form__top .mainform__group input:invalid:not(:focus):not(:placeholder-shown) {
+  border-bottom: 1px solid #E72D2D;
 }
 
 .date .date__form .form-date .formWrap .form__top .mainform__group input:invalid:not(:focus):not(:placeholder-shown) + label {

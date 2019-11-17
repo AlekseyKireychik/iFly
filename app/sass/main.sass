@@ -174,7 +174,7 @@ input.error
 						height: 18px
 						width: 18px
 						content: ""
-						background: #F7F7F7
+						background: #fff
 						display: inline-block
 						vertical-align: middle
 						border: 2px solid $accentTwo
@@ -404,6 +404,8 @@ input.error
 								.required-star
 									color: #999EA7
 						&:invalid:not(:focus):not(:placeholder-shown)
+							border-bottom: 1px solid $accent
+						&:invalid:not(:focus):not(:placeholder-shown)
 							& + label
 								top: -15px
 								font-size: 14px
@@ -552,7 +554,7 @@ input.error
 						height: 18px
 						width: 18px
 						content: ""
-						background: #F7F7F7
+						background: #fff
 						display: inline-block
 						vertical-align: middle
 						border: 2px solid $accentTwo
@@ -617,6 +619,8 @@ header
 										color: #999EA7
 										.required-star
 											color: #999EA7
+								&:invalid:not(:focus):not(:placeholder-shown)
+									border-bottom: 1px solid $accent
 								&:invalid:not(:focus):not(:placeholder-shown)
 									& + label
 										top: -15px
@@ -3627,6 +3631,8 @@ header
 									font-size: 14px
 									line-height: 17px
 									color: $accent
+							&:invalid:not(:focus):not(:placeholder-shown)
+								border-bottom: 1px solid $accent
 							&:valid
 								border-bottom: 1px solid #E5E7E8
 								& + label
@@ -3746,6 +3752,8 @@ header
 									top: -15px
 									.required-star
 										color: #999EA7
+							&:invalid:not(:focus):not(:placeholder-shown)
+								border-bottom: 1px solid $accent
 							&:invalid:not(:focus):not(:placeholder-shown)
 								& + label
 									font-size: 14px
