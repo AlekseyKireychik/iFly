@@ -81,7 +81,17 @@
                         .lang__btn
                             margin-right: 44px!important
     .order__list
-        max-width: 1140px!important		
+        max-width: 1140px!important
+    .container
+        .row
+            &.step__list
+                flex-wrap: wrap!important
+                .step__item
+                    margin-bottom: 25px
+                    &.completed
+                        margin-right: 0
+                    &.active
+                        margin-right: 0
 @media screen and (max-width: 1299px)
     header
         .container
@@ -150,7 +160,7 @@
                             .order__item
                                 flex-basis: 330px!important
                                 width: 330px!important
-                                max-width: 330px!important                                    
+                                max-width: 330px!important
                                 .order__link
                                     flex-basis: 330px!important
 @media (min-width: 577px) and (max-width: 669px)

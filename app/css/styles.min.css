@@ -658,6 +658,20 @@ template {
   .order__list {
     max-width: 1140px !important;
   }
+  .container .row.step__list {
+    -webkit-flex-wrap: wrap !important;
+        -ms-flex-wrap: wrap !important;
+            flex-wrap: wrap !important;
+  }
+  .container .row.step__list .step__item {
+    margin-bottom: 25px;
+  }
+  .container .row.step__list .step__item.completed {
+    margin-right: 0;
+  }
+  .container .row.step__list .step__item.active {
+    margin-right: 0;
+  }
 }
 
 @media screen and (max-width: 1299px) {
@@ -942,6 +956,12 @@ input.error {
   padding: 100px 108px;
 }
 
+@media (max-width: 991.98px) {
+  .popap-01 .form {
+    padding: 70px 50px;
+  }
+}
+
 @media (max-width: 767.98px) {
   .popap-01 .form {
     padding: 50px 10px;
@@ -963,16 +983,45 @@ input.error {
           justify-content: space-between;
 }
 
+@media (max-width: 991.98px) {
+  .popap-01 .form .wrap__btnClose {
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
 .popap-01 .form .wrap__btnClose .title {
   font-size: 44px;
   line-height: 48px;
   text-align: center;
 }
 
+@media (max-width: 575.98px) {
+  .popap-01 .form .wrap__btnClose .title {
+    font-size: 32px;
+    line-height: 36px;
+    padding: 0;
+  }
+}
+
 .popap-01 .form .wrap__btnClose .popap-01-close {
   position: relative;
   cursor: pointer;
   padding: 15px;
+}
+
+@media (max-width: 991.98px) {
+  .popap-01 .form .wrap__btnClose .popap-01-close {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .popap-01 .form .wrap__btnClose .popap-01-close {
+    margin-top: 5px;
+  }
 }
 
 .popap-01 .form .wrap__btnClose .popap-01-close .form__line {
@@ -1017,6 +1066,13 @@ input.error {
   line-height: 48px;
   color: #142C60;
   max-width: 600px;
+}
+
+@media (max-width: 575.98px) {
+  .popap-01 .form .formWrap .form__body {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 
 .popap-01 .form .formWrap .form__bottom {
@@ -1083,14 +1139,13 @@ input.error {
 
 @media (max-width: 991.98px) {
   .popap-01 .form .formWrap .form__bottom .form-check .form__check-input + label:before {
-    bottom: 45px;
+    bottom: 5px;
   }
 }
 
 @media (max-width: 991.98px) and (max-width: 575.98px) {
   .popap-01 .form .formWrap .form__bottom .form-check .form__check-input + label:before {
     bottom: auto;
-    top: 32px;
   }
 }
 
@@ -1150,6 +1205,12 @@ input.error {
   text-align: center;
 }
 
+@media (max-width: 991.98px) {
+  .popap-02 .form {
+    padding: 70px 50px;
+  }
+}
+
 @media (max-width: 767.98px) {
   .popap-02 .form {
     padding: 50px 10px;
@@ -1162,9 +1223,23 @@ input.error {
   text-align: center;
 }
 
+@media (max-width: 575.98px) {
+  .popap-02 .form .title {
+    font-size: 32px;
+    line-height: 36px;
+    padding: 0;
+  }
+}
+
 .popap-02 .form .formWrap {
   padding: 0 100px;
   color: #142C60;
+}
+
+@media (max-width: 991.98px) {
+  .popap-02 .form .formWrap {
+    padding: 0;
+  }
 }
 
 .popap-02 .form .formWrap .form__body {
@@ -1172,6 +1247,13 @@ input.error {
   font-size: 28px;
   line-height: 48px;
   padding-bottom: 35px;
+}
+
+@media (max-width: 575.98px) {
+  .popap-02 .form .formWrap .form__body {
+    font-size: 24px;
+    line-height: 32px;
+  }
 }
 
 .popap-02 .form .formWrap .form__time {
@@ -1202,17 +1284,52 @@ input.error {
   padding-bottom: 80px;
 }
 
+@media (max-width: 575.98px) {
+  .popap-02 .form .popap__bottom {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-bottom: 20px;
+  }
+}
+
 .popap-02 .form .popap__bottom .popap__item {
   width: 100%;
   max-width: 320px;
+}
+
+@media (max-width: 991.98px) {
+  .popap-02 .form .popap__bottom .popap__item {
+    max-width: 230px;
+  }
 }
 
 .popap-02 .form .popap__bottom .popap__item .popap__btn {
   width: 100%;
 }
 
+@media (max-width: 991.98px) {
+  .popap-02 .form .popap__bottom .popap__item .popap__btn {
+    padding: 14px 25px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .popap-02 .form .popap__bottom .popap__item .popap__btn {
+    padding: 10px 20px;
+    margin-bottom: 25px;
+  }
+}
+
 .popap-02 .form .popap__bottom .popap__item .popap__btn:after {
   padding-left: 60px;
+}
+
+@media (max-width: 991.98px) {
+  .popap-02 .form .popap__bottom .popap__item .popap__btn:after {
+    padding-left: 15px;
+  }
 }
 
 .popap-02 .form .popap__bottom .popap__item .popap__btn.prew {
@@ -7885,6 +8002,20 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   padding-bottom: 60px;
 }
 
+@media (max-width: 1199.98px) {
+  .step__list {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .step__list {
+    padding-bottom: 0px;
+  }
+}
+
 .step__list .step__item {
   font-weight: 600;
   font-size: 28px;
@@ -7895,14 +8026,40 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   text-align: center;
 }
 
+@media (max-width: 1199.98px) {
+  .step__list .step__item {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .step__list .step__item {
+    font-size: 22px;
+    line-height: 34px;
+    padding: 3px 10px;
+  }
+}
+
 .step__list .step__item.completed {
   margin-right: 20px;
   background-color: #142C60;
 }
 
+@media (max-width: 1199.98px) {
+  .step__list .step__item.completed {
+    margin-right: 0px;
+  }
+}
+
 .step__list .step__item.active {
   margin-right: 20px;
   background-color: #E72D2D;
+}
+
+@media (max-width: 1199.98px) {
+  .step__list .step__item.active {
+    margin-right: 0px;
+  }
 }
 
 .step__list .step__item.further {
@@ -7911,6 +8068,12 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 
 .choice {
   padding-top: 60px;
+}
+
+@media (max-width: 575.98px) {
+  .choice {
+    padding: 60px 24px 0;
+  }
 }
 
 .choice .container .choice__top {
@@ -7938,6 +8101,20 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   margin-bottom: 0;
 }
 
+@media (max-width: 767.98px) {
+  .choice .container .choice__top .title {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .choice .container .choice__top .title {
+    padding: 0px;
+    margin-bottom: 20px;
+  }
+}
+
 .choice .container .choice__top .choice__topVavue {
   font-weight: 600;
   font-size: 44px;
@@ -7945,6 +8122,13 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   color: #142C60;
   padding-right: 45px;
   position: relative;
+}
+
+@media (max-width: 767.98px) {
+  .choice .container .choice__top .choice__topVavue {
+    font-size: 36px;
+    line-height: 42px;
+  }
 }
 
 .choice .container .choice__top .choice__topVavue:before {
@@ -7997,6 +8181,12 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   padding-bottom: 120px;
 }
 
+@media (max-width: 767.98px) {
+  .choice .container .row.choice__formWrap {
+    padding-bottom: 90px;
+  }
+}
+
 .choice .container .row.choice__formWrap .choice__form {
   display: -webkit-box;
   display: -webkit-flex;
@@ -8019,6 +8209,14 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   width: 100%;
 }
 
+@media (max-width: 575.98px) {
+  .choice .container .row.choice__formWrap .choice__form {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+  }
+}
+
 .choice .container .row.choice__formWrap .choice__form .mainform__group {
   position: relative;
   width: 100%;
@@ -8033,6 +8231,18 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   border: none;
   padding: 15px 20px;
   border-bottom: 1px solid #E5E7E8;
+}
+
+@media (max-width: 991.98px) {
+  .choice .container .row.choice__formWrap .choice__form .mainform__group input {
+    width: auto;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .choice .container .row.choice__formWrap .choice__form .mainform__group input {
+    width: 100%;
+  }
 }
 
 .choice .container .row.choice__formWrap .choice__form .mainform__group input:focus {
@@ -8081,6 +8291,12 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   max-width: 320px;
 }
 
+@media (max-width: 767.98px) {
+  .choice .container .row.choice__formWrap .choice__btn {
+    margin-top: 25px;
+  }
+}
+
 .choice .container .row .choice__total {
   font-weight: 600;
   font-size: 44px;
@@ -8093,15 +8309,39 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   text-align: right;
 }
 
+@media (max-width: 1199.98px) {
+  .choice .container .row .choice__total {
+    text-align: left;
+    padding-top: 35px;
+  }
+}
+
+@media (max-width: 1199.98px) and (max-width: 767.98px) {
+  .choice .container .row .choice__total {
+    font-size: 36px;
+    line-height: 42px;
+  }
+}
+
 .choice .container .row .select__btn {
   width: 100%;
   max-width: 320px;
   margin: 0 auto;
 }
 
+@media (max-width: 767.98px) {
+  .choice .container .row .select__btn {
+    margin: 0 auto 0 0;
+  }
+}
+
 .choice .container .row.calendar {
   padding-top: 60px;
   padding-bottom: 90px;
+}
+
+.choice .container .row.calendar img {
+  width: 100%;
 }
 
 .choice .container .choice__bottom {
@@ -8130,6 +8370,12 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   width: 100%;
 }
 
+@media (max-width: 767.98px) {
+  .choice .container .choice__bottom .choice__item .choice__btn {
+    margin-bottom: 25px;
+  }
+}
+
 .choice .container .choice__bottom .choice__item .choice__btn:after {
   padding-left: 60px;
 }
@@ -8148,9 +8394,21 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   padding-top: 60px;
 }
 
+@media (max-width: 575.98px) {
+  .date {
+    padding: 60px 24px 0;
+  }
+}
+
 .date .date__form {
   background-color: #fff;
   z-index: 1000;
+}
+
+@media (max-width: 575.98px) {
+  .date .date__form {
+    padding: 0px;
+  }
 }
 
 .date .date__form .form-date {
@@ -8160,6 +8418,12 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 @media (max-width: 767.98px) {
   .date .date__form .form-date {
     padding: 50px 10px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .date .date__form .form-date {
+    padding: 30px 0px;
   }
 }
 
