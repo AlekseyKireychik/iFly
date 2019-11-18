@@ -175,6 +175,7 @@
                     class="mainform__control mainform-select"
                     id="gender"
                   >
+                    <option>Пол</option>
                     <option>Мужской</option>
                     <option>Женский</option>
                   </select>
@@ -210,7 +211,7 @@
     <div class="container popap-01">
       <form id="form-popap-01" class="form">
         <div class="wrap__btnClose">
-          <h2 class="title">Связаться с нами</h2>
+          <h2 class="title">Бронирование прошло успешно!</h2>
           <div class="popap-01-close">
             <span class="form__line"></span>
           </div>
@@ -263,6 +264,58 @@
           </li>
           <li class="popap__item">
             <a class="btn popap__btn next" href="#">На главную</a>
+          </li>
+        </ul>
+      </form>
+    </div>
+    <!-- popap login -->
+    <div class="container popap-login">
+      <form id="form-popap-login" class="form">
+        <div class="wrap__btnClose">
+          <h2 class="title">Вход в систему</h2>
+          <div class="popap-login-close">
+            <span class="form__line"></span>
+          </div>
+        </div>
+        <div class="form__wrap">
+          <div class="mainform__group group-01">
+            <input
+              type="email"
+              placeholder=" "
+              class="mainform__control"
+              name="email"
+              id="email"
+              required
+            />
+            <label for="email" class="mainform__label"
+              >Email<span class="required-star">*</span></label
+            >
+            <span class="help-text"></span>
+          </div>
+          <div class="mainform__group group-01">
+            <input
+              type="password"
+              placeholder=" "
+              class="mainform__control"
+              name="password"
+              id="password"
+              required
+            />
+            <label for="password" class="mainform__label"
+              >Пароль<span class="required-star">*</span></label
+            >
+            <span class="help-text"></span>
+          </div>
+        </div>
+        <ul class="row popap__bottom">
+          <li class="popap__item">
+            <a class="btn popap__btn prew" href="#">Зарегистрироваться</a>
+          </li>
+          <li class="popap__item">
+            <a class="popap__btn password_replace" href="#"
+              >Не помню свой пароль</a
+            >
+            <a class="btn popap__btn next" href="#">Войти</a>
           </li>
         </ul>
       </form>

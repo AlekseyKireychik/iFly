@@ -973,23 +973,14 @@ input.error {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-
-@media (max-width: 991.98px) {
-  .popap-01 .form .wrap__btnClose {
-    -webkit-box-align: start;
-    -webkit-align-items: flex-start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-  }
 }
 
 .popap-01 .form .wrap__btnClose .title {
@@ -1010,12 +1001,7 @@ input.error {
   position: relative;
   cursor: pointer;
   padding: 15px;
-}
-
-@media (max-width: 991.98px) {
-  .popap-01 .form .wrap__btnClose .popap-01-close {
-    margin-top: 10px;
-  }
+  margin-top: 10px;
 }
 
 @media (max-width: 575.98px) {
@@ -1178,6 +1164,10 @@ input.error {
   }
 }
 
+.popap-01 .form .formWrap .form__bottom .form__box button {
+  min-width: 240px;
+}
+
 @media (max-width: 575.98px) {
   .popap-01 .form .formWrap .form__bottom .form__box {
     width: 100%;
@@ -1280,8 +1270,7 @@ input.error {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-bottom: 0;
-  padding-top: 40px;
-  padding-bottom: 80px;
+  padding: 40px 15px 80px;
 }
 
 @media (max-width: 575.98px) {
@@ -1290,13 +1279,8 @@ input.error {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
-    padding-bottom: 20px;
+    padding: 40px 0px 20px;
   }
-}
-
-.popap-02 .form .popap__bottom .popap__item {
-  width: 100%;
-  max-width: 320px;
 }
 
 @media (max-width: 991.98px) {
@@ -1306,7 +1290,7 @@ input.error {
 }
 
 .popap-02 .form .popap__bottom .popap__item .popap__btn {
-  width: 100%;
+  min-width: 240px;
 }
 
 @media (max-width: 991.98px) {
@@ -1323,7 +1307,7 @@ input.error {
 }
 
 .popap-02 .form .popap__bottom .popap__item .popap__btn:after {
-  padding-left: 60px;
+  padding-left: 20px;
 }
 
 @media (max-width: 991.98px) {
@@ -1340,6 +1324,330 @@ input.error {
 
 .popap-02 .form .popap__bottom .popap__item .popap__btn.prew:after {
   content: url(../img/_src/arrowRedRight.svg);
+}
+
+.popap-login {
+  background-color: #fff;
+  top: 200px;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  display: block;
+}
+
+.popap-login.is-active {
+  display: block;
+}
+
+.popap-login form {
+  padding: 100px 108px;
+}
+
+@media (max-width: 991.98px) {
+  .popap-login form {
+    padding: 70px 50px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .popap-login form {
+    padding: 50px 10px;
+  }
+}
+
+.popap-login form .wrap__btnClose {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.popap-login form .wrap__btnClose .title {
+  font-size: 44px;
+  line-height: 48px;
+  text-align: center;
+}
+
+@media (max-width: 575.98px) {
+  .popap-login form .wrap__btnClose .title {
+    font-size: 32px;
+    line-height: 36px;
+    padding: 0;
+  }
+}
+
+.popap-login form .wrap__btnClose .popap-login-close {
+  position: relative;
+  cursor: pointer;
+  padding: 15px;
+  margin-top: 10px;
+}
+
+@media (max-width: 575.98px) {
+  .popap-login form .wrap__btnClose .popap-login-close {
+    margin-top: 5px;
+  }
+}
+
+.popap-login form .wrap__btnClose .popap-login-close .form__line {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  top: 47%;
+  right: 50%;
+  -webkit-transform: translate(50%);
+      -ms-transform: translate(50%);
+          transform: translate(50%);
+  background-color: transparent;
+}
+
+.popap-login form .wrap__btnClose .popap-login-close .form__line::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #E72D2D;
+  top: 0px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.popap-login form .wrap__btnClose .popap-login-close .form__line::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #E72D2D;
+  top: 0px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.popap-login form .form__wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  padding-bottom: 60px;
+}
+
+@media (max-width: 575.98px) {
+  .popap-login form .form__wrap {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.popap-login form .form__wrap .mainform__group {
+  position: relative;
+  padding-right: 15px;
+  width: 50%;
+}
+
+@media (max-width: 575.98px) {
+  .popap-login form .form__wrap .mainform__group {
+    padding-right: 0px;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+}
+
+.popap-login form .form__wrap .mainform__group:last-child {
+  padding-right: 0;
+  padding-left: 15px;
+}
+
+@media (max-width: 575.98px) {
+  .popap-login form .form__wrap .mainform__group:last-child {
+    padding-left: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+.popap-login form .form__wrap .mainform__group .mainform__label {
+  font-size: 16px;
+  line-height: 19px;
+  color: #142C60;
+  font-weight: 600;
+  padding-left: 20px;
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+
+.popap-login form .form__wrap .mainform__group .mainform__label .required-star {
+  color: #E72D2D;
+}
+
+.popap-login form .form__wrap .mainform__group input {
+  font-size: 16px;
+  line-height: 19px;
+  color: #142C60;
+  font-weight: 600;
+  width: 100%;
+  border: none;
+  padding: 15px 20px;
+  border-bottom: 1px solid #E5E7E8;
+}
+
+.popap-login form .form__wrap .mainform__group input:focus {
+  border-bottom: 1px solid #142C60;
+}
+
+.popap-login form .form__wrap .mainform__group input:focus + label {
+  top: -15px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #999EA7;
+}
+
+.popap-login form .form__wrap .mainform__group input:focus + label .required-star {
+  color: #999EA7;
+}
+
+.popap-login form .form__wrap .mainform__group input:invalid:not(:focus):not(:placeholder-shown) {
+  border-bottom: 1px solid #E72D2D;
+}
+
+.popap-login form .form__wrap .mainform__group input:invalid:not(:focus):not(:placeholder-shown) + label {
+  top: -15px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #E72D2D;
+}
+
+.popap-login form .form__wrap .mainform__group input:valid {
+  border-bottom: 1px solid #E5E7E8;
+}
+
+.popap-login form .form__wrap .mainform__group input:valid + label {
+  top: -15px;
+}
+
+.popap-login form .popap__bottom {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 0;
+  padding: 0 15px 80px;
+}
+
+@media (max-width: 1199.98px) {
+  .popap-login form .popap__bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .popap-login form .popap__bottom .popap__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.popap-login form .popap__bottom .popap__item:last-child {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.popap-login form .popap__bottom .popap__item .popap__btn {
+  padding: 14px 20px;
+}
+
+@media (max-width: 1199.98px) {
+  .popap-login form .popap__bottom .popap__item .popap__btn {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .popap-login form .popap__bottom .popap__item .popap__btn {
+    padding: 10px 20px;
+  }
+}
+
+.popap-login form .popap__bottom .popap__item .popap__btn:after {
+  padding-left: 20px;
+}
+
+.popap-login form .popap__bottom .popap__item .popap__btn.prew {
+  background: #FFFFFF;
+  color: #E72D2D;
+  border: 1px solid #E72D2D;
+  min-width: 240px;
+}
+
+.popap-login form .popap__bottom .popap__item .popap__btn.prew:after {
+  content: url(../img/_src/arrowRedRight.svg);
+  padding-left: 20px;
+}
+
+.popap-login form .popap__bottom .popap__item .popap__btn.password_replace {
+  font-size: 16px;
+  line-height: 24px;
+  color: #142C60;
+  white-space: nowrap;
+  margin-right: 60px;
+}
+
+@media (max-width: 1199.98px) {
+  .popap-login form .popap__bottom .popap__item .popap__btn.password_replace {
+    margin-right: 0px;
+  }
+}
+
+.popap-login form .popap__bottom .popap__item .popap__btn.next {
+  min-width: 240px;
 }
 
 .slider__counter {

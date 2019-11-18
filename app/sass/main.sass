@@ -106,10 +106,9 @@ input.error
 			padding: 50px 10px
 		.wrap__btnClose
 			display: flex
-			align-items: center
+			align-items: flex-start
 			justify-content: space-between
-			+media-breakpoint-down(md)
-				align-items: flex-start
+				
 			.title
 				font-size: 44px
 				line-height: 48px
@@ -122,8 +121,7 @@ input.error
 				position: relative
 				cursor: pointer
 				padding: 15px
-				+media-breakpoint-down(md)
-					margin-top: 10px
+				margin-top: 10px
 				+media-breakpoint-down(xs)
 					margin-top: 5px
 				.form__line
@@ -216,6 +214,8 @@ input.error
 						+media-breakpoint-down(md)
 							padding-left: 12px
 				.form__box
+					button
+						min-width: 240px
 					+media-breakpoint-down(xs)
 						width: 100%
 						button
@@ -275,25 +275,22 @@ input.error
 			align-items: center
 			justify-content: space-between
 			margin-bottom: 0
-			padding-top: 40px
-			padding-bottom: 80px
+			padding: 40px 15px 80px
 			+media-breakpoint-down(xs)
 				justify-content: center
-				padding-bottom: 20px
+				padding: 40px 0px 20px
 			.popap__item
-				width: 100%
-				max-width: 320px
 				+media-breakpoint-down(md)
 					max-width: 230px
 				.popap__btn
-					width: 100%
+					min-width: 240px
 					+media-breakpoint-down(md)
 						padding: 14px 25px
 					+media-breakpoint-down(xs)
 						padding: 10px 20px
 						margin-bottom: 25px
 					&:after
-						padding-left: 60px
+						padding-left: 20px
 						+media-breakpoint-down(md)
 							padding-left: 15px
 					&.prew
@@ -303,7 +300,171 @@ input.error
 						&:after
 							content: url(../img/_src/arrowRedRight.svg)
 					&.next
-
+//popap login
+.popap-login
+	background-color: #fff
+	// position: absolute
+	top: 200px
+	right: 0
+	left: 0
+	z-index: 1000
+	// display: none
+	display: block
+	&.is-active
+		display: block
+	form
+		padding: 100px 108px
+		+media-breakpoint-down(md)
+			padding: 70px 50px
+		+media-breakpoint-down(sm)
+			padding: 50px 10px
+		.wrap__btnClose
+			display: flex
+			align-items: flex-start
+			justify-content: space-between			
+			.title
+				font-size: 44px
+				line-height: 48px
+				text-align: center
+				+media-breakpoint-down(xs)
+					font-size: 32px
+					line-height: 36px
+					padding: 0
+			.popap-login-close
+				position: relative
+				cursor: pointer
+				padding: 15px
+				margin-top: 10px
+				+media-breakpoint-down(xs)
+					margin-top: 5px
+				.form__line
+					position: absolute
+					width: 24px
+					height: 2px
+					top: 47%
+					right: 50%
+					transform: translate(50%)
+					background-color: transparent
+					&::after
+						content: ""
+						position: absolute
+						width: 24px
+						height: 2px
+						background-color: #E72D2D
+						top: 0px
+						transform: rotate(-45deg)
+					&::before
+						content: ""
+						position: absolute
+						width: 24px
+						height: 2px
+						background-color: #E72D2D
+						top: 0px
+						transform: rotate(45deg)
+		.form__wrap
+			display: flex
+			align-items: flex-start
+			justify-content: space-between
+			flex-wrap: wrap
+			padding-bottom: 60px
+			+media-breakpoint-down(xs)
+				flex-direction: column
+			.mainform__group
+				position: relative
+				padding-right: 15px
+				width: 50%
+				+media-breakpoint-down(xs)
+					padding-right: 0px
+					width: 100%
+					margin-bottom: 40px
+				&:last-child
+					padding-right: 0
+					padding-left: 15px
+					+media-breakpoint-down(xs)
+						padding-left: 0px
+						margin-bottom: 0px
+				.mainform__label
+					font-size: 16px
+					line-height: 19px
+					color: $accentTwo
+					font-weight: 600
+					padding-left: 20px
+					position: absolute
+					top: 15px
+					left: 0
+					.required-star
+						color: $accent
+				input
+					font-size: 16px
+					line-height: 19px
+					color: $accentTwo
+					font-weight: 600
+					width: 100%
+					border: none
+					padding: 15px 20px
+					border-bottom: 1px solid #E5E7E8
+					&:focus
+						border-bottom: 1px solid $accentTwo
+						& + label
+							top: -15px
+							font-size: 14px
+							line-height: 17px
+							color: #999EA7
+							.required-star
+								color: #999EA7
+					&:invalid:not(:focus):not(:placeholder-shown)
+						border-bottom: 1px solid $accent
+					&:invalid:not(:focus):not(:placeholder-shown)
+						& + label
+							top: -15px
+							font-size: 14px
+							line-height: 17px
+							color: $accent
+					&:valid
+						border-bottom: 1px solid #E5E7E8
+						& + label
+							top: -15px
+		.popap__bottom
+			display: flex
+			align-items: center
+			justify-content: space-between
+			margin-bottom: 0
+			padding: 0 15px 80px
+			+media-breakpoint-down(lg)
+				flex-direction: column
+			.popap__item
+				+media-breakpoint-down(lg)
+					flex-direction: column
+				&:last-child
+					display: flex
+					align-items: center
+					justify-content: space-between
+				.popap__btn
+					padding: 14px 20px
+					+media-breakpoint-down(lg)
+						margin-bottom: 25px
+					+media-breakpoint-down(xs)
+						padding: 10px 20px
+					&:after
+						padding-left: 20px
+					&.prew
+						background: #FFFFFF
+						color: $accent
+						border: 1px solid $accent
+						min-width: 240px
+						&:after
+							content: url(../img/_src/arrowRedRight.svg)
+							padding-left: 20px
+					&.password_replace
+						font-size: 16px
+						line-height: 24px
+						color: $accentTwo
+						white-space: nowrap
+						margin-right: 60px
+						+media-breakpoint-down(lg)
+							margin-right: 0px
+					&.next
+						min-width: 240px
 .slider__counter
 	position: absolute
 	left: 64px
