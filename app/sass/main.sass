@@ -52,18 +52,20 @@ body
 	background: $accent
 	font-size: 14px
 	line-height: 34px
-	padding: 14px 50px
+	padding: 14px 75px 14px 45px
 	text-transform: uppercase
 	color: #FFFFFF
+	position: relative
 	border-radius: 0
 	+media-breakpoint-down(sm)
-		padding: 10px 45px
+		padding: 10px 65px 10px 45px
 	+media-breakpoint-down(xs)
-		padding: 10px 20px
+		padding: 10px 55px 10px 35px
 	&::after
 		content: url(../img/_src/arrow.svg)
 		padding-left: 12px
 		width: 30px
+		position: absolute
 
 	&:hover
 		color: #FFFFFF
@@ -108,7 +110,7 @@ input.error
 			display: flex
 			align-items: flex-start
 			justify-content: space-between
-				
+
 			.title
 				font-size: 44px
 				line-height: 48px
@@ -284,10 +286,7 @@ input.error
 					max-width: 230px
 				.popap__btn
 					min-width: 240px
-					+media-breakpoint-down(md)
-						padding: 14px 25px
 					+media-breakpoint-down(xs)
-						padding: 10px 20px
 						margin-bottom: 25px
 					&::after
 						padding-left: 20px
@@ -321,7 +320,7 @@ input.error
 		.wrap__btnClose
 			display: flex
 			align-items: flex-start
-			justify-content: space-between			
+			justify-content: space-between
 			.title
 				font-size: 44px
 				line-height: 48px
@@ -440,11 +439,11 @@ input.error
 					align-items: center
 					justify-content: space-between
 				.popap__btn
-					padding: 14px 20px
 					+media-breakpoint-down(lg)
 						margin-bottom: 25px
 					+media-breakpoint-down(xs)
-						padding: 10px 20px
+						padding: 10px 45px 10px 20px
+
 					&::after
 						padding-left: 20px
 					&.prew
@@ -482,12 +481,12 @@ input.error
 		&.slick-prev
 			left: 0px
 			&::before
-				content: url(../img/_src/arrowSliderLeft.svg)
+				content: url(../img/_src/arrowSliderLeft.png)
 		&.slick-next
 			right: auto
 			left: 128px
 			&::before
-				content: url(../img/_src/arrowSliderRight.svg)
+				content: url(../img/_src/arrowSliderRight.png)
 .overlay
 	position: absolute
 	top: 0
@@ -853,9 +852,9 @@ header
 								width: 295px
 								min-width: 295px
 							+media-breakpoint-down(sm)
-								flex-basis: 215px
-								width: 215px
-								min-width: 215px
+								// flex-basis: 215px
+								// width: 215px
+								// min-width: 215px
 								padding: 10px 10px
 								margin-right: 5px
 							+media-breakpoint-down(xs)
@@ -1079,7 +1078,7 @@ header
 							left: 0
 							top: 3px
 					.header__request
-						padding: 14px 50px 14px 50px
+						padding: 14px 105px 14px 50px
 						margin-right: 30px
 						+media-breakpoint-down(sm)
 							display: none
@@ -1353,25 +1352,28 @@ header
 					background-position: center
 					background-repeat: no-repeat
 					background-size: cover
-					display: flex
-					align-items: flex-end
-					justify-content: flex-end
+					display: flex					
+					position: relative
 					+media-breakpoint-up(xl)
 						min-height: 488px
 						flex-basis: 407px
 						max-width: 407px
+						width: 407px
 					+media-breakpoint-down(xl)
 						min-height: 396px
 						max-width: 332px
 						flex-basis: 332px
+						width: 332px
 					+media-breakpoint-down(lg)
 						min-height: 488px
 						flex-basis: 407px
 						max-width: 407px
+						width: 407px
 					+media-breakpoint-down(md)
 						min-height: 396px
 						max-width: 332px
 						flex-basis: 332px
+						width: 332px
 					+media-breakpoint-down(xs)
 						min-height: 394px
 						max-width: 100%
@@ -1397,40 +1399,59 @@ header
 						min-height: 488px
 						flex-basis: 407px
 						width: 100%
+						margin-top: auto
 						+media-breakpoint-down(xs)
 							min-height: 394px
 							max-width: 100%
 							flex-basis: 100%
 						&:hover
-							.programs__description
-								display: block
+							.wrap__title
+								bottom: 112px
 								transition: .3s
+								.programs__description
+									display: block
+									transition: .3s
 							.programs__wrapBtn
 								.programs__btn
 									background-color: $accent
 									transition: .3s
-						.programs__title
-							padding-left: 74px
-							font-weight: bold
-							font-size: 28px
-							line-height: 34px
-							position: relative
+						.wrap__title
+							position: absolute
+							left: 0
+							bottom: 112px
 							transition: .3s
-							+media-breakpoint-down(xs)
-								font-size: 24px
-								padding-right: 25px
-							&::before
-								content: url(../img/_src/square.svg)
-								position: absolute
-								left: 48px
-								top: -4px
-						.programs__description
-							display: none
-							padding-left: 74px
-							font-size: 18px
-							line-height: 28px
-							transition: .3s
+							.programs__title
+								padding-left: 74px
+								font-weight: bold
+								font-size: 28px
+								line-height: 34px
+								position: relative
+								transition: .3s
+								+media-breakpoint-down(sm)
+									padding-left: 54px
+								+media-breakpoint-down(xs)
+									font-size: 24px
+									padding-right: 25px
+								&::before
+									content: url(../img/_src/square.svg)
+									position: absolute
+									left: 48px
+									top: -4px
+									+media-breakpoint-down(sm)
+										left: 24px
+							.programs__description
+								display: none
+								padding-left: 74px
+								font-size: 18px
+								line-height: 28px
+								transition: .3s
+								+media-breakpoint-down(sm)
+									padding-left: 54px
 						.programs__wrapBtn
+							position: absolute
+							left: 0
+							right: 0
+							bottom: 0
 							text-align: center
 							margin: 40px auto 0
 							width: 100%
@@ -1593,9 +1614,8 @@ header
 					background-position: center
 					background-repeat: no-repeat
 					background-size: cover
-					display: flex
-					align-items: flex-end
-					justify-content: flex-end
+					display: flex					
+					position: relative
 					+media-breakpoint-up(xl)
 						min-height: 488px
 						flex-basis: 407px
@@ -1641,6 +1661,7 @@ header
 					&.item03
 						background-image: url(../img/_src/programs02.jpg)
 					.akcii__link
+						position: relative
 						display: flex
 						align-items: flex-start
 						justify-content: flex-end
@@ -1653,36 +1674,48 @@ header
 							max-width: 100%
 							flex-basis: 100%
 						&:hover
-							.akcii__description
-								display: block
+							.wrap__title
+								bottom: 112px
 								transition: .3s
+								.akcii__description
+									display: block
+									transition: .3s
 							.akcii__wrapBtn
 								.akcii__btn
 									background-color: $accent
 									transition: .3s
-						.akcii__title
-							padding-left: 74px
-							padding-right: 25px
-							font-weight: bold
-							font-size: 28px
-							line-height: 34px
-							position: relative
+						.wrap__title
+							position: absolute
+							left: 0
+							bottom: 112px
 							transition: .3s
-							+media-breakpoint-down(xs)
-								font-size: 24px
-							&::before
-								content: url(../img/_src/square.svg)
-								position: absolute
-								left: 48px
-								top: -4px
-						.akcii__description
-							display: none
-							padding-left: 74px
-							padding-right: 45px
-							font-size: 18px
-							line-height: 28px
-							transition: .1s
+							.akcii__title
+								padding-left: 74px
+								padding-right: 25px
+								font-weight: bold
+								font-size: 28px
+								line-height: 34px
+								position: relative
+								transition: .3s
+								+media-breakpoint-down(xs)
+									font-size: 24px
+								&::before
+									content: url(../img/_src/square.svg)
+									position: absolute
+									left: 48px
+									top: -4px
+							.akcii__description
+								display: none
+								padding-left: 74px
+								padding-right: 45px
+								font-size: 18px
+								line-height: 28px
+								transition: .1s
 						.akcii__wrapBtn
+							position: absolute
+							left: 0
+							right: 0
+							bottom: 0
 							text-align: center
 							margin: 40px auto 0
 							width: 100%
@@ -1737,15 +1770,17 @@ header
 					padding: 21px 22px 21px 22px
 					width: 320px
 					+media-breakpoint-down(sm)
-						padding: 16px 22px 17px 22px
-					+media-breakpoint-down(sm)
+						padding: 17px 22px 17px 22px
+					+media-breakpoint-down(xs)
 						margin-left: 20px
 						margin-bottom: 20px
 						width: 280px
 				.order__btn
 					margin-left: 30px
+					padding: 14px 85px 14px 65px
+					+media-breakpoint-down(sm)
+						padding: 10px 85px 10px 65px
 					+media-breakpoint-down(xs)
-						padding: 10px 45px
 						margin-left: 20px
 .seti__home
 	padding: 120px 0px 234px
@@ -3556,6 +3591,8 @@ header
 		.row
 			.order__tabs
 				border-bottom: none
+				flex-wrap: nowrap
+				margin-bottom: 60px
 				+media-breakpoint-down(sm)
 					flex-direction: column
 					max-width: 100%
@@ -3673,7 +3710,6 @@ header
 								min-height: 568px
 								flex-basis: 407px
 								width: 100%
-								padding: 35px
 								+media-breakpoint-down(lg)
 									flex-basis: 470px
 								+media-breakpoint-down(md)
@@ -3685,20 +3721,21 @@ header
 								&.basket
 									justify-content: space-between
 								&:hover
-									.order__description
-										display: block
+									.wrap__title
+										bottom: 100px
 										transition: .3s
+										.order__description
+											display: block
+											transition: .3s
 									.order__wrapBtn
 										.order__btn
 											background-color: $accent
-											transition: .3s
-								&.basket
-									justify-content: center
-									transition: .5s
-									&:hover
-										justify-content: space-between
-										transition: .5s
+											transition: .3s								
 								.order__basket
+									position: absolute
+									left: 0
+									right: 0
+									top: 35px
 									font-weight: bold
 									font-size: 36px
 									line-height: 44px
@@ -3707,46 +3744,67 @@ header
 									padding-right: 35px
 									width: 100%
 									border-bottom: 1px solid #C4C4C4
-									padding-bottom: 15px
+									padding-bottom: 15px									
 								.order__baskeValue
-
+									position: absolute
+									left: 35px
+									right: 35px
+									bottom: 50%
 								.order__total
+									position: absolute
+									left: 0
+									right: 0
+									bottom: 35px
 									font-weight: bold
 									font-size: 36px
 									line-height: 44px
 									color: #fff
 									padding-left: 35px
 									padding-right: 35px
-									width: 100%
 									border-top: 1px solid #C4C4C4
 									padding-top: 15px
-								.order__title
-									padding-left: 47px
-									font-weight: bold
-									font-size: 28px
-									line-height: 34px
-									position: relative
+								.wrap__title
+									position: absolute
+									left: 0
+									bottom: 100px
 									transition: .3s
 									+media-breakpoint-down(sm)
-										padding-left: 20px
-										padding-right: 0px
-									+media-breakpoint-down(xs)
-										font-size: 24px
-										padding-right: 25px
-									&::before
-										content: url(../img/_src/square.svg)
-										position: absolute
-										left: 20px
-										top: -4px
+										left: 10px
+										right: 10px
+									.order__title
+										padding-left: 47px
+										font-weight: bold
+										font-size: 28px
+										line-height: 34px
+										position: relative
+										transition: .3s
 										+media-breakpoint-down(sm)
-											left: 0px
-								.order__description
-									display: none
-									padding-left: 20px
-									font-size: 18px
-									line-height: 22px
-									transition: .3s
+											padding-left: 20px
+											padding-right: 0px
+										+media-breakpoint-down(xs)
+											font-size: 24px
+											padding-right: 25px
+										&::before
+											content: url(../img/_src/square.svg)
+											position: absolute
+											left: 20px
+											top: -4px
+											+media-breakpoint-down(sm)
+												left: 0px
+									.order__description
+										display: none
+										padding-left: 20px
+										font-size: 18px
+										line-height: 22px
+										transition: .3s
+										+media-breakpoint-down(xs)
+											font-size: 16px
+											line-height: 18px
 								.order__wrapBtn
+									position: absolute
+									left: 0
+									right: 0
+									bottom: 0
 									text-align: center
 									margin: 20px auto 0
 									width: 100%
@@ -3994,7 +4052,7 @@ header
 			&.calendar
 				padding-top: 60px
 				padding-bottom: 90px
-				img 
+				img
 					width: 100%
 		.choice__bottom
 			display: flex
@@ -4019,8 +4077,8 @@ header
 							content: url(../img/_src/arrowRedRight.svg)
 					&.next
 
-// Date
-.date
+// Date page
+.date__page
 	padding-top: 60px
 	+media-breakpoint-down(xs)
 		padding: 60px 24px 0
