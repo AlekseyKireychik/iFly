@@ -485,7 +485,11 @@ $(document).ready(function() {
   //   let slideno = $(this).data("slide");
   //   $(".history-slide").slick("slickGoTo", slideno - 1);
   // });
+  //vacancies
+  // var color = $(".collapse.show");
 
+  // console.log(color);
+  // panel-title
   //news
   $(".news__btn").on("click", function(event) {
     event.preventDefault();
@@ -524,6 +528,8 @@ $(document).ready(function() {
   $(".profile__container").on("click", function(event) {
     event.preventDefault();
     $(".profile__subList").toggleClass("is-active");
+    $(".profile__logo-active").toggleClass("is-active");
+    $(".profile__logo").toggleClass("is-active");
     $("#nav-menu").removeClass("is-active");
     $(".burger-menu").removeClass("is-active");
   });

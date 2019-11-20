@@ -73,6 +73,7 @@
 						<div class="profile__container">
 							<a class="profile__containerLogo" href="#">
 								<img class="profile__logo" src="img/_src/profileicon.svg" alt="profile icon">
+								<img class="profile__logo-active" src="img/_src/profileiconActive.svg" alt="profile icon active">
 							</a>
 							<ul class="profile__subList">
 								<li class="profile__item"><a class="profile__subLink" href="#">Профиль</a></li>
@@ -170,7 +171,7 @@
 						</div>
 						<div class="mainform__group file">
 							<label for="uploaded-file" class="mainform__label">Прикрепить резюме</label>
-							<input id="uploaded-file" onchange="getFileName ();" placeholder=" " accept="application/pdf,application/msword" class="mainform__control" type="file" name="file" multiple>							
+							<input id="uploaded-file" onchange="getFileName ();" placeholder="" accept="application/pdf,application/msword" class="mainform__control" type="file" name="file" multiple>							
 							<span>Допустимый формат: pdf, doc</span>
 						</div>
 					</div>
@@ -180,8 +181,8 @@
 					<input type="hidden" name="url">
 					<div class="footer__bottom">
 						<div class="mainform__group form-check">  
-							<input class="form__check-input" placeholder=" " required type="checkbox" id="check1">  
-							<label class="form__check-label" for="check1">Заполняя форму, я даю согласие на обработку и хранение персональных данных<span class="required-star">*</span></label>  
+							<input class="form__check-input" placeholder="" required type="checkbox" id="check1">  
+							<label class="form__check-label" for="check1">Заполняя форму, я даю согласие на обработку и хранение персональных данных</label>  
 						</div> 
 						<div class="form__box">
 							<button type="submit" id="btn" class="btn submit">
@@ -197,7 +198,7 @@
 			<div id="carouselHome" class="carousel slide" data-ride="carousel">
 				<div class="carousel-inner">
 					<div class="carousel-item active">
-						<img class="carousel-img d-block w-100" src="img/_src/bannerHomePage.jpg" alt="Первый слайд">
+						<img class="carousel-img d-block w-100" src="img/_src/bannerHomePage.jpg" alt="Начни летать как супергерой">
 						<div class="container">
 							<div class="carousel-caption">
 								<h3 class="carousel-title">Начни летать как супергерой</h3>
@@ -207,21 +208,11 @@
 						</div>
 					</div>
 					<div class="carousel-item">
-						<img class="carousel-img d-block w-100" src="img/_src/bannerHomePage.jpg" alt="Второй слайд">
+						<img class="carousel-img d-block w-100" src="img/_src/bannerHomePage02.jpg" alt="Специальное предложение для спортсменов">
 						<div class="container">
 							<div class="carousel-caption ">
-								<h3 class="carousel-title">Начни летать как супергерой</h3>
-								<p class="carousel-text">2 Вместе с нами все ваши мечты становятся реальностью </p>
-								<a class="carousel-link  btn register" href="#">Забронировать</a>
-							</div>
-						</div>
-					</div>
-					<div class="carousel-item">
-						<img class="carousel-img d-block w-100" src="img/_src/bannerHomePage.jpg" alt="Третий слайд">
-						<div class="container">
-							<div class="carousel-caption ">
-								<h3 class="carousel-title">Начни летать как супергерой</h3>
-								<p class="carousel-text">3 Вместе с нами все ваши мечты становятся реальностью </p>
+								<h3 class="carousel-title">Специальное предложение для спортсменов</h3>
+								<p class="carousel-text">в период тестовой эксплуатации с 18 ноября по 6 декабря, 1 час - $250</p>
 								<a class="carousel-link  btn register" href="#">Забронировать</a>
 							</div>
 						</div>
@@ -684,7 +675,7 @@
 				<div class="contacts__map row">
 					<div class="contacts__caption">
 						<h3 class="subTitle">Адрес:</h3>
-						<p class="contacts__address">РБ, г. Минск, Тимирязева 74 ТЦ “Palazzo”</p>
+						<p class="contacts__address">РБ, г. Минск, Тимирязева 74 <br>ТЦ “Palazzo”</p>
 						<ul class="contacts__list">
 							<li class="contacts__item"><a href="tel:+375447492226" class="contacts__phone">+375 44 749 22 26</a></li>
 							<li class="contacts__item"><a href="tel:+375172320089" class="contacts__phone">+375 17 232 00 89</a></li>
