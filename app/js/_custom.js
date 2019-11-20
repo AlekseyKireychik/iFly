@@ -474,20 +474,31 @@ $(document).ready(function() {
   $(".history-slide #slick-slide-control03").text("2014 - 2019");
 
   //vacancies
-  $(".vacancies__btn").on("show.bs.collapse", function() {
-    $(".panel-title").toggleClass("is-active");
+  $(".vacancies__btn").on("click", function(event) {
+    event.preventDefault();
+    if ($(this).hasClass("is-active")) {
+      $(".panel-title").removeClass("is-active");
+      $(".vacancies__btn").removeClass("is-active");
+    } else {      
+      $(".panel-title").removeClass("is-active");
+      $(".vacancies__btn").removeClass("is-active");
+      $(this).closest('.panel-heading').children('.panel-title').addClass("is-active");      
+      $(this).addClass("is-active");
+    }
   });
-  // $(".vacancies__btn").on("click", function(event) {
-  //   if ($(".vacancies__body").hasClass("show")) {
-  //     $(".panel-title").toggleClass("is-active");
-  //   };
-  // });
+ 
 
   // panel-title
   //news
   $(".news__btn").on("click", function(event) {
     event.preventDefault();
-    $(this).toggleClass("is-active");
+    if ($(this).hasClass("is-active")) {
+      $(".news__btn").removeClass("is-active");
+      $(this).removeClass("is-active");
+    } else {
+      $(".news__btn").removeClass("is-active");
+      $(this).addClass("is-active");
+    }
   });
 
   $(".news__selectValue").on("click", function(event) {

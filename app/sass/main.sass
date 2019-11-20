@@ -1253,7 +1253,6 @@ header
 						align-items: center
 						justify-content: center
 						padding-right: 19px
-						+media-breakpoint-down(xs)
 						.seti__link
 							justify-content: center
 							align-items: center
@@ -1839,6 +1838,8 @@ header
 				align-items: flex-start
 				justify-content: space-between
 				margin-bottom: 50px
+				+media-breakpoint-down(md)
+					display: none
 				+media-breakpoint-down(xs)
 					margin-left: 20px
 					margin-right: 20px
@@ -1872,6 +1873,8 @@ header
 		position: relative
 		z-index: 1
 		.seti__item
+			+media-breakpoint-down(sm)
+				margin: 0 5px
 			.seti__itemWrap
 				margin: 0
 				width: 408px
@@ -1887,10 +1890,15 @@ header
 					width: 332px
 					max-width: 332px
 					flex-basis: 332px
+				+media-breakpoint-down(md)
+					margin: 0 -30px
 				+media-breakpoint-down(sm)
 					width: 100%
 					max-width: 100%
 					flex-basis: 100%
+					margin: 0 -3px
+				+media-breakpoint-down(xs)
+					
 				.seti__top
 					display: flex
 					align-items: center
@@ -1968,7 +1976,7 @@ header
 							width: 100%
 							margin: 0 4px
 						+media-breakpoint-down(xs)
-							margin: 0
+							margin: 0 5px
 		.slick-prev
 			margin: 0
 			+media-breakpoint-up(xs)
@@ -1987,7 +1995,7 @@ header
 			&.slick-next
 				margin: 0
 				+media-breakpoint-up(xs)
-					left: calc((100vw/2 + 32px)
+					left: calc((100vw/2 + 42px)
 				+media-breakpoint-up(sm)
 					left: calc(((100vw - 540px)/2) + 20%)
 				+media-breakpoint-up(md)
@@ -2841,8 +2849,8 @@ header
 		padding: 120px 0
 		+media-breakpoint-down(md)
 			padding: 100px 0
-			+media-breakpoint-down(md)
-				padding: 100px 25px
+		+media-breakpoint-down(md)
+			padding: 100px 25px
 		.container
 			.row
 				.panel-group
@@ -2851,6 +2859,8 @@ header
 						background-color: #fff
 						padding: 50px
 						border-bottom: 1px solid #E5E7E8
+						+media-breakpoint-down(md)
+							padding: 50px 20px 50px 25px
 						+media-breakpoint-down(xs)
 							padding: 32px
 						.panel-heading
@@ -2867,19 +2877,21 @@ header
 								position: relative
 								&.is-active
 									color: $accent
+								+media-breakpoint-down(md)
+									padding-left: 0px
 								+media-breakpoint-down(sm)
 									font-size: 20px
-									+media-breakpoint-down(xs)
-										font-size: 16px
-										line-height: 24px
-										padding-right: 15px
+								+media-breakpoint-down(xs)
+									font-size: 16px
+									line-height: 24px
+									padding-right: 15px
 								&::after
 									content: url(../img/_src/square.svg)
 									position: absolute
 									left: 0px
 									top: -2px
-									+media-breakpoint-down(xs)
-										top: 0px
+									+media-breakpoint-down(md)
+										display: none
 							.panel-description
 								font-weight: 300
 								font-size: 18px
@@ -2887,6 +2899,8 @@ header
 								color: #999EA7
 								padding-left: 21px
 								margin-bottom: 40px
+								+media-breakpoint-down(md)
+									padding-left: 0px
 								+media-breakpoint-down(xs)
 									margin-bottom: 0px
 									font-size: 16px
@@ -2900,13 +2914,15 @@ header
 									padding: 20px 20px 50px
 									+media-breakpoint-down(lg)
 										flex-wrap: wrap
-										+media-breakpoint-down(sm)
-											padding: 20px 20px 0px
+									+media-breakpoint-down(md)
+										padding: 20px 20px 50px 0
+									+media-breakpoint-down(sm)
+										padding: 20px 20px 20px 0
 									.vacancies__item
 										+media-breakpoint-down(md)
-											padding-top: 25px
-											&:first-child
-												padding-top: 0px
+											padding-top: 0px
+											&:last-child
+												padding-top: 25px
 										&:last-child
 											+media-breakpoint-down(lg)
 												padding-top: 35px
@@ -2927,7 +2943,7 @@ header
 													font-size: 16px
 								.btn-mobile
 									display: none
-									+media-breakpoint-down(sm)
+									+media-breakpoint-down(md)
 										display: inline-block
 							.vacancies__btnWrap
 								display: flex
@@ -2935,16 +2951,16 @@ header
 								justify-content: space-between
 								width: 100%
 								.panel-link
-									+media-breakpoint-down(sm)
+									+media-breakpoint-down(md)
 										display: none
 								.vacancies__btnContainer
-									+media-breakpoint-down(sm)
+									+media-breakpoint-down(md)
 										position: absolute
 										right: 0px
 										top: 0px
-										+media-breakpoint-down(xs)
-											top: -2px
-											right: -15px
+									+media-breakpoint-down(xs)
+										top: -2px
+										right: -15px
 									.vacancies__btn
 										position: relative
 										font-weight: bold
@@ -2973,7 +2989,7 @@ header
 													right: 50%
 													transform: translate(50%) rotate(45deg)
 													background-color: $accent
-													+media-breakpoint-down(sm)
+													+media-breakpoint-down(md)
 														transform: translate(50%) rotate(0deg)
 													&::before
 														content: ""
@@ -2983,34 +2999,34 @@ header
 														transform: rotate(90deg)
 														background-color: $accent
 														top: 0px
-														+media-breakpoint-down(sm)
+														+media-breakpoint-down(md)
 															display: none
 
 											.value
 												.disabled
 													display: none
-													+media-breakpoint-down(sm)
+													+media-breakpoint-down(md)
 														display: none
 												.active
 													display: block
-													+media-breakpoint-down(sm)
+													+media-breakpoint-down(md)
 														display: none
 										&.collapsed
 											.wrap
 												.value
 													.disabled
 														display: block
-														+media-breakpoint-down(sm)
+														+media-breakpoint-down(md)
 															display: none
 													.active
 														display: none
-														+media-breakpoint-down(sm)
+														+media-breakpoint-down(md)
 															display: none
 												.btn__icon
 													.btn__line
 														transform: translate(50%)
 														&::before
-															+media-breakpoint-down(sm)
+															+media-breakpoint-down(md)
 																display: block
 
 						&.is-active
@@ -3181,6 +3197,9 @@ header
 									position: absolute
 									left: -18px
 									top: -3px
+								+media-breakpoint-down(md)
+									font-size: 18px
+									line-height: 28px
 								+media-breakpoint-down(xs)
 									font-size: 16px
 									line-height: 24px
