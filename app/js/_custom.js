@@ -473,22 +473,16 @@ $(document).ready(function() {
   $(".history-slide #slick-slide-control02").text("2008 - 2013");
   $(".history-slide #slick-slide-control03").text("2014 - 2019");
 
-  //pagination text
-  // $("a[data-slide]").click(function(e) {
-  //   e.preventDefault();
-  //   let slideno = $(this).data("slide");
-  //   $(".insructors__sliders").slick("slickGoTo", slideno - 1);
-  // });
-
-  // $("a[data-slide]").click(function(e) {
-  //   e.preventDefault();
-  //   let slideno = $(this).data("slide");
-  //   $(".history-slide").slick("slickGoTo", slideno - 1);
-  // });
   //vacancies
-  // var color = $(".collapse.show");
+  $(".vacancies__btn").on("show.bs.collapse", function() {
+    $(".panel-title").toggleClass("is-active");
+  });
+  // $(".vacancies__btn").on("click", function(event) {
+  //   if ($(".vacancies__body").hasClass("show")) {
+  //     $(".panel-title").toggleClass("is-active");
+  //   };
+  // });
 
-  // console.log(color);
   // panel-title
   //news
   $(".news__btn").on("click", function(event) {
@@ -549,9 +543,20 @@ $(document).ready(function() {
 
   // accordion FAQ page
   $(".faq__btn").on("click", function() {
-    $(".panel").removeClass("is-active");
-    $(this)
-      .parents(".panel")
-      .toggleClass("is-active");
+    if (
+      $(this)
+        .parents(".panel")
+        .hasClass("is-active")
+    ) {
+      $(".panel").removeClass("is-active");
+      $(this)
+        .parents(".panel")
+        .removeClass("is-active");
+    } else {
+      $(".panel").removeClass("is-active");
+      $(this)
+        .parents(".panel")
+        .addClass("is-active");
+    }
   });
 });

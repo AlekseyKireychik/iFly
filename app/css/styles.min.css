@@ -2880,7 +2880,7 @@ header .container.container__header .header .header__function .header__profile .
   margin-right: 30px;
 }
 
-@media (max-width: 575.98px) {
+@media (max-width: 991.98px) {
   header .container.container__header .header .header__function .header__profile .lang__btn {
     display: none;
   }
@@ -4498,6 +4498,12 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   .seti__home .seti__lenta.slick-slider .slick-list .slick-track .slick-slide {
     max-width: 100%;
     width: 100%;
+    margin: 0 4px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .seti__home .seti__lenta.slick-slider .slick-list .slick-track .slick-slide {
     margin: 0;
   }
 }
@@ -5303,6 +5309,12 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   padding-right: 60px;
 }
 
+@media (max-width: 991.98px) {
+  .insructors .container .insructors__list .insructors__item .insructors__profile .insructors__info .insructors__subItem {
+    padding-right: 40px;
+  }
+}
+
 @media (max-width: 575.98px) {
   .insructors .container .insructors__list .insructors__item .insructors__profile .insructors__info .insructors__subItem {
     -webkit-box-pack: justify;
@@ -6007,9 +6019,9 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   top: 47px;
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 991.98px) {
   .main__instructor .multimedia .container .row .instructor__list .instructor__item .instructor__subTitle::before {
-    top: 36px;
+    top: 37px;
   }
 }
 
@@ -6367,6 +6379,10 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   line-height: 36px;
   padding-left: 21px;
   position: relative;
+}
+
+.main__vacancies .vacancies .container .row .panel-group .panel .panel-heading .panel-title.is-active {
+  color: #E72D2D;
 }
 
 @media (max-width: 767.98px) {
@@ -9239,6 +9255,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 .faq .panel-group .panel.is-active {
+  margin-bottom: 10px;
   -webkit-box-shadow: 0px 8px 24px rgba(55, 71, 84, 0.08);
           box-shadow: 0px 8px 24px rgba(55, 71, 84, 0.08);
   z-index: 99;

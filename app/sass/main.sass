@@ -1101,7 +1101,7 @@ header
 							color: $accentTwo
 							text-transform: uppercase
 							margin-right: 30px
-							+media-breakpoint-down(xs)
+							+media-breakpoint-down(md)
 								display: none
 						.profile__container
 							position: relative
@@ -1130,7 +1130,7 @@ header
 								+media-breakpoint-down(lg)
 									right: calc(((100vw - 960px)/2) * (-1))
 								+media-breakpoint-down(md)
-									right: calc(((100vw - 720px)/2) * (-1))					
+									right: calc(((100vw - 720px)/2) * (-1))
 								+media-breakpoint-down(sm)
 									right: calc(((100vw - 540px)/2) * (-1))
 									top: 60px
@@ -1216,7 +1216,7 @@ header
 				+media-breakpoint-down(lg)
 					right: calc(((100vw - 960px)/2) * (-1))
 				+media-breakpoint-down(md)
-					right: calc(((100vw - 720px)/2) * (-1))					
+					right: calc(((100vw - 720px)/2) * (-1))
 				+media-breakpoint-down(sm)
 					right: calc(((100vw - 540px)/2) * (-1))
 					max-width: 100%
@@ -1966,6 +1966,8 @@ header
 						+media-breakpoint-down(sm)
 							max-width: 100%
 							width: 100%
+							margin: 0 4px
+						+media-breakpoint-down(xs)
 							margin: 0
 		.slick-prev
 			margin: 0
@@ -2372,6 +2374,8 @@ header
 							align-items: flex-start
 							justify-content: flex-start
 							padding-right: 60px
+							+media-breakpoint-down(md)
+								padding-right: 40px
 							+media-breakpoint-down(xs)
 								justify-content: space-between
 								padding-right: 34px
@@ -2672,8 +2676,8 @@ header
 								position: absolute
 								left: 48px
 								top: 47px
-								+media-breakpoint-down(sm)
-									top: 36px
+								+media-breakpoint-down(md)
+									top: 37px
 						.instructor__date
 							display: flex
 							align-items: center
@@ -2861,6 +2865,8 @@ header
 								line-height: 36px
 								padding-left: 21px
 								position: relative
+								&.is-active
+									color: $accent
 								+media-breakpoint-down(sm)
 									font-size: 20px
 									+media-breakpoint-down(xs)
@@ -4325,6 +4331,7 @@ header
 					padding-top: 50px
 					padding-bottom: 40px
 			&.is-active
+				margin-bottom: 10px
 				box-shadow: 0px 8px 24px rgba(55, 71, 84, 0.08)
 				z-index: 99
 
