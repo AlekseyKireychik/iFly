@@ -927,6 +927,8 @@ header
 					color: #999EA7
 					.breadcrumb-item.active
 						color: #999EA7
+						+media-breakpoint-down(xs)
+							word-wrap: normal
 .pagination
 	background-color: #fff
 	.row
@@ -1114,38 +1116,7 @@ header
 									display: none
 									&.is-active
 										display: block
-							.profile__subList
-								display: none
-								position: absolute
-								padding: 20px 20px 0px
-								background-color: #fff
-								border-top: 2px solid rgba(153, 158, 167, 0.5)
-								width: 409px
-								top: 60px
-								z-index: 999
-								+media-breakpoint-up(xl)
-									right: calc(((100vw - 1272px)/2) * (-1))
-								+media-breakpoint-down(xl)
-									right: calc(((100vw - 1140px)/2) * (-1))
-								+media-breakpoint-down(lg)
-									right: calc(((100vw - 960px)/2) * (-1))
-								+media-breakpoint-down(md)
-									right: calc(((100vw - 720px)/2) * (-1))
-								+media-breakpoint-down(sm)
-									right: calc(((100vw - 540px)/2) * (-1))
-									top: 60px
-								+media-breakpoint-down(xs)
-									right: 0
-									top: 55px
-								&.is-active
-									display: block
-								.profile__item
-									margin-bottom: 10px
-									.profile__subLink
-										font-size: 16px
-										line-height: 34px
-										color: $accentTwo
-										white-space: nowrap
+							
 			.burger-menu
 				position: absolute
 				top: 28px
@@ -1196,19 +1167,15 @@ header
 						&::after
 							top: 0
 							transform: rotate(-45deg)
-			.nav
-				position: absolute
-				top: 100px
-				z-index: 1000
+			.profile__subList
 				display: none
-				align-items: flex-start
-				justify-content: flex-start
-				flex-direction: column
-				max-width: 566px
-				width: 100%
-				padding: 20px 20px 10px
+				position: absolute
+				padding: 20px 20px 0px
 				background-color: #fff
-				border-top: 2px solid rgba(153, 158, 167, 0.5)
+				// border-top: 2px solid rgba(153, 158, 167, 0.5)
+				width: 409px
+				top: 96px
+				z-index: 999
 				+media-breakpoint-up(xl)
 					right: calc(((100vw - 1272px)/2) * (-1))
 				+media-breakpoint-down(xl)
@@ -1219,9 +1186,46 @@ header
 					right: calc(((100vw - 720px)/2) * (-1))
 				+media-breakpoint-down(sm)
 					right: calc(((100vw - 540px)/2) * (-1))
-					max-width: 100%
+					top: 60px
+				+media-breakpoint-down(xs)
+					width: 320px
+					right: 0
+					top: 55px
+				&.is-active
+					display: block
+				.profile__item
+					margin-bottom: 10px
+					.profile__subLink
+						font-size: 16px
+						line-height: 34px
+						color: $accentTwo
+						white-space: nowrap
+			.nav
+				position: absolute
+				top: 96px
+				z-index: 1000
+				display: none
+				align-items: flex-start
+				justify-content: flex-start
+				flex-direction: column
+				max-width: 566px
+				width: 100%
+				padding: 20px 20px 10px
+				background-color: #fff
+				// border-top: 2px solid rgba(153, 158, 167, 0.5)
+				+media-breakpoint-up(xl)
+					right: calc(((100vw - 1272px)/2) * (-1))
+				+media-breakpoint-down(xl)
+					right: calc(((100vw - 1140px)/2) * (-1))
+				+media-breakpoint-down(lg)
+					right: calc(((100vw - 960px)/2) * (-1))
+				+media-breakpoint-down(md)
+					right: calc(((100vw - 720px)/2) * (-1))
+				+media-breakpoint-down(sm)
+					right: calc(((100vw - 540px)/2) * (-1))					
 					top: 95px
 				+media-breakpoint-down(xs)
+					max-width: 100%
 					right: 0
 					left: 0
 					top: 80px
@@ -1578,7 +1582,6 @@ header
 					.advantages__dot
 						color: #fff
 						position: relative
-
 						&::before
 							position: absolute
 							content: ""
@@ -1898,7 +1901,7 @@ header
 					flex-basis: 100%
 					margin: 0 -3px
 				+media-breakpoint-down(xs)
-					
+
 				.seti__top
 					display: flex
 					align-items: center
@@ -2270,7 +2273,7 @@ header
 						+media-breakpoint-down(xs)
 							font-size: 36px
 							line-height: 36px
-							padding-top: 70px
+							padding-top: 45px
 					.insructors-text
 						font-size: 24px
 						line-height: 34px
@@ -2280,6 +2283,13 @@ header
 							font-size: 20px
 							padding-top: 15px
 							margin-bottom: 25px
+					.insructors-link
+						+media-breakpoint-down(md)
+							padding: 14px 75px 14px 54px
+						+media-breakpoint-down(xs)
+							width: 100%
+							padding: 14px 25px 14px 4px
+
 			.slick-dots
 				bottom: 60px
 				padding-bottom: 30px
@@ -2839,6 +2849,9 @@ header
 					margin-bottom: 60px
 			.vacancies__btn
 				display: inline-block
+				+media-breakpoint-down(xs)
+					padding: 14px 25px 14px 5px
+					width: 100%
 				.vacancies__counter
 					font-size: 14px
 					line-height: 34px
@@ -2904,9 +2917,27 @@ header
 								+media-breakpoint-down(xs)
 									margin-bottom: 0px
 									font-size: 16px
-
+								&.active-desc
+									+media-breakpoint-down(xs)
+										display: none
 							.panel-collapse
 								width: 100%
+								.panel-description
+									font-weight: 300
+									font-size: 18px
+									line-height: 28px
+									color: #999EA7
+									padding-left: 21px
+									margin-bottom: 40px
+									display: none
+									+media-breakpoint-down(md)
+										padding-left: 0px
+									+media-breakpoint-down(xs)
+										margin-bottom: 0px
+										font-size: 16px
+									&.active-mobile
+										+media-breakpoint-down(xs)
+											display: block
 								.panel-body
 									display: flex
 									align-items: flex-start
@@ -2945,6 +2976,10 @@ header
 									display: none
 									+media-breakpoint-down(md)
 										display: inline-block
+									+media-breakpoint-down(xs)
+										width: 100%
+										padding: 14px 25px 14px 5px
+
 							.vacancies__btnWrap
 								display: flex
 								align-items: center
@@ -3384,11 +3419,15 @@ header
 						align-items: flex-start
 						justify-content: space-between
 						margin-bottom: 0
+						+media-breakpoint-down(xs)
+							width: 100%
 						.new__item
 							display: flex
 							align-items: center
 							justify-content: center
 							padding-right: 15px
+							+media-breakpoint-down(xs)
+								padding-right: 0px
 							.new__link
 								justify-content: center
 								align-items: center

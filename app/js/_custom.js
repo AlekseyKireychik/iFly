@@ -479,10 +479,11 @@ $(document).ready(function() {
     if ($(this).hasClass("is-active")) {
       $(".panel-title").removeClass("is-active");
       $(".vacancies__btn").removeClass("is-active");
+      
     } else {      
       $(".panel-title").removeClass("is-active");
       $(".vacancies__btn").removeClass("is-active");
-      $(this).closest('.panel-heading').children('.panel-title').addClass("is-active");      
+      $(this).closest('.panel-heading').children('.panel-title').addClass("is-active");     
       $(this).addClass("is-active");
     }
   });
