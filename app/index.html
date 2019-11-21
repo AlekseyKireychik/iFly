@@ -11,7 +11,7 @@
 	<meta name="viewport" content="width=device-width">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 
-	<link rel="icon" href="img/favicon.png">
+	<link rel="icon" href="img/favicon.ico">
 	<meta property="og:image" content="img/@1x/preview.jpg">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -147,7 +147,7 @@
 							<span class="help-text"></span>
 						</div>
 						<div class="mainform__group group-01">							
-							<input type="tel" placeholder=" " class="mainform__control" name="tel" id="tel" placeholder="" data-validation-error-msg="Обязательное поле" required>
+							<input type="tel" placeholder=" " class="mainform__control validate-numeric" name="tel" id="tel" placeholder="" data-validation-error-msg="Обязательное поле" required>
 							<label for="tel" class="mainform__label">Телефон<span class="required-star">*</span></label>
 							<span class="help-text"></span>
 						</div>
@@ -159,6 +159,7 @@
 					<div class="form__center">
 						<div class="mainform__group comment">							
 							<textarea
+								data-autoresize rows="1"
 								name="comment"
 								id="comment"
 								coll="5"
