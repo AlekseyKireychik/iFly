@@ -3567,6 +3567,39 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   }
 }
 
+.programs__home .programs__wrapper .programs__nav .programs__list:before {
+  content: " ";
+  background-image: url(../img/_src/needslide.jpg);
+  position: absolute;
+  right: -27px;
+  top: 0px;
+  bottom: 0;
+  width: 20px;
+  display: none;
+}
+
+@media (max-width: 1199.98px) {
+  .programs__home .programs__wrapper .programs__nav .programs__list:before {
+    display: block;
+    width: 220px;
+    right: -235px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .programs__home .programs__wrapper .programs__nav .programs__list:before {
+    width: 65px;
+    right: -85px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .programs__home .programs__wrapper .programs__nav .programs__list:before {
+    width: 20px;
+    right: -30px;
+  }
+}
+
 .programs__home .programs__wrapper .programs__nav .programs__list .programs__item {
   background-position: center;
   background-repeat: no-repeat;
@@ -3944,6 +3977,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 .akcii__home {
   padding-top: 120px;
   padding-bottom: 105px;
+  overflow: hidden;
 }
 
 @media (max-width: 1199.98px) {
@@ -4052,6 +4086,39 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 @media (max-width: 575.98px) {
   .akcii__home .container .row .akcii__list {
     max-width: 100%;
+  }
+}
+
+.akcii__home .container .row .akcii__list:before {
+  content: " ";
+  background-image: url(../img/_src/needslide.jpg);
+  position: absolute;
+  right: -27px;
+  top: 0px;
+  bottom: 0;
+  width: 20px;
+  display: none;
+}
+
+@media (max-width: 1199.98px) {
+  .akcii__home .container .row .akcii__list:before {
+    display: block;
+    width: 220px;
+    right: -235px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .akcii__home .container .row .akcii__list:before {
+    width: 65px;
+    right: -85px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .akcii__home .container .row .akcii__list:before {
+    width: 20px;
+    right: -30px;
   }
 }
 
