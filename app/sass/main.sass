@@ -587,6 +587,27 @@ input.error
 						left: 0
 						.required-star
 							color: $accent
+						.help-text-wrap	
+							position: absolute
+							top: 38px
+							left: 0	
+							display: none
+							.help-text
+								margin-top: 15px
+								padding: 6px 12px
+								font-size: 14px
+								line-height: 18px
+								color: #fff
+								background-color: $accent
+								position: relative
+								display: block
+								white-space: nowrap
+								&::before
+									content: url(../img/_src/before-icon.svg)  
+									position: absolute
+									top: -12px
+									left: 10px
+									
 					input
 						font-size: 16px
 						line-height: 19px
@@ -605,11 +626,33 @@ input.error
 								color: #999EA7
 								.required-star
 									color: #999EA7
-						&:required:invalid:not(:focus)
+						&:required:invalid
 							border-bottom: 1px solid $accent
 							& + label
 								top: 15px
 								color: $accent
+								.help-text-wrap
+									display: block
+						&:required:focus:invalid
+							border-bottom: 1px solid $accentTwo
+							& + label
+								top: -15px
+								color: #999EA7
+								.help-text-wrap
+									display: none
+						&:required:invalid:not(:placeholder-shown)
+							border-bottom: 1px solid $accent
+							& + label
+								top: 15px
+								color: $accent
+								.help-text-wrap
+									display: block
+						
+						// &:invalid
+						// 	border-bottom: 1px solid $accent
+						// 	& + label
+						// 		top: 15px
+						// 		color: $accent
 						&:invalid:not(:focus):not(:placeholder-shown)
 							border-bottom: 1px solid $accent
 						&:invalid:not(:focus):not(:placeholder-shown)
@@ -666,7 +709,7 @@ input.error
 								font-size: 14px
 								line-height: 17px
 								color: #999EA7
-						
+
 					&.file
 						flex-basis: 20%
 						position: relative
@@ -1139,7 +1182,7 @@ header
 							margin-right: 30px
 							+media-breakpoint-down(xs)
 								margin-right: 20px
-							
+
 						.profile__container
 							position: relative
 							.profile__containerLogo
@@ -1151,7 +1194,7 @@ header
 									display: none
 									&.is-active
 										display: block
-							
+
 			.burger-menu
 				position: absolute
 				top: 28px
@@ -1257,7 +1300,7 @@ header
 				+media-breakpoint-down(md)
 					right: calc(((100vw - 720px)/2) * (-1))
 				+media-breakpoint-down(sm)
-					right: calc(((100vw - 540px)/2) * (-1))					
+					right: calc(((100vw - 540px)/2) * (-1))
 					top: 95px
 				+media-breakpoint-down(xs)
 					max-width: 100%

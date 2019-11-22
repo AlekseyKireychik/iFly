@@ -1940,6 +1940,32 @@ input.error {
   color: #E72D2D;
 }
 
+.main__form .form .formWrap .form__top .mainform__group .mainform__label .help-text-wrap {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  display: none;
+}
+
+.main__form .form .formWrap .form__top .mainform__group .mainform__label .help-text-wrap .help-text {
+  margin-top: 15px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #fff;
+  background-color: #E72D2D;
+  position: relative;
+  display: block;
+  white-space: nowrap;
+}
+
+.main__form .form .formWrap .form__top .mainform__group .mainform__label .help-text-wrap .help-text::before {
+  content: url(../img/_src/before-icon.svg);
+  position: absolute;
+  top: -12px;
+  left: 10px;
+}
+
 .main__form .form .formWrap .form__top .mainform__group input {
   font-size: 16px;
   line-height: 19px;
@@ -1966,13 +1992,43 @@ input.error {
   color: #999EA7;
 }
 
-.main__form .form .formWrap .form__top .mainform__group input:required:invalid:not(:focus) {
+.main__form .form .formWrap .form__top .mainform__group input:required:invalid {
   border-bottom: 1px solid #E72D2D;
 }
 
-.main__form .form .formWrap .form__top .mainform__group input:required:invalid:not(:focus) + label {
+.main__form .form .formWrap .form__top .mainform__group input:required:invalid + label {
   top: 15px;
   color: #E72D2D;
+}
+
+.main__form .form .formWrap .form__top .mainform__group input:required:invalid + label .help-text-wrap {
+  display: block;
+}
+
+.main__form .form .formWrap .form__top .mainform__group input:required:focus:invalid {
+  border-bottom: 1px solid #142C60;
+}
+
+.main__form .form .formWrap .form__top .mainform__group input:required:focus:invalid + label {
+  top: -15px;
+  color: #999EA7;
+}
+
+.main__form .form .formWrap .form__top .mainform__group input:required:focus:invalid + label .help-text-wrap {
+  display: none;
+}
+
+.main__form .form .formWrap .form__top .mainform__group input:required:invalid:not(:placeholder-shown) {
+  border-bottom: 1px solid #E72D2D;
+}
+
+.main__form .form .formWrap .form__top .mainform__group input:required:invalid:not(:placeholder-shown) + label {
+  top: 15px;
+  color: #E72D2D;
+}
+
+.main__form .form .formWrap .form__top .mainform__group input:required:invalid:not(:placeholder-shown) + label .help-text-wrap {
+  display: block;
 }
 
 .main__form .form .formWrap .form__top .mainform__group input:invalid:not(:focus):not(:placeholder-shown) {

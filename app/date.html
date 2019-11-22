@@ -116,6 +116,7 @@
                     placeholder=""
                     data-validation-error-msg="Обязательное поле"
                     required
+                    pattern=".{3,}"
                   />
                   <label for="name" class="mainform__label"
                     >Имя<span class="required-star">*</span></label
@@ -132,6 +133,7 @@
                     placeholder=""
                     data-validation-error-msg="Обязательное поле"
                     required
+                    pattern=".{3,}"
                   />
                   <label for="fname" class="mainform__label"
                     >Фамилия<span class="required-star">*</span></label
@@ -148,6 +150,7 @@
                     placeholder=""
                     data-validation-error-msg="Обязательное поле"
                     required
+                    pattern=".{3,}"
                   />
                   <label for="tel" class="mainform__label"
                     >Телефон<span class="required-star">*</span></label
@@ -183,7 +186,8 @@
                 <div class="mainform__group group-01">
                   <input
                     type="date"
-                    placeholder=""
+                    placeholder=" "
+                    autocorrect="off"
                     class="mainform__control"
                     name="date"
                     id="date"
