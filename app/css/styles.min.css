@@ -3468,6 +3468,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 .programs__home {
   padding-top: 120px;
   padding-bottom: 210px;
+  overflow: hidden;
 }
 
 @media (max-width: 767.98px) {
@@ -5314,7 +5315,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   .insructorsPage .insructors__slider .insructors__sliders .insructors__item .container .insructors-text {
     font-size: 20px;
     padding-top: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 40px;
   }
 }
 
