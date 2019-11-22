@@ -114,12 +114,13 @@
                     name="name"
                     id="name"
                     placeholder=""
-                    data-validation-error-msg="Обязательное поле"
                     required
-                    pattern=".{3,}"
                   />
                   <label for="name" class="mainform__label"
-                    >Имя<span class="required-star">*</span></label
+                    >Имя<span class="required-star">*</span
+                    ><span class="help-text-wrap"
+                      ><span class="help-text">Обязательное поле</span></span
+                    ></label
                   >
                   <span class="help-text"></span>
                 </div>
@@ -131,12 +132,13 @@
                     name="fname"
                     id="fname"
                     placeholder=""
-                    data-validation-error-msg="Обязательное поле"
                     required
-                    pattern=".{3,}"
                   />
                   <label for="fname" class="mainform__label"
-                    >Фамилия<span class="required-star">*</span></label
+                    >Фамилия<span class="required-star">*</span
+                    ><span class="help-text-wrap"
+                      ><span class="help-text">Обязательное поле</span></span
+                    ></label
                   >
                   <span class="help-text"></span>
                 </div>
@@ -148,12 +150,14 @@
                     name="tel"
                     id="tel"
                     placeholder=""
-                    data-validation-error-msg="Обязательное поле"
                     required
-                    pattern=".{3,}"
+                    validate-numeric
                   />
                   <label for="tel" class="mainform__label"
-                    >Телефон<span class="required-star">*</span></label
+                    >Телефон<span class="required-star">*</span
+                    ><span class="help-text-wrap"
+                      ><span class="help-text">Обязательное поле</span></span
+                    ></label
                   >
                   <span class="help-text"></span>
                 </div>
@@ -167,7 +171,10 @@
                     required
                   />
                   <label for="form-email" class="mainform__label"
-                    >Email<span class="required-star">*</span></label
+                    >Email<span class="required-star">*</span
+                    ><span class="help-text-wrap"
+                      ><span class="help-text">Обязательное поле</span></span
+                    ></label
                   >
                   <span class="help-text"></span>
                 </div>

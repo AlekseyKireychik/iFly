@@ -9322,6 +9322,32 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   color: #E72D2D;
 }
 
+.date__page .date__form .form-date .formWrap .form__top .mainform__group .mainform__label .help-text-wrap {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  display: none;
+}
+
+.date__page .date__form .form-date .formWrap .form__top .mainform__group .mainform__label .help-text-wrap .help-text {
+  margin-top: 15px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #fff;
+  background-color: #E72D2D;
+  position: relative;
+  display: block;
+  white-space: nowrap;
+}
+
+.date__page .date__form .form-date .formWrap .form__top .mainform__group .mainform__label .help-text-wrap .help-text::before {
+  content: url(../img/_src/before-icon.svg);
+  position: absolute;
+  top: -12px;
+  left: 10px;
+}
+
 .date__page .date__form .form-date .formWrap .form__top .mainform__group input {
   font-size: 16px;
   line-height: 19px;
@@ -9338,14 +9364,53 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 .date__page .date__form .form-date .formWrap .form__top .mainform__group input:focus + label {
+  top: -15px;
   font-size: 14px;
   line-height: 17px;
   color: #999EA7;
-  top: -15px;
 }
 
 .date__page .date__form .form-date .formWrap .form__top .mainform__group input:focus + label .required-star {
   color: #999EA7;
+}
+
+.date__page .date__form .form-date .formWrap .form__top .mainform__group input:required:invalid {
+  border-bottom: 1px solid #E72D2D;
+}
+
+.date__page .date__form .form-date .formWrap .form__top .mainform__group input:required:invalid + label {
+  top: 15px;
+  color: #E72D2D;
+}
+
+.date__page .date__form .form-date .formWrap .form__top .mainform__group input:required:invalid + label .help-text-wrap {
+  display: block;
+}
+
+.date__page .date__form .form-date .formWrap .form__top .mainform__group input:required:focus:invalid {
+  border-bottom: 1px solid #142C60;
+}
+
+.date__page .date__form .form-date .formWrap .form__top .mainform__group input:required:focus:invalid + label {
+  top: -15px;
+  color: #999EA7;
+}
+
+.date__page .date__form .form-date .formWrap .form__top .mainform__group input:required:focus:invalid + label .help-text-wrap {
+  display: none;
+}
+
+.date__page .date__form .form-date .formWrap .form__top .mainform__group input:required:invalid:not(:placeholder-shown) {
+  border-bottom: 1px solid #E72D2D;
+}
+
+.date__page .date__form .form-date .formWrap .form__top .mainform__group input:required:invalid:not(:placeholder-shown) + label {
+  top: 15px;
+  color: #E72D2D;
+}
+
+.date__page .date__form .form-date .formWrap .form__top .mainform__group input:required:invalid:not(:placeholder-shown) + label .help-text-wrap {
+  display: block;
 }
 
 .date__page .date__form .form-date .formWrap .form__top .mainform__group input:invalid:not(:focus):not(:placeholder-shown) {
@@ -9353,17 +9418,17 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 .date__page .date__form .form-date .formWrap .form__top .mainform__group input:invalid:not(:focus):not(:placeholder-shown) + label {
+  top: -15px;
   font-size: 14px;
   line-height: 17px;
-  top: -15px;
   color: #E72D2D;
 }
 
-.date__page .date__form .form-date .formWrap .form__top .mainform__group input:valid {
+.date__page .date__form .form-date .formWrap .form__top .mainform__group input:valid:not(:focus):not(:placeholder-shown) {
   border-bottom: 1px solid #E5E7E8;
 }
 
-.date__page .date__form .form-date .formWrap .form__top .mainform__group input:valid + label {
+.date__page .date__form .form-date .formWrap .form__top .mainform__group input:valid:not(:focus):not(:placeholder-shown) + label {
   top: -15px;
 }
 

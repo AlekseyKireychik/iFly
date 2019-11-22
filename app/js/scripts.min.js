@@ -19,7 +19,7 @@ function RemoveFunc() {
 
   let remove = document.getElementById("del__container").remove();
   return false;
-};
+}
 
 jQuery.each(jQuery("textarea[data-autoresize]"), function() {
   var offset = this.offsetHeight - this.clientHeight;
@@ -565,7 +565,6 @@ $(document).ready(function() {
         return false; //disable key press
     }
   }
-  
 
   $(".form").on("submit", function(e) {
     e.preventDefault();

@@ -646,13 +646,7 @@ input.error
 								top: 15px
 								color: $accent
 								.help-text-wrap
-									display: block
-						
-						// &:invalid
-						// 	border-bottom: 1px solid $accent
-						// 	& + label
-						// 		top: 15px
-						// 		color: $accent
+									display: block						
 						&:invalid:not(:focus):not(:placeholder-shown)
 							border-bottom: 1px solid $accent
 						&:invalid:not(:focus):not(:placeholder-shown)
@@ -4324,6 +4318,27 @@ header
 							left: 0
 							.required-star
 								color: $accent
+							.help-text-wrap	
+								position: absolute
+								top: 38px
+								left: 0	
+								display: none
+								.help-text
+									margin-top: 15px
+									padding: 6px 12px
+									font-size: 14px
+									line-height: 18px
+									color: #fff
+									background-color: $accent
+									position: relative
+									display: block
+									white-space: nowrap
+									&::before
+										content: url(../img/_src/before-icon.svg)  
+										position: absolute
+										top: -12px
+										left: 10px
+										
 						input
 							font-size: 16px
 							line-height: 19px
@@ -4336,24 +4351,84 @@ header
 							&:focus
 								border-bottom: 1px solid $accentTwo
 								& + label
+									top: -15px
 									font-size: 14px
 									line-height: 17px
 									color: #999EA7
-									top: -15px
 									.required-star
 										color: #999EA7
+							&:required:invalid
+								border-bottom: 1px solid $accent
+								& + label
+									top: 15px
+									color: $accent
+									.help-text-wrap
+										display: block
+							&:required:focus:invalid
+								border-bottom: 1px solid $accentTwo
+								& + label
+									top: -15px
+									color: #999EA7
+									.help-text-wrap
+										display: none
+							&:required:invalid:not(:placeholder-shown)
+								border-bottom: 1px solid $accent
+								& + label
+									top: 15px
+									color: $accent
+									.help-text-wrap
+										display: block
+							// &[type="email"]:invalid:not(:focus)
+							// 	border-bottom: 1px solid $accent
+							// 	& + label
+							// 		top: -15px
+							// 		font-size: 14px
+							// 		line-height: 17px
+							// 		color: $accent
+							// 		.help-text-wrap
+							// 			display: none
 							&:invalid:not(:focus):not(:placeholder-shown)
 								border-bottom: 1px solid $accent
 							&:invalid:not(:focus):not(:placeholder-shown)
 								& + label
+									top: -15px
 									font-size: 14px
 									line-height: 17px
-									top: -15px
 									color: $accent
-							&:valid
+							&:valid:not(:focus):not(:placeholder-shown)
 								border-bottom: 1px solid #E5E7E8
 								& + label
 									top: -15px
+						// input
+						// 	font-size: 16px
+						// 	line-height: 19px
+						// 	color: $accentTwo
+						// 	font-weight: 600
+						// 	width: 100%
+						// 	border: none
+						// 	padding: 15px 20px
+						// 	border-bottom: 1px solid #E5E7E8
+						// 	&:focus
+						// 		border-bottom: 1px solid $accentTwo
+						// 		& + label
+						// 			font-size: 14px
+						// 			line-height: 17px
+						// 			color: #999EA7
+						// 			top: -15px
+						// 			.required-star
+						// 				color: #999EA7
+						// 	&:invalid:not(:focus):not(:placeholder-shown)
+						// 		border-bottom: 1px solid $accent
+						// 	&:invalid:not(:focus):not(:placeholder-shown)
+						// 		& + label
+						// 			font-size: 14px
+						// 			line-height: 17px
+						// 			top: -15px
+						// 			color: $accent
+						// 	&:valid
+						// 		border-bottom: 1px solid #E5E7E8
+						// 		& + label
+						// 			top: -15px
 						input[type="date"]
 							opacity: 1
 							background: url(../img/_src/arrowDown.svg)
