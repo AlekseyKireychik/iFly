@@ -2176,6 +2176,7 @@ input.error {
 }
 
 .main__form .form .formWrap #file-name .del__container #del-file {
+  color: #142C60;
   position: relative;
   cursor: pointer;
 }
@@ -2193,6 +2194,10 @@ input.error {
     top: -10px;
     left: 0px;
   }
+}
+
+.main__form .form .formWrap #file-name .del__container #del-file .name {
+  color: #142C60;
 }
 
 @media (max-width: 575.98px) {
