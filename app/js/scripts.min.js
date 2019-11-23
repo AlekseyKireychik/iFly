@@ -63,6 +63,7 @@ $(document).ready(function() {
     slidesToShow: 3,
     slidesToScroll: 1,
     focusOnSelect: true,
+    variableWidth: true,
     responsive: [
       {
         breakpoint: 1400,
@@ -94,6 +95,7 @@ $(document).ready(function() {
     ]
   });
 
+
   //akcii
   $("#akcii-list").on("init", function(event, slick) {
     $(".akcii__counter").text(1 + " / " + slick.slideCount);
@@ -114,6 +116,7 @@ $(document).ready(function() {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: false,
+    variableWidth: true,
     responsive: [
       {
         breakpoint: 1200,
@@ -180,6 +183,8 @@ $(document).ready(function() {
     centerMode: true,
     autoplay: true,
     autoplaySpeed: 3000,
+    useTransform: false,
+    variableWidth: true,
     responsive: [
       {
         breakpoint: 1200,
@@ -198,7 +203,7 @@ $(document).ready(function() {
           slidesToShow: 2,
           slidesToScroll: 1,
           centerMode: false,
-          autoplay: false
+          autoplay: true
         }
       },
       {
@@ -208,7 +213,8 @@ $(document).ready(function() {
           arrows: true,
           slidesToShow: 1,
           slidesToScroll: 1,
-          centerMode: false
+          centerMode: false, 
+          autoplay: true
         }
       }
     ]

@@ -10,7 +10,6 @@
                 .programs__counter
                     display: none
                 .programs__list
-                    max-width: 1582px!important
                     .slick-prev
                         left: 0!important
                         margin: 0!important
@@ -26,17 +25,19 @@
                         z-index: 2!important
                         border: none!important
                         &.slick-next
-                            margin: 0!important
+                            margin: 0!important                            
                             left: auto!important
-                            right: -12px!important
-                            width: 295px!important
+                            right: calc((((100vw - 1272px) / 2) + 10px) * (1 - 2))!important
+                            width: calc((100vw - 1272px) / 2)!important
                             height: 100%!important
                             display: block
-                            background: linear-gradient(90deg,hsla(0,0%,100%,0),#fff)!important
+                            background: linear-gradient(90deg, #142C60 0%, rgba(20, 44, 96, 0) 99%)!important
+                            box-shadow: 0px 8px 24px rgba(55, 71, 84, 0.08)!important
                             &::before
                                 content: url(../img/_src/arrowProduct.png)!important
                                 cursor: pointer!important
                                 left: 50px
+                                top: 42%!important
                                 position: absolute
                             &.slick-disabled
                                 opacity: 0!important
@@ -44,7 +45,10 @@
     .seti__home
         .seti__lenta
             .slick-list
-                padding: 0 5% 0 10%!important
+                padding: 0 5% 0 6%!important
+                .slick-track
+                    .slick-slide
+                        margin: 0 10px!important
     .new__counter
         display: none
 @media screen and (min-width: 1450px)  and (max-width: 1536px)   
@@ -55,7 +59,6 @@
                 .programs__counter
                     display: none
                 .programs__list
-                    max-width: 1400px!important
                     .slick-prev
                         left: 0!important
                         margin: 0!important
@@ -73,21 +76,25 @@
                         &.slick-next
                             margin: 0!important
                             left: auto!important
-                            right: -14px!important
-                            width: 120px!important
+                            right: calc((((100vw - 1272px) / 2) + 10px) * (1 - 2))!important
+                            width: calc((100vw - 1272px) / 2)!important
                             height: 100%!important
-                            display: block
-                            background: linear-gradient(90deg,hsla(0,0%,100%,0),#fff)!important
+                            display: block!important
+                            background: linear-gradient(90deg, #142C60 0%, rgba(20, 44, 96, 0) 99%)!important
+                            box-shadow: 0px 8px 24px rgba(55, 71, 84, 0.08)!important
                             &::before
                                 content: url(../img/_src/arrowProduct.png)!important
                                 cursor: pointer!important
                             &.slick-disabled
                                 opacity: 0!important
-                                display: none
+                                display: none!important
     .seti__home
         .seti__lenta
             .slick-list
                 padding: 0 5% 0 10%!important
+                .slick-track
+                    .slick-slide
+                        margin: 0 10px!important
     .new__counter
         display: none
 

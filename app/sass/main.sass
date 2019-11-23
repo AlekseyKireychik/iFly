@@ -1503,8 +1503,9 @@ header
 						width: 332px
 					+media-breakpoint-down(xs)
 						min-height: 394px
-						max-width: 100%
-						flex-basis: 100%
+						max-width: calc(100vw - 50px)
+						flex-basis:  calc(100vw - 50px)
+						width: calc(100vw - 50px)
 					&.item01
 						background-image: url(../img/_src/programs02.jpg)
 					&.item02
@@ -1599,15 +1600,16 @@ header
 							background-color: $accent
 				&.slick-slider
 					.slick-list
-						margin: 0 -12px
+						margin: 0 0px
 						.slick-track
 							.slick-slide
-								margin: 0 12px
+								margin: 0 10px
 					+media-breakpoint-down(xs)
 						.slick-prev
 							left: calc((100vw/2) - 128px )
 						.slick-next
 							left: calc((100vw/2))
+							
 .advantages__home
 	.advantages__list
 		margin: 0
@@ -1791,8 +1793,9 @@ header
 						width: 332px
 					+media-breakpoint-down(xs)
 						min-height: 394px
-						max-width: 100%
-						flex-basis: 100%
+						max-width: calc(100vw - 50px)
+						flex-basis:  calc(100vw - 50px)
+						width: calc(100vw - 50px)
 					&.akciiSale
 						position: relative
 						&::before
@@ -1879,10 +1882,10 @@ header
 								transition: .3s
 				&.slick-slider
 					.slick-list
-						margin: 0 -12px
+						margin: 0 0px
 						.slick-track
 							.slick-slide
-								margin: 0 12px
+								margin: 0 10px
 					+media-breakpoint-down(xs)
 						.slick-prev
 							left: calc((100vw/2) - 128px )
@@ -2015,37 +2018,54 @@ header
 				+media-breakpoint-down(md)
 					margin: 0 -30px
 				+media-breakpoint-down(sm)
-					width: 100%
-					max-width: 100%
-					flex-basis: 100%
+					width: calc(100vw - 100px)
+					max-width: calc(100vw - 100px)
+					flex-basis: calc(100vw - 100px)
 					margin: 0 -3px
 				+media-breakpoint-down(xs)
+					width: calc(100vw - 50px)
+					max-width: calc(100vw - 50px)
+					flex-basis: calc(100vw - 50px)
 
 				.seti__top
 					display: flex
 					align-items: center
-					justify-content: space-between
-					.seti__topGroup
+					justify-content: flex-start
+					width: 100%
+					.seti__topLogo
 						display: flex
 						align-items: center
 						justify-content: flex-start
-						padding: 20px 0 20px 36px
-						.seti__avatar
+						padding: 20px 0 20px 36px	
+						+media-breakpoint-down(sm)	
+							padding: 20px 0 20px 15px
+					.seti__topGroup
+						display: flex
+						align-items: center
+						justify-content: space-between
+						width: 100%
+						+media-breakpoint-down(sm)
+							flex-direction: column
+							align-items: flex-start
 						.seti__name
 							padding-left: 17px
 							font-weight: bold
 							font-size: 18px
 							line-height: 36px
 							color: $accentTwo
-					.seti__time
-						padding-right: 32px
-						font-size: 16px
-						line-height: 36px
-						color: #999EA7
+						.seti__time
+							padding-right: 32px
+							font-size: 16px
+							line-height: 36px
+							color: #999EA7
+							+media-breakpoint-down(sm)
+								padding-left: 17px
 				.seti__img
 					width: 100%
 				.seti__description
 					padding: 32px 35px 10px
+					+media-breakpoint-down(sm)
+						padding: 25px 15px 10px
 				.seti__bottom
 					display: flex
 					align-items: center
@@ -2074,16 +2094,18 @@ header
 		&.slick-slider
 			.slick-list
 				+media-breakpoint-down(xl)
-					padding: 0 5% 0 10%!important
+					padding: 0 5% 0 8%
 				+media-breakpoint-down(lg)
-					padding: 0 5% 0 20%!important
+					padding: 0 5% 0 14%
 				+media-breakpoint-down(md)
-					padding: 0 5% 0 8%!important
+					padding: 0 5% 0 9%
 				+media-breakpoint-down(sm)
-					padding: 0 5% 0 6%!important
+					padding: 0 5% 0 6%
+				+media-breakpoint-down(xs)
+					padding: 0 5% 0 9%
 				.slick-track
 					.slick-slide
-						margin: 0 10px
+						margin: 0px
 						max-width: 408px
 						width: 408px
 						+media-breakpoint-down(xl)
@@ -2092,13 +2114,13 @@ header
 						+media-breakpoint-down(lg)
 							max-width: 332px
 							width: 332px
-							margin: 0 20px
+							margin: 0 14px
 						+media-breakpoint-down(sm)
-							max-width: 100%
-							width: 100%
+							max-width: calc(100vw - 48px)
+							width: calc(100vw - 48px)
 							margin: 0 4px
 						+media-breakpoint-down(xs)
-							margin: 0 5px
+							margin: 0 6px
 		.slick-prev
 			margin: 0
 			+media-breakpoint-up(xs)
