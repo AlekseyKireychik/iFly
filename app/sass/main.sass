@@ -2062,6 +2062,11 @@ header
 								padding-left: 17px
 				.seti__img
 					width: 100%
+					max-height: 284px
+					min-height: 284px
+					+media-breakpoint-down(lg)
+						max-height: 245px
+						min-height: 245px
 				.seti__description
 					padding: 32px 35px 10px
 					+media-breakpoint-down(sm)
@@ -3339,10 +3344,15 @@ header
 							transition: .3s
 						&.news-post
 							flex-basis: 408px
+							max-width: 408px
 							+media-breakpoint-down(lg)
 								flex-basis: 48%
 							+media-breakpoint-down(sm)
 								flex-basis: 100%
+							.news__link
+								.news__img
+									min-height: 291px
+									max-height: 291px
 						&.date
 							+media-breakpoint-down(md)
 								padding-bottom: 50px
@@ -3350,23 +3360,33 @@ header
 								padding-bottom: 40px
 						&.news-sale
 							flex-basis: 408px
+							max-width: 408px
 							+media-breakpoint-down(lg)
 								flex-basis: 48%
 							+media-breakpoint-down(sm)
 								flex-basis: 100%
+							.news__link
+								.news__img
+									min-height: 291px
+									max-height: 291px
 						&.news-big
 							background-position: center
 							background-repeat: no-repeat
 							background-size: cover
 							position: relative
 							flex-basis: 840px
+							max-width: 840px
 							min-height: 488px
+							max-height: 488px
 							+media-breakpoint-down(lg)
 								flex-basis: 100%
+								max-width: 100%
 							+media-breakpoint-down(md)
 								min-height: 453px
+								max-height: 453px
 							+media-breakpoint-down(sm)
 								min-height: 382px
+								max-height: 382px
 							.news__description
 								+media-breakpoint-down(xs)
 									display: none
@@ -3407,6 +3427,7 @@ header
 									line-height: 28px
 									color: #FFFFFF
 							.news__img
+								width: 100%
 								+media-breakpoint-down(lg)
 									width: 100%
 							.news__subTitle
@@ -3500,6 +3521,10 @@ header
 							left: 60%
 				.new__item
 					padding-right: 24px
+					min-height: 491px
+					max-height: 491px
+					img
+						width: 100%
 			.slider__counter
 				top: 111%
 				+media-breakpoint-down(xs)
@@ -3628,6 +3653,7 @@ header
 						background-color: #fff
 						width: 100%
 						flex-basis: 408px
+						max-width: 408px
 						transition: .3s
 						+media-breakpoint-down(sm)
 							flex-basis: 332px
@@ -3635,6 +3661,8 @@ header
 							display: block
 							.new__img
 								width: 100%
+								min-height: 291px
+								max-height: 291px
 							.new__subTitle
 								font-weight: 600
 								font-size: 18px
