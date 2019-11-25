@@ -1244,7 +1244,6 @@ header
 				position: absolute
 				padding: 20px 20px 0px
 				background-color: #fff
-				// border-top: 2px solid rgba(153, 158, 167, 0.5)
 				width: 409px
 				top: 96px
 				z-index: 999
@@ -1284,7 +1283,6 @@ header
 				width: 100%
 				padding: 20px 20px 10px
 				background-color: #fff
-				// border-top: 2px solid rgba(153, 158, 167, 0.5)
 				+media-breakpoint-up(xl)
 					right: calc(((100vw - 1272px)/2) * (-1))
 				+media-breakpoint-down(xl)
@@ -1306,11 +1304,16 @@ header
 				.menu__wrap
 					border-bottom: 2px solid rgba(153, 158, 167, 0.5)
 					width: 100%
-					.menu__list
+					.menu-title
 						font-size: 16px
 						line-height: 34px
 						font-weight: 600
-
+						position: relative						
+						&.menu-mobile-title		
+							display: none										
+					.menu__list						
+						&.menu-mobile
+							display: none
 						.menu__item
 							padding-left: 15px
 							.menu__link

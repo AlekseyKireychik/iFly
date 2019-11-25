@@ -516,7 +516,18 @@ $(document).ready(function() {
       $(this).addClass("is-active");
     }
   });
-
+  //news
+  $(".menu-title").on("click", function(event) {
+    event.preventDefault();
+    if ($(this).hasClass("is-active")) {
+      $(".menu-title").removeClass("is-active");
+      $(".menu__list").removeClass("is-active");      
+      $(this).removeClass("is-active");
+    } else {
+      $(".menu-title").removeClass("is-active");
+      $(".menu__list").addClass("is-active");
+    }
+  });
   // panel-title
   //news
   $(".news__btn").on("click", function(event) {
