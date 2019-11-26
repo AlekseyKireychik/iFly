@@ -25,7 +25,7 @@
                         z-index: 2!important
                         border: none!important
                         &.slick-next
-                            margin: 0!important                            
+                            margin: 0!important
                             left: auto!important
                             right: calc((((100vw - 1272px) / 2) + 10px) * (1 - 2))!important
                             width: calc((100vw - 1272px) / 2)!important
@@ -165,24 +165,32 @@
                         font-weight: 600!important
                         position: relative!important
                         display: block!important
-                        &:before 
+                        transition: .3s!important
+                        &:before
                             position: absolute!important
                             content: url(../img/_src/arrowDown.svg)!important
                             right: 8px!important
-                            top: 0px!important 
-                        &.menu-mobile-title	
-                            display: block!important                        
-                    .menu__list
-                        display: none!important  
-                        &.is-active   
-                            display: block!important                     
-                        &.menu-mobile
-                            display: none!important  
-                            &.is-active   
-                                display: block!important    
-                            .menu__item  
+                            top: 0px!important
+                        &.is-active
+                            &::before
+                                transform: rotate(180deg)
+                        &.menu-mobile-title
+                            display: block!important
+                        .menu__list
+                            display: none!important
+                            transition: .3s!important
+                            &.is-active
+                                display: block!important
+                                transition: .3s!important
+                            &.menu-mobile
+                                display: none!important
+                                transition: .3s!important
+                                &.is-active
+                                    display: block!important
+                                    transition: .3s!important
+                                .menu__item
 @media screen and (min-width: 1200px) and (max-width: 1370px)
-    .main__form 
+    .main__form
         .form
             padding: 35px 100px!important
     .advantages__list
@@ -212,10 +220,10 @@
                     max-width: 680px!important
     .profile__subList
         right: calc(((100vw - 680px)/2) * (-1))!important
-    header 
+    header
         .container
-            &.container__header 
-                .nav 
+            &.container__header
+                .nav
                     right: calc(((100vw - 680px)/2) * (-1))!important
     .seti__lenta
         .slick-prev

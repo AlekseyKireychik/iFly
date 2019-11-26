@@ -95,7 +95,6 @@ $(document).ready(function() {
     ]
   });
 
-
   //akcii
   $("#akcii-list").on("init", function(event, slick) {
     $(".akcii__counter").text(1 + " / " + slick.slideCount);
@@ -213,7 +212,7 @@ $(document).ready(function() {
           arrows: true,
           slidesToShow: 1,
           slidesToScroll: 1,
-          centerMode: false, 
+          centerMode: false,
           autoplay: true
         }
       }
@@ -516,19 +515,23 @@ $(document).ready(function() {
       $(this).addClass("is-active");
     }
   });
-  //news
-  $(".menu-title").on("click", function(event) {
-    event.preventDefault();
+
+  //menu
+
+  $(".menu-title").on("click", function() {    
     if ($(this).hasClass("is-active")) {
       $(".menu-title").removeClass("is-active");
-      $(".menu__list").removeClass("is-active");      
-      $(this).removeClass("is-active");
+      $(".menu__list").removeClass("is-active");
     } else {
       $(".menu-title").removeClass("is-active");
-      $(".menu__list").addClass("is-active");
+      $(".menu__list").removeClass("is-active");
+      $(this)
+        .children(".menu__list")
+        .addClass("is-active");
+      $(this).addClass("is-active");
     }
   });
-  // panel-title
+
   //news
   $(".news__btn").on("click", function(event) {
     event.preventDefault();
