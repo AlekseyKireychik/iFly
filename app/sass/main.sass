@@ -1621,6 +1621,11 @@ header
 			background-repeat: no-repeat
 			background-size: cover
 			padding: 100px 0 160px
+			min-height: 655px
+			max-height: 655px
+			+media-breakpoint-down(md)
+				min-height: 680px
+				max-height: 680px
 			+media-breakpoint-down(xs)
 				padding: 60px 15px 145px
 			.container

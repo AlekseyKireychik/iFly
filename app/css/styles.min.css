@@ -3927,6 +3927,15 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   background-repeat: no-repeat;
   background-size: cover;
   padding: 100px 0 160px;
+  min-height: 655px;
+  max-height: 655px;
+}
+
+@media (max-width: 991.98px) {
+  .advantages__home .advantages__list .advantages__item {
+    min-height: 680px;
+    max-height: 680px;
+  }
 }
 
 @media (max-width: 575.98px) {
