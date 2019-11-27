@@ -3779,6 +3779,7 @@ header
 						overflow-x: auto
 						white-space: nowrap
 						text-align: left
+						display: flex
 						+media-breakpoint-down(lg)
 							padding-right: 200px
 						+media-breakpoint-down(md)
@@ -3790,10 +3791,22 @@ header
 						li
 							height: 35px
 							min-width: 300px
+							+media-breakpoint-down(md)
+								display: none
 							+media-breakpoint-down(sm)
 								min-width: 274px
 							+media-breakpoint-down(xs)
 								min-width: 144px
+							&.slick-active,
+							&.slick-active + li,
+							&.slick-active + li + li
+								+media-breakpoint-down(md)
+								display: flex
+							&.slick-active,
+							&.slick-active + li,
+							&.slick-active + li + li
+								+media-breakpoint-down(md)
+								display: flex
 							button
 								display: inline
 								width: 300px

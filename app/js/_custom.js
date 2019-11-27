@@ -499,49 +499,6 @@ $(document).ready(function() {
   $(".history-slide #slick-slide-control02").text("2008 - 2013");
   $(".history-slide #slick-slide-control03").text("2014 - 2019");
 
-  let myLine = $(".history-slide .slick-dots li");
-  let myDotsWidth = myLine.outerWidth();
-  let myDotsWidthAll = $(".history-slide .slick-dots").outerWidth();
-  let container = $(".container").outerWidth();
-  console.log(container);
-  let left = 0;
-  //Re-apply the visibility in the beforeChange event.
-  if (container < myDotsWidthAll) {
-    // $("history-slide").on("init", function(event, slick) {
-    //   left = left - myDotsWidth;
-    //   if (left < -container) {
-    //     left = 0;
-    //   }
-    //   $(".history-slide .slick-dots").css({ left: left + "px" });
-    // });
-    // $("history-slide").on("reInit", function(event, slick) {
-    //   left = left - myDotsWidth;
-    //   if (left < -container) {
-    //     left = 0;
-    //   }
-    //   $(".history-slide .slick-dots").css({ left: left + "px" });
-    // });
-    // $("history-slide").on("afterChange", function(
-    //   event,
-    //   slick,
-    //   currentSlide,
-    //   nextSlide
-    // ) {
-    //   left = left - myDotsWidth;
-    //   if (left < -container) {
-    //     left = 0;
-    //   }
-    //   $(".history-slide .slick-dots").css({ left: left + "px" });
-    // });
-    $(".history-slide").on("beforeChange", function() {
-      left = left - myDotsWidth;
-      if (left < -container) {
-        left = 0;
-      }
-      $(".history-slide .slick-dots").css({ left: left + "px" });
-    });
-  }
-
   //vacancies
   $(".vacancies__btn").on("click", function(event) {
     event.preventDefault();
