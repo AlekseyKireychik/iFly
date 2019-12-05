@@ -560,6 +560,9 @@ template {
   .container {
     max-width: 1272px;
   }
+  .maincontainer {
+    max-width: 1272px !important;
+  }
 }
 
 @media screen and (min-width: 1537px) {
@@ -826,6 +829,13 @@ template {
   }
   .container .reviews .container .row .instructor__list {
     max-width: 680px !important;
+  }
+  .maincontainer {
+    max-width: 960px !important;
+  }
+  .maincontainer.sliders {
+    max-width: 960px;
+    margin-left: calc((100vw - 680px) / 2);
   }
   .new__slider .container .row .newpost-slider {
     max-width: 680px !important;
@@ -10137,6 +10147,10 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   }
 }
 
+.maincertificate {
+  overflow: hidden;
+}
+
 .certificteUse {
   padding-bottom: 70px;
 }
@@ -10148,7 +10162,47 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   }
 }
 
-.certificteUse .container .row .certificteUse__tabs {
+.certificteUse .maincontainer {
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+@media (max-width: 1199.98px) {
+  .certificteUse .maincontainer {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .certificteUse .maincontainer {
+    max-width: 720px;
+  }
+  .certificteUse .maincontainer.sliders {
+    max-width: 960px;
+    margin-left: calc((100vw - 720px) / 2);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .certificteUse .maincontainer {
+    max-width: 540px;
+  }
+  .certificteUse .maincontainer.sliders {
+    margin-left: 0px;
+    padding-right: 0;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .certificteUse .maincontainer {
+    max-width: 100%;
+  }
+}
+
+.certificteUse .maincontainer .row .certificteUse__tabs {
   border-bottom: none;
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
@@ -10158,7 +10212,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 @media (max-width: 767.98px) {
-  .certificteUse .container .row .certificteUse__tabs {
+  .certificteUse .maincontainer .row .certificteUse__tabs {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -webkit-flex-direction: column;
@@ -10169,24 +10223,24 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 @media (max-width: 575.98px) {
-  .certificteUse .container .row .certificteUse__tabs {
+  .certificteUse .maincontainer .row .certificteUse__tabs {
     margin-bottom: 0px;
   }
 }
 
-.certificteUse .container .row .certificteUse__tabs .nav-item {
+.certificteUse .maincontainer .row .certificteUse__tabs .nav-item {
   -webkit-flex-basis: 50%;
       -ms-flex-preferred-size: 50%;
           flex-basis: 50%;
   width: 100%;
 }
 
-.certificteUse .container .row .certificteUse__tabs .nav-item:first-child {
+.certificteUse .maincontainer .row .certificteUse__tabs .nav-item:first-child {
   padding-right: 10px;
 }
 
 @media (max-width: 767.98px) {
-  .certificteUse .container .row .certificteUse__tabs .nav-item:first-child {
+  .certificteUse .maincontainer .row .certificteUse__tabs .nav-item:first-child {
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
             flex-basis: 100%;
@@ -10195,12 +10249,12 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   }
 }
 
-.certificteUse .container .row .certificteUse__tabs .nav-item:last-child {
+.certificteUse .maincontainer .row .certificteUse__tabs .nav-item:last-child {
   padding-left: 10px;
 }
 
 @media (max-width: 767.98px) {
-  .certificteUse .container .row .certificteUse__tabs .nav-item:last-child {
+  .certificteUse .maincontainer .row .certificteUse__tabs .nav-item:last-child {
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
             flex-basis: 100%;
@@ -10209,7 +10263,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   }
 }
 
-.certificteUse .container .row .certificteUse__tabs .nav-item .nav-link {
+.certificteUse .maincontainer .row .certificteUse__tabs .nav-item .nav-link {
   font-weight: 600;
   font-size: 18px;
   line-height: 22px;
@@ -10222,8 +10276,16 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   text-align: center;
 }
 
+@media (max-width: 767.98px) {
+  .certificteUse .maincontainer .row .certificteUse__tabs .nav-item .nav-link {
+    max-width: 350px;
+    margin: 0 auto;
+  }
+}
+
 @media (max-width: 575.98px) {
-  .certificteUse .container .row .certificteUse__tabs .nav-item .nav-link {
+  .certificteUse .maincontainer .row .certificteUse__tabs .nav-item .nav-link {
+    max-width: 100%;
     font-size: 14px;
     line-height: 20px;
     padding: 10px 55px 10px 35px;
@@ -10231,25 +10293,25 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   }
 }
 
-.certificteUse .container .row .certificteUse__tabs .nav-item .nav-link.active {
+.certificteUse .maincontainer .row .certificteUse__tabs .nav-item .nav-link.active {
   background: #E72D2D;
 }
 
-.certificteUse .container .row .tab-content {
+.certificteUse .maincontainer .row .tab-content {
   width: 100%;
 }
 
 @media (max-width: 767.98px) {
-  .certificteUse .container .row .tab-content {
+  .certificteUse .maincontainer .row .tab-content {
     max-width: 100%;
   }
 }
 
-.certificteUse .container .row .tab-content .tab-pane {
+.certificteUse .maincontainer .row .tab-content .tab-pane {
   position: relative;
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -10272,13 +10334,24 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   margin-bottom: 0px;
 }
 
-@media (max-width: 1199.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list {
+@media (max-width: 991.98px) {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list {
     overflow-x: scroll;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-right: calc((100vw - 720px) / 2);
   }
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item {
+@media (max-width: 767.98px) {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list {
+    margin-right: 0px;
+  }
+}
+
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -10303,7 +10376,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 @media (min-width: 1200px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item {
     min-height: 568px;
     -webkit-flex-basis: 407px;
         -ms-flex-preferred-size: 407px;
@@ -10314,7 +10387,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 @media (max-width: 1199.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item {
     min-height: 420px;
     -webkit-flex-basis: 292px;
         -ms-flex-preferred-size: 292px;
@@ -10324,10 +10397,19 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
     width: 292px;
     margin-right: 16px;
   }
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item:last-child {
+    margin-right: 0px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item:last-child {
+    margin-right: calc((100vw - 720px) / 2);
+  }
 }
 
 @media (max-width: 575.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item {
     min-height: 300px;
     -webkit-flex-basis: 208px;
         -ms-flex-preferred-size: 208px;
@@ -10339,55 +10421,55 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   }
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item.item01 {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item.item01 {
   background-image: url(../img/_src/cert.jpg);
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item.item02 {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item.item02 {
   background-image: url(../img/_src/cert.jpg);
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item.item03 {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item.item03 {
   background-image: url(../img/_src/cert.jpg);
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item.item04 {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item.item04 {
   background-image: url(../img/_src/cert.jpg);
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item.item05 {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item.item05 {
   background-image: url(../img/_src/cert.jpg);
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item.item06 {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item.item06 {
   background-image: url(../img/_src/cert.jpg);
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item.item07 {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item.item07 {
   background-image: url(../img/_src/cert.jpg);
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item.item08 {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item.item08 {
   background-image: url(../img/_src/cert.jpg);
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item.item09 {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item.item09 {
   background-image: url(../img/_src/cert.jpg);
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item.item10 {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item.item10 {
   background-image: url(../img/_src/cert.jpg);
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item.item11 {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item.item11 {
   background-image: url(../img/_src/cert.jpg);
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item.item12 {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item.item12 {
   background-image: url(../img/_src/cert.jpg);
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content {
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -10414,7 +10496,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 @media (max-width: 1199.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content {
     -webkit-flex-basis: 470px;
         -ms-flex-preferred-size: 470px;
             flex-basis: 470px;
@@ -10423,7 +10505,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 @media (max-width: 991.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content {
     -webkit-flex-basis: 350px;
         -ms-flex-preferred-size: 350px;
             flex-basis: 350px;
@@ -10431,7 +10513,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 @media (max-width: 575.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content {
     min-height: 300px;
     max-width: 100%;
     -webkit-flex-basis: 100%;
@@ -10440,7 +10522,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   }
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__total {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__total {
   position: absolute;
   left: 0;
   right: 0;
@@ -10455,7 +10537,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   padding-top: 15px;
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .wrap__title {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .wrap__title {
   position: absolute;
   left: 0;
   bottom: 100px;
@@ -10466,19 +10548,19 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 @media (max-width: 767.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .wrap__title {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .wrap__title {
     left: 10px;
     right: 10px;
   }
 }
 
 @media (max-width: 575.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .wrap__title {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .wrap__title {
     bottom: 50px;
   }
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .wrap__title .certificteUse__title {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .wrap__title .certificteUse__title {
   padding-left: 47px;
   font-weight: bold;
   font-size: 28px;
@@ -10491,21 +10573,21 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 @media (max-width: 767.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .wrap__title .certificteUse__title {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .wrap__title .certificteUse__title {
     padding-left: 20px;
     padding-right: 0px;
   }
 }
 
 @media (max-width: 575.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .wrap__title .certificteUse__title {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .wrap__title .certificteUse__title {
     font-size: 20px;
     line-height: 24px;
     padding-right: 25px;
   }
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .wrap__title .certificteUse__title::before {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .wrap__title .certificteUse__title::before {
   content: url(../img/_src/square.svg);
   position: absolute;
   left: 20px;
@@ -10513,12 +10595,12 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 @media (max-width: 767.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .wrap__title .certificteUse__title::before {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .wrap__title .certificteUse__title::before {
     left: 0px;
   }
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .wrap__title .certificteUse__description {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .wrap__title .certificteUse__description {
   display: block;
   padding-left: 20px;
   font-size: 18px;
@@ -10530,21 +10612,21 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 @media (max-width: 1199.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .wrap__title .certificteUse__description {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .wrap__title .certificteUse__description {
     font-size: 12px;
     line-height: 15px;
   }
 }
 
 @media (max-width: 575.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .wrap__title .certificteUse__description {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .wrap__title .certificteUse__description {
     font-size: 10px;
     line-height: 12px;
     padding-left: 0px;
   }
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__wrapBtn {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__wrapBtn {
   position: absolute;
   left: 0;
   right: 0;
@@ -10555,14 +10637,14 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__wrapBtn:hover .certificteUse__btn {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__wrapBtn:hover .certificteUse__btn {
   background-color: #E72D2D;
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__wrapBtn .certificteUse__btn {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__wrapBtn .certificteUse__btn {
   background-color: transparent;
   width: 100%;
   -webkit-transition: .3s;
@@ -10570,17 +10652,17 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   transition: .3s;
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__wrapBtn .certificteUse__btn::after {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__wrapBtn .certificteUse__btn::after {
   padding-left: 40px;
 }
 
 @media (max-width: 575.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__wrapBtn .certificteUse__btn {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__wrapBtn .certificteUse__btn {
     padding: 0px 55px 0px 35px;
   }
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options {
   position: absolute;
   right: 0;
   top: 50px;
@@ -10600,18 +10682,18 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 @media (max-width: 1199.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options {
     top: 47px;
   }
 }
 
 @media (max-width: 575.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options {
     top: 33px;
   }
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__time {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__time {
   position: relative;
   padding-right: 15px;
   font-weight: bold;
@@ -10619,35 +10701,35 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   line-height: 20px;
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__time::before {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__time::before {
   content: url(../img/_src/time.svg);
   position: absolute;
   right: 70px;
   top: -6px;
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__time:hover {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__time:hover {
   cursor: pointer;
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__time:hover .certificteUse__container {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__time:hover .certificteUse__container {
   display: block;
 }
 
 @media (max-width: 1199.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__time {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__time {
     font-size: 12px;
     line-height: 20px;
     padding-right: 5px;
   }
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__time::before {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__time::before {
     content: url(../img/_src/time-ipad.svg);
     right: 45px;
     top: 0px;
   }
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__time .certificteUse__container {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__time .certificteUse__container {
   display: none;
   position: absolute;
   right: -20px;
@@ -10657,14 +10739,14 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 @media (max-width: 1199.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__time .certificteUse__container {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__time .certificteUse__container {
     padding: 0px 12px;
     right: -40px;
     top: 40px;
   }
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__time .certificteUse__container .certificteUse__description {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__time .certificteUse__container .certificteUse__description {
   position: relative;
   font-size: 18px;
   line-height: 20px;
@@ -10674,13 +10756,13 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 @media (max-width: 1199.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__time .certificteUse__container .certificteUse__description {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__time .certificteUse__container .certificteUse__description {
     font-size: 12px;
     line-height: 15px;
   }
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__time .certificteUse__container .certificteUse__description::before {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__time .certificteUse__container .certificteUse__description::before {
   content: url(../img/_src/Polygon.svg);
   position: absolute;
   right: 50%;
@@ -10691,12 +10773,12 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 @media (max-width: 1199.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__time .certificteUse__container .certificteUse__description::before {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__time .certificteUse__container .certificteUse__description::before {
     top: -15px;
   }
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__counter {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__counter {
   position: relative;
   padding-left: 40px;
   padding-right: 20px;
@@ -10705,15 +10787,15 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   line-height: 20px;
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__counter:hover {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__counter:hover {
   cursor: pointer;
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__counter:hover .certificteUse__container {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__counter:hover .certificteUse__container {
   display: block;
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__counter::before {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__counter::before {
   content: url(../img/_src/palet.svg);
   position: absolute;
   right: 40px;
@@ -10721,20 +10803,20 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 @media (max-width: 1199.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__counter {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__counter {
     font-size: 12px;
     line-height: 20px;
     padding-left: 25px;
     padding-right: 10px;
   }
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__counter::before {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__counter::before {
     content: url(../img/_src/palet-ipad.svg);
     right: 25px;
     top: 0px;
   }
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__counter .certificteUse__container {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__counter .certificteUse__container {
   display: none;
   position: absolute;
   right: -40px;
@@ -10744,14 +10826,14 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 @media (max-width: 1199.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__counter .certificteUse__container {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__counter .certificteUse__container {
     padding: 0px 12px;
     right: -40px;
     top: 40px;
   }
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__counter .certificteUse__container .certificteUse__description {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__counter .certificteUse__container .certificteUse__description {
   position: relative;
   font-size: 18px;
   line-height: 20px;
@@ -10761,13 +10843,13 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 @media (max-width: 1199.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__counter .certificteUse__container .certificteUse__description {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__counter .certificteUse__container .certificteUse__description {
     font-size: 12px;
     line-height: 15px;
   }
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__counter .certificteUse__container .certificteUse__description::before {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__counter .certificteUse__container .certificteUse__description::before {
   content: url(../img/_src/Polygon.svg);
   position: absolute;
   right: 50%;
@@ -10778,12 +10860,12 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 @media (max-width: 1199.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__counter .certificteUse__container .certificteUse__description::before {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__counter .certificteUse__container .certificteUse__description::before {
     top: -15px;
   }
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__person {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__person {
   position: relative;
   padding-right: 20px;
   padding-left: 20px;
@@ -10792,27 +10874,27 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   line-height: 20px;
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__person::before {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__person::before {
   content: url(../img/_src/man.svg);
   position: absolute;
   right: 40px;
   top: -4px;
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__person:hover {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__person:hover {
   cursor: pointer;
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__person:hover .certificteUse__container {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__person:hover .certificteUse__container {
   display: block;
 }
 
 @media (max-width: 1199.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__person {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__person {
     font-size: 12px;
     line-height: 20px;
   }
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__person::before {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__person::before {
     content: url(../img/_src/man-ipad.svg);
     right: 35px;
     top: 0px;
@@ -10820,18 +10902,18 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 @media (max-width: 1199.98px) and (max-width: 575.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__person::before {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__person::before {
     right: 25px;
   }
 }
 
 @media (max-width: 575.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__person {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__person {
     padding-right: 10px;
   }
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__person .certificteUse__container {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__person .certificteUse__container {
   display: none;
   position: absolute;
   right: -55px;
@@ -10841,14 +10923,14 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 @media (max-width: 1199.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__person .certificteUse__container {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__person .certificteUse__container {
     padding: 0px 12px;
     right: -40px;
     top: 40px;
   }
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__person .certificteUse__container .certificteUse__description {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__person .certificteUse__container .certificteUse__description {
   position: relative;
   font-size: 18px;
   line-height: 20px;
@@ -10858,13 +10940,13 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 @media (max-width: 1199.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__person .certificteUse__container .certificteUse__description {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__person .certificteUse__container .certificteUse__description {
     font-size: 12px;
     line-height: 15px;
   }
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__person .certificteUse__container .certificteUse__description::before {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__person .certificteUse__container .certificteUse__description::before {
   content: url(../img/_src/Polygon.svg);
   position: absolute;
   right: 50%;
@@ -10875,12 +10957,12 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 @media (max-width: 1199.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__person .certificteUse__container .certificteUse__description::before {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__person .certificteUse__container .certificteUse__description::before {
     top: -15px;
   }
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__order {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__order {
   background-color: #E72D2D;
   font-weight: bold;
   font-size: 18px;
@@ -10890,83 +10972,83 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 @media (max-width: 1199.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__order {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__order {
     padding: 7px 10px;
   }
 }
 
 @media (max-width: 575.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__order {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list .certificteUse__item .certificteUse__content .certificteUse__options .certificteUse__order {
     font-size: 10px;
     padding: 0px 10px;
   }
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list.slick-slider .slick-list {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list.slick-slider .slick-list {
   margin: 0 2px;
 }
 
 @media (max-width: 1199.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list.slick-slider .slick-list {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list.slick-slider .slick-list {
     margin: 0 -2px;
   }
 }
 
 @media (max-width: 1199.98px) and (max-width: 767.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list.slick-slider .slick-list {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list.slick-slider .slick-list {
     margin: 0 -2px;
   }
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list.slick-slider .slick-list .slick-track .slick-slide {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list.slick-slider .slick-list .slick-track .slick-slide {
   margin: 0 12px;
 }
 
 @media (max-width: 575.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list.slick-slider .slick-prev {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list.slick-slider .slick-prev {
     left: calc((100vw/2) - 128px);
   }
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list.slick-slider .slick-next {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list.slick-slider .slick-next {
     left: calc((100vw/2));
   }
 }
 
-.certificteUse .container .row .tab-content .tab-pane .certificteUse__list#order-list02 .slick-list {
+.certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list#order-list02 .slick-list {
   margin: 0 -10px;
 }
 
 @media (max-width: 1199.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .certificteUse__list#order-list02 .slick-list {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .certificteUse__list#order-list02 .slick-list {
     margin: 0 -2px;
   }
 }
 
-.certificteUse .container .row .tab-content .tab-pane .slick-arrow {
+.certificteUse .maincontainer .row .tab-content .tab-pane .slick-arrow {
   display: none;
 }
 
 @media (max-width: 1199.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .slick-arrow {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .slick-arrow {
     display: block;
     top: 90%;
   }
 }
 
-.certificteUse .container .row .tab-content .tab-pane .slider__counter {
+.certificteUse .maincontainer .row .tab-content .tab-pane .slider__counter {
   top: auto;
   bottom: 0px;
   display: none;
 }
 
 @media (max-width: 1199.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .slider__counter {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .slider__counter {
     display: block;
     top: 86%;
   }
 }
 
 @media (max-width: 1199.98px) and (max-width: 767.98px) {
-  .certificteUse .container .row .tab-content .tab-pane .slider__counter {
+  .certificteUse .maincontainer .row .tab-content .tab-pane .slider__counter {
     top: 85%;
     left: calc((100vw/2) - 64px);
   }

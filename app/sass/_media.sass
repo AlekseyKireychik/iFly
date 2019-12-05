@@ -2,6 +2,9 @@
 @media screen and (min-width: 1300px)
     .container
         max-width: 1272px
+    .maincontainer
+        max-width: 1272px!important
+
 @media screen and (min-width: 1537px)
     .programs__home
         padding-bottom: 120px!important
@@ -51,7 +54,7 @@
                         margin: 0 10px!important
     .new__counter
         display: none
-@media screen and (min-width: 1450px)  and (max-width: 1536px)   
+@media screen and (min-width: 1450px)  and (max-width: 1536px)
     .programs__home
         padding-bottom: 120px!important
         .programs__wrapper
@@ -208,6 +211,11 @@
                 .row
                     .instructor__list
                         max-width: 680px!important
+    .maincontainer
+        max-width: 960px!important
+        &.sliders
+            max-width: 960px
+            margin-left: calc((100vw - 680px) / 2)
     .new__slider
         .container
             .row

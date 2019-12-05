@@ -4490,15 +4490,6 @@ header
 									color: $accent
 									.help-text-wrap
 										display: block
-							// &[type="email"]:invalid:not(:focus)
-							// 	border-bottom: 1px solid $accent
-							// 	& + label
-							// 		top: -15px
-							// 		font-size: 14px
-							// 		line-height: 17px
-							// 		color: $accent
-							// 		.help-text-wrap
-							// 			display: none
 							&:invalid:not(:focus):not(:placeholder-shown)
 								border-bottom: 1px solid $accent
 							&:invalid:not(:focus):not(:placeholder-shown)
@@ -4511,36 +4502,6 @@ header
 								border-bottom: 1px solid #E5E7E8
 								& + label
 									top: -15px
-						// input
-						// 	font-size: 16px
-						// 	line-height: 19px
-						// 	color: $accentTwo
-						// 	font-weight: 600
-						// 	width: 100%
-						// 	border: none
-						// 	padding: 15px 20px
-						// 	border-bottom: 1px solid #E5E7E8
-						// 	&:focus
-						// 		border-bottom: 1px solid $accentTwo
-						// 		& + label
-						// 			font-size: 14px
-						// 			line-height: 17px
-						// 			color: #999EA7
-						// 			top: -15px
-						// 			.required-star
-						// 				color: #999EA7
-						// 	&:invalid:not(:focus):not(:placeholder-shown)
-						// 		border-bottom: 1px solid $accent
-						// 	&:invalid:not(:focus):not(:placeholder-shown)
-						// 		& + label
-						// 			font-size: 14px
-						// 			line-height: 17px
-						// 			top: -15px
-						// 			color: $accent
-						// 	&:valid
-						// 		border-bottom: 1px solid #E5E7E8
-						// 		& + label
-						// 			top: -15px
 						input[type="date"]
 							opacity: 1
 							background: url(../img/_src/arrowDown.svg)
@@ -4768,13 +4729,34 @@ header
 					display: block
 					+media-breakpoint-down(lg)
 						display: none
-
+.maincertificate						
+	overflow: hidden
 .certificteUse
 	padding-bottom: 70px
 	+media-breakpoint-down(sm)
 		padding-left: 20px
 		padding-right: 20px
-	.container
+	.maincontainer
+		width: 100%
+		padding-left: 15px
+		padding-right: 15px
+		margin: 0 auto
+		+media-breakpoint-down(xl)
+			max-width: 1140px
+		+media-breakpoint-down(lg)
+			max-width: 960px			
+		+media-breakpoint-down(md)
+			max-width: 720px
+			&.sliders
+				max-width: 960px
+				margin-left: calc((100vw - 720px) / 2)
+		+media-breakpoint-down(sm)			
+			max-width: 540px
+			&.sliders
+				margin-left: 0px
+				padding-right: 0
+		+media-breakpoint-down(xs)
+			max-width: 100%
 		.row
 			.certificteUse__tabs
 				border-bottom: none
@@ -4812,7 +4794,11 @@ header
 						border: none
 						padding: 20px 25px
 						text-align: center
+						+media-breakpoint-down(sm)
+							max-width: 350px
+							margin: 0 auto
 						+media-breakpoint-down(xs)
+							max-width: 100%
 							font-size: 14px
 							line-height: 20px
 							padding: 10px 55px 10px 35px
@@ -4835,8 +4821,12 @@ header
 						z-index: 1
 						padding-bottom: 30px
 						margin-bottom: 0px
-						+media-breakpoint-down(lg)
+						+media-breakpoint-down(md)
 							overflow-x: scroll
+							justify-content: flex-start
+							margin-right: calc((100vw - 720px) / 2)
+						+media-breakpoint-down(sm)
+							margin-right: 0px
 						// +media-breakpoint-up(xl)
 						// 	max-width: 1272px
 						// +media-breakpoint-down(xl)
@@ -4873,6 +4863,11 @@ header
 								min-width: 292px
 								width: 292px
 								margin-right: 16px
+								&:last-child
+									margin-right: 0px
+							+media-breakpoint-down(md)
+								&:last-child
+									margin-right: calc((100vw - 720px) / 2)
 							+media-breakpoint-down(xs)
 								// min-height: 394px
 								// max-width: 100%
