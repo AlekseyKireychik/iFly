@@ -11054,6 +11054,119 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   }
 }
 
+.birthday .birthday__list {
+  margin: 0;
+}
+
+.birthday .birthday__list .birthday__item {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0 160px;
+  min-height: 655px;
+  max-height: 655px;
+}
+
+@media (max-width: 991.98px) {
+  .birthday .birthday__list .birthday__item {
+    min-height: 680px;
+    max-height: 680px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .birthday .birthday__list .birthday__item {
+    padding: 60px 15px 145px;
+  }
+}
+
+.birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__title {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 48px;
+  color: #FFF;
+  padding-bottom: 30px;
+}
+
+.birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__sublist {
+  padding-bottom: 30px;
+  padding-left: 0;
+  margin: 0;
+}
+
+.birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__sublist .birthday__elem {
+  font-size: 24px;
+  line-height: 34px;
+  color: #fff;
+}
+
+.birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__sublist .birthday__elem span {
+  font-weight: 600;
+}
+
+.birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__text {
+  font-size: 24px;
+  line-height: 34px;
+  color: #fff;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+  max-width: 800px;
+}
+
+.birthday .birthday__list .birthday__item .container .row .birthday__caption span {
+  font-size: 24px;
+  line-height: 34px;
+  color: #fff;
+}
+
+.birthday .birthday__list .slick-dots {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  bottom: 20px;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  text-align: left;
+  padding-left: 10vw;
+}
+
+.birthday .birthday__list .slick-dots li {
+  margin: 0 27px;
+}
+
+@media (max-width: 575.98px) {
+  .birthday .birthday__list .slick-dots li {
+    margin: 0 20px;
+  }
+}
+
+.birthday .birthday__list .slick-dots li .birthday__dot {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 54px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.birthday .birthday__list .slick-dots li.slick-active .birthday__dot {
+  color: #fff;
+  position: relative;
+}
+
+.birthday .birthday__list .slick-dots li.slick-active .birthday__dot::before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 95px;
+  background-color: #E72D2D;
+  top: -42px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.birthday .birthday__list .slick-dots li:first-child.slick-active .birthday__dot::before {
+  top: -57px;
+}
+
 footer {
   background-color: #142C60;
   padding-top: 60px;

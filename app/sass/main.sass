@@ -4729,7 +4729,7 @@ header
 					display: block
 					+media-breakpoint-down(lg)
 						display: none
-.maincertificate						
+.maincertificate
 	overflow: hidden
 .certificteUse
 	padding-bottom: 70px
@@ -4744,13 +4744,13 @@ header
 		+media-breakpoint-down(xl)
 			max-width: 1140px
 		+media-breakpoint-down(lg)
-			max-width: 960px			
+			max-width: 960px
 		+media-breakpoint-down(md)
 			max-width: 720px
 			&.sliders
 				max-width: 960px
 				margin-left: calc((100vw - 720px) / 2)
-		+media-breakpoint-down(sm)			
+		+media-breakpoint-down(sm)
 			max-width: 540px
 			&.sliders
 				margin-left: 0px
@@ -5021,7 +5021,7 @@ header
 										padding-right: 15px
 										font-weight: bold
 										font-size: 18px
-										line-height: 20px										
+										line-height: 20px
 										&::before
 											content: url(../img/_src/time.svg)
 											position: absolute
@@ -5039,7 +5039,7 @@ header
 												content: url(../img/_src/time-ipad.svg)
 												right: 45px
 												top: 0px
-										
+
 										.certificteUse__container
 											display: none
 											position: absolute
@@ -5228,6 +5228,88 @@ header
 							+media-breakpoint-down(sm)
 								top: 85%
 								left: calc((100vw/2) - 64px)
+.birthday
+	.birthday__list
+		margin: 0
+		.birthday__item
+			background-position: center
+			background-repeat: no-repeat
+			background-size: cover
+			padding: 100px 0 160px
+			min-height: 655px
+			max-height: 655px
+			+media-breakpoint-down(md)
+				min-height: 680px
+				max-height: 680px
+			+media-breakpoint-down(xs)
+				padding: 60px 15px 145px
+			.container
+				.row
+					.birthday__caption
+						.birthday__title
+							font-weight: 600
+							font-size: 40px
+							line-height: 48px
+							color: #FFF
+							padding-bottom: 30px
+						.birthday__sublist
+							padding-bottom: 30px
+							padding-left: 0
+							margin: 0
+							.birthday__elem
+								font-size: 24px
+								line-height: 34px
+								color: #fff
+								span
+									font-weight: 600
+						.birthday__text
+							font-size: 24px
+							line-height: 34px
+							color: #fff
+							margin-bottom: 0
+							padding-bottom: 20px
+							max-width: 800px
+						span
+							font-size: 24px
+							line-height: 34px
+							color: #fff
+						.birthday__btn
+		.slick-dots
+			border-top: 1px solid rgba(255, 255, 255, 0.2)
+			bottom: 20px
+			padding-top: 40px
+			padding-bottom: 50px
+			text-align: left
+			padding-left: 10vw
+
+			li
+				margin: 0 27px
+				+media-breakpoint-down(xs)
+					margin: 0 20px
+				.birthday__dot
+					font-weight: 600
+					font-size: 18px
+					line-height: 54px
+					color: rgba(255, 255, 255, 0.4)
+
+				&.slick-active
+					.birthday__dot
+						color: #fff
+						position: relative
+						&::before
+							position: absolute
+							content: ""
+							height: 2px
+							width: 95px
+							background-color: $accent
+							top: -42px
+							left: 50%
+							transform: translateX(-50%)
+				&:first-child
+					&.slick-active
+						.birthday__dot
+							&::before
+								top: -57px
 
 footer
 	background-color: $accentTwo

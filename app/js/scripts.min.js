@@ -158,6 +158,20 @@ $(document).ready(function() {
     }
   });
 
+  $("#birthday-list").slick({
+    infinite: true,
+    dots: true,
+    arrows: false,
+    speed: 300,
+    slidesToShow: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    customPaging: function(slider, i) {
+      var thumb = $(slider.$slides[i]).data();
+      return '<a class="birthday__dot">' + "0" + (i + 1) + "</a>";
+    }
+  });
+
   //seti homepage
   $("#seti-lenta").on("init", function(event, slick) {
     $(".seti__counter").text(1 + " / " + slick.slideCount);
