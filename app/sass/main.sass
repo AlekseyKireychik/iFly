@@ -840,6 +840,348 @@ input.error
 						width: 100%
 						button
 							width: 100%
+.request__form
+	background-color: #fff
+	position: fixed
+	left: 50%
+	right: 50%
+	top: 0%
+	height: 100vh
+	overflow: auto
+	transform: translate(-50%, 0%)
+	z-index: 1000
+	display: none
+	&.is-active
+		display: block
+	.form
+		padding: 95px 100px
+		+media-breakpoint-down(sm)
+			padding: 50px 10px
+		.wrap__btnClose
+			display: flex
+			align-items: center
+			justify-content: space-between
+			.title
+				margin-bottom: 0
+			.form__btnClose
+				position: relative
+				cursor: pointer
+				padding: 15px
+				.form__line
+					position: absolute
+					width: 24px
+					height: 2px
+					top: 47%
+					right: 50%
+					transform: translate(50%)
+					background-color: transparent
+					&::after
+						content: ""
+						position: absolute
+						width: 24px
+						height: 2px
+						background-color: #E72D2D
+						top: 0px
+						transform: rotate(-45deg)
+					&::before
+						content: ""
+						position: absolute
+						width: 24px
+						height: 2px
+						background-color: #E72D2D
+						top: 0px
+						transform: rotate(45deg)
+
+		.formWrap
+			padding-top: 60px
+			.form__top
+				display: flex
+				align-items: flex-start
+				justify-content: space-between
+				flex-wrap: wrap
+				.mainform__group
+					display: flex
+					align-items: flex-start
+					justify-content: flex-start
+					flex-direction: column
+					position: relative
+					&.group-01
+						flex-basis: 50%
+						width: 100%
+						padding-bottom: 50px
+						+media-breakpoint-down(md)
+							flex-basis: 100%
+							order: 1
+							&:nth-child(3)
+								order: 2
+						&:nth-child(odd)
+							padding-right: 27px
+							+media-breakpoint-down(md)
+								padding-right: 0px
+					.mainform__label
+						font-size: 16px
+						line-height: 19px
+						color: $accentTwo
+						font-weight: 600
+						padding-left: 20px
+						position: absolute
+						top: 15px
+						left: 0
+						.required-star
+							color: $accent
+						.help-text-wrap
+							position: absolute
+							top: 38px
+							left: 0
+							display: none
+							.help-text
+								margin-top: 15px
+								padding: 6px 12px
+								font-size: 14px
+								line-height: 18px
+								color: #fff
+								background-color: $accent
+								position: relative
+								display: block
+								white-space: nowrap
+								&::before
+									content: url(../img/_src/before-icon.svg)
+									position: absolute
+									top: -12px
+									left: 10px
+
+					input
+						font-size: 16px
+						line-height: 19px
+						color: $accentTwo
+						font-weight: 600
+						width: 100%
+						border: none
+						padding: 15px 20px
+						border-bottom: 1px solid #E5E7E8
+						&:focus
+							border-bottom: 1px solid $accentTwo
+							& + label
+								top: -15px
+								font-size: 14px
+								line-height: 17px
+								color: #999EA7
+								.required-star
+									color: #999EA7
+						&:required:invalid
+							border-bottom: 1px solid $accent
+							& + label
+								top: 15px
+								color: $accent
+								.help-text-wrap
+									display: block
+						&:required:focus:invalid
+							border-bottom: 1px solid $accentTwo
+							& + label
+								top: -15px
+								color: #999EA7
+								.help-text-wrap
+									display: none
+						&:required:invalid:not(:placeholder-shown)
+							border-bottom: 1px solid $accent
+							& + label
+								top: 15px
+								color: $accent
+								.help-text-wrap
+									display: block
+						&:invalid:not(:focus):not(:placeholder-shown)
+							border-bottom: 1px solid $accent
+						&:invalid:not(:focus):not(:placeholder-shown)
+							& + label
+								top: -15px
+								font-size: 14px
+								line-height: 17px
+								color: $accent
+						&:valid:not(:focus):not(:placeholder-shown)
+							border-bottom: 1px solid #E5E7E8
+							& + label
+								top: -15px
+			.form__center
+				display: flex
+				align-items: flex-start
+				justify-content: space-between
+				flex-wrap: wrap
+				padding-bottom: 20px
+				+media-breakpoint-down(lg)
+					flex-direction: column
+				.mainform__group
+					display: flex
+					align-items: flex-start
+					justify-content: flex-start
+					flex-direction: column
+					width: 100%
+					position: relative
+					&.comment
+						font-size: 16px
+						line-height: 19px
+						color: $accentTwo
+						font-weight: 600
+						width: 100%
+						flex-basis: 80%
+						padding-right: 27px
+						+media-breakpoint-down(lg)
+							padding-right: 0px
+							padding-bottom: 20px
+							+media-breakpoint-down(md)
+								padding-bottom: 40px
+						.mainform__label
+							position: absolute
+							top: 25px
+						.mainform__control
+							margin-top: 0px
+							padding: 20px 20px
+							&.change
+								& + label
+									top: -15px
+						#comment:focus
+							border-bottom: 1px solid $accentTwo
+							& + label
+								top: -15px
+								font-size: 14px
+								line-height: 17px
+								color: #999EA7
+
+					&.file
+						flex-basis: 20%
+						position: relative
+						z-index: 10
+						padding-top: 25px
+						.mainform__label
+							padding-left: 40px
+							padding-bottom: 15px
+							border-bottom: 1px solid #E5E7E8
+							cursor: pointer
+							+media-breakpoint-down(xs)
+								width: 100%
+						.mainform__control
+							width: 0.1px
+							height: 0.1px
+							opacity: 0
+							position: absolute
+							z-index: -10
+						&::before
+							position: absolute
+							content: url(../img/_src/file.svg)
+							top: 20px
+							padding: 3px
+						span
+							font-size: 14px
+							line-height: 18px
+							padding-top: 10px
+							color: #BEBEBE
+					.mainform__label
+						font-size: 16px
+						line-height: 19px
+						color: $accentTwo
+						font-weight: 600
+						padding-left: 20px
+					.mainform__control
+						width: 100%
+						border: none
+						border-bottom: 1px solid #E5E7E8
+						resize: none
+						margin-top: -23px
+			#file-name
+				.del__container
+					display: flex
+					align-items: center
+					justify-content: space-between
+					background: #F7F7F7
+					padding: 25px 40px 25px 28px
+					font-size: 16px
+					line-height: 19px
+					font-weight: 600
+					#del-file
+						color: $accentTwo
+						position: relative
+						cursor: pointer
+						&::before
+							position: absolute
+							content: url(../img/_src/close.svg)
+							cursor: pointer
+							top: 0px
+							left: -35px
+							+media-breakpoint-down(xs)
+								top: -10px
+								left: 0px
+						.name
+							color: $accentTwo
+							+media-breakpoint-down(xs)
+								display: none
+			.footer__bottom
+				padding-top: 50px
+				display: flex
+				align-items: center
+				justify-content: space-between
+				+media-breakpoint-down(lg)
+					flex-direction: column
+					align-items: flex-start
+					padding-top: 0px
+				.form-check
+					position: relative
+					margin-top: 40px
+					margin-bottom: 20px
+					.form__check-label
+						font-size: 16px
+						line-height: 24px
+						padding-left: 0px
+						color: $accentTwo
+						margin-bottom: 20px
+						position: relative
+						&::after
+							position: absolute
+							content: url(../img/_src/check.svg)
+							left: -31px
+							top: -3px
+							+media-breakpoint-down(md)
+								top: 0px
+								left: -16px
+						+media-breakpoint-down(md)
+							padding-left: 12px
+					.form__check-input
+						background: #F7F7F7
+						border: 2px solid #F7F7F7
+					input[type="checkbox"]
+						display: inline-block
+						width: auto
+						margin-top: 5px
+						opacity: 0
+						cursor: pointer
+					.form__check-input + label::before
+						cursor: pointer
+						position: absolute
+						left: -35px
+						top: 2px
+						height: 18px
+						width: 18px
+						content: ""
+						background: #fff
+						display: inline-block
+						vertical-align: middle
+						border: 2px solid $accentTwo
+						+media-breakpoint-down(md)
+							// bottom: 25px
+							top: 4px
+							left: -20px
+					.form__check-input:checked + label::before
+						background: $accent
+						border: 2px solid $accent
+				.form__box
+					button
+						padding: 14px 95px 14px 60px
+						&::after
+							top: 15px
+							right: 55px
+							padding-left: 0
+					+media-breakpoint-down(xs)
+						width: 100%
+						button
+							width: 100%
 header
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
 	.container-fluid
@@ -5229,15 +5571,26 @@ header
 								top: 85%
 								left: calc((100vw/2) - 64px)
 .birthday
+	position: relative
+	.container__breadcrumb
+		position: absolute
+		left: calc((100vw - 1140px) / 2)
+		.row
+			.nav__breadcrumb
+				.breadcrumb
+					.breadcrumb-item
+						color: #fff
+						a
+							color: #fff
 	.birthday__list
 		margin: 0
 		.birthday__item
 			background-position: center
 			background-repeat: no-repeat
 			background-size: cover
-			padding: 100px 0 160px
-			min-height: 655px
-			max-height: 655px
+			padding: 190px 0 0
+			min-height: 752px
+			max-height: 752px
 			+media-breakpoint-down(md)
 				min-height: 680px
 				max-height: 680px
@@ -5252,35 +5605,87 @@ header
 							line-height: 48px
 							color: #FFF
 							padding-bottom: 30px
-						.birthday__sublist
+							margin-bottom: 0px
+						.birthday__textContainer
+							max-width: 800px
+							padding-bottom: 40px
+							.birthday__text
+								font-size: 24px
+								line-height: 34px
+								color: #fff
+								margin-bottom: 0
+								padding-bottom: 20px
+								&:last-child
+									padding-bottom: 0px
+						.birthday__advantage
 							padding-bottom: 30px
 							padding-left: 0
-							margin: 0
+							margin: 0	
+							padding-left: 25px					
 							.birthday__elem
 								font-size: 24px
 								line-height: 34px
 								color: #fff
+								list-style-type: disc
 								span
 									font-weight: 600
-						.birthday__text
+						.birthday__wrap					
+							p
+								font-size: 24px
+								line-height: 34px
+								color: #fff
+								margin-bottom: 0px
+								&:last-child
+									margin-bottom: 20px
+							.birthday__sublist
+								padding-left: 25px
+								&:first-child
+									padding-bottom: 20px
+								.birthday__elem
+									font-weight: 600
+									font-size: 24px
+									line-height: 34px
+									color: #fff
+									list-style-type: disc
+						.birthday__items
+							padding-left: 20px
+							.birthday__elem
+								font-weight: 600
+								font-size: 24px
+								line-height: 34px
+								color: #fff
+								list-style-type: disc
+						.birthday__slog
 							font-size: 24px
 							line-height: 34px
 							color: #fff
-							margin-bottom: 0
-							padding-bottom: 20px
-							max-width: 800px
-						span
-							font-size: 24px
-							line-height: 34px
-							color: #fff
-						.birthday__btn
+							.birthday__phone
+								&:hover
+									text-decoration: underline
+						.birthday__btnWrap
+							display: flex
+							align-items: center
+							justify-content: flex-start
+							li
+								padding-right: 20px
+								.birthday__btn
+									width: 350px
+									&::after 
+										right: 57px
+										padding-left: 0
+									&.white
+										background: #fff
+										color: #E72D2D
+										border: 1px solid #E72D2D
+										&::after 
+											content: url(../img/_src/arrowRedRight.svg)
 		.slick-dots
 			border-top: 1px solid rgba(255, 255, 255, 0.2)
-			bottom: 20px
+			bottom: 0px
 			padding-top: 40px
 			padding-bottom: 50px
 			text-align: left
-			padding-left: 10vw
+			padding-left: calc((100vw - 1272px) / 2)
 
 			li
 				margin: 0 27px

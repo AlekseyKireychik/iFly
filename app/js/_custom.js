@@ -546,7 +546,20 @@ $(document).ready(function() {
     event.preventDefault();
     $(".news__nav").toggleClass("is-active");
   });
-
+  //form request
+  $(".request").on("click", function(event) {
+    event.preventDefault();
+    $(".request__form").addClass("is-active");
+    $(".overlay").addClass("is-active");
+    $(".overlay").on("click", function(event) {
+      $(this).removeClass("is-active");
+      $(".request__form").removeClass("is-active");
+    });
+    $(".form__btnClose").on("click", function(event) {
+      $(".overlay").removeClass("is-active");
+      $(".request__form").removeClass("is-active");
+    });
+  });
   //form
   $(".register").on("click", function(event) {
     event.preventDefault();
@@ -569,7 +582,13 @@ $(document).ready(function() {
       $(this).removeClass("change");
     }
   });
-
+  $("#comment02").bind("input", function() {
+    if ($("#comment02").html($(this).val().length)) {
+      $(this).addClass("change");
+    } else {
+      $(this).removeClass("change");
+    }
+  });
   $(document).on("keypress", ".validate-numeric", function(event) {
     return isNumber(event);
   });

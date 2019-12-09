@@ -563,6 +563,9 @@ template {
   .maincontainer {
     max-width: 1272px !important;
   }
+  .birthday .container__breadcrumb {
+    left: calc((100vw - 1272px) / 2) !important;
+  }
 }
 
 @media screen and (min-width: 1537px) {
@@ -2448,6 +2451,636 @@ input.error {
     width: 100%;
   }
   .main__form .form .formWrap .footer__bottom .form__box button {
+    width: 100%;
+  }
+}
+
+.request__form {
+  background-color: #fff;
+  position: fixed;
+  left: 50%;
+  right: 50%;
+  top: 0%;
+  height: 100vh;
+  overflow: auto;
+  -webkit-transform: translate(-50%, 0%);
+      -ms-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  z-index: 1000;
+  display: none;
+}
+
+.request__form.is-active {
+  display: block;
+}
+
+.request__form .form {
+  padding: 95px 100px;
+}
+
+@media (max-width: 767.98px) {
+  .request__form .form {
+    padding: 50px 10px;
+  }
+}
+
+.request__form .form .wrap__btnClose {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.request__form .form .wrap__btnClose .title {
+  margin-bottom: 0;
+}
+
+.request__form .form .wrap__btnClose .form__btnClose {
+  position: relative;
+  cursor: pointer;
+  padding: 15px;
+}
+
+.request__form .form .wrap__btnClose .form__btnClose .form__line {
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  top: 47%;
+  right: 50%;
+  -webkit-transform: translate(50%);
+      -ms-transform: translate(50%);
+          transform: translate(50%);
+  background-color: transparent;
+}
+
+.request__form .form .wrap__btnClose .form__btnClose .form__line::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #E72D2D;
+  top: 0px;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.request__form .form .wrap__btnClose .form__btnClose .form__line::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  background-color: #E72D2D;
+  top: 0px;
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.request__form .form .formWrap {
+  padding-top: 60px;
+}
+
+.request__form .form .formWrap .form__top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.request__form .form .formWrap .form__top .mainform__group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+}
+
+.request__form .form .formWrap .form__top .mainform__group.group-01 {
+  -webkit-flex-basis: 50%;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+@media (max-width: 991.98px) {
+  .request__form .form .formWrap .form__top .mainform__group.group-01 {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .request__form .form .formWrap .form__top .mainform__group.group-01:nth-child(3) {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+
+.request__form .form .formWrap .form__top .mainform__group.group-01:nth-child(odd) {
+  padding-right: 27px;
+}
+
+@media (max-width: 991.98px) {
+  .request__form .form .formWrap .form__top .mainform__group.group-01:nth-child(odd) {
+    padding-right: 0px;
+  }
+}
+
+.request__form .form .formWrap .form__top .mainform__group .mainform__label {
+  font-size: 16px;
+  line-height: 19px;
+  color: #142C60;
+  font-weight: 600;
+  padding-left: 20px;
+  position: absolute;
+  top: 15px;
+  left: 0;
+}
+
+.request__form .form .formWrap .form__top .mainform__group .mainform__label .required-star {
+  color: #E72D2D;
+}
+
+.request__form .form .formWrap .form__top .mainform__group .mainform__label .help-text-wrap {
+  position: absolute;
+  top: 38px;
+  left: 0;
+  display: none;
+}
+
+.request__form .form .formWrap .form__top .mainform__group .mainform__label .help-text-wrap .help-text {
+  margin-top: 15px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #fff;
+  background-color: #E72D2D;
+  position: relative;
+  display: block;
+  white-space: nowrap;
+}
+
+.request__form .form .formWrap .form__top .mainform__group .mainform__label .help-text-wrap .help-text::before {
+  content: url(../img/_src/before-icon.svg);
+  position: absolute;
+  top: -12px;
+  left: 10px;
+}
+
+.request__form .form .formWrap .form__top .mainform__group input {
+  font-size: 16px;
+  line-height: 19px;
+  color: #142C60;
+  font-weight: 600;
+  width: 100%;
+  border: none;
+  padding: 15px 20px;
+  border-bottom: 1px solid #E5E7E8;
+}
+
+.request__form .form .formWrap .form__top .mainform__group input:focus {
+  border-bottom: 1px solid #142C60;
+}
+
+.request__form .form .formWrap .form__top .mainform__group input:focus + label {
+  top: -15px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #999EA7;
+}
+
+.request__form .form .formWrap .form__top .mainform__group input:focus + label .required-star {
+  color: #999EA7;
+}
+
+.request__form .form .formWrap .form__top .mainform__group input:required:invalid {
+  border-bottom: 1px solid #E72D2D;
+}
+
+.request__form .form .formWrap .form__top .mainform__group input:required:invalid + label {
+  top: 15px;
+  color: #E72D2D;
+}
+
+.request__form .form .formWrap .form__top .mainform__group input:required:invalid + label .help-text-wrap {
+  display: block;
+}
+
+.request__form .form .formWrap .form__top .mainform__group input:required:focus:invalid {
+  border-bottom: 1px solid #142C60;
+}
+
+.request__form .form .formWrap .form__top .mainform__group input:required:focus:invalid + label {
+  top: -15px;
+  color: #999EA7;
+}
+
+.request__form .form .formWrap .form__top .mainform__group input:required:focus:invalid + label .help-text-wrap {
+  display: none;
+}
+
+.request__form .form .formWrap .form__top .mainform__group input:required:invalid:not(:placeholder-shown) {
+  border-bottom: 1px solid #E72D2D;
+}
+
+.request__form .form .formWrap .form__top .mainform__group input:required:invalid:not(:placeholder-shown) + label {
+  top: 15px;
+  color: #E72D2D;
+}
+
+.request__form .form .formWrap .form__top .mainform__group input:required:invalid:not(:placeholder-shown) + label .help-text-wrap {
+  display: block;
+}
+
+.request__form .form .formWrap .form__top .mainform__group input:invalid:not(:focus):not(:placeholder-shown) {
+  border-bottom: 1px solid #E72D2D;
+}
+
+.request__form .form .formWrap .form__top .mainform__group input:invalid:not(:focus):not(:placeholder-shown) + label {
+  top: -15px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #E72D2D;
+}
+
+.request__form .form .formWrap .form__top .mainform__group input:valid:not(:focus):not(:placeholder-shown) {
+  border-bottom: 1px solid #E5E7E8;
+}
+
+.request__form .form .formWrap .form__top .mainform__group input:valid:not(:focus):not(:placeholder-shown) + label {
+  top: -15px;
+}
+
+.request__form .form .formWrap .form__center {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 1199.98px) {
+  .request__form .form .formWrap .form__center {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.request__form .form .formWrap .form__center .mainform__group {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+.request__form .form .formWrap .form__center .mainform__group.comment {
+  font-size: 16px;
+  line-height: 19px;
+  color: #142C60;
+  font-weight: 600;
+  width: 100%;
+  -webkit-flex-basis: 80%;
+      -ms-flex-preferred-size: 80%;
+          flex-basis: 80%;
+  padding-right: 27px;
+}
+
+@media (max-width: 1199.98px) {
+  .request__form .form .formWrap .form__center .mainform__group.comment {
+    padding-right: 0px;
+    padding-bottom: 20px;
+  }
+}
+
+@media (max-width: 1199.98px) and (max-width: 991.98px) {
+  .request__form .form .formWrap .form__center .mainform__group.comment {
+    padding-bottom: 40px;
+  }
+}
+
+.request__form .form .formWrap .form__center .mainform__group.comment .mainform__label {
+  position: absolute;
+  top: 25px;
+}
+
+.request__form .form .formWrap .form__center .mainform__group.comment .mainform__control {
+  margin-top: 0px;
+  padding: 20px 20px;
+}
+
+.request__form .form .formWrap .form__center .mainform__group.comment .mainform__control.change + label {
+  top: -15px;
+}
+
+.request__form .form .formWrap .form__center .mainform__group.comment #comment:focus {
+  border-bottom: 1px solid #142C60;
+}
+
+.request__form .form .formWrap .form__center .mainform__group.comment #comment:focus + label {
+  top: -15px;
+  font-size: 14px;
+  line-height: 17px;
+  color: #999EA7;
+}
+
+.request__form .form .formWrap .form__center .mainform__group.file {
+  -webkit-flex-basis: 20%;
+      -ms-flex-preferred-size: 20%;
+          flex-basis: 20%;
+  position: relative;
+  z-index: 10;
+  padding-top: 25px;
+}
+
+.request__form .form .formWrap .form__center .mainform__group.file .mainform__label {
+  padding-left: 40px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #E5E7E8;
+  cursor: pointer;
+}
+
+@media (max-width: 575.98px) {
+  .request__form .form .formWrap .form__center .mainform__group.file .mainform__label {
+    width: 100%;
+  }
+}
+
+.request__form .form .formWrap .form__center .mainform__group.file .mainform__control {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  position: absolute;
+  z-index: -10;
+}
+
+.request__form .form .formWrap .form__center .mainform__group.file::before {
+  position: absolute;
+  content: url(../img/_src/file.svg);
+  top: 20px;
+  padding: 3px;
+}
+
+.request__form .form .formWrap .form__center .mainform__group.file span {
+  font-size: 14px;
+  line-height: 18px;
+  padding-top: 10px;
+  color: #BEBEBE;
+}
+
+.request__form .form .formWrap .form__center .mainform__group .mainform__label {
+  font-size: 16px;
+  line-height: 19px;
+  color: #142C60;
+  font-weight: 600;
+  padding-left: 20px;
+}
+
+.request__form .form .formWrap .form__center .mainform__group .mainform__control {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #E5E7E8;
+  resize: none;
+  margin-top: -23px;
+}
+
+.request__form .form .formWrap #file-name .del__container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #F7F7F7;
+  padding: 25px 40px 25px 28px;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: 600;
+}
+
+.request__form .form .formWrap #file-name .del__container #del-file {
+  color: #142C60;
+  position: relative;
+  cursor: pointer;
+}
+
+.request__form .form .formWrap #file-name .del__container #del-file::before {
+  position: absolute;
+  content: url(../img/_src/close.svg);
+  cursor: pointer;
+  top: 0px;
+  left: -35px;
+}
+
+@media (max-width: 575.98px) {
+  .request__form .form .formWrap #file-name .del__container #del-file::before {
+    top: -10px;
+    left: 0px;
+  }
+}
+
+.request__form .form .formWrap #file-name .del__container #del-file .name {
+  color: #142C60;
+}
+
+@media (max-width: 575.98px) {
+  .request__form .form .formWrap #file-name .del__container #del-file .name {
+    display: none;
+  }
+}
+
+.request__form .form .formWrap .footer__bottom {
+  padding-top: 50px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 1199.98px) {
+  .request__form .form .formWrap .footer__bottom {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    padding-top: 0px;
+  }
+}
+
+.request__form .form .formWrap .footer__bottom .form-check {
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.request__form .form .formWrap .footer__bottom .form-check .form__check-label {
+  font-size: 16px;
+  line-height: 24px;
+  padding-left: 0px;
+  color: #142C60;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.request__form .form .formWrap .footer__bottom .form-check .form__check-label::after {
+  position: absolute;
+  content: url(../img/_src/check.svg);
+  left: -31px;
+  top: -3px;
+}
+
+@media (max-width: 991.98px) {
+  .request__form .form .formWrap .footer__bottom .form-check .form__check-label::after {
+    top: 0px;
+    left: -16px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .request__form .form .formWrap .footer__bottom .form-check .form__check-label {
+    padding-left: 12px;
+  }
+}
+
+.request__form .form .formWrap .footer__bottom .form-check .form__check-input {
+  background: #F7F7F7;
+  border: 2px solid #F7F7F7;
+}
+
+.request__form .form .formWrap .footer__bottom .form-check input[type="checkbox"] {
+  display: inline-block;
+  width: auto;
+  margin-top: 5px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.request__form .form .formWrap .footer__bottom .form-check .form__check-input + label::before {
+  cursor: pointer;
+  position: absolute;
+  left: -35px;
+  top: 2px;
+  height: 18px;
+  width: 18px;
+  content: "";
+  background: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  border: 2px solid #142C60;
+}
+
+@media (max-width: 991.98px) {
+  .request__form .form .formWrap .footer__bottom .form-check .form__check-input + label::before {
+    top: 4px;
+    left: -20px;
+  }
+}
+
+.request__form .form .formWrap .footer__bottom .form-check .form__check-input:checked + label::before {
+  background: #E72D2D;
+  border: 2px solid #E72D2D;
+}
+
+.request__form .form .formWrap .footer__bottom .form__box button {
+  padding: 14px 95px 14px 60px;
+}
+
+.request__form .form .formWrap .footer__bottom .form__box button::after {
+  top: 15px;
+  right: 55px;
+  padding-left: 0;
+}
+
+@media (max-width: 575.98px) {
+  .request__form .form .formWrap .footer__bottom .form__box {
+    width: 100%;
+  }
+  .request__form .form .formWrap .footer__bottom .form__box button {
     width: 100%;
   }
 }
@@ -11054,6 +11687,23 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   }
 }
 
+.birthday {
+  position: relative;
+}
+
+.birthday .container__breadcrumb {
+  position: absolute;
+  left: calc((100vw - 1140px) / 2);
+}
+
+.birthday .container__breadcrumb .row .nav__breadcrumb .breadcrumb .breadcrumb-item {
+  color: #fff;
+}
+
+.birthday .container__breadcrumb .row .nav__breadcrumb .breadcrumb .breadcrumb-item a {
+  color: #fff;
+}
+
 .birthday .birthday__list {
   margin: 0;
 }
@@ -11062,9 +11712,9 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 100px 0 160px;
-  min-height: 655px;
-  max-height: 655px;
+  padding: 190px 0 0;
+  min-height: 752px;
+  max-height: 752px;
 }
 
 @media (max-width: 991.98px) {
@@ -11086,46 +11736,138 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   line-height: 48px;
   color: #FFF;
   padding-bottom: 30px;
+  margin-bottom: 0px;
 }
 
-.birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__sublist {
-  padding-bottom: 30px;
-  padding-left: 0;
-  margin: 0;
+.birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__textContainer {
+  max-width: 800px;
+  padding-bottom: 40px;
 }
 
-.birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__sublist .birthday__elem {
-  font-size: 24px;
-  line-height: 34px;
-  color: #fff;
-}
-
-.birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__sublist .birthday__elem span {
-  font-weight: 600;
-}
-
-.birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__text {
+.birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__textContainer .birthday__text {
   font-size: 24px;
   line-height: 34px;
   color: #fff;
   margin-bottom: 0;
   padding-bottom: 20px;
-  max-width: 800px;
 }
 
-.birthday .birthday__list .birthday__item .container .row .birthday__caption span {
+.birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__textContainer .birthday__text:last-child {
+  padding-bottom: 0px;
+}
+
+.birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__advantage {
+  padding-bottom: 30px;
+  padding-left: 0;
+  margin: 0;
+  padding-left: 25px;
+}
+
+.birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__advantage .birthday__elem {
+  font-size: 24px;
+  line-height: 34px;
+  color: #fff;
+  list-style-type: disc;
+}
+
+.birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__advantage .birthday__elem span {
+  font-weight: 600;
+}
+
+.birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__wrap p {
+  font-size: 24px;
+  line-height: 34px;
+  color: #fff;
+  margin-bottom: 0px;
+}
+
+.birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__wrap p:last-child {
+  margin-bottom: 20px;
+}
+
+.birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__wrap .birthday__sublist {
+  padding-left: 25px;
+}
+
+.birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__wrap .birthday__sublist:first-child {
+  padding-bottom: 20px;
+}
+
+.birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__wrap .birthday__sublist .birthday__elem {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 34px;
+  color: #fff;
+  list-style-type: disc;
+}
+
+.birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__items {
+  padding-left: 20px;
+}
+
+.birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__items .birthday__elem {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 34px;
+  color: #fff;
+  list-style-type: disc;
+}
+
+.birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__slog {
   font-size: 24px;
   line-height: 34px;
   color: #fff;
 }
 
+.birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__slog .birthday__phone:hover {
+  text-decoration: underline;
+}
+
+.birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__btnWrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__btnWrap li {
+  padding-right: 20px;
+}
+
+.birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__btnWrap li .birthday__btn {
+  width: 350px;
+}
+
+.birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__btnWrap li .birthday__btn::after {
+  right: 57px;
+  padding-left: 0;
+}
+
+.birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__btnWrap li .birthday__btn.white {
+  background: #fff;
+  color: #E72D2D;
+  border: 1px solid #E72D2D;
+}
+
+.birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__btnWrap li .birthday__btn.white::after {
+  content: url(../img/_src/arrowRedRight.svg);
+}
+
 .birthday .birthday__list .slick-dots {
   border-top: 1px solid rgba(255, 255, 255, 0.2);
-  bottom: 20px;
+  bottom: 0px;
   padding-top: 40px;
   padding-bottom: 50px;
   text-align: left;
-  padding-left: 10vw;
+  padding-left: calc((100vw - 1272px) / 2);
 }
 
 .birthday .birthday__list .slick-dots li {

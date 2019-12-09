@@ -232,18 +232,92 @@
 				</div>
 			</form>
 		</div>
+		<div class="container request__form">
+			<form id="form02" class="form">
+				<div class="wrap__btnClose">
+					<h2 class="title">Оставьте заявку</h2>
+					<div class="form__btnClose">
+						<span class="form__line"></span>
+					</div>
+				</div>
+				<div class="formWrap">
+					<div class="form__top">
+						<div class="mainform__group group-01">							
+							<input type="text" placeholder=" " class="mainform__control required" name="name" id="name02" placeholder="" required>
+							<label for="name02"  class="mainform__label">Имя<span class="required-star">*</span><span class="help-text-wrap"><span class="help-text">Обязательное поле</span></span></label>
+							
+						</div>
+						<div class="mainform__group group-01">							
+							<input type="text" placeholder=" " class="mainform__control required" name="fname" id="fname02" placeholder="" required>
+							<label for="fname02" class="mainform__label">Фамилия<span class="required-star">*</span><span class="help-text-wrap"><span class="help-text">Обязательное поле</span></span></label>
+						</div>
+						<div class="mainform__group group-01">							
+							<input type="tel" placeholder=" " class="mainform__control validate-numeric required" name="tel" id="tel02" placeholder="" required>
+							<label for="tel02" class="mainform__label">Телефон<span class="required-star">*</span><span class="help-text-wrap"><span class="help-text">Обязательное поле</span></span></label>
+						</div>
+						<div class="mainform__group group-01">							
+							<input type="email" placeholder=" " class="mainform__control" name="email" id="email02" placeholder="">
+							<label for="email" class="mainform__label">Email</label>
+						</div>
+					</div>
+					<div class="form__center">
+						<div class="mainform__group comment">							
+							<textarea
+								data-autoresize rows="1"
+								name="comment"
+								id="comment02"
+								coll="5"
+								rows="3"
+								class="mainform__control"
+								placeholder=" "
+								>
+							</textarea>
+							<label for="comment02" class="mainform__label">Комментарий</label>
+						</div>
+					</div>
+					
+					<input type="hidden" name="culturecode">
+					<input type="hidden" name="url">
+					<div class="footer__bottom">
+						<div class="mainform__group form-check">  
+							<input class="form__check-input required" placeholder="" required type="checkbox" id="check2">  
+							<label class="form__check-label" for="check2">Заполняя форму, я даю согласие на обработку и хранение персональных данных</label>  
+						</div> 
+						<div class="form__box">
+							<button type="submit" id="btn" class="btn submit">
+								ОТПРАВИТЬ
+							</button>
+						</div>
+					</div>					
+				</div>
+			</form>
+		</div>
 		<div class="overlay"></div>
 		<div class="birthday">
+			<div class="container container__breadcrumb">
+				<div class="row">
+					<nav aria-label="breadcrumb" class="nav__breadcrumb">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="/">Ваш праздник</a></li>
+							<li class="breadcrumb-item active" aria-current="page">
+								Дни Рождения
+							</li>
+						</ol>
+					</nav>
+				</div>
+			</div>
 			<ul id="birthday-list" class="birthday__list slider">
 				<li class="birthday__item" style="background-image: url(img/_src/birthday01.jpg);">
 					<div class="container">
 						<div class="row">
 							<div class="birthday__caption">
 								<h2 class="birthday__title">День Рождения в аэротрубе</h2>
-								<p class="birthday__text">Ищите идеи, где бы отметить день Рождения так, чтобы праздник надолго запомнился и взрослым, и детям?</p>
-								<p class="birthday__text">Подарите эмоции себе или своим близким – проведите день Рождения в аэротрубе iFLY Minsk. И вы буквально улетите от счастья!</p>
-								<ul>
-									<li><a class="birthday__btn btn" href="#">Оставить заявку</a></li>
+								<div class="birthday__textContainer">
+									<p class="birthday__text">Ищите идеи, где бы отметить день Рождения так, чтобы праздник надолго запомнился и взрослым, и детям?</p>
+									<p class="birthday__text">Подарите эмоции себе или своим близким – проведите день Рождения в аэротрубе iFLY Minsk. И вы буквально улетите от счастья!</p>
+								</div>
+								<ul class="birthday__btnWrap">
+									<li><a class="birthday__btn white btn request" href="#">Оставить заявку</a></li>
 									<li><a class="birthday__btn btn" href="#">преимущества</a></li>
 								</ul>
 							</div>
@@ -255,13 +329,15 @@
 						<div class="row">
 							<div class="birthday__caption">
 								<h2 class="birthday__title">Преимущества праздника в аэротрубе</h2>
-								<ul class="birthday__sublist">
+								<ul class="birthday__advantage">
 									<li class="birthday__elem"><span>ВЕСЕЛО</span> - развлекательный полет в аэротрубе дарит радость и веселье детям и взрослым</li>
 									<li class="birthday__elem"><span>ОРИГИНАЛЬНО</span> - проведенное мероприятие в аэродинамическом комплексе удивит любого</li>
 									<li class="birthday__elem"><span>НЕЗАБЫВАЕМО</span> - полученные эмоции от свободного полета останутся в вашей памяти надолго</li>
 									<li class="birthday__elem"><span>БЕЗОПАСНО</span> - полет проходит в безопасных условиях под контролем опытных инструкторов</li>
 								</ul>
-								<a class="birthday__btn btn" href="#">Ожидания от посещения</a>
+								<ul class="birthday__btnWrap">
+									<li><a class="birthday__btn btn" href="#">Ожидания от посещения</a></li>
+								</ul>
 							</div>
 						</div>
 					</div>					
@@ -271,18 +347,22 @@
 						<div class="row">
 							<div class="birthday__caption">
 								<h2 class="birthday__title">Каждого участника праздника ожидаете</h2>
-								<ul class="birthday__sublist">
-									<li class="birthday__elem">предполетный инструктаж</li>
-									<li class="birthday__elem">2 мин свободного полета (или более, в зависимости от ваших пожеланий);</li>
-								</ul>
-								<span>Чтобы заказать праздник в iFLY Minsk :</span>
-								<ul class="birthday__sublist">
-									<li class="birthday__elem">определитесь с количеством гостей;</li>
-									<li class="birthday__elem">заполните заявку на полет – должна быть ссылка на заполнение заявки</li>
-								</ul>
-								<span>Наши менеджеры свяжутся с вами для уточнения даты и времени мероприятия, подробностей программы.</span>
-								<ul>
-									<li><a class="birthday__btn btn" href="#">Оставить заявку</a></li>
+								<div class="birthday__wrap">
+									<ul class="birthday__sublist">
+										<li class="birthday__elem">предполетный инструктаж</li>
+										<li class="birthday__elem">2 мин свободного полета (или более, в зависимости от ваших пожеланий);</li>
+									</ul>
+								</div>
+								<div class="birthday__wrap">
+									<p>Чтобы заказать праздник в iFLY Minsk :</p>
+									<ul class="birthday__sublist">
+										<li class="birthday__elem">определитесь с количеством гостей;</li>
+										<li class="birthday__elem">заполните заявку на полет – должна быть ссылка на заполнение заявки</li>
+									</ul>								
+									<p>Наши менеджеры свяжутся с вами для уточнения даты и времени мероприятия, подробностей программы.</p>
+								</div>
+								<ul class="birthday__btnWrap">
+									<li><a class="birthday__btn white btn request" href="#">Оставить заявку</a></li>
 									<li><a class="birthday__btn btn" href="#">Важно знать</a></li>
 								</ul>
 							</div>
@@ -294,14 +374,16 @@
 						<div class="row">
 							<div class="birthday__caption">	
 								<h2 class="birthday__title">Что важно знать?</h2>
-								<ul class="birthday__sublist">
+								<ul class="birthday__items">
 									<li class="birthday__elem">В программу полета включен инструктаж и необходимая для полета экипировка (шлем, комбинезон, очки, беруши);</li>
 									<li class="birthday__elem">Рекомендуемая форма одежды: удобная одежда, спортивная обувь (без металлических вставок);</li>
 									<li class="birthday__elem">Участник должен быть старше 3 лет;</li>
 									<li class="birthday__elem">Нельзя летать со свежими травмами позвоночника или вывихами плеча;</li>
 									<li class="birthday__elem">Можно приглашать друзей наблюдать за вашим полетом.</li>
 								</ul>
-								<span>Мы поможем организовать ваш праздник в соответствии с вашими потребностями и провести незабываемое мероприятие. Чтобы забронировать дату мероприятия, свяжитесь с нами по тел. <a href="tel:+375257776655">+375257776655</a></span>
+								<span class="birthday__slog">Мы поможем организовать ваш праздник в соответствии с вашими потребностями и провести незабываемое мероприятие. Чтобы забронировать дату мероприятия, свяжитесь с нами по тел.<br> 
+									<a class="birthday__phone" href="tel:+375257776655">+375257776655</a>
+								</span>
 							</div>
 						</div>
 					</div>					
