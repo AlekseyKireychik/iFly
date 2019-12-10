@@ -7,6 +7,9 @@
     .birthday
         .container__breadcrumb
             left: calc((100vw - 1272px) / 2)!important
+        .birthday__list
+            .slick-dots
+                padding-left: calc((100vw - 1272px) / 2)!important
 @media screen and (min-width: 1537px)
     .programs__home
         padding-bottom: 120px!important
@@ -269,6 +272,12 @@
                                 max-width: 330px!important
                                 .order__link
                                     flex-basis: 330px!important
+    .birthday
+        .container__breadcrumb
+            left: calc((100vw - 680px) / 2)!important
+        .birthday__list
+            .slick-dots
+                padding-left: calc((100vw - 680px) / 2)!important
 @media (min-width: 577px) and (max-width: 669px)
     .programs__home
         .container
@@ -290,3 +299,15 @@
                                 flex-basis: 100%!important
                             &.instructor-small
                                 flex-basis: 100%!important
+@media screen and (max-width: 320px)
+    .birthday
+        .birthday__list
+            .birthday__item
+                min-height: 955px!important
+                max-height: 955px!important
+                .container
+                    .row
+                        .birthday__caption
+                            .birthday__btnWrap
+                                li
+                                    padding-bottom: 10px!important
