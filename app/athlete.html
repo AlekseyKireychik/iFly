@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>iFly</title>
+	<meta name="description" content="iFly Стать спорсменом">
+
+	<meta name="viewport" content="width=device-width">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+	<link rel="icon" href="img/favicon.ico">
+	<meta property="og:image" content="img/@1x/preview.jpg">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="css/styles.min.css" />   
+
+</head>
+
+<body>
+	<header>		
+		<div class="container container__header ">
+			<div class="header row">
+				<div class="header__logo">
+					<a href="/">
+						<img class="" src="img/_src/logo.png" alt="iFly">
+					</a>
+				</div>
+				<nav class="header__nav">
+					<ul class="header__list-nav">
+						<li class="header__item">
+							<a href="#" class="header__link">Новичкам</a>
+							<ul class="header__subList">
+								<li class="header__item"><a class="header__subLink" href="">Что вас ждет</a></li>
+								<li class="header__item"><a class="header__subLink" href="">Программы полетов</a></li>
+								<li class="header__item"><a class="header__subLink" href="./certificate.html">Подарочный сертификат</a></li>
+								<li class="header__item"><a class="header__subLink" href="">Стать спортсменом</a></li>
+								<li class="header__item"><a class="header__subLink" href="">Вопрос-ответ</a></li>
+							</ul>
+						</li>
+						<li class="header__item">
+							<a href="./" class="header__link">Спортсменам</a>
+							<ul class="header__subList">
+								<li class="header__item"><a class="header__subLink" href="">Тарифы</a></li>
+								<li class="header__item"><a class="header__subLink" href="">Коучинг</a></li>
+								<li class="header__item"><a class="header__subLink" href="">Детская лига</a></li>
+								<li class="header__item"><a class="header__subLink" href="">Курс AFF</a></li>
+								<li class="header__item"><a class="header__subLink" href="">Возможности объекта</a></li>
+								<li class="header__item"><a class="header__subLink" href="">Кэмпы и соревнования</a></li>
+								<li class="header__item"><a class="header__subLink" href="">Аэротрубный спорт</a></li>
+							</ul>
+						</li>
+						<li class="header__item">
+							<a href="./" class="header__link">Корпоративы</a>
+							<ul class="header__subList">
+								<li class="header__item"><a class="header__subLink" href="./birthday.html">Дни рождения</a></li>
+								<li class="header__item"><a class="header__subLink" href="">Бизнес встречи</a></li>
+							</ul>
+						</li>
+					</ul>
+				</nav>	
+				<div class="header__function">
+					<a class="header__phone" href="tel:+375441111111">+375 44 111-11-11</a>
+					<a class="header__request btn register" href="#">Полетели</a>
+					<div class="header__profile">
+						<a class="lang__btn" href="#">ru</a>
+						<div class="profile__container">
+							<a class="profile__containerLogo" href="#">
+								<img class="profile__logo" src="img/_src/profileicon.svg" alt="profile icon">
+								<img class="profile__logo-active" src="img/_src/profileiconActive.svg" alt="profile icon active">
+							</a>							
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="burger-menu">
+				<a href="#" class="burger-menu__button">
+					<span class="burger-menu__lines"></span>
+				</a>
+			</div>
+			<ul class="profile__subList">
+				<li class="profile__item"><a class="profile__subLink" href="#">Профиль</a></li>
+				<li class="profile__item"><a class="profile__subLink" href="#">Мои полеты</a></li>
+				<li class="profile__item"><a class="profile__subLink" href="#">Настройки</a></li>
+				<li class="profile__item"><a class="profile__subLink" href="#">Выйти</a></li>
+			</ul>
+			<nav id="nav-menu" class="nav">
+				<ul class="menu__wrap">
+					<li class="menu__subItem">
+						<div class="menu-title menu-mobile-title">Новичкам
+							<ul class="menu__list menu-mobile">
+								<li class="menu__item"><a class="menu__link" href="">Что вас ждет</a></li>
+								<li class="menu__item"><a class="menu__link" href="">Программы полетов</a></li>
+								<li class="menu__item"><a class="menu__link" href="./certificate.html">Подарочный сертификат</a></li>
+								<li class="menu__item"><a class="menu__link" href="">Стать спортсменом</a></li>
+								<li class="menu__item"><a class="menu__link" href="">Вопрос-ответ</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="menu__subItem">
+						<div class="menu-title menu-mobile-title">Спортсменам
+							<ul class="menu__list menu-mobile">
+								<li class="menu__item"><a class="menu__link" href="">Тарифы</a></li>
+								<li class="menu__item"><a class="menu__link" href="">Коучинг</a></li>
+								<li class="menu__item"><a class="menu__link" href="">Детская лига</a></li>
+								<li class="menu__item"><a class="menu__link" href="">Курс AFF</a></li>
+								<li class="menu__item"><a class="menu__link" href="">Возможности объекта</a></li>
+								<li class="menu__item"><a class="menu__link" href="">Кэмпы и соревнования</a></li>
+								<li class="menu__item"><a class="menu__link" href="">Аэротрубный спорт</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="menu__subItem">						
+						<div class="menu-title menu-mobile-title">Корпоративы
+							<ul class="menu__list menu-mobile">
+								<li class="menu__item"><a class="menu__link" href="./birthday.html">Дни рождения</a></li>
+								<li class="menu__item"><a class="menu__link" href="">Бизнес встречи</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="menu__subItem">
+						<div class="menu-title">Новости
+							<ul class="menu__list">
+								<li class="menu__item"><a class="menu__link" href="./news.html">Специальные предложения</a></li>
+								<li class="menu__item"><a class="menu__link" href="./news.html">Новости</a></li>
+							</ul>
+						</div>
+					</li>
+					<li class="menu__subItem">
+						<div class="menu-title">О нас
+							<ul class="menu__list">
+								<li class="menu__item"><a class="menu__link" href="">iFLY Minsk</a></li>
+								<li class="menu__item"><a class="menu__link" href="">Как это работает</a></li>
+								<li class="menu__item"><a class="menu__link" href="./instructors.html">Наша команда</a></li>
+								<li class="menu__item"><a class="menu__link" href="">Виртуальный тур</a></li>
+								<li class="menu__item"><a class="menu__link" href="">Фото и видео</a></li>
+								<li class="menu__item"><a class="menu__link" href="./contacts.html">Контакты</a></li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<ul class="seti__list">
+					<li class="seti__item"><a class="seti__link" href=""><img class="seti__icon" src="img/_src/instagramBlack.svg" alt="Мы в инстаграм"></a></li>
+					<li class="seti__item"><a class="seti__link" href=""><img class="seti__icon" src="img/_src/FacebookBlack.svg" alt="Мы в фэйсбук"></a></li>
+					<li class="seti__item"><a class="seti__link" href=""><img class="seti__icon" src="img/_src/youtubeBlack.svg" alt="Мы в ютуб"></a></li>							
+				</ul>	
+				<ul class="contacts__list">
+					<li class="contacts__item">
+						<a class="contacts__link contacts__phone" href="tel:+375441111111">+375 44 111-11-11</a>
+					</li>
+					<li class="contacts__item">
+						<a class="contacts__link contacts__mail" href="mailto:info@iflyminsk.by">info@iflyminsk.by</a>
+					</li>
+					<li class="contacts__item">
+						<a class="contacts__link contacts__map" href="./contacts.html">Тимирязева 74</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="burger-menu__overlay"></div>			
+		</div>
+	</header>
+	<main>
+		<div class="container main__form">
+			<form id="form" class="form">
+				<div class="wrap__btnClose">
+					<h2 class="title">Связаться с нами</h2>
+					<div class="form__btnClose">
+						<span class="form__line"></span>
+					</div>
+				</div>
+				<div class="formWrap">
+					<div class="form__top">
+						<div class="mainform__group group-01">							
+							<input type="text" placeholder=" " class="mainform__control required" name="name" id="name" placeholder="" required>
+							<label for="name"  class="mainform__label">Имя<span class="required-star">*</span><span class="help-text-wrap"><span class="help-text">Обязательное поле</span></span></label>
+							
+						</div>
+						<div class="mainform__group group-01">							
+							<input type="text" placeholder=" " class="mainform__control required" name="fname" id="fname" placeholder="" required>
+							<label for="fname" class="mainform__label">Фамилия<span class="required-star">*</span><span class="help-text-wrap"><span class="help-text">Обязательное поле</span></span></label>
+						</div>
+						<div class="mainform__group group-01">							
+							<input type="tel" placeholder=" " class="mainform__control validate-numeric required" name="tel" id="tel" placeholder="" required>
+							<label for="tel" class="mainform__label">Телефон<span class="required-star">*</span><span class="help-text-wrap"><span class="help-text">Обязательное поле</span></span></label>
+						</div>
+						<div class="mainform__group group-01">							
+							<input type="email" placeholder=" " class="mainform__control" name="email" id="email" placeholder="">
+							<label for="email" class="mainform__label">Email</label>
+						</div>
+					</div>
+					<div class="form__center">
+						<div class="mainform__group comment">							
+							<textarea
+								data-autoresize rows="1"
+								name="comment"
+								id="comment"
+								coll="5"
+								rows="3"
+								class="mainform__control"
+								placeholder=" "
+								>
+							</textarea>
+							<label for="comment" class="mainform__label">Комментарий</label>
+						</div>
+						<div class="mainform__group file">
+							<label for="uploaded-file" class="mainform__label">Прикрепить резюме</label>
+							<input id="uploaded-file" onchange="getFileName ();" placeholder="" accept="application/pdf,application/msword" class="mainform__control" type="file" name="file" multiple>							
+							<span>Допустимый формат: pdf, doc</span>
+						</div>
+					</div>
+					<div id="file-name"></div>
+					
+					<input type="hidden" name="culturecode">
+					<input type="hidden" name="url">
+					<div class="footer__bottom">
+						<div class="mainform__group form-check">  
+							<input class="form__check-input required" placeholder="" required type="checkbox" id="check1">  
+							<label class="form__check-label" for="check1">Заполняя форму, я даю согласие на обработку и хранение персональных данных</label>  
+						</div> 
+						<div class="form__box">
+							<button type="submit" id="btn" class="btn submit">
+								ОТПРАВИТЬ
+							</button>
+						</div>
+					</div>					
+				</div>
+			</form>
+		</div>
+		<div class="container request__form">
+			<form id="form02" class="form">
+				<div class="wrap__btnClose">
+					<h2 class="title">Оставьте заявку</h2>
+					<div class="form__btnClose">
+						<span class="form__line"></span>
+					</div>
+				</div>
+				<div class="formWrap">
+					<div class="form__top">
+						<div class="mainform__group group-01">							
+							<input type="text" placeholder=" " class="mainform__control required" name="name" id="name02" placeholder="" required>
+							<label for="name02"  class="mainform__label">Имя<span class="required-star">*</span><span class="help-text-wrap"><span class="help-text">Обязательное поле</span></span></label>
+							
+						</div>
+						<div class="mainform__group group-01">							
+							<input type="text" placeholder=" " class="mainform__control required" name="fname" id="fname02" placeholder="" required>
+							<label for="fname02" class="mainform__label">Фамилия<span class="required-star">*</span><span class="help-text-wrap"><span class="help-text">Обязательное поле</span></span></label>
+						</div>
+						<div class="mainform__group group-01">							
+							<input type="tel" placeholder=" " class="mainform__control validate-numeric required" name="tel" id="tel02" placeholder="" required>
+							<label for="tel02" class="mainform__label">Телефон<span class="required-star">*</span><span class="help-text-wrap"><span class="help-text">Обязательное поле</span></span></label>
+						</div>
+						<div class="mainform__group group-01">							
+							<input type="email" placeholder=" " class="mainform__control" name="email" id="email02" placeholder="">
+							<label for="email" class="mainform__label">Email</label>
+						</div>
+					</div>
+					<div class="form__center">
+						<div class="mainform__group comment">							
+							<textarea
+								data-autoresize rows="1"
+								name="comment"
+								id="comment02"
+								coll="5"
+								rows="3"
+								class="mainform__control"
+								placeholder=" "
+								>
+							</textarea>
+							<label for="comment02" class="mainform__label">Комментарий</label>
+						</div>
+					</div>
+					
+					<input type="hidden" name="culturecode">
+					<input type="hidden" name="url">
+					<div class="footer__bottom">
+						<div class="mainform__group form-check">  
+							<input class="form__check-input required" placeholder="" required type="checkbox" id="check2">  
+							<label class="form__check-label" for="check2">Заполняя форму, я даю согласие на обработку и хранение персональных данных</label>  
+						</div> 
+						<div class="form__box">
+							<button type="submit" id="btn" class="btn submit">
+								ОТПРАВИТЬ
+							</button>
+						</div>
+					</div>					
+				</div>
+			</form>
+		</div>
+		<div class="overlay"></div>
+		<div class="athlete">
+			<div class="container container__breadcrumb">
+				<div class="row">
+					<nav aria-label="breadcrumb" class="nav__breadcrumb">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="/">Главная</a></li>
+							<li class="breadcrumb-item active" aria-current="page">
+								Стать спорсменом
+							</li>
+						</ol>
+					</nav>
+				</div>
+			</div>
+			<section class="athlete__banner">
+				<div class="container">
+					<div class="row">
+						<div class="athlete__caption">
+							<h2 class="athlete__title">Стать спортсменом</h2>
+							<p class="athlete__text">Вы испытали всю бурю эмоций от первого полета и теперь каждую ночь летаете во сне? Значит вам пора стать спортсменом и теперь тренироваться по-настоящему. В iFLY Minsk это очень просто. Достаточно пройти наше 10-минутное обучение «От Новичка к Профессионалу». И дальше вы сможете сами выбирать дисциплину, в которой хотите развиваться, инструктора, с которым вам комфортно и время для тренировок, в которое вам удобно.</p>
+							<a class="athlete__btn white btn request" href="#">Заказать обучение</a>								
+						</div>
+					</div>
+				</div>
+			</section>			
+		</div>
+		<section class="athlete__programs">
+			<div class="container">
+				<div class="row">
+					<h2 class="title">Программа обучения</h2>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="athlete__left">
+						<div class="athlete__content">
+							<div class="wrap__title">
+								<h3 class="athlete__title">Тест1</h3>
+								<span class="athlete__description">Обучающие курсы полёта в аэротрубе в дружеской, веселой обстановке группы. Все хотят отметить корпоративный успех в кругу сослуживцев нестандартно, весело, интересно. В неформальной обстановке коллеги лучше узнают друг друга. Это укрепляет командный дух и благотворно влияет на климат в трудовом коллективе.</span>
+							</div>
+							<a href="#" class="athlete__wrapBtn">
+								<span class="athlete__btn btn">купить</span>
+							</a>
+							<div class="athlete__options">
+								<span class="athlete__time">5 мин
+									<span class="athlete__container">
+										<span class="athlete__description">Время полета</span>
+									</span>
+								</span>
+								<span class="athlete__counter">2
+									<span class="athlete__container">
+										<span class="athlete__description">Количество полетов</span>
+									</span>
+								</span>
+								<span class="athlete__person">2
+									<span class="athlete__container">
+										<span class="athlete__description">Количество человек</span>
+									</span>
+								</span>
+								<span class="athlete__order">50 BYN</span>
+							</div>
+						</div>
+					</div>
+					<div class="athlete__right">
+						<div class="athlete__slider slider">
+							<div class="athlete__item"><img src="img/_src/videopr.jpg" alt="1"></div>
+							<div class="athlete__item"><img src="img/_src/videopr.jpg" alt="2"></div>
+							<div class="athlete__item"><img src="img/_src/videopr.jpg" alt="3"></div>
+							<div class="athlete__item"><img src="img/_src/videopr.jpg" alt="4"></div>
+							<div class="athlete__item"><img src="img/_src/videopr.jpg" alt="5"></div>
+						</div>	
+						<div class="athlete__sliderNav slider">
+							<div class="athlete__item"><img src="img/_src/videopr.jpg" alt="1"></div>
+							<div class="athlete__item"><img src="img/_src/videopr.jpg" alt="2"></div>
+							<div class="athlete__item"><img src="img/_src/videopr.jpg" alt="3"></div>
+							<div class="athlete__item"><img src="img/_src/videopr.jpg" alt="4"></div>
+							<div class="athlete__item"><img src="img/_src/videopr.jpg" alt="5"></div>
+						</div>
+					</div>				
+				</div>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<div class="footer__logo container">
+			<div class="row">
+				<a class="footer__link" href="/"><img src="img/_src/logo-footer.png" alt="iFly"/></a>
+			</div>
+		</div>
+		<div class="container">
+			<nav class="footer__nav row">
+				<ul class="footer__list">
+				  <li class="footer__item">
+					<a class="footer__link" href="./">Программы полетов</a>
+				  </li>
+				  <li class="footer__item">
+					<a class="footer__link" href="./">Подарочный сертификат</a>
+				  </li>
+				  <li class="footer__item">
+					<a class="footer__link" href="./">Специальные предложения</a>
+				  </li>
+				  <li class="footer__item">
+					<a class="footer__link" href="./contacts.html">Контакты</a>
+				  </li>
+				  <li class="footer__item">
+					<a class="footer__link" href="./faq.html">FAQ</a>
+				  </li>
+				</ul>
+				<ul class="footer__list">
+				  <li class="footer__item">
+					<a class="footer__link" href="./history.html">История iFLY</a>
+				  </li>
+				  <li class="footer__item">
+					<a class="footer__link" href="./">ТРЦ Palazzo</a>
+				  </li>
+				  <li class="footer__item">
+					<a class="footer__link" href="./">Для прессы</a>
+				  </li>
+				  <li class="footer__item">
+					<a class="footer__link" href="./">Партнерам</a>
+				  </li>
+				  <li class="footer__item">
+					<a class="footer__link" href="./vacancies.html">Вакансии</a>
+				  </li>
+				</ul>
+				<ul class="footer__list law">
+				  <li class="footer__item">
+					<a class="footer__link" href="./">Пользовательское соглашение</a>
+				  </li>
+				  <li class="footer__item">
+					<a class="footer__link" href="./">Юридическая информация</a>
+				  </li>
+				  <li class="footer__item">
+					<a class="footer__link" href="./zakaz_poleta.html">Как оформить полет</a>
+				  </li>
+				  
+				  <li class="footer__item">
+					<ul class="footer__sublist">
+					<li class="footer__item">
+						<a class="footer__link" href="">
+							<img
+								class="footer__img"
+								src="img/_src/instagram.svg"
+								alt="Мы в инстаграм"
+							/>
+						</a>
+					</li>
+					  <li class="footer__item">
+						<a class="footer__link" href=""
+						  ><img
+							class="footer__img"
+							src="img/_src/Facebook.svg"
+							alt="Мы в фэйсбук"
+						/></a>
+					  </li>
+					  <li class="footer__item">
+						<a class="footer__link" href=""
+						  ><img
+							class="footer__img"
+							src="img/_src/youtube.svg"
+							alt="Мы в ютуб"
+						/></a>
+					  </li>					  
+					</ul>
+				  </li>
+				</ul>
+			</nav>
+		</div>
+		<div class="container">
+			<div class="footer__bottom  row">
+				<span class="footer__copiryte">
+				  <span class="footer__description">2019 &#169; iFLY.</span>
+				  <span class="footer__description">Все права защищены.</span><br><br>
+				  <span class="footer__description">СООО «БелМартПлаза»<br>Республика Беларусь, г. Минск, ул. Тимирязева, 67,<br>офис 1702, УНП 191305848</span>
+				</span>
+				<span><img class="footer__img" src="img/_src/logos.png"/></span>
+				<span>Разработчик сайта <a href="#">- Gik-Media</a></span>
+			</div>
+		</div>
+	</footer>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+	<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+			crossorigin="anonymous"
+	></script>
+	<script
+			src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+			crossorigin="anonymous"
+	></script>
+	<script src="js/scripts.min.js"></script>
+</body>
+</html>

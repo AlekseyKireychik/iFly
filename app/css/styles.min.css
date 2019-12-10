@@ -569,6 +569,9 @@ template {
   .birthday .birthday__list .slick-dots {
     padding-left: calc((100vw - 1272px) / 2) !important;
   }
+  .athlete .container__breadcrumb {
+    left: calc((100vw - 1272px) / 2) !important;
+  }
 }
 
 @media screen and (min-width: 1537px) {
@@ -892,6 +895,9 @@ template {
   }
   .birthday .birthday__list .slick-dots {
     padding-left: calc((100vw - 680px) / 2) !important;
+  }
+  .athlete .container__breadcrumb {
+    left: calc((100vw - 680px) / 2) !important;
   }
 }
 
@@ -12238,6 +12244,678 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 
 .parties .container .row .parties__video a img {
   width: 100%;
+}
+
+.athlete {
+  position: relative;
+}
+
+.athlete .container__breadcrumb {
+  position: absolute;
+  left: calc((100vw - 1140px) / 2);
+}
+
+@media (max-width: 1199.98px) {
+  .athlete .container__breadcrumb {
+    left: calc((100vw - 960px) / 2);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .athlete .container__breadcrumb {
+    left: calc((100vw - 720px) / 2);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .athlete .container__breadcrumb {
+    left: calc((100vw - 540px) / 2);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .athlete .container__breadcrumb {
+    left: 0px;
+  }
+}
+
+.athlete .container__breadcrumb .row .nav__breadcrumb .breadcrumb {
+  margin-bottom: 0;
+}
+
+@media (max-width: 575.98px) {
+  .athlete .container__breadcrumb .row .nav__breadcrumb .breadcrumb {
+    padding-left: 20px;
+  }
+}
+
+.athlete .container__breadcrumb .row .nav__breadcrumb .breadcrumb .breadcrumb-item {
+  color: #fff;
+  opacity: 0.8;
+}
+
+.athlete .container__breadcrumb .row .nav__breadcrumb .breadcrumb .breadcrumb-item a {
+  color: #fff;
+  opacity: 0.8;
+}
+
+.athlete .athlete__banner {
+  background-image: url(../img/_src/atbg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 350px 0 0;
+}
+
+.athlete .athlete__banner .container .row .athlete__caption .athlete__title {
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 66px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.athlete .athlete__banner .container .row .athlete__caption .athlete__text {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.athlete .athlete__banner .container .row .athlete__caption .athlete__btn {
+  width: 350px;
+  margin-bottom: 130px;
+}
+
+.athlete .athlete__banner .container .row .athlete__caption .athlete__btn.btn::after {
+  padding-left: 0;
+}
+
+.athlete__programs {
+  padding-bottom: 70px;
+}
+
+.athlete__programs .container .row .title {
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+
+.athlete__programs .container .row .athlete__left {
+  background-image: url(../img/_src/cert.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  min-height: 396px;
+  max-width: 332px;
+  -webkit-flex-basis: 332px;
+      -ms-flex-preferred-size: 332px;
+          flex-basis: 332px;
+  width: 332px;
+}
+
+@media (min-width: 1200px) {
+  .athlete__programs .container .row .athlete__left {
+    min-height: 568px;
+    -webkit-flex-basis: 407px;
+        -ms-flex-preferred-size: 407px;
+            flex-basis: 407px;
+    max-width: 407px;
+    width: 407px;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .athlete__programs .container .row .athlete__left {
+    min-height: 420px;
+    -webkit-flex-basis: 292px;
+        -ms-flex-preferred-size: 292px;
+            flex-basis: 292px;
+    max-width: 292px;
+    min-width: 292px;
+    width: 292px;
+    margin-right: 16px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .athlete__programs .container .row .athlete__left {
+    min-height: 300px;
+    -webkit-flex-basis: 208px;
+        -ms-flex-preferred-size: 208px;
+            flex-basis: 208px;
+    max-width: 208px;
+    min-width: 208px;
+    width: 208px;
+    margin-right: 10px;
+  }
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 568px;
+  -webkit-flex-basis: 407px;
+      -ms-flex-preferred-size: 407px;
+          flex-basis: 407px;
+  width: 100%;
+}
+
+@media (max-width: 1199.98px) {
+  .athlete__programs .container .row .athlete__left .athlete__content {
+    -webkit-flex-basis: 470px;
+        -ms-flex-preferred-size: 470px;
+            flex-basis: 470px;
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .athlete__programs .container .row .athlete__left .athlete__content {
+    -webkit-flex-basis: 350px;
+        -ms-flex-preferred-size: 350px;
+            flex-basis: 350px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .athlete__programs .container .row .athlete__left .athlete__content {
+    min-height: 300px;
+    max-width: 100%;
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+  }
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .athlete__total {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 35px;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 44px;
+  color: #fff;
+  padding-left: 35px;
+  padding-right: 35px;
+  border-top: 1px solid #C4C4C4;
+  padding-top: 15px;
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .wrap__title {
+  position: absolute;
+  left: 0;
+  bottom: 100px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  color: #fff;
+}
+
+@media (max-width: 767.98px) {
+  .athlete__programs .container .row .athlete__left .athlete__content .wrap__title {
+    left: 10px;
+    right: 10px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .athlete__programs .container .row .athlete__left .athlete__content .wrap__title {
+    bottom: 50px;
+  }
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .wrap__title .athlete__title {
+  padding-left: 47px;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 34px;
+  position: relative;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  color: #fff;
+}
+
+@media (max-width: 767.98px) {
+  .athlete__programs .container .row .athlete__left .athlete__content .wrap__title .athlete__title {
+    padding-left: 20px;
+    padding-right: 0px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .athlete__programs .container .row .athlete__left .athlete__content .wrap__title .athlete__title {
+    font-size: 20px;
+    line-height: 24px;
+    padding-right: 25px;
+  }
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .wrap__title .athlete__title::before {
+  content: url(../img/_src/square.svg);
+  position: absolute;
+  left: 20px;
+  top: -4px;
+}
+
+@media (max-width: 767.98px) {
+  .athlete__programs .container .row .athlete__left .athlete__content .wrap__title .athlete__title::before {
+    left: 0px;
+  }
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .wrap__title .athlete__description {
+  display: block;
+  padding-left: 20px;
+  font-size: 18px;
+  line-height: 22px;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  color: #fff;
+}
+
+@media (max-width: 1199.98px) {
+  .athlete__programs .container .row .athlete__left .athlete__content .wrap__title .athlete__description {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .athlete__programs .container .row .athlete__left .athlete__content .wrap__title .athlete__description {
+    font-size: 10px;
+    line-height: 12px;
+    padding-left: 0px;
+  }
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .athlete__wrapBtn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+  margin: 20px auto 0;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .athlete__wrapBtn:hover .athlete__btn {
+  background-color: #E72D2D;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .athlete__wrapBtn .athlete__btn {
+  background-color: transparent;
+  width: 100%;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .athlete__wrapBtn .athlete__btn::after {
+  padding-left: 40px;
+}
+
+@media (max-width: 575.98px) {
+  .athlete__programs .container .row .athlete__left .athlete__content .athlete__wrapBtn .athlete__btn {
+    padding: 0px 55px 0px 35px;
+  }
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .athlete__options {
+  position: absolute;
+  right: 0;
+  top: 50px;
+  color: #FFF;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 1199.98px) {
+  .athlete__programs .container .row .athlete__left .athlete__content .athlete__options {
+    top: 47px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .athlete__programs .container .row .athlete__left .athlete__content .athlete__options {
+    top: 33px;
+  }
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__time {
+  position: relative;
+  padding-right: 15px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__time::before {
+  content: url(../img/_src/time.svg);
+  position: absolute;
+  right: 70px;
+  top: -6px;
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__time:hover {
+  cursor: pointer;
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__time:hover .athlete__container {
+  display: block;
+}
+
+@media (max-width: 1199.98px) {
+  .athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__time {
+    font-size: 12px;
+    line-height: 20px;
+    padding-right: 5px;
+  }
+  .athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__time::before {
+    content: url(../img/_src/time-ipad.svg);
+    right: 45px;
+    top: 0px;
+  }
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__time .athlete__container {
+  display: none;
+  position: absolute;
+  right: -20px;
+  top: 50px;
+  background-color: #fff;
+  padding: 5px 12px;
+}
+
+@media (max-width: 1199.98px) {
+  .athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__time .athlete__container {
+    padding: 0px 12px;
+    right: -40px;
+    top: 40px;
+  }
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__time .athlete__container .athlete__description {
+  position: relative;
+  font-size: 18px;
+  line-height: 20px;
+  color: #142C60;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+@media (max-width: 1199.98px) {
+  .athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__time .athlete__container .athlete__description {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__time .athlete__container .athlete__description::before {
+  content: url(../img/_src/Polygon.svg);
+  position: absolute;
+  right: 50%;
+  top: -20px;
+  -webkit-transform: translate(50%);
+      -ms-transform: translate(50%);
+          transform: translate(50%);
+}
+
+@media (max-width: 1199.98px) {
+  .athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__time .athlete__container .athlete__description::before {
+    top: -15px;
+  }
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__counter {
+  position: relative;
+  padding-left: 40px;
+  padding-right: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__counter:hover {
+  cursor: pointer;
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__counter:hover .athlete__container {
+  display: block;
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__counter::before {
+  content: url(../img/_src/palet.svg);
+  position: absolute;
+  right: 40px;
+  top: -4px;
+}
+
+@media (max-width: 1199.98px) {
+  .athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__counter {
+    font-size: 12px;
+    line-height: 20px;
+    padding-left: 25px;
+    padding-right: 10px;
+  }
+  .athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__counter::before {
+    content: url(../img/_src/palet-ipad.svg);
+    right: 25px;
+    top: 0px;
+  }
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__counter .athlete__container {
+  display: none;
+  position: absolute;
+  right: -40px;
+  top: 50px;
+  background-color: #fff;
+  padding: 5px 12px;
+}
+
+@media (max-width: 1199.98px) {
+  .athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__counter .athlete__container {
+    padding: 0px 12px;
+    right: -40px;
+    top: 40px;
+  }
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__counter .athlete__container .athlete__description {
+  position: relative;
+  font-size: 18px;
+  line-height: 20px;
+  color: #142C60;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+@media (max-width: 1199.98px) {
+  .athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__counter .athlete__container .athlete__description {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__counter .athlete__container .athlete__description::before {
+  content: url(../img/_src/Polygon.svg);
+  position: absolute;
+  right: 50%;
+  top: -20px;
+  -webkit-transform: translate(50%);
+      -ms-transform: translate(50%);
+          transform: translate(50%);
+}
+
+@media (max-width: 1199.98px) {
+  .athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__counter .athlete__container .athlete__description::before {
+    top: -15px;
+  }
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__person {
+  position: relative;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__person::before {
+  content: url(../img/_src/man.svg);
+  position: absolute;
+  right: 40px;
+  top: -4px;
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__person:hover {
+  cursor: pointer;
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__person:hover .athlete__container {
+  display: block;
+}
+
+@media (max-width: 1199.98px) {
+  .athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__person {
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__person::before {
+    content: url(../img/_src/man-ipad.svg);
+    right: 35px;
+    top: 0px;
+  }
+}
+
+@media (max-width: 1199.98px) and (max-width: 575.98px) {
+  .athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__person::before {
+    right: 25px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__person {
+    padding-right: 10px;
+  }
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__person .athlete__container {
+  display: none;
+  position: absolute;
+  right: -55px;
+  top: 50px;
+  background-color: #fff;
+  padding: 5px 12px;
+}
+
+@media (max-width: 1199.98px) {
+  .athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__person .athlete__container {
+    padding: 0px 12px;
+    right: -40px;
+    top: 40px;
+  }
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__person .athlete__container .athlete__description {
+  position: relative;
+  font-size: 18px;
+  line-height: 20px;
+  color: #142C60;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
+@media (max-width: 1199.98px) {
+  .athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__person .athlete__container .athlete__description {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__person .athlete__container .athlete__description::before {
+  content: url(../img/_src/Polygon.svg);
+  position: absolute;
+  right: 50%;
+  top: -20px;
+  -webkit-transform: translate(50%);
+      -ms-transform: translate(50%);
+          transform: translate(50%);
+}
+
+@media (max-width: 1199.98px) {
+  .athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__person .athlete__container .athlete__description::before {
+    top: -15px;
+  }
+}
+
+.athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__order {
+  background-color: #E72D2D;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  color: #FFF;
+  padding: 14px 10px;
+}
+
+@media (max-width: 1199.98px) {
+  .athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__order {
+    padding: 7px 10px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .athlete__programs .container .row .athlete__left .athlete__content .athlete__options .athlete__order {
+    font-size: 10px;
+    padding: 0px 10px;
+  }
 }
 
 footer {
