@@ -13089,6 +13089,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 .athlete__programs .container .row .athlete__right .athlete__sliderWrap .athlete__slider .athlete__item {
   max-width: 840px;
   height: 420px;
+  cursor: pointer;
 }
 
 @media (max-width: 991.98px) {
@@ -13157,6 +13158,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   min-height: 130px;
   max-height: 130px;
   margin-right: 20px;
+  cursor: pointer;
 }
 
 @media (max-width: 991.98px) {
