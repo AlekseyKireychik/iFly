@@ -514,20 +514,21 @@ $(document).ready(function() {
   $(".history-slide #slick-slide-control03").text("2014 - 2019");
 
   //athlete
-  $('.athlete__slider').slick({
+  $(".athlete__slider").slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
     fade: false,
-    asNavFor: '.athlete__sliderNav'
+    asNavFor: ".athlete__sliderNav"
   });
-  $('.athlete__sliderNav').slick({
+  $(".athlete__sliderNav").slick({
     slidesToShow: 4,
     slidesToScroll: 1,
-    asNavFor: '.athlete__slider',
+    asNavFor: ".athlete__slider",
     arrows: false,
     dots: false,
-    centerMode: true,
+    variableWidth: true,
+    centerMode: false,
     focusOnSelect: true
   });
   //vacancies

@@ -6497,24 +6497,48 @@ header
 		background-repeat: no-repeat
 		background-size: cover
 		padding: 350px 0 0
+		+media-breakpoint-down(md)
+			padding: 260px 0 0
+		+media-breakpoint-down(sm)
+			padding: 240px 0 0
 		.container
 			.row
 				.athlete__caption
+					+media-breakpoint-down(xs)
+						padding: 0 20px
 					.athlete__title
 						font-weight: 600
 						font-size: 54px
 						line-height: 66px
 						color: #fff
 						margin-bottom: 20px
+						+media-breakpoint-down(md)
+							font-size: 40px
+							line-height: 48px
+							margin-bottom: 70px
+						+media-breakpoint-down(sm)
+							font-size: 36px
+							line-height: 44px
+							margin-bottom: 30px
 					.athlete__text
 						font-weight: 600
 						font-size: 18px
 						line-height: 28px
 						color: #fff
 						margin-bottom: 30px
+						+media-breakpoint-down(md)
+							line-height: 22px
+							margin-bottom: 70px
+						+media-breakpoint-down(sm)
+							font-size: 14px
+							line-height: 17px
+							margin-bottom: 20px
 					.athlete__btn
 						width: 350px
 						margin-bottom: 130px
+						+media-breakpoint-down(xs)
+							width: 100%
+							margin-bottom: 60px
 						&.btn::after
 							padding-left: 0
 .athlete__programs
@@ -6524,8 +6548,30 @@ header
 			.title
 				padding-top: 60px
 				padding-bottom: 40px
+				+media-breakpoint-down(lg)
+					text-align: center
+					width: 100%
+				+media-breakpoint-down(sm)
+					padding-top: 30px
+					padding-bottom: 30px
+					margin: 0
 	.container
 		.row
+			&.athlete__container
+				+media-breakpoint-down(lg)
+					flex-direction: column-reverse
+					align-items: center
+			.athlete__titleSection
+				display: none
+				font-size: 24px
+				line-height: 29px
+				margin-bottom: 40px
+				max-width: 380px
+				text-align: center
+				+media-breakpoint-down(lg)
+					display: flex
+				+media-breakpoint-down(xs)
+					padding: 0 20px
 			.athlete__left
 				background-image: url(../img/_src/cert.jpg)
 				background-position: center
@@ -6534,6 +6580,7 @@ header
 				display: flex
 				align-items: flex-end
 				justify-content: flex-end
+				margin-right: 20px
 				+media-breakpoint-up(xl)
 					min-height: 568px
 					flex-basis: 407px
@@ -6550,14 +6597,14 @@ header
 					max-width: 292px
 					min-width: 292px
 					width: 292px
-					margin-right: 16px
+					margin-right: 0px
 				+media-breakpoint-down(xs)
 					min-height: 300px
 					flex-basis: 208px
 					max-width: 208px
 					min-width: 208px
 					width: 208px
-					margin-right: 10px
+					margin-right: 10px				
 				.athlete__content
 					position: relative
 					display: flex
@@ -6843,7 +6890,84 @@ header
 							+media-breakpoint-down(xs)
 								font-size: 10px
 								padding: 0px 10px
-							
+			.athlete__right
+				+media-breakpoint-down(lg)
+					padding-bottom: 40px
+				.athlete__sliderWrap
+					.athlete__slider
+						max-width: 840px
+						height: 420px
+						margin-bottom: 20px
+						+media-breakpoint-down(md)	
+							max-width: 682px
+						+media-breakpoint-down(sm)	
+							max-width: 272px
+							height: 150px
+						.athlete__item
+							max-width: 840px
+							height: 420px
+							+media-breakpoint-down(md)	
+								max-width: 682px
+							+media-breakpoint-down(sm)	
+								max-width: 272px
+								height: 150px
+							.athlete__video	
+								max-width: 840px
+								height: 420px	
+								+media-breakpoint-down(md)	
+									max-width: 682px
+								+media-breakpoint-down(sm)	
+									max-width: 272px
+									height: 150px				
+								.athlete__img		
+									width: 100%
+									height: 420px						
+									object-fit: cover
+									+media-breakpoint-down(sm)	
+										height: 150px
+
+				.athlete__sliderNav
+					max-width: 840px
+					height: 100%		
+					+media-breakpoint-down(md)	
+						max-width: 682px	
+					+media-breakpoint-down(sm)	
+						max-width: 272px	
+					.athlete__item
+						max-width: 195px
+						min-height: 130px
+						max-height: 130px
+						margin-right: 20px
+						+media-breakpoint-down(md)
+							max-width: 156px
+							min-height: 100px
+							max-height: 100px
+						+media-breakpoint-down(sm)	
+							max-width: 130px
+							min-height: 80px
+							max-height: 80px
+						.athlete__video		
+							max-width: 195px
+							min-height: 130px
+							max-height: 130px
+							+media-breakpoint-down(md)
+								max-width: 156px
+								min-height: 100px
+								max-height: 100px
+							+media-breakpoint-down(sm)	
+								max-width: 130px
+								min-height: 80px
+								max-height: 80px			
+							.athlete__img		
+								width: 195px	
+								height: 130px	
+								object-fit: cover
+								+media-breakpoint-down(md)
+									max-width: 156px
+									height: 100px
+								+media-breakpoint-down(sm)	
+									max-width: 130px
+									height: 80px
 
 footer
 	background-color: $accentTwo
