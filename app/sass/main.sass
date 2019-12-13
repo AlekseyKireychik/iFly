@@ -4051,6 +4051,150 @@ header
 				+media-breakpoint-down(xs)
 					left: calc((100vw/2) - 64px)
 					top: 108%
+//gallery
+.main__gallery
+	background-color: #F7F7F7
+	padding-bottom: 120px
+	.gallery
+		+media-breakpoint-down(sm)
+			padding: 0 25px
+		.container
+			.gallery__top
+				display: flex
+				align-items: center
+				justify-content: space-between
+				padding-bottom: 55px
+				.title
+					margin-bottom: 0
+					+media-breakpoint-down(md)
+						font-size: 36px
+						line-height: 44px
+						margin-bottom: 10px
+					+media-breakpoint-down(sm)
+						padding-left: 0
+				.gallery__navWrap
+					display: flex
+					align-items: center
+					justify-content: space-between
+					margin-bottom: 0
+					+media-breakpoint-down(xs)
+						width: 100%
+					.gallery__tile
+						margin-right: 20px
+					.gallery__btnGroup
+						position: relative
+						.gallery__selectValue
+							display: none
+							padding: 9px 82px 9px 35px
+							background: #FFF
+							color: $accent
+							position: relative
+							+media-breakpoint-down(xs)
+								display: block
+							&::before
+								position: absolute
+								content: url(../img/_src/arrowDownRed.svg)
+								position: absolute
+								left: 120px
+								top: 10px
+
+						.gallery__nav
+							display: flex
+							align-items: center
+							justify-content: flex-start
+							margin-bottom: 0
+							+media-breakpoint-down(xs)
+								display: none
+							&.is-active
+								position: absolute
+								display: flex
+								flex-direction: column
+								align-items: flex-start
+								justify-content: flex-start
+								background-color: #fff
+								width: 100%
+								border-top: 1px solid #f2f2f2
+							.gallery__item
+								.gallery__tile
+									font-weight: 600
+									font-size: 16px
+									line-height: 56px
+									color: #999EA7
+									opacity: 0.8
+								.gallery__btn
+									cursor: pointer
+									font-weight: 600
+									font-size: 16px
+									line-height: 56px
+									color: #999EA7
+									opacity: 0.8
+									padding: 20px 35px
+									transition: .3s
+									+media-breakpoint-down(md)
+										padding: 12px 35px
+									+media-breakpoint-down(xs)
+										&:hover
+											color: $accent
+										&:active
+											color: $accent
+									&.is-active
+										background-color: #fff
+										padding: 20px 35px
+										transition: .3s
+										color: $accent
+
+			.row
+				.gallery__list
+					display: flex
+					align-items: flex-start
+					justify-content: space-between
+					flex-wrap: wrap
+					margin-bottom: 0
+					padding-bottom: 25px
+					+media-breakpoint-down(xs)
+						flex-wrap: nowrap
+						flex-direction: column
+					.gallery__item
+						margin-bottom: 25px
+						background-color: #fff
+						width: 100%
+						transition: .3s
+						&.photo
+							flex-basis: 408px
+							height: 488px
+							+media-breakpoint-down(lg)
+								flex-basis: 49%
+								order: 0
+								&:nth-child(3)
+									order: 1
+								&:nth-last-child(2)									
+									order: 1
+									
+							+media-breakpoint-down(md)
+								height: 258px
+							.gallery__link
+								.gallery__img
+									width: 100%
+									height: 488px
+									+media-breakpoint-down(lg)
+										width: 100%
+									+media-breakpoint-down(md)
+										height: 258px
+						&.video
+							flex-basis: 840px
+							height: 488px
+							+media-breakpoint-down(lg)
+								flex-basis: 100%
+								order: 0 
+							+media-breakpoint-down(md)
+								height: 453px
+							.gallery__img
+								width: 100%
+								height: 488px
+								+media-breakpoint-down(lg)
+									width: 100%
+								+media-breakpoint-down(md)
+									height: 453px
 //history page
 .main__history
 	.history__banner

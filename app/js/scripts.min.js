@@ -564,6 +564,24 @@ $(document).ready(function() {
     event.preventDefault();
     $(".news__nav").toggleClass("is-active");
   });
+  //gallery
+  $(".gallery__btn").on("click", function(event) {
+    event.preventDefault();
+    if ($(this).hasClass("is-active")) {
+      $(".gallery__btn").removeClass("is-active");
+      $(this).removeClass("is-active");
+    } else {
+      $(".gallery__btn").removeClass("is-active");
+      $(this).addClass("is-active");
+    }
+  });
+
+  $(".gallery__selectValue").on("click", function(event) {
+    event.preventDefault();
+    $(".gallery__nav").toggleClass("is-active");
+  });
+  // Lightbox
+	$('.gallery .gallery__link').lightbox(); 
   //form request
   $(".request").on("click", function(event) {
     event.preventDefault();
