@@ -581,7 +581,7 @@ $(document).ready(function() {
     $(".gallery__nav").toggleClass("is-active");
   });
   // Lightbox
-	$('.gallery .gallery__link').lightbox(); 
+	// $('.gallery .gallery__link').lightbox(); 
   //form request
   $(".request").on("click", function(event) {
     event.preventDefault();

@@ -1090,7 +1090,7 @@ body {
 .btn::after {
   content: url(../img/_src/arrow.svg);
   padding-left: 12px;
-  width: 30px;
+  width: auto;
   position: absolute;
 }
 
@@ -8198,6 +8198,13 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   max-height: 291px;
 }
 
+@media (max-width: 575.98px) {
+  .main__news .news .container .row .news__list .news__item.news-post .news__link .news__img {
+    min-height: 208px;
+    max-height: 208px;
+  }
+}
+
 @media (max-width: 991.98px) {
   .main__news .news .container .row .news__list .news__item.date {
     padding-bottom: 50px;
@@ -8236,6 +8243,13 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 .main__news .news .container .row .news__list .news__item.news-sale .news__link .news__img {
   min-height: 291px;
   max-height: 291px;
+}
+
+@media (max-width: 575.98px) {
+  .main__news .news .container .row .news__list .news__item.news-sale .news__link .news__img {
+    min-height: 208px;
+    max-height: 208px;
+  }
 }
 
 .main__news .news .container .row .news__list .news__item.news-big {
@@ -8510,7 +8524,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 
 @media (max-width: 575.98px) {
   .new__slider .container .row .newpost-slider {
-    max-width: 300px;
+    max-width: calc( 100vw - 40px);
     margin: 0 auto;
   }
   .new__slider .container .row .newpost-slider .slick-prev {
@@ -12101,8 +12115,8 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 .birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__textContainer .birthday__text {
-  font-size: 24px;
-  line-height: 34px;
+  font-size: 18px;
+  line-height: 24px;
   color: #fff;
   margin-bottom: 0;
   padding-bottom: 20px;
@@ -12127,8 +12141,8 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 .birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__advantage .birthday__elem {
-  font-size: 24px;
-  line-height: 34px;
+  font-size: 18px;
+  line-height: 24px;
   color: #fff;
   list-style-type: disc;
 }
@@ -12152,8 +12166,8 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 .birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__wrap p {
-  font-size: 24px;
-  line-height: 34px;
+  font-size: 18px;
+  line-height: 24px;
   color: #fff;
   margin-bottom: 0px;
 }
@@ -12179,8 +12193,8 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 
 .birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__wrap .birthday__sublist .birthday__elem {
   font-weight: 600;
-  font-size: 24px;
-  line-height: 34px;
+  font-size: 18px;
+  line-height: 24px;
   color: #fff;
   list-style-type: disc;
 }
@@ -12198,8 +12212,8 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 
 .birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__items .birthday__elem {
   font-weight: 600;
-  font-size: 24px;
-  line-height: 34px;
+  font-size: 18px;
+  line-height: 24px;
   color: #fff;
   list-style-type: disc;
 }
@@ -12212,8 +12226,8 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 .birthday .birthday__list .birthday__item .container .row .birthday__caption .birthday__slog {
-  font-size: 24px;
-  line-height: 34px;
+  font-size: 18px;
+  line-height: 24px;
   color: #fff;
 }
 
@@ -12435,8 +12449,8 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 .parties .container .row .parties__list .parties__item .parties__link {
   display: block;
   font-weight: 600;
-  font-size: 28px;
-  line-height: 34px;
+  font-size: 18px;
+  line-height: 24px;
   color: #142C60;
   padding: 40px 90px;
   position: relative;
@@ -12460,7 +12474,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   height: 12px;
   width: 12px;
   background-color: #E72D2D;
-  top: 50px;
+  top: 45px;
   left: 60px;
 }
 
@@ -12486,17 +12500,9 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 .parties .container .row .parties__list .parties__item .parties__link:hover {
-  color: #fff;
   -webkit-transition: .3s;
   -o-transition: .3s;
   transition: .3s;
-  background: -webkit-gradient(linear, left top, right top, from(#142C60), color-stop(99.66%, rgba(20, 44, 96, 0.3)));
-  background: -o-linear-gradient(left, #142C60 0%, rgba(20, 44, 96, 0.3) 99.66%);
-  background: linear-gradient(90deg, #142C60 0%, rgba(20, 44, 96, 0.3) 99.66%);
-}
-
-.parties .container .row .parties__list .parties__item .parties__link:hover::after {
-  display: none;
 }
 
 .parties .container .row .parties__bottom {

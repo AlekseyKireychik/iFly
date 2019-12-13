@@ -64,7 +64,7 @@ body
 	&::after
 		content: url(../img/_src/arrow.svg)
 		padding-left: 12px
-		width: 30px
+		width: auto
 		position: absolute
 
 	&:hover
@@ -3702,6 +3702,9 @@ header
 								.news__img
 									min-height: 291px
 									max-height: 291px
+									+media-breakpoint-down(xs)
+										min-height: 208px
+										max-height: 208px
 						&.date
 							+media-breakpoint-down(md)
 								padding-bottom: 50px
@@ -3718,6 +3721,9 @@ header
 								.news__img
 									min-height: 291px
 									max-height: 291px
+									+media-breakpoint-down(xs)
+										min-height: 208px
+										max-height: 208px
 						&.news-big
 							background-position: center
 							background-repeat: no-repeat
@@ -3861,7 +3867,7 @@ header
 				+media-breakpoint-down(sm)
 					max-width: 540px
 				+media-breakpoint-down(xs)
-					max-width: 300px
+					max-width: calc( 100vw - 40px)
 					margin: 0 auto
 					.slick-prev
 						left: 15%
@@ -6337,8 +6343,8 @@ header
 							max-width: 800px
 							padding-bottom: 40px
 							.birthday__text
-								font-size: 24px
-								line-height: 34px
+								font-size: 18px
+								line-height: 24px
 								color: #fff
 								margin-bottom: 0
 								padding-bottom: 20px
@@ -6353,8 +6359,8 @@ header
 							margin: 0
 							padding-left: 25px
 							.birthday__elem
-								font-size: 24px
-								line-height: 34px
+								font-size: 18px
+								line-height: 24px
 								color: #fff
 								list-style-type: disc
 								+media-breakpoint-down(xs)
@@ -6367,8 +6373,8 @@ header
 										line-height: 24px
 						.birthday__wrap
 							p
-								font-size: 24px
-								line-height: 34px
+								font-size: 18px
+								line-height: 24px
 								color: #fff
 								margin-bottom: 0px
 								+media-breakpoint-down(xs)
@@ -6382,8 +6388,8 @@ header
 									padding-bottom: 20px
 								.birthday__elem
 									font-weight: 600
-									font-size: 24px
-									line-height: 34px
+									font-size: 18px
+									line-height: 24px
 									color: #fff
 									list-style-type: disc
 									+media-breakpoint-down(xs)
@@ -6393,16 +6399,16 @@ header
 							padding-left: 20px
 							.birthday__elem
 								font-weight: 600
-								font-size: 24px
-								line-height: 34px
+								font-size: 18px
+								line-height: 24px
 								color: #fff
 								list-style-type: disc
 								+media-breakpoint-down(xs)
 									font-size: 16px
 									line-height: 24px
 						.birthday__slog
-							font-size: 24px
-							line-height: 34px
+							font-size: 18px
+							line-height: 24px
 							color: #fff
 							+media-breakpoint-down(xs)
 								font-size: 16px
@@ -6525,8 +6531,8 @@ header
 					.parties__link
 						display: block
 						font-weight: 600
-						font-size: 28px
-						line-height: 34px
+						font-size: 18px
+						line-height: 24px
 						color: $accentTwo
 						padding: 40px 90px
 						position: relative
@@ -6542,7 +6548,7 @@ header
 							height: 12px
 							width: 12px
 							background-color: $accent
-							top: 50px
+							top: 45px
 							left: 60px
 							+media-breakpoint-down(md)
 								left: 0px
@@ -6558,11 +6564,11 @@ header
 							background-size: 100% 20px
 							background-image: linear-gradient(90.05deg, #142C60 0%, rgba(20, 44, 96, 0) 100%)
 						&:hover
-							color: #fff
+							// color: #fff
 							transition: .3s
-							background: linear-gradient(90deg, #142C60 0%, rgba(20, 44, 96, 0.3) 99.66%)
-							&::after
-								display: none
+							// background: linear-gradient(90deg, #142C60 0%, rgba(20, 44, 96, 0.3) 99.66%)
+							// &::after
+							// 	display: none
 			.parties__bottom
 				display: flex
 				align-items: center
