@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+
+    <title>iFly - Что вас ждет</title>
+    <meta name="description" content="iFly" />
+
+    <meta name="viewport" content="width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+    <link rel="icon" href="img/favicon.png" />
+    <meta property="og:image" content="img/@1x/preview.jpg" />
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="css/styles.min.css" />
+    <style>
+        .main__waiting {
+            background-color: #F7F7F7;
+        }
+        .advantages__home .advantages__list .slick-dots li.slick-active .advantages__dot::before {
+            top: -57px;
+        }
+        .block-content__right {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+        .pt-0 {
+            padding-top: 0 !important;
+        }
+        .pb-30 {
+            max-width: 100% !important;
+            padding-bottom: 30px !important;
+        }
+        .list {
+            margin-left: 40px;
+        }
+
+        .list li{
+            color: white;
+        }
+
+        .advantages__home .advantages__list .advantages__item {
+            min-height: 1000px !important;
+            max-height: 1000px !important;
+        }
+
+        .btn {
+            cursor: pointer;
+        }
+
+        @media (max-width: 994px) {
+            .slick-dots {
+                display: none !important;
+            }
+
+            .block-content__right {
+                justify-content: space-around;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<header>
+    <div class="container container__header">
+        <div class="header row">
+            <div class="header__logo">
+                <a href="/">
+                    <img class="" src="img/_src/logo.png" alt="iFly">
+                </a>
+            </div>
+            <nav class="header__nav">
+                <ul class="header__list-nav">
+                    <li class="header__item">
+                        <a href="#" class="header__link">Новичкам</a>
+                        <ul class="header__subList">
+                            <li class="header__item"><a class="header__subLink" href="">Что вас ждет</a></li>
+                            <li class="header__item"><a class="header__subLink" href="">Программы полетов</a></li>
+                            <li class="header__item"><a class="header__subLink" href="">Подарочный сертификат</a></li>
+                            <li class="header__item"><a class="header__subLink" href="">Стать спортсменом</a></li>
+                            <li class="header__item"><a class="header__subLink" href="">Вопрос-ответ</a></li>
+                        </ul>
+                    </li>
+                    <li class="header__item">
+                        <a href="./" class="header__link">Спортсменам</a>
+                        <ul class="header__subList">
+                            <li class="header__item"><a class="header__subLink" href="">Тарифы</a></li>
+                            <li class="header__item"><a class="header__subLink" href="">Коучинг</a></li>
+                            <li class="header__item"><a class="header__subLink" href="">Детская лига</a></li>
+                            <li class="header__item"><a class="header__subLink" href="">Курс AFF</a></li>
+                            <li class="header__item"><a class="header__subLink" href="">Возможности объекта</a></li>
+                            <li class="header__item"><a class="header__subLink" href="">Кэмпы и соревнования</a></li>
+                            <li class="header__item"><a class="header__subLink" href="">Аэротрубный спорт</a></li>
+                        </ul>
+                    </li>
+                    <li class="header__item">
+                        <a href="./" class="header__link">Корпоративы</a>
+                        <ul class="header__subList">
+                            <li class="header__item"><a class="header__subLink" href="">Дни рождения</a></li>
+                            <li class="header__item"><a class="header__subLink" href="">Бизнес встречи</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__function">
+                <a class="header__phone" href="tel:+375441111111">+375 44 111-11-11</a>
+                <a class="header__request btn register" href="#">Полетели</a>
+                <div class="header__profile">
+                    <a class="lang__btn" href="#">ru</a>
+                    <div class="profile__container">
+                        <a class="profile__containerLogo" href="#">
+                            <img class="profile__logo" src="img/_src/profileicon.svg" alt="profile icon">
+                            <img class="profile__logo-active" src="img/_src/profileiconActive.svg" alt="profile icon active">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="burger-menu">
+            <a href="#" class="burger-menu__button">
+                <span class="burger-menu__lines"></span>
+            </a>
+        </div>
+        <ul class="profile__subList">
+            <li class="profile__item"><a class="profile__subLink" href="#">Профиль</a></li>
+            <li class="profile__item"><a class="profile__subLink" href="#">Мои полеты</a></li>
+            <li class="profile__item"><a class="profile__subLink" href="#">Настройки</a></li>
+            <li class="profile__item"><a class="profile__subLink" href="#">Выйти</a></li>
+        </ul>
+        <nav id="nav-menu" class="nav">
+            <div class="menu__wrap">
+                <ul class="menu__list">Новости
+                    <li class="menu__item"><a class="menu__link" href="./news.html">Специальные предложения</a></li>
+                    <li class="menu__item"><a class="menu__link" href="./news.html">Новости</a></li>
+                </ul>
+                <ul class="menu__list">О нас
+                    <li class="menu__item"><a class="menu__link" href="">iFLY Minsk</a></li>
+                    <li class="menu__item"><a class="menu__link" href="">Как это работает</a></li>
+                    <li class="menu__item"><a class="menu__link" href="./instructors.html">Наша команда</a></li>
+                    <li class="menu__item"><a class="menu__link" href="">Виртуальный тур</a></li>
+                    <li class="menu__item"><a class="menu__link" href="">Фото и видео</a></li>
+                    <li class="menu__item"><a class="menu__link" href="./contacts.html">Контакты</a></li>
+                </ul>
+            </div>
+            <ul class="seti__list">
+                <li class="seti__item"><a class="seti__link" href=""><img class="seti__icon" src="img/_src/instagramBlack.svg" alt="Мы в инстаграм"></a></li>
+                <li class="seti__item"><a class="seti__link" href=""><img class="seti__icon" src="img/_src/FacebookBlack.svg" alt="Мы в фэйсбук"></a></li>
+                <li class="seti__item"><a class="seti__link" href=""><img class="seti__icon" src="img/_src/youtubeBlack.svg" alt="Мы в ютуб"></a></li>
+            </ul>
+            <ul class="contacts__list">
+                <li class="contacts__item">
+                    <a class="contacts__link contacts__phone" href="tel:+375441111111">+375 44 111-11-11</a>
+                </li>
+                <li class="contacts__item">
+                    <a class="contacts__link contacts__mail" href="mailto:info@iflyminsk.by">info@iflyminsk.by</a>
+                </li>
+                <li class="contacts__item">
+                    <a class="contacts__link contacts__map" href="./contacts.html">Тимирязева 74</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="burger-menu__overlay"></div>
+    </div>
+</header>
+<main class="main__waiting">
+    <div class="container main__form">
+        <form id="form" class="form">
+            <div class="wrap__btnClose">
+                <h2 class="title">Связаться с нами</h2>
+                <div class="form__btnClose">
+                    <span class="form__line"></span>
+                </div>
+            </div>
+            <div class="formWrap">
+                <div class="form__top">
+                    <div class="mainform__group group-01">
+                        <input type="text" placeholder=" " class="mainform__control" name="name" id="name" placeholder="" data-validation-error-msg="Обязательное поле" required>
+                        <label for="name"  class="mainform__label">Имя<span class="required-star">*</span></label>
+                        <span class="help-text"></span>
+                    </div>
+                    <div class="mainform__group group-01">
+                        <input type="text" placeholder=" " class="mainform__control" name="fname" id="fname" placeholder="" data-validation-error-msg="Обязательное поле" required>
+                        <label for="fname" class="mainform__label">Фамилия<span class="required-star">*</span></label>
+                        <span class="help-text"></span>
+                    </div>
+                    <div class="mainform__group group-01">
+                        <input type="tel" placeholder=" " class="mainform__control" name="tel" id="tel" placeholder="" data-validation-error-msg="Обязательное поле" required>
+                        <label for="tel" class="mainform__label">Телефон<span class="required-star">*</span></label>
+                        <span class="help-text"></span>
+                    </div>
+                    <div class="mainform__group group-01">
+                        <input type="email" placeholder=" " class="mainform__control" name="email" id="email" placeholder="">
+                        <label for="email" class="mainform__label">Email</label>
+                    </div>
+                </div>
+                <div class="form__center">
+                    <div class="mainform__group comment">
+							<textarea
+                                    name="comment"
+                                    id="comment"
+                                    coll="5"
+                                    rows="3"
+                                    class="mainform__control"
+                                    placeholder=" "
+                            >
+							</textarea>
+                        <label for="comment" class="mainform__label">Комментарий</label>
+                    </div>
+                    <div class="mainform__group file">
+                        <label for="uploaded-file" class="mainform__label">Прикрепить резюме</label>
+                        <input id="uploaded-file" onchange="getFileName ();" placeholder=" " accept="application/pdf,application/msword" class="mainform__control" type="file" name="file" multiple>
+                        <span>Допустимый формат: pdf, doc</span>
+                    </div>
+                </div>
+                <div id="file-name"></div>
+
+                <input type="hidden" name="culturecode">
+                <input type="hidden" name="url">
+                <div class="footer__bottom">
+                    <div class="mainform__group form-check">
+                        <input class="form__check-input" placeholder=" " required type="checkbox" id="check1">
+                        <label class="form__check-label" for="check1">Заполняя форму, я даю согласие на обработку и хранение персональных данных</label>
+                    </div>
+                    <div class="form__box">
+                        <button type="submit" id="btn" class="btn submit">
+                            ОТПРАВИТЬ
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="overlay"></div>
+    <div class="container container__breadcrumb">
+        <div class="row">
+            <nav aria-label="breadcrumb" class="nav__breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/">Главная</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                        Что вас ждет
+                    </li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <section class="advantages__home">
+        <ul id="advantages-list-waiting" class="advantages__list slider">
+            <li class="advantages__item" style="background-image: url(img/_src/slide-1.jpg);">
+                <div class="container">
+                    <div class="row">
+                        <div class="advantages__caption">
+                            <h2 class="advantages__title pt-0">Шаг 1 - Теория</h2>
+                            <p class="advantages__text pb-30">Кто может летать?</p>
+                            <p class="advantages__text pb-30">Вы и все, кто придет с вами! Мы предлагаем безопасное, веселое и невероятное приключение для всех желающих! Не нужно быть в своей лучшей физической форме, летать могут все! Наши опытные инструктора помогут сделать ваш полет незабываемым.</p>
+                            <p class="advantages__text pb-30" style="padding-bottom: 0 !important;">Люди любого возраста и физической формы:
+                            <ul class="list">
+                                <li>• От 3 до 103 лет (мы серьезно)</li>
+                                <li>• Несовершеннолетним необходимо быть в присутствии родителей, чтобы подписать документы</li>
+                                <li>• Максимальный вес – 110 кг</li>
+                                <li>• Без ограничений по росту</li>
+                                <li>• Не имеющие серьезных проблем с сердцем</li>
+                                <li>• Не имеющие незаживших травм, ушибов, переломов</li>
+                                <li>• Не беременные</li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="block-content__right">
+                            <a class="btn">Следующий шаг</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="advantages__item" style="background-image: url(img/_src/slide-2.jpg);">
+                <div class="container">
+                    <div class="row">
+                        <div class="advantages__caption">
+                            <h2 class="advantages__title pt-0">Шаг 2 - Экипировка</h2>
+                            <p class="advantages__text pb-30">Что одевать?</p>
+                            <p class="advantages__text pb-30">Одевайте удобную одежду – то, что вы бы одели в свой обычный день.
+                                Нет необходимости переодеваться перед полетом – вам выдадут специальный комбинезон, который можно одеть поверх вашей одежды.</p>
+                            <p class="advantages__text pb-30" style="padding-bottom: 0 !important;">Подходящая одежда:
+                            <ul class="list">
+                                <li>• Штаны: Одевайте джинсы или штаны, убедитесь, что они не слишком плотные и не сковывают движения.</li>
+                                <li>• Шорты: Тоже самое, что и со штанами, убедитесь, что в них вам удобно.</li>
+                                <li>• Футболка или рубашка: Удобная майка или кофта, желательно с длинным рукавом.</li>
+                                <li>• Носки: Любые удобные носки, которые вы носите каждый день</li>
+                                <li>• Обувь: Мы рекомендуем закрытую и удобную обувь. Шлепки или сандалии запрещены</li>
+                                <li>Убедительно просим вас снять вещи, которые легко потерять, например, серьги, цепочки, браслеты, часы, кольца и т.д.</li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="block-content__right">
+                            <a class="btn">Следующий шаг</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="advantages__item" style="background-image: url(img/_src/slide-3.jpg);">
+                <div class="container">
+                    <div class="row">
+                        <div class="advantages__caption">
+                            <h2 class="advantages__title pt-0">Шаг 3 - Подготовка к полету</h2>
+                            <p class="advantages__text pb-30">Когда приезжать и что сделать до полета?</p>
+                            <p class="advantages__text pb-30">Приезжайте к точному времени, указанному во время бронирования полета (по телефону с нашим администратором или онлайн). Когда вы зайдете в iFLY Minsk, администратор будет вас ждать возле стойки Reception. Наши сотрудники обязательно ответят на любые дополнительные вопросы.</p>
+                            <p class="advantages__text pb-30" style="padding-bottom: 0 !important;">Регистрация:
+                            <ul class="list">
+                                <li>• Подписать все нужные документы</li>
+                                <li>• Создать личный кабинет</li>
+                                <li>• Оплатить ваш полет</li>
+                                <li>Подготовка к полету:</li>
+                                <li>• После прохождения регистрации вас встретит наш опытный инструктор</li>
+                                <li>• Инструктор проведет подробный предполетный инструктаж</li>
+                                <li>• Вам выдадут комбинезон, шлем и очки</li>
+                                <li>• Вам покажут шкафчики, в которых можно оставить личные вещи</li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="block-content__right">
+                            <a class="btn">Следующий шаг</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="advantages__item" style="background-image: url(img/_src/slide-4.jpg);">
+                <div class="container">
+                    <div class="row">
+                        <div class="advantages__caption">
+                            <h2 class="advantages__title pt-0">Шаг 4 - Полет</h2>
+                            <p class="advantages__text pb-30">Как это, летать в аэротрубе?</p>
+                            <p class="advantages__text pb-30">То, чего вы так долго ждали! Ваш инструктор пригласит вас в аэродинамическую трубу и совсем скоро вы испытаете настоящее чувство полета.</p>
+                            <p class="advantages__text pb-30" style="padding-bottom: 0 !important;">Ваше приключение:
+                            <ul class="list">
+                                <li>• Сначала вы займете место на скамье рядом с другими новичками из группы</li>
+                                <li>• Инструктор покажет вам подойти к двери, когда придет ваша очередь</li>
+                                <li>• Инструктор поможет вам мягко лечь на поток, вы точно не упадете</li>
+                                <li>• Вы лежите на потоке – расслабьтесь и улыбайтесь!</li>
+                                <li>• Инструктор будет все время стоят рядом и помогать осваивать технику</li>
+                                <li>• Каждый зайдет в трубу минимум 2 раза (зависит от купленного пакета)</li>
+                            </ul>
+                            </p>
+                            <p class="advantages__text pb-30">Ваше приключение в iFLY Minsk включает в себя регистрацию, подгтовку и сам полет. Все это займет около 1 часа. Хотите увеличить время полета, мы будем рады предложить вам все возможные варианты.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="block-content__right">
+                            <a class="btn">Следующий шаг</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="advantages__item" style="background-image: url(img/_src/slide-5.jpg);">
+                <div class="container">
+                    <div class="row">
+                        <div class="advantages__caption">
+                            <h2 class="advantages__title pt-0">Шаг 5 - Безопасность</h2>
+                            <p class="advantages__text pb-30">Безопасность в iFLY Minsk</p>
+                            <p class="advantages__text pb-30">Полет в аэротрубе станет для вас одним из самых незабываемых впечатлений в жизни. Это не только весело, но и очень безопасно.
+                                Более того, безопасность – это самая главная составляющая работы iFLY Minsk. Именно поэтому вся наша команда прошла длительное обучение и подготовлена по лучшим международным стандартам.</p>
+                            <p class="advantages__text pb-30" style="padding-bottom: 0 !important;">Почему полеты в аэротрубе iFLY Minsk безопасны?
+                            <ul class="list">
+                                <li>• Обучение: Перед полетом вы обязательно пройдете инструктаж об основах работы аэродинамической трубы и поведении тела в воздушном потоке</li>
+                                <li>• Подходящая экипировка: Инструктор удостоверится, что комбинезон и шлем подходит вам по размеру и правильно одет/закреплен</li>
+                                <li>• Инструктора iFLY Minsk: Весь летный персонал проходит жесткий отбор и тяжелое обучение, развивающее выносливость, силу и реакцию, чтобы находиться рядом с вами в аэротрубе и помогать вам в течение всего полета</li>
+                                <li>• Дополнительная забота о детях: Если ребенок совсем маленький, инструктор держит его, не отпуская в течение всего полета</li>
+                                <li>• Отключение электричества: Не стоит волноваться о непредвиденном отключении электричества. Двигатели продолжат работать по инерции, благодаря чему вы мягко и безопасно опуститесь вниз.</li>
+                            </ul>
+                            </p>
+                            <p class="advantages__text pb-30">Ваше приключение в iFLY Minsk включает в себя регистрацию, подгтовку и сам полет. Все это займет около 1 часа. Хотите увеличить время полета, мы будем рады предложить вам все возможные варианты.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="block-content__right">
+                            <a class="btn">Следующий шаг</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer__logo container">
+        <div class="row">
+            <a class="footer__link" href="/"><img src="img/_src/logo-footer.png" alt="iFly"/></a>
+        </div>
+    </div>
+    <div class="container">
+        <nav class="footer__nav row">
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a class="footer__link" href="./">Программы полетов</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" href="./">Подарочный сертификат</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" href="./">Специальные предложения</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" href="./contacts.html">Контакты</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" href="./faq.html">FAQ</a>
+                </li>
+            </ul>
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a class="footer__link" href="./history.html">История iFLY</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" href="./">ТРЦ Palazzo</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" href="./">Для прессы</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" href="./">Партнерам</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" href="./vacancies.html">Вакансии</a>
+                </li>
+            </ul>
+            <ul class="footer__list law">
+                <li class="footer__item">
+                    <a class="footer__link" href="./">Пользовательское соглашение</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" href="./">Юридическая информация</a>
+                </li>
+                <li class="footer__item">
+                    <a class="footer__link" href="./zakaz_poleta.html">Как оформить полет</a>
+                </li>
+
+                <li class="footer__item">
+                    <ul class="footer__sublist">
+                        <li class="footer__item">
+                            <a class="footer__link" href="">
+                                <img
+                                        class="footer__img"
+                                        src="img/_src/instagram.svg"
+                                        alt="Мы в инстаграм"
+                                />
+                            </a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href=""
+                            ><img
+                                    class="footer__img"
+                                    src="img/_src/Facebook.svg"
+                                    alt="Мы в фэйсбук"
+                            /></a>
+                        </li>
+                        <li class="footer__item">
+                            <a class="footer__link" href=""
+                            ><img
+                                    class="footer__img"
+                                    src="img/_src/youtube.svg"
+                                    alt="Мы в ютуб"
+                            /></a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="container">
+        <div class="footer__bottom  row">
+				<span class="footer__copiryte">
+				  <span class="footer__description">2019 &#169; iFLY.</span>
+				  <span class="footer__description">Все права защищены.</span><br><br>
+				  <span class="footer__description">СООО «БелМартПлаза»<br>Республика Беларусь, г. Минск, ул. Тимирязева, 67,<br>офис 1702, УНП 191305848</span>
+				</span>
+            <span><img class="footer__img" src="img/_src/logos.png"/></span>
+            <span>Разработчик сайта <a href="#">- Gik-Media</a></span>
+        </div>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>
+<script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"
+></script>
+<script
+        src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"
+></script>
+<script>
+    $("#advantages-list-waiting").slick({
+        infinite: true,
+        dots: true,
+        arrows: false,
+        speed: 300,
+        slidesToShow: 1,
+        autoplay: false,
+        autoplaySpeed: 3000,
+        customPaging: function(slider, i) {
+            var thumb = $(slider.$slides[i]).data();
+            return '<a class="advantages__dot">' + "0" + (i + 1) + "</a>";
+        }
+    });
+
+   $('.btn').click(function () {
+       $("#advantages-list-waiting").slick('slickNext');
+    })
+</script>
+<script src="js/scripts.min.js"></script>
+</body>
+</html>
