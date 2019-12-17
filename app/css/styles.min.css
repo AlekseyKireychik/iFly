@@ -8549,12 +8549,42 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 
 .new__slider .container .row .newpost-slider .new__item {
   padding-right: 24px;
-  min-height: 491px;
+  min-height: 200px;
   max-height: 491px;
+}
+
+@media (max-width: 991.98px) {
+  .new__slider .container .row .newpost-slider .new__item {
+    max-height: 600px;
+  }
 }
 
 .new__slider .container .row .newpost-slider .new__item img {
   width: 100%;
+}
+
+@media (max-width: 1199.98px) {
+  .new__slider .container .row .newpost-slider .new__item img {
+    width: calc(( 100vw - ((100vw - 940px) /2)) + 24px);
+  }
+}
+
+@media (max-width: 991.98px) {
+  .new__slider .container .row .newpost-slider .new__item img {
+    width: calc(( 100vw - ((100vw - 720px) /2)) + 24px);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .new__slider .container .row .newpost-slider .new__item img {
+    width: calc(( 100vw - ((100vw - 540px) /2)) + 24px);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .new__slider .container .row .newpost-slider .new__item img {
+    width: calc(( 100vw - 40px));
+  }
 }
 
 .new__slider .container .row .slider__counter {
@@ -8581,6 +8611,13 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 .new .container .new__content .new__img {
   width: 100%;
   padding-bottom: 70px;
+}
+
+@media (max-width: 575.98px) {
+  .new .container .new__content .new__img {
+    width: calc( 100vw - 40px);
+    height: auto;
+  }
 }
 
 .new .container .new__content .new__text {
