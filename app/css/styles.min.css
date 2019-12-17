@@ -4739,15 +4739,27 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   height: 2px;
   width: 95px;
   background-color: #E72D2D;
-  top: -42px;
+  top: -57px;
   left: 50%;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
 }
 
-.advantages__home .advantages__list .slick-dots li:first-child.slick-active .advantages__dot::before {
-  top: -57px;
+.advantages__home.about_us .advantages__list .advantages__item .container .row .advantages__title {
+  padding-top: 65px;
+}
+
+.advantages__home.what_awaits .advantages__list .advantages__item .container .row .advantages__caption .advantages__title {
+  padding-top: 65px;
+}
+
+.advantages__home.what_awaits .advantages__list .advantages__item .container .row .block-content__right .btn {
+  width: 350px;
+}
+
+.advantages__home.what_awaits .advantages__list .advantages__item .container .row .block-content__right .btn::after {
+  padding-left: 40px;
 }
 
 .akcii__home {
@@ -8697,6 +8709,10 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 
 @media (max-width: 575.98px) {
   .new__contentBottom .container .row .new__info .new__social .new__list {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
     width: 100%;
   }
 }
@@ -8719,7 +8735,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 
 @media (max-width: 575.98px) {
   .new__contentBottom .container .row .new__info .new__social .new__list .new__item {
-    padding-right: 0px;
+    padding-right: 20px;
   }
 }
 
@@ -12388,8 +12404,8 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 .parties__top .container .row .title {
-  font-size: 54px;
-  line-height: 100px;
+  font-size: 40px;
+  line-height: 48px;
   margin-bottom: 100px;
 }
 
@@ -12410,8 +12426,8 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 
 .parties .container .row .parties__description {
   padding-bottom: 60px;
-  font-size: 24px;
-  line-height: 34px;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 @media (max-width: 991.98px) {
@@ -12584,11 +12600,19 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   }
 }
 
+.parties .container .row .parties__bottom .parties__btn {
+  width: 350px;
+}
+
 @media (max-width: 575.98px) {
   .parties .container .row .parties__bottom .parties__btn {
     width: 100%;
     padding: 0px 55px 0px 35px;
   }
+}
+
+.parties .container .row .parties__bottom .parties__btn::after {
+  padding-left: 50px;
 }
 
 .parties .container .row .parties__video {
@@ -12750,7 +12774,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 .athlete .athlete__banner .container .row .athlete__caption .athlete__btn.btn::after {
-  padding-left: 0;
+  padding-left: 40px;
 }
 
 .athlete__programs {

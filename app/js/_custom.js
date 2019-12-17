@@ -150,7 +150,7 @@ $(document).ready(function() {
     arrows: false,
     speed: 300,
     slidesToShow: 1,
-    autoplay: true,
+    autoplay: false,
     autoplaySpeed: 3000,
     customPaging: function(slider, i) {
       var thumb = $(slider.$slides[i]).data();
@@ -430,6 +430,7 @@ $(document).ready(function() {
     slidesToScroll: 1,
     variableWidth: true,
     autoplay: true,
+    adaptiveHeight: true,
     autoplaySpeed: 3000,
     responsive: [
       {
