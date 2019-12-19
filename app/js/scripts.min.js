@@ -581,6 +581,14 @@ $(document).ready(function() {
     event.preventDefault();
     $(".gallery__nav").toggleClass("is-active");
   });
+
+  //show - hide text 
+  $('.show').on('click', function(event) {
+    $('.hide').slideToggle(function() {
+      console.log($(event.target).is(':visible'));
+      $(event.target).text($(this).is(':visible') ? 'Читать меньше...' : 'Читать больше...');
+    });
+  }); 
   // Lightbox
 	// $('.gallery .gallery__link').lightbox(); 
   //form request

@@ -20,12 +20,12 @@
     <link rel="stylesheet" href="css/styles.min.css" />
     <style>
         .main__waiting {
-            background-color: #F7F7F7;
+            background-color: #142C60;
         }
-        .advantages__home .advantages__list .slick-dots li.slick-active .advantages__dot::before {
+        .advantages__home.what_awaits .advantages__list .slick-dots li.slick-active .advantages__dot::before {
             top: -57px;
         }
-        .block-content__right {
+        .advantages__home.what_awaits .block-content__right {
             width: 100%;
             display: flex;
             justify-content: flex-end;
@@ -37,30 +37,117 @@
             max-width: 100% !important;
             padding-bottom: 30px !important;
         }
-        .list {
+        .advantages__home.what_awaits .advantages__caption .list {
             margin-left: 40px;
         }
 
-        .list li{
-            color: white;
+        .advantages__home.what_awaits .advantages__caption .list li{
+            color: #fff;
         }
 
-        .advantages__home .advantages__list .advantages__item {
-            min-height: 1000px !important;
-            max-height: 1000px !important;
+        .advantages__home.what_awaits .advantages__list .advantages__item {
+            min-height: 835px;
+            max-height: 1000px;
+        }
+        .advantages__home.what_awaits .advantages__list .slick-dots {
+            bottom: 0px;
         }
 
         .btn {
             cursor: pointer;
         }
+        .advantages__home.what_awaits .container__breadcrumb {
+            padding-top: 0px;
+        }
 
-        @media (max-width: 994px) {
-            .slick-dots {
-                display: none !important;
+        .advantages__home.what_awaits .container__breadcrumb .row .nav__breadcrumb {
+            position: absolute;
+            margin-top: 40px;
+            margin-left: 40px;
+        }
+
+        .advantages__home.what_awaits .container__breadcrumb .row .nav__breadcrumb .breadcrumb .breadcrumb-item {
+            color: #FFFFFF;
+        }
+
+        .advantages__home.what_awaits .container__breadcrumb .row .nav__breadcrumb .breadcrumb .breadcrumb-item::before {
+            color: #FFFFFF;
+        }
+
+        .advantages__home.what_awaits .container__breadcrumb .row .nav__breadcrumb .breadcrumb .breadcrumb-item a {
+            color: #FFFFFF;
+        }
+
+        .advantages__home.what_awaits .advantages__list .advantages__item .container .row .advantages__caption .advantages__title {
+            padding-top: 65px;
+        }
+
+        .advantages__home.what_awaits .advantages__list .advantages__item .container .row .block-content__right .btn {
+            width: 350px;
+        }
+
+        .advantages__home.what_awaits .advantages__list .advantages__item .container .row .block-content__right .btn::after {
+            padding-left: 40px;
+        }
+        .show {
+            font-size: 14px;
+            line-height: 28px;
+            color: #FFF;
+            margin-left: 40px;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .hide{
+            display: none;
+        }
+        @media screen and  (max-width: 1199px) {
+            .advantages__home.what_awaits .advantages__list .advantages__item {
+                max-height: 1080px;
             }
-
-            .block-content__right {
-                justify-content: space-around;
+        }
+        @media screen and (max-width: 991.98px) {
+            .advantages__home.what_awaits .advantages__list .advantages__item {
+                max-height: 1150px;
+            }
+        }
+        @media (min-width: 700px) and (max-width: 767px) {
+            .advantages__home.what_awaits .advantages__list .advantages__item {
+                max-height: 1200px;
+            }
+        }
+        @media screen and (max-width: 699px) {
+            .advantages__home.what_awaits .advantages__list .advantages__item {
+                max-height: 1320px;
+            }
+            .advantages__home.what_awaits .block-content__right {
+                justify-content: flex-start;
+            }
+            .advantages__home.what_awaits .container__breadcrumb .row .nav__breadcrumb {
+                margin-left: 0px;
+            }
+            .advantages__home.what_awaits .advantages__list .advantages__item .container .row .advantages__title {
+                margin-left: 0px;
+            }
+            .advantages__home.what_awaits .advantages__list .advantages__item .container .row .advantages__text {
+                margin-left: 0px;
+            }
+            .advantages__home.what_awaits .advantages__caption .list {
+                margin-left: 0px;
+            }
+            .show {            
+                margin-left: 0px;
+                padding-bottom: 15px;
+            }
+        }
+        @media screen and (max-width: 576px) {
+            .advantages__home.what_awaits .advantages__list .advantages__item {
+                max-height: 1850px;
+            }
+            .advantages__home.what_awaits .advantages__list .slick-dots {
+                display: none!important;
+            }
+            .advantages__home.what_awaits .advantages__list .advantages__item {
+                padding: 40px 20px 10px
             }
         }
     </style>
@@ -257,7 +344,7 @@
                             <h2 class="advantages__title ">Шаг 1 - Теория</h2>
                             <p class="advantages__text pb-30">Кто может летать?</p>
                             <p class="advantages__text pb-30">Вы и все, кто придет с вами! Мы предлагаем безопасное, веселое и невероятное приключение для всех желающих! Не нужно быть в своей лучшей физической форме, летать могут все! Наши опытные инструктора помогут сделать ваш полет незабываемым.</p>
-                            <p class="advantages__text pb-30" style="padding-bottom: 0 !important;">Люди любого возраста и физической формы:
+                            <p class="advantages__text pb-0">Люди любого возраста и физической формы:
                             <ul class="list">
                                 <li>• От 3 до 103 лет (мы серьезно)</li>
                                 <li>• Несовершеннолетним необходимо быть в присутствии родителей, чтобы подписать документы</li>
@@ -285,7 +372,7 @@
                             <p class="advantages__text pb-30">Что одевать?</p>
                             <p class="advantages__text pb-30">Одевайте удобную одежду – то, что вы бы одели в свой обычный день.
                                 Нет необходимости переодеваться перед полетом – вам выдадут специальный комбинезон, который можно одеть поверх вашей одежды.</p>
-                            <p class="advantages__text pb-30" style="padding-bottom: 0 !important;">Подходящая одежда:
+                            <p class="advantages__text pb-0">Подходящая одежда:
                             <ul class="list">
                                 <li>• Штаны: Одевайте джинсы или штаны, убедитесь, что они не слишком плотные и не сковывают движения.</li>
                                 <li>• Шорты: Тоже самое, что и со штанами, убедитесь, что в них вам удобно.</li>
@@ -311,18 +398,20 @@
                             <h2 class="advantages__title">Шаг 3 - Подготовка к полету</h2>
                             <p class="advantages__text pb-30">Когда приезжать и что сделать до полета?</p>
                             <p class="advantages__text pb-30">Приезжайте к точному времени, указанному во время бронирования полета (по телефону с нашим администратором или онлайн). Когда вы зайдете в iFLY Minsk, администратор будет вас ждать возле стойки Reception. Наши сотрудники обязательно ответят на любые дополнительные вопросы.</p>
-                            <p class="advantages__text pb-30" style="padding-bottom: 0 !important;">Регистрация:
+                            <p class="advantages__text pb-0">Регистрация:</p>
                             <ul class="list">
                                 <li>• Подписать все нужные документы</li>
                                 <li>• Создать личный кабинет</li>
                                 <li>• Оплатить ваш полет</li>
+                            </ul>
+                            <ul class="list hide">
                                 <li>Подготовка к полету:</li>
                                 <li>• После прохождения регистрации вас встретит наш опытный инструктор</li>
                                 <li>• Инструктор проведет подробный предполетный инструктаж</li>
                                 <li>• Вам выдадут комбинезон, шлем и очки</li>
                                 <li>• Вам покажут шкафчики, в которых можно оставить личные вещи</li>
                             </ul>
-                            </p>
+                            <div class="show">Читать больше...</div>                            
                         </div>
                     </div>
                     <div class="row">
@@ -339,7 +428,7 @@
                             <h2 class="advantages__title">Шаг 4 - Полет</h2>
                             <p class="advantages__text pb-30">Как это, летать в аэротрубе?</p>
                             <p class="advantages__text pb-30">То, чего вы так долго ждали! Ваш инструктор пригласит вас в аэродинамическую трубу и совсем скоро вы испытаете настоящее чувство полета.</p>
-                            <p class="advantages__text pb-30" style="padding-bottom: 0 !important;">Ваше приключение:
+                            <p class="advantages__text pb-0">Ваше приключение:
                             <ul class="list">
                                 <li>• Сначала вы займете место на скамье рядом с другими новичками из группы</li>
                                 <li>• Инструктор покажет вам подойти к двери, когда придет ваша очередь</li>
@@ -349,7 +438,8 @@
                                 <li>• Каждый зайдет в трубу минимум 2 раза (зависит от купленного пакета)</li>
                             </ul>
                             </p>
-                            <p class="advantages__text pb-30">Ваше приключение в iFLY Minsk включает в себя регистрацию, подгтовку и сам полет. Все это займет около 1 часа. Хотите увеличить время полета, мы будем рады предложить вам все возможные варианты.</p>
+                            <p class="advantages__text pb-0 hide">Ваше приключение в iFLY Minsk включает в себя регистрацию, подгтовку и сам полет. Все это займет около 1 часа. Хотите увеличить время полета, мы будем рады предложить вам все возможные варианты.</p>
+                            <div class="show">Читать больше...</div>
                         </div>
                     </div>
                     <div class="row">
@@ -367,16 +457,18 @@
                             <p class="advantages__text pb-30">Безопасность в iFLY Minsk</p>
                             <p class="advantages__text pb-30">Полет в аэротрубе станет для вас одним из самых незабываемых впечатлений в жизни. Это не только весело, но и очень безопасно.
                                 Более того, безопасность – это самая главная составляющая работы iFLY Minsk. Именно поэтому вся наша команда прошла длительное обучение и подготовлена по лучшим международным стандартам.</p>
-                            <p class="advantages__text pb-30" style="padding-bottom: 0 !important;">Почему полеты в аэротрубе iFLY Minsk безопасны?
-                            <ul class="list">
-                                <li>• Обучение: Перед полетом вы обязательно пройдете инструктаж об основах работы аэродинамической трубы и поведении тела в воздушном потоке</li>
-                                <li>• Подходящая экипировка: Инструктор удостоверится, что комбинезон и шлем подходит вам по размеру и правильно одет/закреплен</li>
-                                <li>• Инструктора iFLY Minsk: Весь летный персонал проходит жесткий отбор и тяжелое обучение, развивающее выносливость, силу и реакцию, чтобы находиться рядом с вами в аэротрубе и помогать вам в течение всего полета</li>
-                                <li>• Дополнительная забота о детях: Если ребенок совсем маленький, инструктор держит его, не отпуская в течение всего полета</li>
-                                <li>• Отключение электричества: Не стоит волноваться о непредвиденном отключении электричества. Двигатели продолжат работать по инерции, благодаря чему вы мягко и безопасно опуститесь вниз.</li>
-                            </ul>
-                            </p>
-                            <p class="advantages__text pb-30">Ваше приключение в iFLY Minsk включает в себя регистрацию, подгтовку и сам полет. Все это займет около 1 часа. Хотите увеличить время полета, мы будем рады предложить вам все возможные варианты.</p>
+                            <p class="advantages__text pb-0">Почему полеты в аэротрубе iFLY Minsk безопасны?</p>
+                            <div class="hide">
+                                <ul class="list">
+                                    <li>• Обучение: Перед полетом вы обязательно пройдете инструктаж об основах работы аэродинамической трубы и поведении тела в воздушном потоке</li>
+                                    <li>• Подходящая экипировка: Инструктор удостоверится, что комбинезон и шлем подходит вам по размеру и правильно одет/закреплен</li>
+                                    <li>• Инструктора iFLY Minsk: Весь летный персонал проходит жесткий отбор и тяжелое обучение, развивающее выносливость, силу и реакцию, чтобы находиться рядом с вами в аэротрубе и помогать вам в течение всего полета</li>
+                                    <li>• Дополнительная забота о детях: Если ребенок совсем маленький, инструктор держит его, не отпуская в течение всего полета</li>
+                                    <li>• Отключение электричества: Не стоит волноваться о непредвиденном отключении электричества. Двигатели продолжат работать по инерции, благодаря чему вы мягко и безопасно опуститесь вниз.</li>
+                                </ul>                                
+                                <p class="advantages__text pb-0">Ваше приключение в iFLY Minsk включает в себя регистрацию, подгтовку и сам полет. Все это займет около 1 часа. Хотите увеличить время полета, мы будем рады предложить вам все возможные варианты.</p>
+                            </div>
+                            <div class="show">Читать больше...</div>
                         </div>
                     </div>
                     <div class="row">

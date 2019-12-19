@@ -87,7 +87,6 @@ select.error
 	border-bottom: 1px solid $accent
 input.error
 	border-bottom: 1px solid $accent
-
 //popap 01
 .popap-01
 	background-color: #fff
@@ -592,6 +591,7 @@ input.error
 							top: 38px
 							left: 0
 							display: none
+							z-index: 98
 							.help-text
 								margin-top: 15px
 								padding: 6px 12px
@@ -934,6 +934,7 @@ input.error
 							top: 38px
 							left: 0
 							display: none
+							z-index: 98
 							.help-text
 								margin-top: 15px
 								padding: 6px 12px
@@ -2012,8 +2013,15 @@ header
 			padding-top: 40px
 			padding-bottom: 50px
 			text-align: left
-			padding-left: 10vw
-
+			padding-left: calc((100vw - 1140px) / 2)
+			+media-breakpoint-down(lg)
+				padding-left: calc((100vw - 960px) / 2)
+			+media-breakpoint-down(md)
+				padding-left: calc((100vw - 720px) / 2)
+			+media-breakpoint-down(sm)
+				padding-left: calc((100vw - 540px) / 2)
+			+media-breakpoint-down(xs)
+				padding-left: 20px
 			li
 				margin: 0 27px
 				+media-breakpoint-down(xs)
@@ -2049,34 +2057,34 @@ header
 					.row 
 						.advantages__title
 							padding-top: 65px
-	&.what_awaits 
-		.container__breadcrumb
-			padding-top: 0px
-			.row
-				.nav__breadcrumb
-					position: absolute
-					margin-top: 40px
-					margin-left: 40px
-					.breadcrumb
-						.breadcrumb-item
-							color: #FFFFFF
-							&::before
-								color: #FFFFFF
-							a 
-								color: #FFFFFF
-		.advantages__list 
-			.advantages__item 
-				.container 
-					.row 
-						.advantages__caption
-							.advantages__title
-								padding-top: 65px	
-					.row 
-						.block-content__right 
-							.btn
-								width: 350px
-								&::after
-									padding-left: 40px
+	// &.what_awaits 
+	// 	.container__breadcrumb
+	// 		padding-top: 0px
+	// 		.row
+	// 			.nav__breadcrumb
+	// 				position: absolute
+	// 				margin-top: 40px
+	// 				margin-left: 40px
+	// 				.breadcrumb
+	// 					.breadcrumb-item
+	// 						color: #FFFFFF
+	// 						&::before
+	// 							color: #FFFFFF
+	// 						a 
+	// 							color: #FFFFFF
+	// 	.advantages__list 
+	// 		.advantages__item 
+	// 			.container 
+	// 				.row 
+	// 					.advantages__caption
+	// 						.advantages__title
+	// 							padding-top: 65px	
+	// 				.row 
+	// 					.block-content__right 
+	// 						.btn
+	// 							width: 350px
+	// 							&::after
+	// 								padding-left: 40px
 									
 
 .akcii__home
@@ -4984,6 +4992,7 @@ header
 								top: 38px
 								left: 0
 								display: none
+								z-index: 98
 								.help-text
 									margin-top: 15px
 									padding: 6px 12px
