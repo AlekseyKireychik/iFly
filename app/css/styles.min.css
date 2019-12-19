@@ -4750,6 +4750,28 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   padding-top: 65px;
 }
 
+.advantages__home.what_awaits .container__breadcrumb {
+  padding-top: 0px;
+}
+
+.advantages__home.what_awaits .container__breadcrumb .row .nav__breadcrumb {
+  position: absolute;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+.advantages__home.what_awaits .container__breadcrumb .row .nav__breadcrumb .breadcrumb .breadcrumb-item {
+  color: #FFFFFF;
+}
+
+.advantages__home.what_awaits .container__breadcrumb .row .nav__breadcrumb .breadcrumb .breadcrumb-item::before {
+  color: #FFFFFF;
+}
+
+.advantages__home.what_awaits .container__breadcrumb .row .nav__breadcrumb .breadcrumb .breadcrumb-item a {
+  color: #FFFFFF;
+}
+
 .advantages__home.what_awaits .advantages__list .advantages__item .container .row .advantages__caption .advantages__title {
   padding-top: 65px;
 }
@@ -8496,6 +8518,12 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
   padding-bottom: 184px;
 }
 
+@media (max-width: 575.98px) {
+  .new__slider {
+    padding-bottom: 120px;
+  }
+}
+
 .new__slider .container .row {
   position: relative;
 }
@@ -8556,6 +8584,12 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 @media (max-width: 991.98px) {
   .new__slider .container .row .newpost-slider .new__item {
     max-height: 600px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .new__slider .container .row .newpost-slider .new__item {
+    min-height: 155px;
   }
 }
 
@@ -8627,6 +8661,12 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 @media (max-width: 991.98px) {
   .new .container .new__content .new__text {
     padding: 0 0 50px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .new .container .new__content .new__text {
+    padding: 0 0 30px;
   }
 }
 
@@ -10858,6 +10898,7 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 
 .faq {
   padding-bottom: 120px;
+  padding-top: 36px;
 }
 
 @media (max-width: 767.98px) {
