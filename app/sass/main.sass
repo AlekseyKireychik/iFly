@@ -3714,7 +3714,7 @@ header
 				.news__list
 					display: flex
 					align-items: flex-start
-					justify-content: space-between
+					justify-content: flex-start
 					flex-wrap: wrap
 					margin-bottom: 0
 					padding-bottom: 25px
@@ -3724,14 +3724,27 @@ header
 						background-color: #fff
 						width: 100%
 						transition: .3s
+						margin-right: 20px
 						+media-breakpoint-down(lg)
 							order: 0
 							&:nth-child(3)
 								order: 1
 							&:nth-child(9)
 								order: 1
+							&:nth-child(2n)
+								margin-right: 0px	
+							&:nth-child(3n)
+								margin-right: 20px
 						+media-breakpoint-down(md)
 							padding-bottom: 20px
+						+media-breakpoint-down(sm)
+							margin-right: 0px
+							&:nth-child(2n)
+								margin-right: 0px	
+							&:nth-child(3n)
+								margin-right: 0px
+						&:nth-child(3n)
+							margin-right: 0px							
 						&:hover
 							box-shadow: 0px 8px 24px rgba(55, 71, 84, 0.08)
 							transition: .3s
@@ -4307,6 +4320,8 @@ header
 			.row
 				.history-slide
 					max-width: 1272px
+					margin-bottom: 0px
+					padding-bottom: 0px
 					.history__caption
 						flex-direction: column
 						align-items: flex-start
@@ -4327,20 +4342,30 @@ header
 							line-height: 28px
 							color: #fff
 							padding-top: 40px
-							padding-bottom: 110px
+							padding-bottom: 140px
 							max-width: 624px
 							+media-breakpoint-down(xs)
 								max-width: 280px
+					.slick-list
+						&::after
+							content: " "
+							width: 100%
+							height: 1px
+							background-color: rgba(255, 255, 255, 0.4)
+							position: absolute
+							bottom: 0
+							z-index: 99
 					.slick-dots
-						bottom: -40px
+						bottom: 0px
 						left: 0
 						padding-bottom: 40px
-						border-bottom: 1px solid rgba(255, 255, 255, 0.4)
+						// border-bottom: 1px solid rgba(255, 255, 255, 0.4)
 						overflow: hidden
 						overflow-x: auto
 						white-space: nowrap
 						text-align: left
 						display: flex
+						justify-content: space-between
 						+media-breakpoint-down(lg)
 							padding-right: 200px
 						+media-breakpoint-down(md)
@@ -4349,7 +4374,10 @@ header
 							padding-right: 600px
 						+media-breakpoint-down(xs)
 							padding-right: 990px
+						
+							
 						li
+							margin: 0
 							height: 35px
 							min-width: 300px
 							+media-breakpoint-down(md)
