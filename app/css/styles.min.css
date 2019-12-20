@@ -9583,13 +9583,12 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 .flight__top .container .row .title {
-  font-size: 54px;
+  font-size: 40px;
   line-height: 100px;
 }
 
 @media (max-width: 991.98px) {
   .flight__top .container .row .title {
-    font-size: 40px;
     line-height: 48px;
   }
 }
@@ -9636,6 +9635,13 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 
 .flight .container .flight__content .flight__text p {
   padding-bottom: 25px;
+  font-size: 18px;
+}
+
+@media (max-width: 575.98px) {
+  .flight .container .flight__content .flight__text p {
+    font-size: 16px;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -12636,8 +12642,8 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 .parties .container .row .parties__bottom .parties__text {
-  font-size: 24px;
-  line-height: 34px;
+  font-size: 18px;
+  line-height: 24px;
   color: #142C60;
   max-width: 650px;
   margin-right: 60px;
@@ -12658,8 +12664,8 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 }
 
 .parties .container .row .parties__bottom .parties__text .phone {
-  font-size: 24px;
-  line-height: 34px;
+  font-size: 18px;
+  line-height: 24px;
   color: #142C60;
   font-weight: 600;
 }
@@ -12669,6 +12675,10 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
     font-size: 16px;
     line-height: 24px;
   }
+}
+
+.parties .container .row .parties__bottom .parties__text .phone:hover {
+  text-decoration: underline;
 }
 
 .parties .container .row .parties__bottom .parties__btn {
