@@ -8659,29 +8659,29 @@ header .container.container__header .nav .contacts__list .contacts__item .contac
 
 .new .container .new__content .new__img {
   width: 100%;
-  padding-bottom: 70px;
 }
 
 @media (max-width: 575.98px) {
   .new .container .new__content .new__img {
     width: calc( 100vw - 40px);
     height: auto;
+    max-height: 245px;
   }
 }
 
 .new .container .new__content .new__text {
-  padding: 0 110px 50px;
+  padding: 70px 110px 50px;
 }
 
 @media (max-width: 991.98px) {
   .new .container .new__content .new__text {
-    padding: 0 0 50px;
+    padding: 70px 0 50px;
   }
 }
 
 @media (max-width: 575.98px) {
   .new .container .new__content .new__text {
-    padding: 0 0 30px;
+    padding: 70px 0 30px;
   }
 }
 
